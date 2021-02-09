@@ -1,6 +1,7 @@
-_y#include <stdlib.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <dirent.h>
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>

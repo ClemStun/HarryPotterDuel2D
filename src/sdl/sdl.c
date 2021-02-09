@@ -34,3 +34,39 @@ window * Initialize_sdl(){
 
     return win;
 }
+
+SDL_Texture * LoadImages(SDL_Renderer* pRenderer){
+    printf("Chargement des images...\n");
+    DIR *d;
+    struct dirent *dir;
+    char **nomsImages;
+    int nb_images = 0;
+    SDL_Texture * images;
+
+    d = opendir("../../assets/images");
+    while((dir = readdir(d)) != NULL) nb_images++;
+    closedir(d);
+
+    nomsImages = (char**)malloc(sizeof(char*) * nb_images);
+    images = malloc(sizeof(SDL_Texture) * nb_images);
+
+    d = opendir("../../assets/images");
+    for(int i = 0; (dir = readdir(d)) != NULL; i++){
+        nomsImages[i] = (char*)malloc(sizeof(char) * strlen(dir->d_name)+1);
+        strcpy(nomsImages[i], dir->d_name);
+    }
+    closedir(d);
+    for(int i=0; i<nb_images; i++){
+        char nom[50] = "../../assets/images/";
+        strcat(nom, nomsImages[i]);
+        images[i] = IMG_LoadTexture(pRenderer, nom);
+        printf("%s\n", nom);
+    }
+    printf("Images chargées: %d\n", nb_images);
+
+    return images;
+}
+
+void DisplayImage(SDL_Texture *t, int posX, int posY){
+
+}
