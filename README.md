@@ -17,3 +17,17 @@ déplacements
 
 Matthieu : 
     gestion de connexion en réseaux
+    
+Séance 2:
+Organisation du Git !
+
+Clément : 
+    Test premier sort
+
+Hugo : 
+    Mise en place du personnage
+    structure globale
+    déplacements 
+
+Matthieu : 
+    gestion de connexion en réseaux
