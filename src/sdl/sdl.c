@@ -3,6 +3,7 @@
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 600
 
+extern
 window * Initialize_sdl(){
     window *win;
     win = malloc(sizeof(window));
@@ -35,38 +36,60 @@ window * Initialize_sdl(){
     return win;
 }
 
-SDL_Texture * LoadImages(SDL_Renderer* pRenderer){
+extern
+void LoadImages(SDL_Renderer * pRenderer, images_t * images){
     printf("Chargement des images...\n");
     DIR *d;
     struct dirent *dir;
-    char **nomsImages;
-    int nb_images = 0;
-    SDL_Texture * images;
+    images->nb_images = 0;
 
-    d = opendir("../../assets/images");
-    while((dir = readdir(d)) != NULL) nb_images++;
+    d = opendir("./assets/images");
+    while((dir = readdir(d)) != NULL) images->nb_images++;
     closedir(d);
 
-    nomsImages = (char**)malloc(sizeof(char*) * nb_images);
-    images = malloc(sizeof(SDL_Texture) * nb_images);
+    images->nomsImages = (char**)malloc(sizeof(char*) * images->nb_images);
+    images->l_textImages = (SDL_Texture**)malloc(sizeof(SDL_Texture*) * images->nb_images);
 
-    d = opendir("../../assets/images");
+    d = opendir("./assets/images");
     for(int i = 0; (dir = readdir(d)) != NULL; i++){
-        nomsImages[i] = (char*)malloc(sizeof(char) * strlen(dir->d_name)+1);
-        strcpy(nomsImages[i], dir->d_name);
+        images->nomsImages[i] = (char*)malloc(sizeof(char) * strlen(dir->d_name)+1);
+        strcpy(images->nomsImages[i], dir->d_name);
     }
     closedir(d);
-    for(int i=0; i<nb_images; i++){
-        char nom[50] = "../../assets/images/";
-        strcat(nom, nomsImages[i]);
-        images[i] = IMG_LoadTexture(pRenderer, nom);
+    for(int i = 0; i < images->nb_images; i++){
+        char nom[50] = "./assets/images/";
+        strcat(nom, images->nomsImages[i]);
+        images->l_textImages[i] = IMG_LoadTexture(pRenderer, nom);
         printf("%s\n", nom);
     }
-    printf("Images chargées: %d\n", nb_images);
-
-    return images;
+    printf("Images chargées: %d\n", images->nb_images);
 }
 
-void DisplayImage(SDL_Texture *t, int posX, int posY){
+extern
+void DrawImage(SDL_Renderer * pRenderer, images_t * images, char * nom, int x, int y, int w, int h){
+    // x et y les coordonnées,
+    SDL_Rect imgDestRect;
+    imgDestRect.x = x;
+    imgDestRect.y = y;
+    imgDestRect.w = w;
+    imgDestRect.h = h;
+  char nom2[50];
+  sprintf(nom2, "%s", nom);
+  if(!strstr(nom2, ".png")){
+    strcat(nom2, ".png");
+  }
+    int i;
+    //ici on recherche quel est l'indice de l'image qu'on veux afficher
+    for(i=0; strcmp(images->nomsImages[i], nom2)!=0 && i<images->nb_images; i++);
+    //on l'affiche ensuite
+    SDL_RenderCopy(pRenderer, images->l_textImages[i], NULL, &imgDestRect);
+}
 
+extern
+void FreeImages(images_t * images){
+	for(int i = 0; i < images->nb_images; i++){
+		free(images->nomsImages[i]);
+	}
+	free(images->nomsImages);
+	free(images->l_textImages);
 }
