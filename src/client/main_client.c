@@ -1,43 +1,46 @@
 #include "../sdl/sdl.h"
+#include "../player/move.h"
+#include <math.h>
 
 int main(int argc, char **argv){
     window *win;
+    images_t images;
     int should_quit = 0;
     SDL_Event event;
     const Uint8 *keyboard_state_array = SDL_GetKeyboardState(NULL);
 
     win = Initialize_sdl();
-    
+    LoadImages(win->pRenderer, &images);
+
+    int deplX = 100, deplY = 100;
 
     // Boucle de jeu
     while(!should_quit){
         // Clear du rendu
         SDL_RenderClear(win->pRenderer);
-
         // Détection d'évènements
         while(SDL_PollEvent(&event)){
 			switch (event.type){
 				case SDL_QUIT:
 					should_quit = 1;
 				break;
+                case SDL_MOUSEBUTTONDOWN:
+                case SDL_MOUSEBUTTONUP:
+                    if(SDL_BUTTON(SDL_BUTTON_LEFT)){
+                        SDL_GetMouseState(&deplX, &deplY);
+                        deplX -= 50;
+                        deplY -= 50;
+                    }
+                break;
             }
         }
-        if(keyboard_state_array[SDL_SCANCODE_UP] && !(keyboard_state_array[SDL_SCANCODE_DOWN]) && rect1.y-VITESSE > 0){
-            rect1.y -= VITESSE;
-        }
-        else if(!keyboard_state_array[SDL_SCANCODE_UP] && keyboard_state_array[SDL_SCANCODE_DOWN] && rect1.y+VITESSE < SCREEN_HEIGHT-RECT_HEIGHT){
-            rect1.y += VITESSE;
-        }
-        if(keyboard_state_array[SDL_SCANCODE_LEFT] && !(keyboard_state_array[SDL_SCANCODE_RIGHT]) && rect1.x-VITESSE6 > 0){
-            rect1.x -= VITESSE;
-        }
-        else if(!keyboard_state_array[SDL_SCANCODE_LEFT] && keyboard_state_array[SDL_SCANCODE_RIGHT] && rect1.x+VITESSE < SCREEN_WIDTH-RECT_WIDTH){
-            rect1.x += VITESSE;
-        }
+
+        updatePosition(win, &images, deplX, deplY);
 
         // Actualisation du rendu
         SDL_RenderPresent(win->pRenderer);
     }
+    FreeImages(&images);
 
     // Libération mémoire du rendu
     SDL_DestroyRenderer(win->pRenderer);

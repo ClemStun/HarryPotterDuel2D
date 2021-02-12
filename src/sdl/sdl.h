@@ -17,7 +17,7 @@ typedef struct images_s{
     SDL_Texture ** l_textImages;
 } images_t;
 
-window * Initialize_sdl();
+extern window * Initialize_sdl();
 extern void LoadImages(SDL_Renderer * pRenderer, images_t * images);
 extern void DrawImage(SDL_Renderer * pRenderer, images_t * images, char * nom, int x, int y, int w, int h);
 extern void FreeImages(images_t * images);
