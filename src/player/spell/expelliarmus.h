@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "../player.h"
 
 typedef struct expelliarmus_s{
 
@@ -7,6 +8,8 @@ typedef struct expelliarmus_s{
     int damage;
     int pos_x;
     int pos_y;
+    float posXf;
+    float posYf;
     int width;
     int height;
     int sender;
@@ -20,4 +23,4 @@ typedef struct expelliarmus_s{
 
 } expelliarmus_t;
 
-extern expelliarmus_t * createExpelliarmus(int, int);
+extern expelliarmus_t * createExpelliarmus(player_t *);

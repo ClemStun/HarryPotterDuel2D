@@ -1,5 +1,7 @@
 #include "player.h"
 
+static int playerUnstun(int intervalle, player_t * p);
+
 extern
 player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite){
     player_t * p;
@@ -11,6 +13,9 @@ player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite){
     p->pt_life = 100;
     p->pt_mana = 100;
     p->sprite = sprite;
+    p->is_stun = 0;
+
+    p->unStun = playerUnstun;
 }
 
 extern
@@ -23,4 +28,8 @@ int playerPosY(player_t * p){
     return p->pos_y;
 }
 
-int main(){}
+static
+int playerUnstun(int intervalle, player_t * p){
+    p->is_stun = 0;
+    printf("Player plus Stun");
+}
