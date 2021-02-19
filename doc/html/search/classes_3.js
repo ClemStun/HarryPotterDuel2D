@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['window_5fs_12',['window_s',['../structwindow__s.html',1,'']]]
+  ['player_5fs_14',['player_s',['../structplayer__s.html',1,'']]],
+  ['position_15',['Position',['../structPosition.html',1,'']]]
 ];

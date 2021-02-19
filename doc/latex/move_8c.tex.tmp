@@ -1,0 +1,83 @@
+\hypertarget{move_8c}{}\doxysection{Référence du fichier src/player/move.c}
+\label{move_8c}\index{src/player/move.c@{src/player/move.c}}
+
+
+Fonctions de déplacement.  
+
+
+{\ttfamily \#include \char`\"{}../sdl/sdl.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de move.\+c\+:
+% FIG 0
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{move_8c_a11125dd26e6ed9f00a4845c431cde02b}{update\+Position}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, int deplX, int deplY)
+\begin{DoxyCompactList}\small\item\em Mise à jour de position de image en fonction du clique. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{move_8c_ab34f89ef94db9dd6d3a04425dd6d9c9d}\label{move_8c_ab34f89ef94db9dd6d3a04425dd6d9c9d}} 
+int {\bfseries posX} = 50
+\item 
+\mbox{\Hypertarget{move_8c_a65ab2de052c17234c8a1db3fd3b868a9}\label{move_8c_a65ab2de052c17234c8a1db3fd3b868a9}} 
+int {\bfseries posY} = 50
+\item 
+\mbox{\Hypertarget{move_8c_abc1fefe213cf482f8cb0e41248312fe7}\label{move_8c_abc1fefe213cf482f8cb0e41248312fe7}} 
+double {\bfseries pos\+Xfloat} = 0
+\item 
+\mbox{\Hypertarget{move_8c_a73ec33292ff33364973dc9193db4166d}\label{move_8c_a73ec33292ff33364973dc9193db4166d}} 
+double {\bfseries pos\+Yfloat} = 0
+\item 
+\mbox{\Hypertarget{move_8c_a566dc782068d4eb5b5ef37b305b53864}\label{move_8c_a566dc782068d4eb5b5ef37b305b53864}} 
+double {\bfseries vitesse} = 0
+\item 
+\mbox{\Hypertarget{move_8c_a396fd407509c10937271a75a97e0847e}\label{move_8c_a396fd407509c10937271a75a97e0847e}} 
+double {\bfseries vX} = 0
+\item 
+\mbox{\Hypertarget{move_8c_ac81b829436ca7febfa70ff9d9cd31114}\label{move_8c_ac81b829436ca7febfa70ff9d9cd31114}} 
+double {\bfseries vY} = 0
+\item 
+\mbox{\Hypertarget{move_8c_abb71fdf7eafc0a2a4d4d5cedd458476f}\label{move_8c_abb71fdf7eafc0a2a4d4d5cedd458476f}} 
+double {\bfseries norme} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fonctions de déplacement. 
+
+\begin{DoxyAuthor}{Auteur}
+C\+O\+U\+T\+A\+NT Hugo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 feb 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{move_8c_a11125dd26e6ed9f00a4845c431cde02b}\label{move_8c_a11125dd26e6ed9f00a4845c431cde02b}} 
+\index{move.c@{move.c}!updatePosition@{updatePosition}}
+\index{updatePosition@{updatePosition}!move.c@{move.c}}
+\doxysubsubsection{\texorpdfstring{updatePosition()}{updatePosition()}}
+{\footnotesize\ttfamily void update\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{int}]{deplX,  }\item[{int}]{deplY }\end{DoxyParamCaption})}
+
+
+
+Mise à jour de position de image en fonction du clique. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Structure de la fenêtre de jeu \\
+\hline
+{\em images} & Structure de la liste des images \\
+\hline
+{\em deplX} & Coordonée en X du clique \\
+\hline
+{\em deplY} & Coordonée en Y du clique\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Ne retourne rien 
+\end{DoxyReturn}

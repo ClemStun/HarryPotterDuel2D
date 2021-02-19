@@ -17,10 +17,10 @@
 /**
  * \fn extern expelliarmus_t * createExpelliarmus(int x, int y)
  * \brief création d'un objet expelliarmus_t
- * 
+ *
  * @param x Entier de la coordonée x de l'objet
  * @param y Entier de la coordonée y de l'objet
- * 
+ *
  * @return Retourne un objet expelliarmus_t
  */
 extern expelliarmus_t * createExpelliarmus(int, int);
@@ -28,11 +28,11 @@ extern expelliarmus_t * createExpelliarmus(int, int);
 /**
  * \fn static void deplacement(expelliarmus_t * spell, int x, int y);
  * \brief Déplacment d'un objet expelliarmus_t
- * 
+ *
  * @param spell Pointeur sur l'objet expelliarmus_t qui a déplacer
  * @param x Entier de la coordonée x de destination de l'objet
  * @param y Entier de la coordonée y de destination de l'objet
- * 
+ *
  * @return void
  */
 static void deplacement(expelliarmus_t *, int, int);
@@ -40,9 +40,9 @@ static void deplacement(expelliarmus_t *, int, int);
 /**
  * \fn static void display(expelliarmus_t * spell);
  * \brief Affichage d'un objet expelliarmus_t
- * 
+ *
  * @param spell Pointeur sur l'objet expelliarmus_t a afficher
- * 
+ *
  * @return void
  */
 static void display(expelliarmus_t *);
@@ -50,9 +50,9 @@ static void display(expelliarmus_t *);
 /**
  * \fn static int collision_test(expelliarmus_t * spell, int x, int y);
  * \brief Test de collision entre l'objet expelliarmus_t et un joueurs
- * 
+ *
  * @param spell Pointeur sur l'objet expelliarmus_t a afficher
- * 
+ *
  * @return Entier 0 s'il y a collision 1 sinon
  */
 static int collision_test(expelliarmus_t *, int, int);
@@ -60,9 +60,9 @@ static int collision_test(expelliarmus_t *, int, int);
 /**
  * \fn static void destroy(expelliarmus_t ** spell);
  * \brief Destruction d'un objet expelliarmus_t
- * 
+ *
  * @param spell Pointeur sur un pointeur d'objet expelliarmus_t a afficher
- * 
+ *
  * @return void
  */
 static void destroy(expelliarmus_t **);
@@ -113,7 +113,7 @@ void display(expelliarmus_t * spell){
 
 }
 /*
-static 
+static
 int collision_test(expelliarmus_t * spell, player_t * player){
 
     if(((spell->pos_x + spell->width >= player->pos_x) && (spell->pos_x + spell->width <= player->width)) || ((spell->pos_x >= player->pos_x) && (spell->pos_x  <= player->width)))
@@ -123,7 +123,7 @@ int collision_test(expelliarmus_t * spell, player_t * player){
 
 }*/
 
-static 
+static
 int collision_test(expelliarmus_t * spell, int x, int y){
 
     if(((spell->pos_x + spell->width >= x) && (spell->pos_x + spell->width <= x)) || ((spell->pos_x >= x) && (spell->pos_x  <= x)))

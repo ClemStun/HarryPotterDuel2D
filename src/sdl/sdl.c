@@ -1,7 +1,69 @@
+/**
+ * \file sdl.c
+ * \brief Fonctions créees avec la SDL2
+ * \author COUTANT Hugo
+ * \version 0.1
+ * \date 14 feb 2021
+ *
+ */
+
 #include "sdl.h"
 
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 600
+
+/**
+* \fn extern window * Initialize_sdl()
+* \brief Initialisation de la fenêtre de jeu avec la structure window
+*
+* @return retourne la structure window initilisée
+*/
+extern window * Initialize_sdl();
+
+/**
+ * \fn extern void LoadImages(SDL_Renderer * pRenderer, images_t * images)
+ * \brief Chargement des images du fichier images dans une structure et chargement des textures
+ *
+ * @param pRenderer Pointeur sur un rendu
+ * @param images Pointeur sur la structure contenant les images
+ *
+ * @return Ne retourne rien
+ */
+extern void LoadImages(SDL_Renderer * pRenderer, images_t * images);
+
+/**
+ * \fn extern void DrawImage(SDL_Renderer * pRenderer, images_t * images, char * nom, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH)
+ * \brief Dessine l'image voulue dans le rendu à la position et taille souhaitée
+ *
+ * @param pRenderer Pointeur sur un rendu
+ * @param images Pointeur sur la structure contenant les images
+ * @param nom Nom de l'image souhaitée
+ * @param srcX Position de départ en X sur l'image de la zone selectionée
+ * @param srcY Position de départ en Y sur l'image de la zone selectionée
+ * @param srcW Largeur de la zone selectionée
+ * @param srcH Hauteur de la zone selectionée
+
+
+
+ * @param destX Position en X sur le rendu
+ * @param destY Position en y sur le rendu
+ * @param destW Largeur souhaitée de l'image
+ * @param destH Hauteur souhaitée de l'image
+ *
+ * @return Ne retourne rien
+ */
+extern void DrawImage(SDL_Renderer * pRenderer, images_t * images, char * nom, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH);
+
+/**
+ * \fn extern void FreeImages(images_t * images)
+ * \brief Libération de la mémoire détenue par la structure contenant les images
+ *
+ * @param images Pointeur sur la structure contenant les images
+ *
+ * @return Ne retourne rien
+ */
+extern void FreeImages(images_t * images);
+
 
 extern
 window * Initialize_sdl(){
@@ -64,13 +126,18 @@ void LoadImages(SDL_Renderer * pRenderer, images_t * images){
 }
 
 extern
-void DrawImage(SDL_Renderer * pRenderer, images_t * images, char * nom, int x, int y, int w, int h){
-    // x et y les coordonnées,
+void DrawImage(SDL_Renderer * pRenderer, images_t * images, char * nom, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH){
     SDL_Rect imgDestRect;
-    imgDestRect.x = x;
-    imgDestRect.y = y;
-    imgDestRect.w = w;
-    imgDestRect.h = h;
+    imgDestRect.x = destX;
+    imgDestRect.y = destY;
+    imgDestRect.w = destW;
+    imgDestRect.h = destH;
+
+    SDL_Rect imgSrcRect;
+    imgSrcRect.x = srcX;
+    imgSrcRect.y = srcY;
+    imgSrcRect.w = srcW;
+    imgSrcRect.h = srcH;
   char nom2[50];
   sprintf(nom2, "%s", nom);
   if(!strstr(nom2, ".png")){
@@ -80,7 +147,7 @@ void DrawImage(SDL_Renderer * pRenderer, images_t * images, char * nom, int x, i
     //ici on recherche quel est l'indice de l'image qu'on veux afficher
     for(i=0; strcmp(images->nomsImages[i], nom2)!=0 && i<images->nb_images; i++);
     //on l'affiche ensuite
-    SDL_RenderCopy(pRenderer, images->l_textImages[i], NULL, &imgDestRect);
+    SDL_RenderCopy(pRenderer, images->l_textImages[i], &imgSrcRect, &imgDestRect);
 }
 
 extern

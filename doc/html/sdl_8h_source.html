@@ -82,8 +82,18 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    SDL_Renderer *pRenderer;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;} <a class="code" href="structwindow__s.html">window</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<a class="code" href="structwindow__s.html">window</a> * Initialize_sdl();</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structimages__s.html">   14</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structimages__s.html">images_s</a>{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> nb_images;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">char</span> ** nomsImages;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    SDL_Texture ** l_textImages;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;} <a class="code" href="structimages__s.html">images_t</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">extern</span> <a class="code" href="structwindow__s.html">window</a> * Initialize_sdl();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> LoadImages(SDL_Renderer * pRenderer, <a class="code" href="structimages__s.html">images_t</a> * images);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> DrawImage(SDL_Renderer * pRenderer, <a class="code" href="structimages__s.html">images_t</a> * images, <span class="keywordtype">char</span> * nom, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> FreeImages(<a class="code" href="structimages__s.html">images_t</a> * images);</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructimages__s_html"><div class="ttname"><a href="structimages__s.html">images_s</a></div><div class="ttdef"><b>Definition:</b> sdl.h:14</div></div>
 <div class="ttc" id="astructwindow__s_html"><div class="ttname"><a href="structwindow__s.html">window_s</a></div><div class="ttdef"><b>Definition:</b> sdl.h:9</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

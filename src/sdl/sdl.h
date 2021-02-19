@@ -19,5 +19,5 @@ typedef struct images_s{
 
 extern window * Initialize_sdl();
 extern void LoadImages(SDL_Renderer * pRenderer, images_t * images);
-extern void DrawImage(SDL_Renderer * pRenderer, images_t * images, char * nom, int x, int y, int w, int h);
+extern void DrawImage(SDL_Renderer * pRenderer, images_t * images, char * nom, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH);
 extern void FreeImages(images_t * images);
