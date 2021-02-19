@@ -31,3 +31,14 @@ Hugo :
 
 Matthieu : 
     gestion de connexion en réseaux
+    
+Séance 3:
+
+Clément :
+	création de sort reste des sorts
+
+Hugo :
+	Sprite personnages
+	
+Matthieu :
+	gestion de deux personnages en réseau
