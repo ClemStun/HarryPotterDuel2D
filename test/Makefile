@@ -6,3 +6,6 @@ test_sort.o: ./testsort.c
 
 expelliarmus.o: ../src/player/spell/expelliarmus.c
 	gcc ../src/player/spell/expelliarmus.c -c expelliarmus.o -lm
+
+clean:
+	rm -rf *.o

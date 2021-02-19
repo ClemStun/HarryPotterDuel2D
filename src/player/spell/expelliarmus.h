@@ -2,7 +2,7 @@
 
 typedef struct expelliarmus_s{
 
-    char name[20];
+    char * name;
     int speed;
     int damage;
     int pos_x;

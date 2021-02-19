@@ -13,6 +13,7 @@
 #include <math.h>
 
 #include "expelliarmus.h"
+#include "../player.h"
 
 /**
  * \fn extern expelliarmus_t * createExpelliarmus(int x, int y)
@@ -67,16 +68,20 @@ static int collision_test(expelliarmus_t *, int, int);
  */
 static void destroy(expelliarmus_t **);
 
+float posXf;
+float posYf;
+
 extern
-expelliarmus_t * createExpelliarmus(int x, int y){
+expelliarmus_t * createExpelliarmus(player_t * player){
 
     expelliarmus_t * spell = malloc(sizeof(expelliarmus_t));
 
+    spell->name = malloc(sizeof(char) * strlen("Expelliarmus"));
     strcpy(spell->name, "Expelliarmus");
     spell->speed = 5;
     spell->damage = 10;
-    spell->pos_x = x;//player->pos_x;
-    spell->pos_y = y;//player->pos_y;
+    posXf = player->pos_x;//player->pos_x;
+    posYf = player->pos_y;//player->pos_y;
     spell->width = 10;
     spell->height = 10;
     spell->sender = 0;//player->id_player;
@@ -86,6 +91,7 @@ expelliarmus_t * createExpelliarmus(int x, int y){
     spell->deplacement = deplacement;
     spell->display = display;
     spell->collision_test = collision_test;
+    spell->destroy = destroy;
 
     return spell;
 }
@@ -93,15 +99,18 @@ expelliarmus_t * createExpelliarmus(int x, int y){
 static
 void deplacement(expelliarmus_t * spell, int x_dest, int y_dest){
 
-    float vx = x_dest - spell->pos_x;
-    float vy = y_dest - spell->pos_y;
+    float vx = x_dest - posXf;
+    float vy = y_dest - posYf;
 
     double v = sqrt(vx*vx + vy*vy);
     float vxx = vx/v;
     float vyy = vy/v;
 
-    spell->pos_x += vxx * spell->speed;
-    spell->pos_y += vyy * spell->speed;
+    posXf += vxx * spell->speed;
+    posYf += vyy * spell->speed;
+    
+    spell->pos_x = posXf;
+    spell->pos_y = posYf;
 }
 
 static
@@ -126,8 +135,8 @@ int collision_test(expelliarmus_t * spell, player_t * player){
 static
 int collision_test(expelliarmus_t * spell, int x, int y){
 
-    if(((spell->pos_x + spell->width >= x) && (spell->pos_x + spell->width <= x)) || ((spell->pos_x >= x) && (spell->pos_x  <= x)))
-        if(((spell->pos_y + spell->height >= y) && (spell->pos_y + spell->height <= y)) || ((spell->pos_y >= y) && (spell->pos_y  <= y))){
+    if(((spell->pos_x + spell->width >= x) && (spell->pos_x + spell->width <= x + 10)) || ((spell->pos_x >= x) && (spell->pos_x  <= x + 10)))
+        if(((spell->pos_y + spell->height >= y) && (spell->pos_y + spell->height <= y + 10)) || ((spell->pos_y >= y) && (spell->pos_y  <= y + 10))){
             //player->pt_life -= spell->damage;
             return 0;
         }
@@ -137,6 +146,7 @@ int collision_test(expelliarmus_t * spell, int x, int y){
 
 static
 void destroy(expelliarmus_t ** spell){
+    free((*spell)->name);
     free(*spell);
     *spell = NULL;
 }
