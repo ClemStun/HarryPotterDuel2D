@@ -9,6 +9,7 @@
 
 #include "../sdl/sdl.h"
 
+
 /**
  * \fn extern void updatePosition(window * win, images_t * images, int deplX, int deplY)
  * \brief Mise à jour de position de image en fonction du clique
@@ -26,7 +27,7 @@ void updatePosition(window * win, images_t * images, int deplX, int deplY);
 
 
 int posX = 50, posY = 50;
-double posXfloat = 0, posYfloat = 0;
+double posXfloat = 50, posYfloat = 50;
 double vitesse = 0;
 double vX = 0, vY = 0, norme = 0;
 int a = 1, b = 1;
@@ -45,11 +46,15 @@ void updatePosition(window * win, images_t * images, int deplX, int deplY){
     posY = (int)posYfloat;
 
     if((posX < deplX-2 || posX > deplX+2) || (posY < deplY-2 || posY > deplY+2)){
-        vitesse = 1.01;
+        vitesse = 0.2;
+        if(b++ > 100){
+            a++;
+            b = 1;
+        }
+        DrawImage(win->pRenderer, images, "hp.png", (a%5)*32, 64, 32, 32, posX, posY, 100, 100);
     }
     else{
         vitesse = 0;
+        DrawImage(win->pRenderer, images, "hp.png", 5*32, 64, 32, 32, posX, posY, 100, 100);
     }
-
-    DrawImage(win->pRenderer, images, "hp.png", (a++%6)*32, 0, 32, 32, posX, posY, 100, 100);
 }
