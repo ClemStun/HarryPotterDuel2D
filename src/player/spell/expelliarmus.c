@@ -6,14 +6,13 @@
  * \date 09 feb 2021
  *
  */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 
+#include "../../sdl/sdl.h"
 #include "expelliarmus.h"
-#include "../player.h"
 
 /**
  * \fn extern expelliarmus_t * createExpelliarmus(int x, int y)
@@ -24,7 +23,7 @@
  *
  * @return Retourne un objet expelliarmus_t
  */
-extern expelliarmus_t * createExpelliarmus(player_t *);
+extern expelliarmus_t * createExpelliarmus(int, int, int, int, int);
 
 /**
  * \fn static void deplacement(expelliarmus_t * spell, int x, int y);
@@ -46,7 +45,7 @@ static void deplacement(expelliarmus_t *, int, int);
  *
  * @return void
  */
-static void display(expelliarmus_t *);
+static void display(expelliarmus_t *, window *);
 
 /**
  * \fn static int collision_test(expelliarmus_t * spell, int x, int y);
@@ -56,7 +55,7 @@ static void display(expelliarmus_t *);
  *
  * @return Entier 0 s'il y a collision 1 sinon
  */
-static int collision_test(expelliarmus_t *, int, int);
+static int collision_test(expelliarmus_t *, int, int, int *);
 
 /**
  * \fn static void destroy(expelliarmus_t ** spell);
@@ -69,7 +68,7 @@ static int collision_test(expelliarmus_t *, int, int);
 static void destroy(expelliarmus_t **);
 
 extern
-expelliarmus_t * createExpelliarmus(player_t * player){
+expelliarmus_t * createExpelliarmus(int player_posX, int player_posY, int id_player, int destX, int destY){
 
     expelliarmus_t * spell = malloc(sizeof(expelliarmus_t));
 
@@ -77,11 +76,14 @@ expelliarmus_t * createExpelliarmus(player_t * player){
     strcpy(spell->name, "Expelliarmus");
     spell->speed = 5;
     spell->damage = 10;
-    spell->posXf = player->pos_x;//player->pos_x;
-    spell->posYf = player->pos_y;//player->pos_y;
+    spell->manaCost = 10;
+    spell->posXf = player_posX;
+    spell->posYf = player_posY;
+    spell->destX = destX;
+    spell->destY = destY;
     spell->width = 10;
     spell->height = 10;
-    spell->sender = 0;//player->id_player;
+    spell->sender = id_player;
 
     //spell->sprite = NULL;
 
@@ -95,6 +97,8 @@ expelliarmus_t * createExpelliarmus(player_t * player){
 
 static
 void deplacement(expelliarmus_t * spell, int x_dest, int y_dest){
+
+    //printf("YO!\n");
 
     float vx = x_dest - spell->posXf;
     float vy = y_dest - spell->posYf;
@@ -111,11 +115,18 @@ void deplacement(expelliarmus_t * spell, int x_dest, int y_dest){
 }
 
 static
-void display(expelliarmus_t * spell){
+void display(expelliarmus_t * spell, window * win){
 
-    //Hugo je te laisse faire ça
+    //printf("YO displayed!\n");
 
-    //TU VEUX QUE TE DEMARRRRE
+    SDL_Rect display;
+    display.x = spell->pos_x;
+    display.y = spell->pos_y;
+    display.w = 30;
+    display.h = 30;
+
+    SDL_SetRenderDrawColor(win->pRenderer, 255, 255, 255, 255);
+    SDL_RenderFillRect(win->pRenderer, &display);
 
 }
 /*
@@ -130,11 +141,14 @@ int collision_test(expelliarmus_t * spell, player_t * player){
 }*/
 
 static
-int collision_test(expelliarmus_t * spell, int x, int y){
+int collision_test(expelliarmus_t * spell, int x, int y, int * pt_life){
+
+    //printf("YO collision tested!\n");
 
     if(((spell->pos_x + spell->width >= x) && (spell->pos_x + spell->width <= x + 10)) || ((spell->pos_x >= x) && (spell->pos_x  <= x + 10)))
         if(((spell->pos_y + spell->height >= y) && (spell->pos_y + spell->height <= y + 10)) || ((spell->pos_y >= y) && (spell->pos_y  <= y + 10))){
-            player->pt_life -= spell->damage;
+            *pt_life -= spell->damage;
+            spell->destroy(&spell);
             return 0;
         }
 

@@ -1,13 +1,16 @@
 #include <stdio.h>
-#include "../player.h"
+#include "sort.h"
 
 typedef struct petrificus_s{
 
     char * name;
     int speed;
     int damage;
+    int manaCost;
     int pos_x;
     int pos_y;
+    int destX;
+    int destY;
     float posXf;
     float posYf;
     int width;
@@ -23,4 +26,4 @@ typedef struct petrificus_s{
 
 } petrificus_t;
 
-extern petrificus_t * createPetrificus(player_t *);
+extern petrificus_t * createPetrificus(player_t *, int, int);

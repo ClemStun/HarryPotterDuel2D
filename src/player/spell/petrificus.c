@@ -68,7 +68,7 @@ static int collision_test(petrificus_t *, int, int, player_t *);
 static void destroy(petrificus_t **);
 
 extern
-petrificus_t * createPetrificus(player_t * player){
+petrificus_t * createPetrificus(player_t * player, int destX, int destY){
 
     petrificus_t * spell = malloc(sizeof(petrificus_t));
 
@@ -76,8 +76,11 @@ petrificus_t * createPetrificus(player_t * player){
     strcpy(spell->name, "Petrificus");
     spell->speed = 2;
     spell->damage = 10;
+    spell->manaCost = 20;
     spell->posXf = player->pos_x;//player->pos_x;
     spell->posYf = player->pos_y;//player->pos_y;
+    spell->destX = destX;
+    spell->destY = destY;
     spell->width = 10;
     spell->height = 10;
     spell->sender = 0;//player->id_player;

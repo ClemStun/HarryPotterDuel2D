@@ -12,7 +12,12 @@ typedef struct player_s{
     int pt_life;
     int pt_mana;
     int pt_xp;
+    int is_stun;
     SDL_Texture *sprite;
+
+    int (*unStun)(int, struct player_s *);
+    sort_t * (*castSpell)(int, int, int, int, int); 
+
 } player_t;
 
 extern player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite);

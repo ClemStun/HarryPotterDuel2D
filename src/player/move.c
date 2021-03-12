@@ -8,6 +8,7 @@
  */
 
 #include "../sdl/sdl.h"
+#include "player.h"
 
 
 /**
@@ -22,18 +23,16 @@
  * @return Ne retourne rien
  */
 extern
-void updatePosition(window * win, images_t * images, int deplX, int deplY);
+void updatePosition(window * win, player_t * monPerso, images_t * images, int deplX, int deplY);
 
 
-
-int posX = 50, posY = 50;
 double posXfloat = 50, posYfloat = 50;
 double vitesse = 0;
 double vX = 0, vY = 0, norme = 0;
 int a = 1, b = 1;
 
 extern
-void updatePosition(window * win, images_t * images, int deplX, int deplY){
+void updatePosition(window * win, player_t * monPerso, images_t * images, int deplX, int deplY){
     vX = (double)deplX - posXfloat;
     vY = (double)deplY - posYfloat;
 
@@ -42,19 +41,20 @@ void updatePosition(window * win, images_t * images, int deplX, int deplY){
     posXfloat += (vX/norme)*vitesse;
     posYfloat += (vY/norme)*vitesse;
 
-    posX = (int)posXfloat;
-    posY = (int)posYfloat;
+    monPerso->pos_x = (int)posXfloat;
+    monPerso->pos_y = (int)posYfloat;
 
-    if((posX < deplX-2 || posX > deplX+2) || (posY < deplY-2 || posY > deplY+2)){
+
+    if((monPerso->pos_x < deplX-2 || monPerso->pos_x > deplX+2) || (monPerso->pos_y < deplY-2 || monPerso->pos_y > deplY+2)){
         vitesse = 0.2;
         if(b++ > 100){
             a++;
             b = 1;
         }
-        DrawImage(win->pRenderer, images, "hp.png", (a%5)*32, 64, 32, 32, posX, posY, 100, 100);
+        DrawImage(win->pRenderer, images, "hp.png", (a%5)*32, 64, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
     }
     else{
         vitesse = 0;
-        DrawImage(win->pRenderer, images, "hp.png", 5*32, 64, 32, 32, posX, posY, 100, 100);
+        DrawImage(win->pRenderer, images, "hp.png", 5*32, 64, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
     }
 }

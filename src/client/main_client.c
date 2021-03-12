@@ -1,6 +1,8 @@
 #include "../sdl/sdl.h"
-#include "../player/move.h"
+#include "../player/spell/expelliarmus.h"
+#include "../player/spell/sort.h"
 #include "../player/player.h"
+#include "../player/move.h"
 #include "../HUD/hud_ingame.h"
 #include <math.h>
 
@@ -14,15 +16,17 @@ int main(int argc, char **argv){
     SDL_Event event;
     const Uint8 *keyboard_state_array = SDL_GetKeyboardState(NULL);
 
+    sort_t * sort = NULL;
+
     win = Initialize_sdl();
     LoadImages(win->pRenderer, &images);
-
 
     // Destiné à dégager
     player_t * monPerso;
     monPerso = createPlayer(1, "Heaven", NULL);
 
     int deplX = 100, deplY = 100;
+    int destSpellX, destSpellY;
 
     // Boucle de jeu
     while(!should_quit){
@@ -42,12 +46,24 @@ int main(int argc, char **argv){
                         deplY -= 50;
                     }
                 break;
+                case SDL_KEYDOWN:
+                    if(keyboard_state_array[SDL_SCANCODE_UP] && sort == NULL){
+                        SDL_GetMouseState(&destSpellX, &destSpellY);
+                        sort = monPerso->castSpell(monPerso->pos_x, monPerso->pos_y, monPerso->id_player, destSpellX, destSpellY);
+                    }
+                break;
             }
         }
 
-        updatePosition(win, &images, deplX, deplY);
+        updatePosition(win, monPerso, &images, deplX, deplY);
         update_hud_ingame(win, &images, monPerso);
 
+        if(sort != NULL){
+            sort->deplacement(sort, sort->destX, sort->destY);
+            sort->display(sort, win);
+            sort->collision_test(sort, sort->destX, sort->destX, &(monPerso->pt_life));
+            printf("Je suis en %d, %d\n", sort->pos_x, sort->pos_y);
+        }
 
         // Actualisation du rendu
         SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 255);

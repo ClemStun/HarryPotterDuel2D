@@ -16,6 +16,7 @@ player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite){
     p->is_stun = 0;
 
     p->unStun = playerUnstun;
+    p->castSpell = createExpelliarmus;
 }
 
 extern
@@ -31,5 +32,5 @@ int playerPosY(player_t * p){
 static
 int playerUnstun(int intervalle, player_t * p){
     p->is_stun = 0;
-    printf("Player plus Stun");
+    printf("Player plus stun");
 }
