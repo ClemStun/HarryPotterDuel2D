@@ -25,4 +25,4 @@ typedef struct expelliarmus_s{
 
 } expelliarmus_t;
 
-extern expelliarmus_t * createExpelliarmus(int, int, int, int, int);
+extern expelliarmus_t * createExpelliarmus(int, int, int);

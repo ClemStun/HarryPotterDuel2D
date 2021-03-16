@@ -23,7 +23,7 @@
  *
  * @return Retourne un objet expelliarmus_t
  */
-extern expelliarmus_t * createExpelliarmus(int, int, int, int, int);
+extern expelliarmus_t * createExpelliarmus(int, int, int);
 
 /**
  * \fn static void deplacement(expelliarmus_t * spell, int x, int y);
@@ -68,7 +68,7 @@ static int collision_test(expelliarmus_t **, int, int, int *);
 static void destroy(expelliarmus_t **);
 
 extern
-expelliarmus_t * createExpelliarmus(int player_posX, int player_posY, int id_player, int destX, int destY){
+expelliarmus_t * createExpelliarmus(int player_posX, int player_posY, int id_player){
 
     expelliarmus_t * spell = malloc(sizeof(expelliarmus_t));
 
@@ -79,8 +79,9 @@ expelliarmus_t * createExpelliarmus(int player_posX, int player_posY, int id_pla
     spell->manaCost = 10;
     spell->posXf = player_posX;
     spell->posYf = player_posY;
-    spell->destX = destX;
-    spell->destY = destY;
+    spell->destX;
+    spell->destY;
+    SDL_GetMouseState(&(spell->destX), &(spell->destY));
     spell->width = 10;
     spell->height = 10;
     spell->sender = id_player;

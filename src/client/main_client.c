@@ -26,7 +26,6 @@ int main(int argc, char **argv){
     monPerso = createPlayer(1, "Heaven", NULL);
 
     int deplX = 100, deplY = 100;
-    int destSpellX, destSpellY;
 
     // Boucle de jeu
     while(!should_quit){
@@ -48,8 +47,7 @@ int main(int argc, char **argv){
                 break;
                 case SDL_KEYDOWN:
                     if(keyboard_state_array[SDL_SCANCODE_UP] && sort == NULL){
-                        SDL_GetMouseState(&destSpellX, &destSpellY);
-                        sort = monPerso->castSpell(monPerso->pos_x, monPerso->pos_y, monPerso->id_player, destSpellX, destSpellY);
+                        sort = monPerso->castSpell(monPerso->pos_x, monPerso->pos_y, monPerso->id_player);
                     }
                 break;
             }
