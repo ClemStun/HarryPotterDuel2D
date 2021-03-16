@@ -42,3 +42,24 @@ Hugo :
 	
 Matthieu :
 	gestion de deux personnages en réseau
+
+Séance du 12/03/21:
+
+Clément:
+	Ajouter les sorts de manière à ce que le personnages puisse les lancer
+	
+Hugo:
+	Création du menu
+	
+Séance du 16/03/21:
+
+Clément:
+	Finir l'adaptation des sorts pour le personnage
+	
+Hugo:
+	Finir le menu
+	
+Matthieu:
+	Ajout du deuxieme joueurs 
+
+
