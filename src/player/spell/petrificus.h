@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "sort.h"
 
 typedef struct petrificus_s{
 
@@ -20,10 +19,10 @@ typedef struct petrificus_s{
     //SDL_Texture * sprite;
 
     void (*deplacement)(struct petrificus_s *, int, int);
-    void (*display)(struct petrificus_s *);
-    int (*collision_test)(struct petrificus_s *,int , int, player_t *);
+    void (*display)(struct petrificus_s *, window *);
+    int (*collision_test)(struct petrificus_s *,int , int, int *, int *, SDL_TimerID *, int (*)(int, int *));
     void (*destroy)(struct petrificus_s **);
 
 } petrificus_t;
 
-extern petrificus_t * createPetrificus(player_t *, int, int);
+extern petrificus_t * createPetrificus(int, int, int, int, int);

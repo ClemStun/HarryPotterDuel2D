@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include "../sdl/sdl.h"
+#include "./spell/sort.h"
 
 typedef struct player_s{
     int id_player;
@@ -13,10 +13,11 @@ typedef struct player_s{
     int pt_mana;
     int pt_xp;
     int is_stun;
+    SDL_TimerID id_timer;
     SDL_Texture *sprite;
 
-    int (*unStun)(int, struct player_s *);
-    sort_t * (*castSpell)(int, int, int, int, int); 
+    int (*unStun)(int, SDL_TimerID *);
+    sort_t * (*castSpell)(int, int, int); 
 
 } player_t;
 

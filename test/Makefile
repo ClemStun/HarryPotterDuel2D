@@ -1,5 +1,5 @@
 test_sort: ../src/player/spell/petrificus.o ./testsort.o ../src/player/player.o
-	gcc ../src/player/spell/petrificus.o testsort.o ../src/player/player.o -o ./testsort -lm -lSDL2
+	gcc ../src/player/spell/petrificus.o testsort.o ../src/player/player.o -o ./testsort -lm -lSDL2 -g
 
 test_sort.o: ./testsort.c
 	gcc ./testsort.c -c testsort.o

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+#include "../src/player/player.h"
 #include "../src/player/spell/petrificus.h"
 
 int main(){
@@ -12,23 +13,20 @@ int main(){
         
 
     player_t * player = createPlayer(1, "Clement", NULL);
-    petrificus_t * petri = createPetrificus(player);
+    petrificus_t * petri = createPetrificus(player->pos_x, player->pos_y, player->id_player, 300, 300);
 
-    int x_dest, y_dest;
-    x_dest = 300;
-    y_dest = 20;
-
-    while(petri->collision_test(petri, x_dest, y_dest, player)){
-        petri->deplacement(petri, x_dest, y_dest);
+    while(petri->collision_test(petri, petri->destX, petri->destY, &(player->pt_life), &(player->is_stun), &(player->id_timer), player->unStun)){
+        petri->deplacement(petri, petri->destX, petri->destY);
         system("clear");
         printf("x:%i y:%i\n", petri->pos_x, petri->pos_y);
         sleep(0.5);
     }
 
-    printf("Y a eu collision\n");
+    printf("Y a eu collision du coup player stun\n");
     petri->destroy(&petri);
+    printf("%p\n", petri);
 
-    SDL_Delay(3000);
+    SDL_Delay(1050);
 
     SDL_Quit();
 

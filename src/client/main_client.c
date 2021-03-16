@@ -1,6 +1,3 @@
-#include "../sdl/sdl.h"
-#include "../player/spell/expelliarmus.h"
-#include "../player/spell/sort.h"
 #include "../player/player.h"
 #include "../player/move.h"
 #include "../HUD/hud_ingame.h"

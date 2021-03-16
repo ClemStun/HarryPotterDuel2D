@@ -12,10 +12,11 @@
 #include <string.h>
 #include <math.h>
 
+#include "../player.h"
 #include "petrificus.h"
 
 /**
- * \fn extern petrificus_t * createExpelliarmus(int x, int y)
+ * \fn extern petrificus_t * createPetrificus(int x, int y)
  * \brief création d'un objet petrificus_t
  *
  * @param x Entier de la coordonée x de l'objet
@@ -23,7 +24,7 @@
  *
  * @return Retourne un objet petrificus_t
  */
-extern petrificus_t * createExpelliarmus(player_t * player);
+extern petrificus_t * createPetrificus(int, int, int, int, int);
 
 /**
  * \fn static void deplacement(petrificus_t * spell, int x, int y);
@@ -45,7 +46,7 @@ static void deplacement(petrificus_t *, int, int);
  *
  * @return void
  */
-static void display(petrificus_t *);
+static void display(petrificus_t *, window *);
 
 /**
  * \fn static int collision_test(petrificus_t * spell, int x, int y);
@@ -55,7 +56,7 @@ static void display(petrificus_t *);
  *
  * @return Entier 0 s'il y a collision 1 sinon
  */
-static int collision_test(petrificus_t *, int, int, player_t *);
+static int collision_test(petrificus_t *, int, int, int *, int *, SDL_TimerID *, int (*)(int, int *));
 
 /**
  * \fn static void destroy(petrificus_t ** spell);
@@ -68,7 +69,7 @@ static int collision_test(petrificus_t *, int, int, player_t *);
 static void destroy(petrificus_t **);
 
 extern
-petrificus_t * createPetrificus(player_t * player, int destX, int destY){
+petrificus_t * createPetrificus(int player_posX, int player_posY, int id_player, int destX, int destY){
 
     petrificus_t * spell = malloc(sizeof(petrificus_t));
 
@@ -77,13 +78,13 @@ petrificus_t * createPetrificus(player_t * player, int destX, int destY){
     spell->speed = 2;
     spell->damage = 10;
     spell->manaCost = 20;
-    spell->posXf = player->pos_x;//player->pos_x;
-    spell->posYf = player->pos_y;//player->pos_y;
+    spell->posXf = player_posX;
+    spell->posYf = player_posY;
     spell->destX = destX;
     spell->destY = destY;
     spell->width = 10;
     spell->height = 10;
-    spell->sender = 0;//player->id_player;
+    spell->sender = id_player;
 
     //spell->sprite = NULL;
 
@@ -113,35 +114,29 @@ void deplacement(petrificus_t * spell, int x_dest, int y_dest){
 }
 
 static
-void display(petrificus_t * spell){
+void display(petrificus_t * spell, window * win){
 
-    //Hugo je te laisse faire ça
+    SDL_Rect display;
+    display.x = spell->pos_x;
+    display.y = spell->pos_y;
+    display.w = 30;
+    display.h = 30;
 
-    //TU VEUX QUE TE DEMARRRRE
+    SDL_SetRenderDrawColor(win->pRenderer, 255, 255, 255, 255);
+    SDL_RenderFillRect(win->pRenderer, &display);
 
 }
-/*
-static
-int collision_test(petrificus_t * spell, player_t * player){
-
-    if(((spell->pos_x + spell->width >= player->pos_x) && (spell->pos_x + spell->width <= player->width)) || ((spell->pos_x >= player->pos_x) && (spell->pos_x  <= player->width)))
-        if(((spell->pos_y + spell->height >= player->pos_y) && (spell->pos_y + spell->height <= player->height + player->pos_y)) || ((spell->pos_y >= player->pos_y) && (spell->pos_y  <= player->pos_y + player->heihgt))){
-            player->pt_life -= spell->damamge;
-        }
-
-}*/
 
 static
-int collision_test(petrificus_t * spell, int x, int y, player_t * player){
+int collision_test(petrificus_t * spell, int x, int y, int * pt_life, int * pStun, SDL_TimerID * id_timer, int (*unStun)(int , int *)){
 
     if(((spell->pos_x + spell->width >= x) && (spell->pos_x + spell->width <= x + 10)) || ((spell->pos_x >= x) && (spell->pos_x  <= x + 10)))
         if(((spell->pos_y + spell->height >= y) && (spell->pos_y + spell->height <= y + 10)) || ((spell->pos_y >= y) && (spell->pos_y  <= y + 10))){
-            player->pt_life -= spell->damage;
-            player->is_stun = 1;
-            if(SDL_(1000, player->unStun, player) == 0){
+            *pt_life -= spell->damage;
+            id_timer = SDL_AddTimer(1000, unStun, id_timer);
+            if(id_timer == 0){
                 printf("Error : %s\n", SDL_GetError());
             }
-            printf("Player stun \n");
             return 0;
         }
 

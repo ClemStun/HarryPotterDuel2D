@@ -1,6 +1,6 @@
 #include "player.h"
 
-static int playerUnstun(int intervalle, player_t * p);
+static int playerUnstun(int, int *);
 
 extern
 player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite){
@@ -16,7 +16,7 @@ player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite){
     p->is_stun = 0;
 
     p->unStun = playerUnstun;
-    p->castSpell = createExpelliarmus;
+    p->castSpell = NULL;
 }
 
 extern
@@ -30,7 +30,8 @@ int playerPosY(player_t * p){
 }
 
 static
-int playerUnstun(int intervalle, player_t * p){
-    p->is_stun = 0;
-    printf("Player plus stun");
+int playerUnstun(int intervalle, SDL_TimerID * id_timer){
+    if(SDL_RemoveTimer(*id_timer))
+        printf("Je suis censé ne plus pop après ça \n");
+    printf("Player plus stun \n");
 }
