@@ -138,7 +138,7 @@ int collision_test(petrificus_t * spell, int x, int y, player_t * player){
         if(((spell->pos_y + spell->height >= y) && (spell->pos_y + spell->height <= y + 10)) || ((spell->pos_y >= y) && (spell->pos_y  <= y + 10))){
             player->pt_life -= spell->damage;
             player->is_stun = 1;
-            if(1000, player->unStun, player) == 0){
+            if(SDL_(1000, player->unStun, player) == 0){
                 printf("Error : %s\n", SDL_GetError());
             }
             printf("Player stun \n");

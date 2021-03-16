@@ -55,7 +55,7 @@ static void display(expelliarmus_t *, window *);
  *
  * @return Entier 0 s'il y a collision 1 sinon
  */
-static int collision_test(expelliarmus_t *, int, int, int *);
+static int collision_test(expelliarmus_t **, int, int, int *);
 
 /**
  * \fn static void destroy(expelliarmus_t ** spell);
@@ -141,14 +141,12 @@ int collision_test(expelliarmus_t * spell, player_t * player){
 }*/
 
 static
-int collision_test(expelliarmus_t * spell, int x, int y, int * pt_life){
+int collision_test(expelliarmus_t ** spell, int x, int y, int * pt_life){
 
-    //printf("YO collision tested!\n");
-
-    if(((spell->pos_x + spell->width >= x) && (spell->pos_x + spell->width <= x + 10)) || ((spell->pos_x >= x) && (spell->pos_x  <= x + 10)))
-        if(((spell->pos_y + spell->height >= y) && (spell->pos_y + spell->height <= y + 10)) || ((spell->pos_y >= y) && (spell->pos_y  <= y + 10))){
-            *pt_life -= spell->damage;
-            spell->destroy(&spell);
+    if((((*spell)->pos_x + (*spell)->width >= x) && ((*spell)->pos_x + (*spell)->width <= x + 10)) || (((*spell)->pos_x >= x) && ((*spell)->pos_x  <= x + 10)))
+        if((((*spell)->pos_y + (*spell)->height >= y) && ((*spell)->pos_y + (*spell)->height <= y + 10)) || (((*spell)->pos_y >= y) && ((*spell)->pos_y  <= y + 10))){
+            *pt_life -= (*spell)->damage;
+            (*spell)->destroy(spell);
             return 0;
         }
 

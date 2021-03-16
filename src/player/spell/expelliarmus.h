@@ -20,7 +20,7 @@ typedef struct expelliarmus_s{
 
     void (*deplacement)(struct expelliarmus_s *, int, int);
     void (*display)(struct expelliarmus_s *, window *);
-    int (*collision_test)(struct expelliarmus_s *,int , int, int *);
+    int (*collision_test)(struct expelliarmus_s **,int , int, int *);
     void (*destroy)(struct expelliarmus_s **);
 
 } expelliarmus_t;

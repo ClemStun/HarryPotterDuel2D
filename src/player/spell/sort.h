@@ -18,7 +18,7 @@ typedef struct sort_s{
 
     void (*deplacement)(struct sort_s *, int, int);
     void (*display)(struct sort_s *, window *);
-    int (*collision_test)(struct sort_s *,int , int, int *);
+    int (*collision_test)(struct sort_s **,int , int, int *);
     void (*destroy)(struct sort_s **);
 
 } sort_t;

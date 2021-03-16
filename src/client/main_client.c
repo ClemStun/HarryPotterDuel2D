@@ -61,8 +61,7 @@ int main(int argc, char **argv){
         if(sort != NULL){
             sort->deplacement(sort, sort->destX, sort->destY);
             sort->display(sort, win);
-            sort->collision_test(sort, sort->destX, sort->destX, &(monPerso->pt_life));
-            printf("Je suis en %d, %d\n", sort->pos_x, sort->pos_y);
+            sort->collision_test(&sort, sort->destX, sort->destY, &(monPerso->pt_life));
         }
 
         // Actualisation du rendu
