@@ -1,7 +1,7 @@
 sdl_options = -lSDL2 -lSDL2_image
 
 BIN = ./client/main_client
-OBJ = ./client/main_client.o ./player/move.o ./player/player.o ./sdl/sdl.o ./HUD/hud_ingame.o ./player/spell/expelliarmus.o
+OBJ = ./client/main_client.o ./player/move.o ./player/player.o ./sdl/sdl.o ./HUD/hud_ingame.o ./player/spell/expelliarmus.o ./player/spell/petrificus.o
 
 ./client/main_client : $(OBJ)
 	gcc -o $(BIN) $(OBJ) $(sdl_options) -lm -g
@@ -17,6 +17,9 @@ OBJ = ./client/main_client.o ./player/move.o ./player/player.o ./sdl/sdl.o ./HUD
 
 ./player/spell/expelliarmus.o: ./player/spell/expelliarmus.c
 	gcc -o ./player/spell/expelliarmus.o -c ./player/spell/expelliarmus.c
+
+./player/spell/expelliarmus.o: ./player/spell/petrificus.c
+	gcc -o ./player/spell/petrificus.o -c ./player/spell/petrificus.c
 
 ./sdl/sdl.o : ./sdl/sdl.c
 	gcc -o ./sdl/sdl.o -c ./sdl/sdl.c

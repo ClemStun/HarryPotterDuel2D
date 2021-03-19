@@ -15,61 +15,13 @@
 #include "../player.h"
 #include "petrificus.h"
 
-/**
- * \fn extern petrificus_t * createPetrificus(int x, int y)
- * \brief création d'un objet petrificus_t
- *
- * @param x Entier de la coordonée x de l'objet
- * @param y Entier de la coordonée y de l'objet
- *
- * @return Retourne un objet petrificus_t
- */
-extern petrificus_t * createPetrificus(int, int, int, int, int);
-
-/**
- * \fn static void deplacement(petrificus_t * spell, int x, int y);
- * \brief Déplacment d'un objet petrificus_t
- *
- * @param spell Pointeur sur l'objet petrificus_t qui a déplacer
- * @param x Entier de la coordonée x de destination de l'objet
- * @param y Entier de la coordonée y de destination de l'objet
- *
- * @return void
- */
 static void deplacement(petrificus_t *, int, int);
-
-/**
- * \fn static void display(petrificus_t * spell);
- * \brief Affichage d'un objet petrificus_t
- *
- * @param spell Pointeur sur l'objet petrificus_t a afficher
- *
- * @return void
- */
 static void display(petrificus_t *, window *);
-
-/**
- * \fn static int collision_test(petrificus_t * spell, int x, int y);
- * \brief Test de collision entre l'objet petrificus_t et un joueurs
- *
- * @param spell Pointeur sur l'objet petrificus_t a afficher
- *
- * @return Entier 0 s'il y a collision 1 sinon
- */
-static int collision_test(petrificus_t *, int, int, int *, int *, SDL_TimerID *, int (*)(int, int *));
-
-/**
- * \fn static void destroy(petrificus_t ** spell);
- * \brief Destruction d'un objet petrificus_t
- *
- * @param spell Pointeur sur un pointeur d'objet petrificus_t a afficher
- *
- * @return void
- */
+static int collision_test(petrificus_t **, int, int, player_t *);
 static void destroy(petrificus_t **);
 
 extern
-petrificus_t * createPetrificus(int player_posX, int player_posY, int id_player, int destX, int destY){
+petrificus_t * createPetrificus(player_t * player){
 
     petrificus_t * spell = malloc(sizeof(petrificus_t));
 
@@ -78,13 +30,12 @@ petrificus_t * createPetrificus(int player_posX, int player_posY, int id_player,
     spell->speed = 2;
     spell->damage = 10;
     spell->manaCost = 20;
-    spell->posXf = player_posX;
-    spell->posYf = player_posY;
-    spell->destX = destX;
-    spell->destY = destY;
+    spell->posXf = player->pos_x;
+    spell->posYf = player->pos_y;
+    SDL_GetMouseState(&(spell->destX), &(spell->destY));
     spell->width = 10;
     spell->height = 10;
-    spell->sender = id_player;
+    spell->sender = player->id_player;
 
     //spell->sprite = NULL;
 
@@ -128,15 +79,16 @@ void display(petrificus_t * spell, window * win){
 }
 
 static
-int collision_test(petrificus_t * spell, int x, int y, int * pt_life, int * pStun, SDL_TimerID * id_timer, int (*unStun)(int , int *)){
+int collision_test(petrificus_t ** spell, int x, int y, player_t * player){
 
-    if(((spell->pos_x + spell->width >= x) && (spell->pos_x + spell->width <= x + 10)) || ((spell->pos_x >= x) && (spell->pos_x  <= x + 10)))
-        if(((spell->pos_y + spell->height >= y) && (spell->pos_y + spell->height <= y + 10)) || ((spell->pos_y >= y) && (spell->pos_y  <= y + 10))){
-            *pt_life -= spell->damage;
-            id_timer = SDL_AddTimer(1000, unStun, id_timer);
-            if(id_timer == 0){
+    if((((*spell)->pos_x + (*spell)->width >= x) && ((*spell)->pos_x + (*spell)->width <= x + 10)) || (((*spell)->pos_x >= x) && ((*spell)->pos_x  <= x + 10)))
+        if((((*spell)->pos_y + (*spell)->height >= y) && ((*spell)->pos_y + (*spell)->height <= y + 10)) || (((*spell)->pos_y >= y) && ((*spell)->pos_y  <= y + 10))){
+            player->pt_life -= (*spell)->damage;
+           player->id_timer = SDL_AddTimer(1000, player->unStun, player);
+            if(player->id_timer == 0){
                 printf("Error : %s\n", SDL_GetError());
             }
+            (*spell)->destroy(spell);
             return 0;
         }
 

@@ -20,9 +20,9 @@ typedef struct expelliarmus_s{
 
     void (*deplacement)(struct expelliarmus_s *, int, int);
     void (*display)(struct expelliarmus_s *, window *);
-    int (*collision_test)(struct expelliarmus_s **,int , int, int *);
+    int (*collision_test)(struct expelliarmus_s **,int , int, player_t *);
     void (*destroy)(struct expelliarmus_s **);
 
 } expelliarmus_t;
 
-extern expelliarmus_t * createExpelliarmus(int, int, int);
+extern expelliarmus_t * createExpelliarmus(player_t *);

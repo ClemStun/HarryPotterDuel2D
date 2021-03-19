@@ -13,9 +13,9 @@ int main(){
         
 
     player_t * player = createPlayer(1, "Clement", NULL);
-    petrificus_t * petri = createPetrificus(player->pos_x, player->pos_y, player->id_player, 300, 300);
+    petrificus_t * petri = createPetrificus(player, 300, 300);
 
-    while(petri->collision_test(petri, petri->destX, petri->destY, &(player->pt_life), &(player->is_stun), &(player->id_timer), player->unStun)){
+    while(petri->collision_test(petri, petri->destX, petri->destY, player)){
         petri->deplacement(petri, petri->destX, petri->destY);
         system("clear");
         printf("x:%i y:%i\n", petri->pos_x, petri->pos_y);
@@ -26,7 +26,7 @@ int main(){
     petri->destroy(&petri);
     printf("%p\n", petri);
 
-    SDL_Delay(1050);
+    SDL_Delay(2500);
 
     SDL_Quit();
 

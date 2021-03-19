@@ -16,8 +16,8 @@ typedef struct player_s{
     SDL_TimerID id_timer;
     SDL_Texture *sprite;
 
-    int (*unStun)(int, SDL_TimerID *);
-    sort_t * (*castSpell)(int, int, int); 
+    int (*unStun)(int, struct player_s *);
+    sort_t * (*castSpell)(struct player_s *); 
 
 } player_t;
 

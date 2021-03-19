@@ -1,4 +1,6 @@
 #include "../player/player.h"
+#include "../player/spell/expelliarmus.h"
+#include "../player/spell/petrificus.h"
 #include "../player/move.h"
 #include "../HUD/hud_ingame.h"
 #include <math.h>
@@ -21,6 +23,7 @@ int main(int argc, char **argv){
     // Destiné à dégager
     player_t * monPerso;
     monPerso = createPlayer(1, "Heaven", NULL);
+    monPerso->castSpell = createPetrificus;
 
     int deplX = 100, deplY = 100;
 
@@ -44,7 +47,7 @@ int main(int argc, char **argv){
                 break;
                 case SDL_KEYDOWN:
                     if(keyboard_state_array[SDL_SCANCODE_UP] && sort == NULL){
-                        sort = monPerso->castSpell(monPerso->pos_x, monPerso->pos_y, monPerso->id_player);
+                        sort = monPerso->castSpell(monPerso);
                     }
                 break;
             }
@@ -56,7 +59,7 @@ int main(int argc, char **argv){
         if(sort != NULL){
             sort->deplacement(sort, sort->destX, sort->destY);
             sort->display(sort, win);
-            sort->collision_test(&sort, sort->destX, sort->destY, &(monPerso->pt_life));
+            sort->collision_test(&sort, sort->destX, sort->destY, monPerso);
         }
 
         // Actualisation du rendu

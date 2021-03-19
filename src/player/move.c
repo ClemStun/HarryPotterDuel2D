@@ -7,7 +7,6 @@
  *
  */
 
-#include "../sdl/sdl.h"
 #include "player.h"
 
 
@@ -38,8 +37,10 @@ void updatePosition(window * win, player_t * monPerso, images_t * images, int de
 
     norme = sqrt(vX*vX + vY*vY);
 
-    posXfloat += (vX/norme)*vitesse;
-    posYfloat += (vY/norme)*vitesse;
+    if(!(monPerso->is_stun)){
+        posXfloat += (vX/norme)*vitesse;
+        posYfloat += (vY/norme)*vitesse;
+    }
 
     monPerso->pos_x = (int)posXfloat;
     monPerso->pos_y = (int)posYfloat;
