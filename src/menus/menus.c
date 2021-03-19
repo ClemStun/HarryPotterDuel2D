@@ -21,7 +21,7 @@ void createButton(window *win, text_t * text, int posX, int posY, int rectW, int
 }
 
 extern
-int game_state(window *win, images_t * images, player_t * monPerso, sort_t * sort, const Uint8 *keyboard_state_array){
+int game_state(window *win, images_t * images, player_t * monPerso, sort_t ** sort, const Uint8 *keyboard_state_array){
     // Lecture des évènements
     while(SDL_PollEvent(&event)){
 			switch (event.type){
@@ -36,8 +36,8 @@ int game_state(window *win, images_t * images, player_t * monPerso, sort_t * sor
                     }
                 break;
                 case SDL_KEYDOWN:
-                    if(keyboard_state_array[SDL_SCANCODE_UP] && sort == NULL){
-                        sort = monPerso->castSpell(monPerso);
+                    if(keyboard_state_array[SDL_SCANCODE_UP] && *sort == NULL){
+                        *sort = monPerso->castSpell(monPerso);
                     }
                 break;
             }
@@ -47,11 +47,13 @@ int game_state(window *win, images_t * images, player_t * monPerso, sort_t * sor
     updatePosition(win, monPerso, images, monPerso->pos_x_click, monPerso->pos_y_click);
     update_hud_ingame(win, images, monPerso);
 
-    if(sort != NULL){
-        sort->deplacement(sort, sort->destX, sort->destY);
-        sort->display(sort, win);
-        sort->collision_test(&sort, sort->destX, sort->destY, monPerso);
+    if(*sort != NULL){
+        (*sort)->deplacement((*sort), (*sort)->destX, (*sort)->destY);
+        (*sort)->display((*sort), win);
+        (*sort)->collision_test(sort, (*sort)->destX, (*sort)->destY, monPerso);
     }
+
+    return 0;
 }
 
 extern
