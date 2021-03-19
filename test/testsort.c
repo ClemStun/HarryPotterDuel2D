@@ -10,7 +10,7 @@ int main(){
     if(SDL_Init(SDL_INIT_TIMER) != 0){
         printf("Error : %s", SDL_GetError());
     }
-        
+
 
     player_t * player = createPlayer(1, "Clement", NULL);
     petrificus_t * petri = createPetrificus(player, 300, 300);

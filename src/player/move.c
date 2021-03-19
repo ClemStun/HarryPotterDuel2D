@@ -7,7 +7,7 @@
  *
  */
 
-#include "player.h"
+#include "move.h"
 
 
 /**
@@ -37,14 +37,11 @@ void updatePosition(window * win, player_t * monPerso, images_t * images, int de
 
     norme = sqrt(vX*vX + vY*vY);
 
-    if(!(monPerso->is_stun)){
-        posXfloat += (vX/norme)*vitesse;
-        posYfloat += (vY/norme)*vitesse;
-    }
+    posXfloat += (vX/norme)*vitesse;
+    posYfloat += (vY/norme)*vitesse;
 
     monPerso->pos_x = (int)posXfloat;
     monPerso->pos_y = (int)posYfloat;
-
 
     if((monPerso->pos_x < deplX-2 || monPerso->pos_x > deplX+2) || (monPerso->pos_y < deplY-2 || monPerso->pos_y > deplY+2)){
         vitesse = 0.2;

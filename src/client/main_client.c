@@ -1,8 +1,6 @@
-#include "../player/player.h"
+#include "../menus/menus.h"
 #include "../player/spell/expelliarmus.h"
 #include "../player/spell/petrificus.h"
-#include "../player/move.h"
-#include "../HUD/hud_ingame.h"
 #include <math.h>
 
 #define SCREEN_WIDTH 1200
@@ -11,55 +9,40 @@
 int main(int argc, char **argv){
     window *win;
     images_t images;
+    text_t * text;
+    t_etat etat_de_jeu = GAME;
     int should_quit = 0;
-    SDL_Event event;
     const Uint8 *keyboard_state_array = SDL_GetKeyboardState(NULL);
 
     sort_t * sort = NULL;
 
     win = Initialize_sdl();
     LoadImages(win->pRenderer, &images);
+    text = init_struct_text();
+
+    // fonts
+    TTF_Font *font = TTF_OpenFont("../../assets/fonts/big_noodle_titling.ttf", 80);
 
     // Destiné à dégager
     player_t * monPerso;
     monPerso = createPlayer(1, "Heaven", NULL);
-    monPerso->castSpell = createPetrificus;
-
-    int deplX = 100, deplY = 100;
+    monPerso->castSpell = createExpelliarmus;
 
     // Boucle de jeu
     while(!should_quit){
+
         // Clear du rendu
         SDL_RenderClear(win->pRenderer);
         SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 255 );
-        // Détection d'évènements
-        while(SDL_PollEvent(&event)){
-			switch (event.type){
-				case SDL_QUIT:
-					should_quit = 1;
-				break;
-                case SDL_MOUSEBUTTONDOWN:
-                    if(SDL_BUTTON(SDL_BUTTON_LEFT)){
-                        SDL_GetMouseState(&deplX, &deplY);
-                        deplX -= 50;
-                        deplY -= 50;
-                    }
-                break;
-                case SDL_KEYDOWN:
-                    if(keyboard_state_array[SDL_SCANCODE_UP] && sort == NULL){
-                        sort = monPerso->castSpell(monPerso);
-                    }
-                break;
-            }
-        }
 
-        updatePosition(win, monPerso, &images, deplX, deplY);
-        update_hud_ingame(win, &images, monPerso);
-
-        if(sort != NULL){
-            sort->deplacement(sort, sort->destX, sort->destY);
-            sort->display(sort, win);
-            sort->collision_test(&sort, sort->destX, sort->destY, monPerso);
+        // Etat
+        switch(etat_de_jeu){
+            case HOME:
+                should_quit = home_state(win, &images, text, monPerso, font);
+            break;
+            case GAME:
+                should_quit = game_state(win, &images, monPerso, sort, keyboard_state_array);
+            break;
         }
 
         // Actualisation du rendu
@@ -67,6 +50,10 @@ int main(int argc, char **argv){
         SDL_RenderPresent(win->pRenderer);
     }
     FreeImages(&images);
+    freeText(&text);
+    freePlayer(monPerso);
+
+    TTF_CloseFont(font);
 
     // Libération mémoire du rendu
     SDL_DestroyRenderer(win->pRenderer);
@@ -79,8 +66,9 @@ int main(int argc, char **argv){
         fprintf(stderr,"Erreur de création de la fenêtre: %s\n",SDL_GetError());
         exit(0);
     }
-
     free(win);
+    TTF_Quit();
+    IMG_Quit();
     SDL_Quit();
     return 1;
 }

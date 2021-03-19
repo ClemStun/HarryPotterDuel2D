@@ -82,6 +82,11 @@ window * Initialize_sdl(){
         return 0;
     }
 
+    if(TTF_Init() == -1){
+        printf("TTF_Init: %s\n", TTF_GetError());
+        return 0;
+    }
+
     //Création de la fenêtre et du rendu
 
     win->pWindow = SDL_CreateWindow("Jeu test", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
@@ -154,7 +159,82 @@ extern
 void FreeImages(images_t * images){
 	for(int i = 0; i < images->nb_images; i++){
 		free(images->nomsImages[i]);
+        SDL_DestroyTexture(images->l_textImages[i]);
 	}
 	free(images->nomsImages);
 	free(images->l_textImages);
+}
+
+extern
+text_t * init_struct_text(){
+    text_t * text;
+    text = malloc(sizeof(text_t));
+    text->nb_text = 0;
+    text->text = malloc(sizeof(char *));
+    text->l_textText = malloc(sizeof(SDL_Texture *));
+    return text;
+}
+
+extern
+void createText(SDL_Renderer *pRenderer, text_t * text, int x, int y, int text_width, int text_height, const char *texte, TTF_Font *font, const char color){
+    int flag = 0, i;
+    SDL_Rect textRect;
+    SDL_Texture *textTexture;
+
+    textRect.x = x - (text_width/2);
+    textRect.y = y - (text_height/2);
+    textRect.w = text_width;
+    textRect.h = text_height;
+
+    if(text->nb_text > 0){
+        for(i = 0; i < text->nb_text; i++){
+            if(strcmp(text->text[i], texte) == 0) flag = i;
+        }
+    }
+
+    if(!flag){
+        SDL_Surface *textSurface;
+        SDL_Color textColor;
+
+        switch(color){
+            case 'b':
+                textColor.r = 0;
+                textColor.g = 0;
+                textColor.b = 0;
+            break;
+            case 'w':
+                textColor.r = 255;
+                textColor.g = 255;
+                textColor.b = 255;
+            break;
+        }
+
+        textSurface = TTF_RenderText_Blended(font, texte, textColor);
+        textTexture = SDL_CreateTextureFromSurface(pRenderer, textSurface);
+        SDL_FreeSurface(textSurface);
+
+        text->nb_text++;
+        text->text = realloc(text->text, sizeof(char *) * text->nb_text);
+        text->text[text->nb_text - 1] = malloc(sizeof(char) * strlen(texte) + 1);
+        strcpy(text->text[text->nb_text - 1], texte);
+        text->l_textText = realloc(text->l_textText, sizeof(SDL_Texture *) * text->nb_text);
+        text->l_textText[text->nb_text - 1] = textTexture;
+    }
+    else{
+        textTexture = text->l_textText[flag];
+    }
+
+    SDL_RenderCopy(pRenderer, textTexture, NULL, &textRect);
+}
+
+extern
+void freeText(text_t ** text){
+    for(int i = 0; i < (*text)->nb_text; i++){
+        free((*text)->text[i]);
+        SDL_DestroyTexture((*text)->l_textText[i]);
+    }
+    free((*text)->text);
+    free((*text)->l_textText);
+    free(*text);
+    *text = NULL;
 }

@@ -59,7 +59,7 @@ void deplacement(petrificus_t * spell, int x_dest, int y_dest){
 
     spell->posXf += vxx * spell->speed;
     spell->posYf += vyy * spell->speed;
-    
+
     spell->pos_x = spell->posXf;
     spell->pos_y = spell->posYf;
 }

@@ -1,5 +1,4 @@
-#include "../sdl/sdl.h"
-#include "../player/player.h"
+#include "hud_ingame.h"
 
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 600

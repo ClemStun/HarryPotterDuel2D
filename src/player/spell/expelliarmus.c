@@ -62,7 +62,7 @@ void deplacement(expelliarmus_t * spell, int x_dest, int y_dest){
 
     spell->posXf += vxx * spell->speed;
     spell->posYf += vyy * spell->speed;
-    
+
     spell->pos_x = spell->posXf;
     spell->pos_y = spell->posYf;
 }
@@ -85,12 +85,10 @@ void display(expelliarmus_t * spell, window * win){
 /*
 static
 int collision_test(expelliarmus_t * spell, player_t * player){
-
     if(((spell->pos_x + spell->width >= player->pos_x) && (spell->pos_x + spell->width <= player->width)) || ((spell->pos_x >= player->pos_x) && (spell->pos_x  <= player->width)))
         if(((spell->pos_y + spell->height >= player->pos_y) && (spell->pos_y + spell->height <= player->height + player->pos_y)) || ((spell->pos_y >= player->pos_y) && (spell->pos_y  <= player->pos_y + player->heihgt))){
             player->pt_life -= spell->damamge;
         }
-
 }*/
 
 static

@@ -10,6 +10,8 @@ player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite){
     p->id_player = id_player;
     p->pos_x = 30;
     p->pos_y = 30;
+    p->pos_x_click = 100;
+    p->pos_y_click = 100;
     p->pt_life = 100;
     p->pt_mana = 100;
     p->sprite = sprite;
@@ -17,6 +19,11 @@ player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite){
 
     p->unStun = playerUnstun;
     p->castSpell = NULL;
+}
+
+extern
+void freePlayer(player_t * p){
+    free(p);
 }
 
 extern
