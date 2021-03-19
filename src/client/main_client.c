@@ -10,7 +10,7 @@ int main(int argc, char **argv){
     window *win;
     images_t images;
     text_t * text;
-    t_etat etat_de_jeu = GAME;
+    t_etat etat_de_jeu = HOME;
     int should_quit = 0;
     const Uint8 *keyboard_state_array = SDL_GetKeyboardState(NULL);
 
