@@ -9,14 +9,15 @@ Méthode de l\textquotesingle{}objet expelliarmus\+\_\+t.
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../player.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}expelliarmus.\+h\char`\"{}}\newline
 Graphe des dépendances par inclusion de expelliarmus.\+c\+:
 % FIG 0
 \doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$ \mbox{\hyperlink{expelliarmus_8c_a92825b57763acde4b29ba3d63f39a12b}{create\+Expelliarmus}} (int, int)
-\begin{DoxyCompactList}\small\item\em création d\textquotesingle{}un objet expelliarmus\+\_\+t \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$ \mbox{\hyperlink{expelliarmus_8c_a957f26991da0c8a242c11afce62cb72d}{create\+Expelliarmus}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Création d\textquotesingle{}un sort expelliarmus. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -34,23 +35,21 @@ Comte Clément
 
 
 \doxysubsection{Documentation des fonctions}
-\mbox{\Hypertarget{expelliarmus_8c_a92825b57763acde4b29ba3d63f39a12b}\label{expelliarmus_8c_a92825b57763acde4b29ba3d63f39a12b}} 
+\mbox{\Hypertarget{expelliarmus_8c_a957f26991da0c8a242c11afce62cb72d}\label{expelliarmus_8c_a957f26991da0c8a242c11afce62cb72d}} 
 \index{expelliarmus.c@{expelliarmus.c}!createExpelliarmus@{createExpelliarmus}}
 \index{createExpelliarmus@{createExpelliarmus}!expelliarmus.c@{expelliarmus.c}}
 \doxysubsubsection{\texorpdfstring{createExpelliarmus()}{createExpelliarmus()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$ create\+Expelliarmus (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$ create\+Expelliarmus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{player }\end{DoxyParamCaption})}
 
 
 
-création d\textquotesingle{}un objet expelliarmus\+\_\+t 
+Création d\textquotesingle{}un sort expelliarmus. 
 
 
 \begin{DoxyParams}{Paramètres}
-{\em x} & Entier de la coordonée x de l\textquotesingle{}objet \\
-\hline
-{\em y} & Entier de la coordonée y de l\textquotesingle{}objet\\
+{\em player} & Pointeur sur le joueur player\+\_\+t qui lance le sort. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
-Retourne un objet expelliarmus\+\_\+t 
+Renvoie le sort créé qui est un élément de type expelliarmus\+\_\+t. 
 \end{DoxyReturn}

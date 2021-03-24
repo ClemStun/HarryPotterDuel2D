@@ -1,0 +1,23 @@
+digraph "src/sdl/sdl.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="src/sdl/sdl.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Header du fichier sdl.c."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="src/player/player.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$player_8h_source.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="src/player/move.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$move_8h_source.html",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="src/HUD/hud_ingame.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$hud__ingame_8h_source.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="src/menus/menus.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menus_8h_source.html",tooltip=" "];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="src/player/move.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$move_8c.html",tooltip="Fonctions de déplacement."];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="src/player/spell/expelliarmus.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$expelliarmus_8c.html",tooltip="Méthode de l'objet expelliarmus_t."];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="src/player/spell/petrificus.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$petrificus_8c.html",tooltip="Méthode de l'objet petrificus_t."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="src/sdl/sdl.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sdl_8c.html",tooltip="Header de move.c."];
+}

@@ -44,6 +44,8 @@ petrificus_t * createPetrificus(player_t * player){
     spell->collision_test = collision_test;
     spell->destroy = destroy;
 
+    printf("Petrificus lancé !\n");
+
     return spell;
 }
 

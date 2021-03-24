@@ -1,0 +1,221 @@
+\hypertarget{sdl_8h}{}\doxysection{Référence du fichier src/sdl/sdl.h}
+\label{sdl_8h}\index{src/sdl/sdl.h@{src/sdl/sdl.h}}
+
+
+Header du fichier \mbox{\hyperlink{sdl_8c}{sdl.\+c}}.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$dirent.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L2/\+S\+D\+L.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L2/\+S\+D\+L\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L2/\+S\+D\+L\+\_\+ttf.\+h$>$}\newline
+Graphe des dépendances par inclusion de sdl.\+h\+:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Information fenêtre S\+DL. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structimages__s}{images\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Bibliothèque de textures d\textquotesingle{}images avec leur nom et le nombre d\textquotesingle{}images stockées. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structtext__s}{text\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sdl_8h_af079e6a723aaf448286ac47db2dd03b3}\label{sdl_8h_af079e6a723aaf448286ac47db2dd03b3}} 
+typedef struct \mbox{\hyperlink{structwindow__s}{window\+\_\+s}} {\bfseries window}
+\item 
+\mbox{\Hypertarget{sdl_8h_aa04f89fd1592df081ca364d9d1411077}\label{sdl_8h_aa04f89fd1592df081ca364d9d1411077}} 
+typedef struct \mbox{\hyperlink{structimages__s}{images\+\_\+s}} {\bfseries images\+\_\+t}
+\item 
+\mbox{\Hypertarget{sdl_8h_a00af485b0d66726362db14ff8d6e285e}\label{sdl_8h_a00af485b0d66726362db14ff8d6e285e}} 
+typedef struct \mbox{\hyperlink{structtext__s}{text\+\_\+s}} {\bfseries text\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structwindow__s}{window}} $\ast$ \mbox{\hyperlink{sdl_8h_a0e9760359fc5f7eb266fe5a3b7c105fd}{Initialize\+\_\+sdl}} ()
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}initialisation de notre fenêtre S\+DL dans une structure window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sdl_8h_a6d45f86589d9728613bcb4af451c462e}{Load\+Images}} (S\+D\+L\+\_\+\+Renderer $\ast$p\+Renderer, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
+\begin{DoxyCompactList}\small\item\em Fonction qui créer la texture d\textquotesingle{}images présentes dans un fichier, et les range dans une structure images\+\_\+t. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sdl_8h_a6c07564f680f2f88a466856e832c0c54}{Draw\+Image}} (S\+D\+L\+\_\+\+Renderer $\ast$p\+Renderer, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, char $\ast$nom, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH)
+\begin{DoxyCompactList}\small\item\em Fonction qui affiche une image demandée de la taille souhaitée, à l\textquotesingle{}endroit souhaité sur le rendu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sdl_8h_a6e139edd32e39c7772f5b2f8ec1789dd}{Free\+Images}} (\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
+\begin{DoxyCompactList}\small\item\em Libération mémoire de la structure image\+\_\+t. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$ \mbox{\hyperlink{sdl_8h_a27bf9a862bf69f9d0554670bb224eb70}{init\+\_\+struct\+\_\+text}} ()
+\begin{DoxyCompactList}\small\item\em Initialisation d\textquotesingle{}une structure text\+\_\+t servant à stocké des textures de textes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sdl_8h_abd9cf965956654884844521dfa4aee92}{create\+Text}} (S\+D\+L\+\_\+\+Renderer $\ast$p\+Renderer, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, int x, int y, int text\+\_\+width, int text\+\_\+height, const char $\ast$texte, T\+T\+F\+\_\+\+Font $\ast$font, const char color)
+\begin{DoxyCompactList}\small\item\em Fonction de création de texte à l\textquotesingle{}endroit donné sur le rendu, avec sa taille, son contenu, sa police et sa couleur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sdl_8h_ac22ad11f66798b3bb4a730e78286153d}{free\+Text}} (\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$$\ast$text)
+\begin{DoxyCompactList}\small\item\em Fonction de libération mémoire d\textquotesingle{}une structure text\+\_\+t. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Header du fichier \mbox{\hyperlink{sdl_8c}{sdl.\+c}}. 
+
+\begin{DoxyAuthor}{Auteur}
+C\+O\+U\+T\+A\+NT Hugo / C\+O\+M\+TE Clément 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 feb 2021
+\end{DoxyDate}
+\begin{DoxyAuthor}{Auteur}
+C\+O\+U\+T\+A\+NT Hugo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 feb 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{sdl_8h_abd9cf965956654884844521dfa4aee92}\label{sdl_8h_abd9cf965956654884844521dfa4aee92}} 
+\index{sdl.h@{sdl.h}!createText@{createText}}
+\index{createText@{createText}!sdl.h@{sdl.h}}
+\doxysubsubsection{\texorpdfstring{createText()}{createText()}}
+{\footnotesize\ttfamily void create\+Text (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{p\+Renderer,  }\item[{\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$}]{text,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{text\+\_\+width,  }\item[{int}]{text\+\_\+height,  }\item[{const char $\ast$}]{texte,  }\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font,  }\item[{const char}]{color }\end{DoxyParamCaption})}
+
+
+
+Fonction de création de texte à l\textquotesingle{}endroit donné sur le rendu, avec sa taille, son contenu, sa police et sa couleur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\+Renderer} & Pointeur sur le rendu où va se trouver le texte. \\
+\hline
+{\em text} & Pointeur sur une structure text\+\_\+t servant à rangé les textures de textes. \\
+\hline
+{\em x} & \mbox{\hyperlink{structPosition}{Position}} en X du centre du texte sur le rendu. \\
+\hline
+{\em y} & \mbox{\hyperlink{structPosition}{Position}} en Y du centre du texte sur le rendu. \\
+\hline
+{\em text\+\_\+width} & Largeur du texte sur le rendu. \\
+\hline
+{\em text\+\_\+height} & Hauteur du texte sur le rendu. \\
+\hline
+{\em texte} & Contenu du texte sur le rendu. \\
+\hline
+{\em font} & Pointeur sur une structure T\+T\+F\+\_\+\+Font étant la police du texte. \\
+\hline
+{\em color} & Caractère représentant la couleur du texte (exemple \+: \textquotesingle{}r\textquotesingle{} pour rouge). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sdl_8h_a6c07564f680f2f88a466856e832c0c54}\label{sdl_8h_a6c07564f680f2f88a466856e832c0c54}} 
+\index{sdl.h@{sdl.h}!DrawImage@{DrawImage}}
+\index{DrawImage@{DrawImage}!sdl.h@{sdl.h}}
+\doxysubsubsection{\texorpdfstring{DrawImage()}{DrawImage()}}
+{\footnotesize\ttfamily void Draw\+Image (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{p\+Renderer,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{char $\ast$}]{nom,  }\item[{int}]{srcX,  }\item[{int}]{srcY,  }\item[{int}]{srcW,  }\item[{int}]{srcH,  }\item[{int}]{destX,  }\item[{int}]{destY,  }\item[{int}]{destW,  }\item[{int}]{destH }\end{DoxyParamCaption})}
+
+
+
+Fonction qui affiche une image demandée de la taille souhaitée, à l\textquotesingle{}endroit souhaité sur le rendu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\+Renderer} & Pointeur sur le rendu où vont être affichées les images. \\
+\hline
+{\em images} & Pointeur sur une structure image\+\_\+t où sont rangées les textures des images. \\
+\hline
+{\em nom} & Chaine de caractère étant le nom de l\textquotesingle{}image. \\
+\hline
+{\em srcX} & \mbox{\hyperlink{structPosition}{Position}} en X du rectangle source de l\textquotesingle{}image. \\
+\hline
+{\em srcY} & \mbox{\hyperlink{structPosition}{Position}} en Y du rectangle source de l\textquotesingle{}image. \\
+\hline
+{\em srcW} & Largeur du rectangle source de l\textquotesingle{}image. \\
+\hline
+{\em srcH} & Hauteur du rectangle source de l\textquotesingle{}image. \\
+\hline
+{\em destX} & \mbox{\hyperlink{structPosition}{Position}} en X du rectangle cible sur le rendu. \\
+\hline
+{\em destY} & \mbox{\hyperlink{structPosition}{Position}} en Y du rectangle cible sur le rendu. \\
+\hline
+{\em destW} & Largeur du rectangle cible sur le rendu. \\
+\hline
+{\em destH} & Hauteur du rectangle cible sur le rendu. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sdl_8h_a6e139edd32e39c7772f5b2f8ec1789dd}\label{sdl_8h_a6e139edd32e39c7772f5b2f8ec1789dd}} 
+\index{sdl.h@{sdl.h}!FreeImages@{FreeImages}}
+\index{FreeImages@{FreeImages}!sdl.h@{sdl.h}}
+\doxysubsubsection{\texorpdfstring{FreeImages()}{FreeImages()}}
+{\footnotesize\ttfamily void Free\+Images (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images }\end{DoxyParamCaption})}
+
+
+
+Libération mémoire de la structure image\+\_\+t. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em images} & Pointeur sur une structure images\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sdl_8h_ac22ad11f66798b3bb4a730e78286153d}\label{sdl_8h_ac22ad11f66798b3bb4a730e78286153d}} 
+\index{sdl.h@{sdl.h}!freeText@{freeText}}
+\index{freeText@{freeText}!sdl.h@{sdl.h}}
+\doxysubsubsection{\texorpdfstring{freeText()}{freeText()}}
+{\footnotesize\ttfamily void free\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$$\ast$}]{text }\end{DoxyParamCaption})}
+
+
+
+Fonction de libération mémoire d\textquotesingle{}une structure text\+\_\+t. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em text} & Double pointeur sur une structure text\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sdl_8h_a27bf9a862bf69f9d0554670bb224eb70}\label{sdl_8h_a27bf9a862bf69f9d0554670bb224eb70}} 
+\index{sdl.h@{sdl.h}!init\_struct\_text@{init\_struct\_text}}
+\index{init\_struct\_text@{init\_struct\_text}!sdl.h@{sdl.h}}
+\doxysubsubsection{\texorpdfstring{init\_struct\_text()}{init\_struct\_text()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtext__s}{text\+\_\+t}}$\ast$ init\+\_\+struct\+\_\+text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialisation d\textquotesingle{}une structure text\+\_\+t servant à stocké des textures de textes. 
+
+\begin{DoxyReturn}{Renvoie}
+text\+\_\+t$\ast$ Pointeur sur une structure text\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sdl_8h_a0e9760359fc5f7eb266fe5a3b7c105fd}\label{sdl_8h_a0e9760359fc5f7eb266fe5a3b7c105fd}} 
+\index{sdl.h@{sdl.h}!Initialize\_sdl@{Initialize\_sdl}}
+\index{Initialize\_sdl@{Initialize\_sdl}!sdl.h@{sdl.h}}
+\doxysubsubsection{\texorpdfstring{Initialize\_sdl()}{Initialize\_sdl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structwindow__s}{window}}$\ast$ Initialize\+\_\+sdl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction d\textquotesingle{}initialisation de notre fenêtre S\+DL dans une structure window. 
+
+\begin{DoxyReturn}{Renvoie}
+window$\ast$ Pointeur sur une structure comportant des infos sur la fenêtre. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{sdl_8h_a6d45f86589d9728613bcb4af451c462e}\label{sdl_8h_a6d45f86589d9728613bcb4af451c462e}} 
+\index{sdl.h@{sdl.h}!LoadImages@{LoadImages}}
+\index{LoadImages@{LoadImages}!sdl.h@{sdl.h}}
+\doxysubsubsection{\texorpdfstring{LoadImages()}{LoadImages()}}
+{\footnotesize\ttfamily void Load\+Images (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{p\+Renderer,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images }\end{DoxyParamCaption})}
+
+
+
+Fonction qui créer la texture d\textquotesingle{}images présentes dans un fichier, et les range dans une structure images\+\_\+t. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\+Renderer} & Pointeur sur le rendu où vont se trouver les images. \\
+\hline
+{\em images} & Pointeur sur une structure images\+\_\+t où vont être rangées les textures des images. \\
+\hline
+\end{DoxyParams}

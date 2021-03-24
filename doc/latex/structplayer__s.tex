@@ -1,5 +1,18 @@
 \hypertarget{structplayer__s}{}\doxysection{Référence de la structure player\+\_\+s}
 \label{structplayer__s}\index{player\_s@{player\_s}}
+
+
+Informations d\textquotesingle{}un personnage.  
+
+
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+
+
+Graphe de collaboration de player\+\_\+s\+:
+% FIG 0
 \doxysubsection*{Attributs publics}
 \begin{DoxyCompactItemize}
 \item 
@@ -15,6 +28,12 @@ int {\bfseries pos\+\_\+x}
 \mbox{\Hypertarget{structplayer__s_a44e31d278d236854d8fc3866ee72ca54}\label{structplayer__s_a44e31d278d236854d8fc3866ee72ca54}} 
 int {\bfseries pos\+\_\+y}
 \item 
+\mbox{\Hypertarget{structplayer__s_aa44de8b4d78fc5a53435b22a816dfb58}\label{structplayer__s_aa44de8b4d78fc5a53435b22a816dfb58}} 
+int {\bfseries pos\+\_\+x\+\_\+click}
+\item 
+\mbox{\Hypertarget{structplayer__s_a58a234f5cc671a253548c54917953555}\label{structplayer__s_a58a234f5cc671a253548c54917953555}} 
+int {\bfseries pos\+\_\+y\+\_\+click}
+\item 
 \mbox{\Hypertarget{structplayer__s_a106ae7a1e10b1362f07f0f25e0c1ac19}\label{structplayer__s_a106ae7a1e10b1362f07f0f25e0c1ac19}} 
 int {\bfseries set\+\_\+sort} \mbox{[}5\mbox{]}
 \item 
@@ -27,11 +46,41 @@ int {\bfseries pt\+\_\+mana}
 \mbox{\Hypertarget{structplayer__s_a9bf49ad8a08e8c2eb920a83cd089a114}\label{structplayer__s_a9bf49ad8a08e8c2eb920a83cd089a114}} 
 int {\bfseries pt\+\_\+xp}
 \item 
+\mbox{\Hypertarget{structplayer__s_a91181c796547299fd614fa69956e1299}\label{structplayer__s_a91181c796547299fd614fa69956e1299}} 
+int {\bfseries is\+\_\+stun}
+\item 
+\mbox{\Hypertarget{structplayer__s_acf0b4fd596c898ad8a410d7b2b132222}\label{structplayer__s_acf0b4fd596c898ad8a410d7b2b132222}} 
+S\+D\+L\+\_\+\+Timer\+ID {\bfseries id\+\_\+timer}
+\item 
 \mbox{\Hypertarget{structplayer__s_a71bf8b71477c1e4ac4a8ea002a00929f}\label{structplayer__s_a71bf8b71477c1e4ac4a8ea002a00929f}} 
 S\+D\+L\+\_\+\+Texture $\ast$ {\bfseries sprite}
+\item 
+\mbox{\Hypertarget{structplayer__s_a0d335d596d4c7f8b5162006119f6b2f4}\label{structplayer__s_a0d335d596d4c7f8b5162006119f6b2f4}} 
+int($\ast$ {\bfseries un\+Stun} )(int, struct \mbox{\hyperlink{structplayer__s}{player\+\_\+s}} $\ast$)
+\item 
+\mbox{\Hypertarget{structplayer__s_aac76ceffcef2bb43bec7e584e7b1b881}\label{structplayer__s_aac76ceffcef2bb43bec7e584e7b1b881}} 
+\mbox{\hyperlink{structsort__s}{sort\+\_\+t}} $\ast$($\ast$ {\bfseries cast\+Spell} )(struct \mbox{\hyperlink{structplayer__s}{player\+\_\+s}} $\ast$)
+\item 
+\mbox{\Hypertarget{structplayer__s_a1c8e76b80541ed69ec3e89a6ecf796e5}\label{structplayer__s_a1c8e76b80541ed69ec3e89a6ecf796e5}} 
+int {\bfseries id}
+\item 
+\mbox{\Hypertarget{structplayer__s_a3e8c318ef0424ade8e8ffe751bcf7a5a}\label{structplayer__s_a3e8c318ef0424ade8e8ffe751bcf7a5a}} 
+int {\bfseries x}
+\item 
+\mbox{\Hypertarget{structplayer__s_a56ab94da07631bf517dd60a334d5aaae}\label{structplayer__s_a56ab94da07631bf517dd60a334d5aaae}} 
+int {\bfseries y}
+\item 
+\mbox{\Hypertarget{structplayer__s_a093c531e288f9082410b8d3291b51301}\label{structplayer__s_a093c531e288f9082410b8d3291b51301}} 
+char {\bfseries pseudo} \mbox{[}16\mbox{]}
 \end{DoxyCompactItemize}
 
 
-La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\doxysubsection{Description détaillée}
+Informations d\textquotesingle{}un personnage. 
+
+Toutes les statistiques liées au personnage nécessaire au fonctionnement du jeu et de l\textquotesingle{}affichage des informations. 
+
+La documentation de cette structure a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
 \item 
-src/player/player.\+h\end{DoxyCompactItemize}
+src/player/player.\+h\item 
+src/server/utils.\+h\end{DoxyCompactItemize}

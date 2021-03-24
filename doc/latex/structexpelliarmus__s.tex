@@ -1,10 +1,19 @@
 \hypertarget{structexpelliarmus__s}{}\doxysection{Référence de la structure expelliarmus\+\_\+s}
 \label{structexpelliarmus__s}\index{expelliarmus\_s@{expelliarmus\_s}}
+
+
+Structure du sort expelliarmus\+\_\+t contanenant toutes les informations.  
+
+
+
+
+{\ttfamily \#include $<$expelliarmus.\+h$>$}
+
 \doxysubsection*{Attributs publics}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structexpelliarmus__s_a8e2ce4c4099e6486aa6a077a54382bb8}\label{structexpelliarmus__s_a8e2ce4c4099e6486aa6a077a54382bb8}} 
-char {\bfseries name} \mbox{[}20\mbox{]}
+\mbox{\Hypertarget{structexpelliarmus__s_a990e6410637af70a38abe6e17006ee64}\label{structexpelliarmus__s_a990e6410637af70a38abe6e17006ee64}} 
+char $\ast$ {\bfseries name}
 \item 
 \mbox{\Hypertarget{structexpelliarmus__s_a5e826eec9a7d2a1d1e359bd47717b2cd}\label{structexpelliarmus__s_a5e826eec9a7d2a1d1e359bd47717b2cd}} 
 int {\bfseries speed}
@@ -12,11 +21,26 @@ int {\bfseries speed}
 \mbox{\Hypertarget{structexpelliarmus__s_ab33bb4dbd5f5459963ad990947a18074}\label{structexpelliarmus__s_ab33bb4dbd5f5459963ad990947a18074}} 
 int {\bfseries damage}
 \item 
+\mbox{\Hypertarget{structexpelliarmus__s_a7bf51cceca43e548a291bc04c414a98f}\label{structexpelliarmus__s_a7bf51cceca43e548a291bc04c414a98f}} 
+int {\bfseries mana\+Cost}
+\item 
 \mbox{\Hypertarget{structexpelliarmus__s_a2188ce40caf0b56844daf2a5544fa532}\label{structexpelliarmus__s_a2188ce40caf0b56844daf2a5544fa532}} 
 int {\bfseries pos\+\_\+x}
 \item 
 \mbox{\Hypertarget{structexpelliarmus__s_ad67d300f146f1667cdfbf10f59fb1fd6}\label{structexpelliarmus__s_ad67d300f146f1667cdfbf10f59fb1fd6}} 
 int {\bfseries pos\+\_\+y}
+\item 
+\mbox{\Hypertarget{structexpelliarmus__s_a6057269a23d593733514d7d9f1934364}\label{structexpelliarmus__s_a6057269a23d593733514d7d9f1934364}} 
+int {\bfseries destX}
+\item 
+\mbox{\Hypertarget{structexpelliarmus__s_a62eb768e404a7aa51b1de86a7b7ece17}\label{structexpelliarmus__s_a62eb768e404a7aa51b1de86a7b7ece17}} 
+int {\bfseries destY}
+\item 
+\mbox{\Hypertarget{structexpelliarmus__s_a85d911e31214ff1807fd54998392ba44}\label{structexpelliarmus__s_a85d911e31214ff1807fd54998392ba44}} 
+float {\bfseries pos\+Xf}
+\item 
+\mbox{\Hypertarget{structexpelliarmus__s_abdc494b85561838c488f1090d6749f97}\label{structexpelliarmus__s_abdc494b85561838c488f1090d6749f97}} 
+float {\bfseries pos\+Yf}
 \item 
 \mbox{\Hypertarget{structexpelliarmus__s_a554015abd0fccc858fcd013c6939fde8}\label{structexpelliarmus__s_a554015abd0fccc858fcd013c6939fde8}} 
 int {\bfseries width}
@@ -30,17 +54,20 @@ int {\bfseries sender}
 \mbox{\Hypertarget{structexpelliarmus__s_ac5e84d489d1a1523720f45354fe5987c}\label{structexpelliarmus__s_ac5e84d489d1a1523720f45354fe5987c}} 
 void($\ast$ {\bfseries deplacement} )(struct \mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+s}} $\ast$, int, int)
 \item 
-\mbox{\Hypertarget{structexpelliarmus__s_a5641b9e1fe72da91e37a3ac31de4b3e1}\label{structexpelliarmus__s_a5641b9e1fe72da91e37a3ac31de4b3e1}} 
-void($\ast$ {\bfseries display} )(struct \mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+s}} $\ast$)
+\mbox{\Hypertarget{structexpelliarmus__s_aeb2874b927c6a5e25ee5956f662f8fc3}\label{structexpelliarmus__s_aeb2874b927c6a5e25ee5956f662f8fc3}} 
+void($\ast$ {\bfseries display} )(struct \mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+s}} $\ast$, \mbox{\hyperlink{structwindow__s}{window}} $\ast$)
 \item 
-\mbox{\Hypertarget{structexpelliarmus__s_ae8806cf06e2e5e21c6a755a6e99eec07}\label{structexpelliarmus__s_ae8806cf06e2e5e21c6a755a6e99eec07}} 
-int($\ast$ {\bfseries collision\+\_\+test} )(struct \mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+s}} $\ast$, int, int)
+\mbox{\Hypertarget{structexpelliarmus__s_ae0567c37dc15aebff4cc97db52c4a75c}\label{structexpelliarmus__s_ae0567c37dc15aebff4cc97db52c4a75c}} 
+int($\ast$ {\bfseries collision\+\_\+test} )(struct \mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+s}} $\ast$$\ast$, int, int, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$)
 \item 
 \mbox{\Hypertarget{structexpelliarmus__s_ab27a63f9a09820d6617b710f37991ab7}\label{structexpelliarmus__s_ab27a63f9a09820d6617b710f37991ab7}} 
 void($\ast$ {\bfseries destroy} )(struct \mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+s}} $\ast$$\ast$)
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Description détaillée}
+Structure du sort expelliarmus\+\_\+t contanenant toutes les informations. 
+
 La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
 \item 
-src/player/spell/expelliarmus.\+h\end{DoxyCompactItemize}
+src/player/spell/\mbox{\hyperlink{expelliarmus_8h}{expelliarmus.\+h}}\end{DoxyCompactItemize}

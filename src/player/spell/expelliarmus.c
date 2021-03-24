@@ -19,6 +19,13 @@ static void display(expelliarmus_t *, window *);
 static int collision_test(expelliarmus_t **, int, int, player_t *);
 static void destroy(expelliarmus_t **);
 
+/**
+ * \fn extern expelliarmus_t * createExpelliarmus(player_t * player)
+ * \brief Création d'un sort expelliarmus.
+ *
+ * \param player Pointeur sur le joueur player_t qui lance le sort.
+ * \return Renvoie le sort créé qui est un élément de type expelliarmus_t.
+ */
 extern
 expelliarmus_t * createExpelliarmus(player_t * player){
 
@@ -45,9 +52,20 @@ expelliarmus_t * createExpelliarmus(player_t * player){
     spell->collision_test = collision_test;
     spell->destroy = destroy;
 
+    printf("Expelliarmus lancé !\n");
+
     return spell;
 }
 
+/**
+ * \fn static void deplacement(expelliarmus_t * spell, int x_dest, int y_dest)
+ * \brief Mis a jour de la position d'un expelliarmus_t
+ *
+ * \param spell Pointeur sur l'élément expelliarmus_t en question
+ * \param x_dest Position X de la destination du sort
+ * \param y_dest Position Y de la destination du sort
+ * \return Ne renvoie rien.
+ */
 static
 void deplacement(expelliarmus_t * spell, int x_dest, int y_dest){
 
@@ -67,6 +85,14 @@ void deplacement(expelliarmus_t * spell, int x_dest, int y_dest){
     spell->pos_y = spell->posYf;
 }
 
+/**
+ * \fn static void display(expelliarmus_t * spell, window * win)
+ * \brief Affichage d'un expelliarmus_t
+ *
+ * \param spell Pointeur sur l'élément expelliarmus_t en question
+ * \param win Fenetre dans laquelle le sort sera afficher
+ * \return Ne renvoie rien.
+ */
 static
 void display(expelliarmus_t * spell, window * win){
 
@@ -82,15 +108,17 @@ void display(expelliarmus_t * spell, window * win){
     SDL_RenderFillRect(win->pRenderer, &display);
 
 }
-/*
-static
-int collision_test(expelliarmus_t * spell, player_t * player){
-    if(((spell->pos_x + spell->width >= player->pos_x) && (spell->pos_x + spell->width <= player->width)) || ((spell->pos_x >= player->pos_x) && (spell->pos_x  <= player->width)))
-        if(((spell->pos_y + spell->height >= player->pos_y) && (spell->pos_y + spell->height <= player->height + player->pos_y)) || ((spell->pos_y >= player->pos_y) && (spell->pos_y  <= player->pos_y + player->heihgt))){
-            player->pt_life -= spell->damamge;
-        }
-}*/
 
+/**
+ * \fn static int collision_test(expelliarmus_t ** spell, int x, int y, player_t * player)
+ * \brief Test des collisions entre un sort expelliarmus_t et un player_t player
+ *
+ * \param spell Pointeur sur pointeur d'un expelliarmus_t
+ * \param x Position X max du sort
+ * \param y Position Y max du sort
+ * \param player Pointeur sur un player_t  
+ * \return Renvoie 0 s'il y a eu collision, 1 sinon. 
+ */
 static
 int collision_test(expelliarmus_t ** spell, int x, int y, player_t * player){
     if((((*spell)->pos_x + (*spell)->width >= x) && ((*spell)->pos_x + (*spell)->width <= x + 10)) || (((*spell)->pos_x >= x) && ((*spell)->pos_x  <= x + 10)))
@@ -104,10 +132,16 @@ int collision_test(expelliarmus_t ** spell, int x, int y, player_t * player){
     return 1;
 }
 
+/**
+ * \fn static void destroy(expelliarmus_t ** spell)
+ * \brief Desttruction d'un expelliarmus_t
+ *
+ * \param spell Pointeur sur pointeur d'un expelliarmus_t destiné a être détruit
+ * \return Ne renvoie rien.
+ */
 static
 void destroy(expelliarmus_t ** spell){
     free((*spell)->name);
     free(*spell);
     *spell = NULL;
-    printf("Yo !");
 }

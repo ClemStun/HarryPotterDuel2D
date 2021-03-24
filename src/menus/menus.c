@@ -1,4 +1,6 @@
 #include "menus.h"
+#include "../player/spell/expelliarmus.h"
+#include "../player/spell/petrificus.h"
 
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 600
@@ -28,7 +30,7 @@ int zone_detect(int x, int y, int w, int h, int mouseX, int mouseY){
 }
 
 extern
-int game_state(window *win, images_t * images, player_t * monPerso, sort_t ** sort, const Uint8 *keyboard_state_array){
+int game_state(window *win, images_t * images, player_t * monPerso, player_t * mannequin, sort_t ** sort, const Uint8 *keyboard_state_array){
     // Lecture des évènements
     while(SDL_PollEvent(&event)){
 			switch (event.type){
@@ -43,21 +45,25 @@ int game_state(window *win, images_t * images, player_t * monPerso, sort_t ** so
                     }
                 break;
                 case SDL_KEYDOWN:
-                    if(keyboard_state_array[SDL_SCANCODE_UP] && *sort == NULL){
+                    if(keyboard_state_array[SDL_SCANCODE_UP] && *sort == NULL)
                         *sort = monPerso->castSpell(monPerso);
-                    }
+                    else if(keyboard_state_array[SDL_SCANCODE_1])
+                        monPerso->castSpell = createExpelliarmus;
+                    else if(keyboard_state_array[SDL_SCANCODE_2])
+                        monPerso->castSpell = createPetrificus;
                 break;
             }
         }
 
     //Actualisation du jeu
     updatePosition(win, monPerso, images, monPerso->pos_x_click, monPerso->pos_y_click, 0.2);
+    //updatePosition(win, mannequin, images, 50, 50, 0.2);
     update_hud_ingame(win, images, monPerso);
 
     if(*sort != NULL){
         (*sort)->deplacement((*sort), (*sort)->destX, (*sort)->destY);
         (*sort)->display((*sort), win);
-        (*sort)->collision_test(sort, (*sort)->destX, (*sort)->destY, monPerso);
+        (*sort)->collision_test(sort, (*sort)->destX, (*sort)->destY, mannequin);
     }
 
     return 2;

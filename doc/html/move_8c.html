@@ -66,8 +66,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Fonctions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
 <div class="title">Référence du fichier move.c</div>  </div>
 </div><!--header-->
@@ -75,7 +74,7 @@ $(function() {
 
 <p>Fonctions de déplacement.  
 <a href="#details">Plus de détails...</a></p>
-<div class="textblock"><code>#include &quot;../sdl/sdl.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;move.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de move.c:</div>
 <div class="dyncontent">
@@ -84,36 +83,9 @@ Graphe des dépendances par inclusion de move.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a11125dd26e6ed9f00a4845c431cde02b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="move_8c.html#a11125dd26e6ed9f00a4845c431cde02b">updatePosition</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structimages__s.html">images_t</a> *images, int deplX, int deplY)</td></tr>
-<tr class="memdesc:a11125dd26e6ed9f00a4845c431cde02b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mise à jour de position de image en fonction du clique.  <a href="move_8c.html#a11125dd26e6ed9f00a4845c431cde02b">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a11125dd26e6ed9f00a4845c431cde02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ab34f89ef94db9dd6d3a04425dd6d9c9d"><td class="memItemLeft" align="right" valign="top"><a id="ab34f89ef94db9dd6d3a04425dd6d9c9d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>posX</b> = 50</td></tr>
-<tr class="separator:ab34f89ef94db9dd6d3a04425dd6d9c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ab2de052c17234c8a1db3fd3b868a9"><td class="memItemLeft" align="right" valign="top"><a id="a65ab2de052c17234c8a1db3fd3b868a9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>posY</b> = 50</td></tr>
-<tr class="separator:a65ab2de052c17234c8a1db3fd3b868a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc1fefe213cf482f8cb0e41248312fe7"><td class="memItemLeft" align="right" valign="top"><a id="abc1fefe213cf482f8cb0e41248312fe7"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>posXfloat</b> = 0</td></tr>
-<tr class="separator:abc1fefe213cf482f8cb0e41248312fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73ec33292ff33364973dc9193db4166d"><td class="memItemLeft" align="right" valign="top"><a id="a73ec33292ff33364973dc9193db4166d"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>posYfloat</b> = 0</td></tr>
-<tr class="separator:a73ec33292ff33364973dc9193db4166d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a566dc782068d4eb5b5ef37b305b53864"><td class="memItemLeft" align="right" valign="top"><a id="a566dc782068d4eb5b5ef37b305b53864"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>vitesse</b> = 0</td></tr>
-<tr class="separator:a566dc782068d4eb5b5ef37b305b53864"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a396fd407509c10937271a75a97e0847e"><td class="memItemLeft" align="right" valign="top"><a id="a396fd407509c10937271a75a97e0847e"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>vX</b> = 0</td></tr>
-<tr class="separator:a396fd407509c10937271a75a97e0847e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac81b829436ca7febfa70ff9d9cd31114"><td class="memItemLeft" align="right" valign="top"><a id="ac81b829436ca7febfa70ff9d9cd31114"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>vY</b> = 0</td></tr>
-<tr class="separator:ac81b829436ca7febfa70ff9d9cd31114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb71fdf7eafc0a2a4d4d5cedd458476f"><td class="memItemLeft" align="right" valign="top"><a id="abb71fdf7eafc0a2a4d4d5cedd458476f"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>norme</b> = 0</td></tr>
-<tr class="separator:abb71fdf7eafc0a2a4d4d5cedd458476f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b4d1874b21614efc956dd082b679aad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="move_8c.html#a7b4d1874b21614efc956dd082b679aad">updatePosition</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structplayer__s.html">player_t</a> *monPerso, <a class="el" href="structimages__s.html">images_t</a> *images, int deplX, int deplY, double vitesse)</td></tr>
+<tr class="memdesc:a7b4d1874b21614efc956dd082b679aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mise à jour de position de l'image pour atteindre le clique effectué par l'utilisateur en respectant la vitesse.  <a href="move_8c.html#a7b4d1874b21614efc956dd082b679aad">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7b4d1874b21614efc956dd082b679aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Fonctions de déplacement. </p>
@@ -121,8 +93,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>norme</b> = 0</td><
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>14 feb 2021 </dd></dl>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
-<a id="a11125dd26e6ed9f00a4845c431cde02b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11125dd26e6ed9f00a4845c431cde02b">&#9670;&nbsp;</a></span>updatePosition()</h2>
+<a id="a7b4d1874b21614efc956dd082b679aad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b4d1874b21614efc956dd082b679aad">&#9670;&nbsp;</a></span>updatePosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -132,6 +104,12 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>norme</b> = 0</td><
           <td>(</td>
           <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
           <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td>
+          <td class="paramname"><em>monPerso</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -149,7 +127,13 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>norme</b> = 0</td><
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>deplY</em>&#160;</td>
+          <td class="paramname"><em>deplY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vitesse</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -159,17 +143,18 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>norme</b> = 0</td><
       </table>
 </div><div class="memdoc">
 
-<p>Mise à jour de position de image en fonction du clique. </p>
+<p>Mise à jour de position de l'image pour atteindre le clique effectué par l'utilisateur en respectant la vitesse. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">win</td><td>Structure de la fenêtre de jeu </td></tr>
-    <tr><td class="paramname">images</td><td>Structure de la liste des images </td></tr>
-    <tr><td class="paramname">deplX</td><td>Coordonée en X du clique </td></tr>
-    <tr><td class="paramname">deplY</td><td>Coordonée en Y du clique</td></tr>
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">monPerso</td><td>Pointeur sur une structure player_t représentant les infos d'un personnage. </td></tr>
+    <tr><td class="paramname">images</td><td>Pointeur sur une structure images_t, bibliothèque de textures des images. </td></tr>
+    <tr><td class="paramname">deplX</td><td>Coordonée en X du clic. </td></tr>
+    <tr><td class="paramname">deplY</td><td>Coordonée en Y du clic. </td></tr>
+    <tr><td class="paramname">vitesse</td><td>vitesse de déplacement du personnage. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>Ne retourne rien </dd></dl>
 
 </div>
 </div>

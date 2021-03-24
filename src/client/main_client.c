@@ -28,6 +28,10 @@ int main(int argc, char **argv){
     monPerso = createPlayer(1, "Heaven", NULL);
     monPerso->castSpell = createExpelliarmus;
 
+    //Mannequin
+    player_t * mannequin;
+    mannequin = createPlayer(2, "Mannequin", NULL);
+
     // Boucle de jeu
     while(should_quit){
         
@@ -41,7 +45,7 @@ int main(int argc, char **argv){
                 should_quit = home_state(win, &images, text, monPerso, font);
             break;
             case GAME:
-                should_quit = game_state(win, &images, monPerso, &sort, keyboard_state_array);
+                should_quit = game_state(win, &images, monPerso, mannequin, &sort, keyboard_state_array);
             break;
         }
         

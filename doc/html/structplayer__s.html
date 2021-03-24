@@ -68,6 +68,17 @@ $(function() {
 <div class="title">Référence de la structure player_s</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Informations d'un personnage.  
+ <a href="structplayer__s.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="player_8h_source.html">player.h</a>&gt;</code></p>
+<div class="dynheader">
+Graphe de collaboration de player_s:</div>
+<div class="dyncontent">
+<div class="center"><img src="structplayer__s__coll__graph.png" border="0" usemap="#player__s_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 0 -->
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
@@ -83,6 +94,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>pos_x</b></td></tr>
 <tr class="memitem:a44e31d278d236854d8fc3866ee72ca54"><td class="memItemLeft" align="right" valign="top"><a id="a44e31d278d236854d8fc3866ee72ca54"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>pos_y</b></td></tr>
 <tr class="separator:a44e31d278d236854d8fc3866ee72ca54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa44de8b4d78fc5a53435b22a816dfb58"><td class="memItemLeft" align="right" valign="top"><a id="aa44de8b4d78fc5a53435b22a816dfb58"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>pos_x_click</b></td></tr>
+<tr class="separator:aa44de8b4d78fc5a53435b22a816dfb58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a234f5cc671a253548c54917953555"><td class="memItemLeft" align="right" valign="top"><a id="a58a234f5cc671a253548c54917953555"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>pos_y_click</b></td></tr>
+<tr class="separator:a58a234f5cc671a253548c54917953555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a106ae7a1e10b1362f07f0f25e0c1ac19"><td class="memItemLeft" align="right" valign="top"><a id="a106ae7a1e10b1362f07f0f25e0c1ac19"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>set_sort</b> [5]</td></tr>
 <tr class="separator:a106ae7a1e10b1362f07f0f25e0c1ac19"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -95,12 +112,40 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>pt_mana</b></td></tr>
 <tr class="memitem:a9bf49ad8a08e8c2eb920a83cd089a114"><td class="memItemLeft" align="right" valign="top"><a id="a9bf49ad8a08e8c2eb920a83cd089a114"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>pt_xp</b></td></tr>
 <tr class="separator:a9bf49ad8a08e8c2eb920a83cd089a114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91181c796547299fd614fa69956e1299"><td class="memItemLeft" align="right" valign="top"><a id="a91181c796547299fd614fa69956e1299"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>is_stun</b></td></tr>
+<tr class="separator:a91181c796547299fd614fa69956e1299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf0b4fd596c898ad8a410d7b2b132222"><td class="memItemLeft" align="right" valign="top"><a id="acf0b4fd596c898ad8a410d7b2b132222"></a>
+SDL_TimerID&#160;</td><td class="memItemRight" valign="bottom"><b>id_timer</b></td></tr>
+<tr class="separator:acf0b4fd596c898ad8a410d7b2b132222"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71bf8b71477c1e4ac4a8ea002a00929f"><td class="memItemLeft" align="right" valign="top"><a id="a71bf8b71477c1e4ac4a8ea002a00929f"></a>
 SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><b>sprite</b></td></tr>
 <tr class="separator:a71bf8b71477c1e4ac4a8ea002a00929f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d335d596d4c7f8b5162006119f6b2f4"><td class="memItemLeft" align="right" valign="top"><a id="a0d335d596d4c7f8b5162006119f6b2f4"></a>
+int(*&#160;</td><td class="memItemRight" valign="bottom"><b>unStun</b> )(int, struct <a class="el" href="structplayer__s.html">player_s</a> *)</td></tr>
+<tr class="separator:a0d335d596d4c7f8b5162006119f6b2f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac76ceffcef2bb43bec7e584e7b1b881"><td class="memItemLeft" align="right" valign="top"><a id="aac76ceffcef2bb43bec7e584e7b1b881"></a>
+<a class="el" href="structsort__s.html">sort_t</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><b>castSpell</b> )(struct <a class="el" href="structplayer__s.html">player_s</a> *)</td></tr>
+<tr class="separator:aac76ceffcef2bb43bec7e584e7b1b881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c8e76b80541ed69ec3e89a6ecf796e5"><td class="memItemLeft" align="right" valign="top"><a id="a1c8e76b80541ed69ec3e89a6ecf796e5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
+<tr class="separator:a1c8e76b80541ed69ec3e89a6ecf796e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8c318ef0424ade8e8ffe751bcf7a5a"><td class="memItemLeft" align="right" valign="top"><a id="a3e8c318ef0424ade8e8ffe751bcf7a5a"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
+<tr class="separator:a3e8c318ef0424ade8e8ffe751bcf7a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ab94da07631bf517dd60a334d5aaae"><td class="memItemLeft" align="right" valign="top"><a id="a56ab94da07631bf517dd60a334d5aaae"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
+<tr class="separator:a56ab94da07631bf517dd60a334d5aaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a093c531e288f9082410b8d3291b51301"><td class="memItemLeft" align="right" valign="top"><a id="a093c531e288f9082410b8d3291b51301"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>pseudo</b> [16]</td></tr>
+<tr class="separator:a093c531e288f9082410b8d3291b51301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Informations d'un personnage. </p>
+<p>Toutes les statistiques liées au personnage nécessaire au fonctionnement du jeu et de l'affichage des informations. </p>
+</div><hr/>La documentation de cette structure a été générée à partir des fichiers suivants :<ul>
 <li>src/player/<a class="el" href="player_8h_source.html">player.h</a></li>
+<li>src/server/<a class="el" href="utils_8h_source.html">utils.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

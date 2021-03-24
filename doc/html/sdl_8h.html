@@ -1,0 +1,481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Harry Potter Battle 2D: Référence du fichier src/sdl/sdl.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Harry Potter Battle 2D
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_40988668acd171a89cddbb9743a487a4.html">sdl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier sdl.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Header du fichier <a class="el" href="sdl_8c.html" title="Header de move.c.">sdl.c</a>.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;dirent.h&gt;</code><br />
+<code>#include &lt;SDL2/SDL.h&gt;</code><br />
+<code>#include &lt;SDL2/SDL_image.h&gt;</code><br />
+<code>#include &lt;SDL2/SDL_ttf.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de sdl.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="sdl_8h__incl.png" border="0" usemap="#src_2sdl_2sdl_8h" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="sdl_8h__dep__incl.png" border="0" usemap="#src_2sdl_2sdl_8hdep" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+</div>
+<p><a href="sdl_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwindow__s.html">window_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information fenêtre SDL.  <a href="structwindow__s.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structimages__s.html">images_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bibliothèque de textures d'images avec leur nom et le nombre d'images stockées.  <a href="structimages__s.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtext__s.html">text_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.  <a href="structtext__s.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:af079e6a723aaf448286ac47db2dd03b3"><td class="memItemLeft" align="right" valign="top"><a id="af079e6a723aaf448286ac47db2dd03b3"></a>
+typedef struct <a class="el" href="structwindow__s.html">window_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>window</b></td></tr>
+<tr class="separator:af079e6a723aaf448286ac47db2dd03b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04f89fd1592df081ca364d9d1411077"><td class="memItemLeft" align="right" valign="top"><a id="aa04f89fd1592df081ca364d9d1411077"></a>
+typedef struct <a class="el" href="structimages__s.html">images_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>images_t</b></td></tr>
+<tr class="separator:aa04f89fd1592df081ca364d9d1411077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00af485b0d66726362db14ff8d6e285e"><td class="memItemLeft" align="right" valign="top"><a id="a00af485b0d66726362db14ff8d6e285e"></a>
+typedef struct <a class="el" href="structtext__s.html">text_s</a>&#160;</td><td class="memItemRight" valign="bottom"><b>text_t</b></td></tr>
+<tr class="separator:a00af485b0d66726362db14ff8d6e285e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a0e9760359fc5f7eb266fe5a3b7c105fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwindow__s.html">window</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdl_8h.html#a0e9760359fc5f7eb266fe5a3b7c105fd">Initialize_sdl</a> ()</td></tr>
+<tr class="memdesc:a0e9760359fc5f7eb266fe5a3b7c105fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction d'initialisation de notre fenêtre SDL dans une structure window.  <a href="sdl_8h.html#a0e9760359fc5f7eb266fe5a3b7c105fd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0e9760359fc5f7eb266fe5a3b7c105fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d45f86589d9728613bcb4af451c462e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdl_8h.html#a6d45f86589d9728613bcb4af451c462e">LoadImages</a> (SDL_Renderer *pRenderer, <a class="el" href="structimages__s.html">images_t</a> *images)</td></tr>
+<tr class="memdesc:a6d45f86589d9728613bcb4af451c462e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui créer la texture d'images présentes dans un fichier, et les range dans une structure images_t.  <a href="sdl_8h.html#a6d45f86589d9728613bcb4af451c462e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6d45f86589d9728613bcb4af451c462e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c07564f680f2f88a466856e832c0c54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdl_8h.html#a6c07564f680f2f88a466856e832c0c54">DrawImage</a> (SDL_Renderer *pRenderer, <a class="el" href="structimages__s.html">images_t</a> *images, char *nom, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH)</td></tr>
+<tr class="memdesc:a6c07564f680f2f88a466856e832c0c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui affiche une image demandée de la taille souhaitée, à l'endroit souhaité sur le rendu.  <a href="sdl_8h.html#a6c07564f680f2f88a466856e832c0c54">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6c07564f680f2f88a466856e832c0c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e139edd32e39c7772f5b2f8ec1789dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdl_8h.html#a6e139edd32e39c7772f5b2f8ec1789dd">FreeImages</a> (<a class="el" href="structimages__s.html">images_t</a> *images)</td></tr>
+<tr class="memdesc:a6e139edd32e39c7772f5b2f8ec1789dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libération mémoire de la structure image_t.  <a href="sdl_8h.html#a6e139edd32e39c7772f5b2f8ec1789dd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6e139edd32e39c7772f5b2f8ec1789dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27bf9a862bf69f9d0554670bb224eb70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdl_8h.html#a27bf9a862bf69f9d0554670bb224eb70">init_struct_text</a> ()</td></tr>
+<tr class="memdesc:a27bf9a862bf69f9d0554670bb224eb70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation d'une structure text_t servant à stocké des textures de textes.  <a href="sdl_8h.html#a27bf9a862bf69f9d0554670bb224eb70">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a27bf9a862bf69f9d0554670bb224eb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd9cf965956654884844521dfa4aee92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdl_8h.html#abd9cf965956654884844521dfa4aee92">createText</a> (SDL_Renderer *pRenderer, <a class="el" href="structtext__s.html">text_t</a> *text, int x, int y, int text_width, int text_height, const char *texte, TTF_Font *font, const char color)</td></tr>
+<tr class="memdesc:abd9cf965956654884844521dfa4aee92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de création de texte à l'endroit donné sur le rendu, avec sa taille, son contenu, sa police et sa couleur.  <a href="sdl_8h.html#abd9cf965956654884844521dfa4aee92">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abd9cf965956654884844521dfa4aee92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac22ad11f66798b3bb4a730e78286153d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdl_8h.html#ac22ad11f66798b3bb4a730e78286153d">freeText</a> (<a class="el" href="structtext__s.html">text_t</a> **text)</td></tr>
+<tr class="memdesc:ac22ad11f66798b3bb4a730e78286153d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de libération mémoire d'une structure text_t.  <a href="sdl_8h.html#ac22ad11f66798b3bb4a730e78286153d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac22ad11f66798b3bb4a730e78286153d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Header du fichier <a class="el" href="sdl_8c.html" title="Header de move.c.">sdl.c</a>. </p>
+<dl class="section author"><dt>Auteur</dt><dd>COUTANT Hugo / COMTE Clément </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>14 feb 2021</dd></dl>
+<dl class="section author"><dt>Auteur</dt><dd>COUTANT Hugo </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>14 feb 2021 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="abd9cf965956654884844521dfa4aee92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd9cf965956654884844521dfa4aee92">&#9670;&nbsp;</a></span>createText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void createText </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>pRenderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>text_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>text_height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>texte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de création de texte à l'endroit donné sur le rendu, avec sa taille, son contenu, sa police et sa couleur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pRenderer</td><td>Pointeur sur le rendu où va se trouver le texte. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure text_t servant à rangé les textures de textes. </td></tr>
+    <tr><td class="paramname">x</td><td><a class="el" href="structPosition.html">Position</a> en X du centre du texte sur le rendu. </td></tr>
+    <tr><td class="paramname">y</td><td><a class="el" href="structPosition.html">Position</a> en Y du centre du texte sur le rendu. </td></tr>
+    <tr><td class="paramname">text_width</td><td>Largeur du texte sur le rendu. </td></tr>
+    <tr><td class="paramname">text_height</td><td>Hauteur du texte sur le rendu. </td></tr>
+    <tr><td class="paramname">texte</td><td>Contenu du texte sur le rendu. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une structure TTF_Font étant la police du texte. </td></tr>
+    <tr><td class="paramname">color</td><td>Caractère représentant la couleur du texte (exemple : 'r' pour rouge). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6c07564f680f2f88a466856e832c0c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c07564f680f2f88a466856e832c0c54">&#9670;&nbsp;</a></span>DrawImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DrawImage </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>pRenderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structimages__s.html">images_t</a> *&#160;</td>
+          <td class="paramname"><em>images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>nom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>srcX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>srcY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>srcW</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>srcH</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>destX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>destY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>destW</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>destH</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui affiche une image demandée de la taille souhaitée, à l'endroit souhaité sur le rendu. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pRenderer</td><td>Pointeur sur le rendu où vont être affichées les images. </td></tr>
+    <tr><td class="paramname">images</td><td>Pointeur sur une structure image_t où sont rangées les textures des images. </td></tr>
+    <tr><td class="paramname">nom</td><td>Chaine de caractère étant le nom de l'image. </td></tr>
+    <tr><td class="paramname">srcX</td><td><a class="el" href="structPosition.html">Position</a> en X du rectangle source de l'image. </td></tr>
+    <tr><td class="paramname">srcY</td><td><a class="el" href="structPosition.html">Position</a> en Y du rectangle source de l'image. </td></tr>
+    <tr><td class="paramname">srcW</td><td>Largeur du rectangle source de l'image. </td></tr>
+    <tr><td class="paramname">srcH</td><td>Hauteur du rectangle source de l'image. </td></tr>
+    <tr><td class="paramname">destX</td><td><a class="el" href="structPosition.html">Position</a> en X du rectangle cible sur le rendu. </td></tr>
+    <tr><td class="paramname">destY</td><td><a class="el" href="structPosition.html">Position</a> en Y du rectangle cible sur le rendu. </td></tr>
+    <tr><td class="paramname">destW</td><td>Largeur du rectangle cible sur le rendu. </td></tr>
+    <tr><td class="paramname">destH</td><td>Hauteur du rectangle cible sur le rendu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6e139edd32e39c7772f5b2f8ec1789dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e139edd32e39c7772f5b2f8ec1789dd">&#9670;&nbsp;</a></span>FreeImages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FreeImages </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structimages__s.html">images_t</a> *&#160;</td>
+          <td class="paramname"><em>images</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libération mémoire de la structure image_t. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">images</td><td>Pointeur sur une structure images_t. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac22ad11f66798b3bb4a730e78286153d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac22ad11f66798b3bb4a730e78286153d">&#9670;&nbsp;</a></span>freeText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void freeText </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> **&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de libération mémoire d'une structure text_t. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Double pointeur sur une structure text_t. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a27bf9a862bf69f9d0554670bb224eb70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27bf9a862bf69f9d0554670bb224eb70">&#9670;&nbsp;</a></span>init_struct_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtext__s.html">text_t</a>* init_struct_text </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialisation d'une structure text_t servant à stocké des textures de textes. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>text_t* Pointeur sur une structure text_t. </dd></dl>
+
+</div>
+</div>
+<a id="a0e9760359fc5f7eb266fe5a3b7c105fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e9760359fc5f7eb266fe5a3b7c105fd">&#9670;&nbsp;</a></span>Initialize_sdl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structwindow__s.html">window</a>* Initialize_sdl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction d'initialisation de notre fenêtre SDL dans une structure window. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>window* Pointeur sur une structure comportant des infos sur la fenêtre. </dd></dl>
+
+</div>
+</div>
+<a id="a6d45f86589d9728613bcb4af451c462e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d45f86589d9728613bcb4af451c462e">&#9670;&nbsp;</a></span>LoadImages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadImages </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Renderer *&#160;</td>
+          <td class="paramname"><em>pRenderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structimages__s.html">images_t</a> *&#160;</td>
+          <td class="paramname"><em>images</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui créer la texture d'images présentes dans un fichier, et les range dans une structure images_t. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pRenderer</td><td>Pointeur sur le rendu où vont se trouver les images. </td></tr>
+    <tr><td class="paramname">images</td><td>Pointeur sur une structure images_t où vont être rangées les textures des images. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

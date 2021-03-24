@@ -68,24 +68,44 @@ $(function() {
 <div class="title">Référence de la structure expelliarmus_s</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Structure du sort expelliarmus_t contanenant toutes les informations.  
+ <a href="structexpelliarmus__s.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="expelliarmus_8h_source.html">expelliarmus.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
-<tr class="memitem:a8e2ce4c4099e6486aa6a077a54382bb8"><td class="memItemLeft" align="right" valign="top"><a id="a8e2ce4c4099e6486aa6a077a54382bb8"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> [20]</td></tr>
-<tr class="separator:a8e2ce4c4099e6486aa6a077a54382bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a990e6410637af70a38abe6e17006ee64"><td class="memItemLeft" align="right" valign="top"><a id="a990e6410637af70a38abe6e17006ee64"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="separator:a990e6410637af70a38abe6e17006ee64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e826eec9a7d2a1d1e359bd47717b2cd"><td class="memItemLeft" align="right" valign="top"><a id="a5e826eec9a7d2a1d1e359bd47717b2cd"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>speed</b></td></tr>
 <tr class="separator:a5e826eec9a7d2a1d1e359bd47717b2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab33bb4dbd5f5459963ad990947a18074"><td class="memItemLeft" align="right" valign="top"><a id="ab33bb4dbd5f5459963ad990947a18074"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>damage</b></td></tr>
 <tr class="separator:ab33bb4dbd5f5459963ad990947a18074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bf51cceca43e548a291bc04c414a98f"><td class="memItemLeft" align="right" valign="top"><a id="a7bf51cceca43e548a291bc04c414a98f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>manaCost</b></td></tr>
+<tr class="separator:a7bf51cceca43e548a291bc04c414a98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2188ce40caf0b56844daf2a5544fa532"><td class="memItemLeft" align="right" valign="top"><a id="a2188ce40caf0b56844daf2a5544fa532"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>pos_x</b></td></tr>
 <tr class="separator:a2188ce40caf0b56844daf2a5544fa532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad67d300f146f1667cdfbf10f59fb1fd6"><td class="memItemLeft" align="right" valign="top"><a id="ad67d300f146f1667cdfbf10f59fb1fd6"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>pos_y</b></td></tr>
 <tr class="separator:ad67d300f146f1667cdfbf10f59fb1fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6057269a23d593733514d7d9f1934364"><td class="memItemLeft" align="right" valign="top"><a id="a6057269a23d593733514d7d9f1934364"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>destX</b></td></tr>
+<tr class="separator:a6057269a23d593733514d7d9f1934364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62eb768e404a7aa51b1de86a7b7ece17"><td class="memItemLeft" align="right" valign="top"><a id="a62eb768e404a7aa51b1de86a7b7ece17"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>destY</b></td></tr>
+<tr class="separator:a62eb768e404a7aa51b1de86a7b7ece17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d911e31214ff1807fd54998392ba44"><td class="memItemLeft" align="right" valign="top"><a id="a85d911e31214ff1807fd54998392ba44"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>posXf</b></td></tr>
+<tr class="separator:a85d911e31214ff1807fd54998392ba44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdc494b85561838c488f1090d6749f97"><td class="memItemLeft" align="right" valign="top"><a id="abdc494b85561838c488f1090d6749f97"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>posYf</b></td></tr>
+<tr class="separator:abdc494b85561838c488f1090d6749f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a554015abd0fccc858fcd013c6939fde8"><td class="memItemLeft" align="right" valign="top"><a id="a554015abd0fccc858fcd013c6939fde8"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>width</b></td></tr>
 <tr class="separator:a554015abd0fccc858fcd013c6939fde8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,17 +118,19 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>sender</b></td></tr>
 <tr class="memitem:ac5e84d489d1a1523720f45354fe5987c"><td class="memItemLeft" align="right" valign="top"><a id="ac5e84d489d1a1523720f45354fe5987c"></a>
 void(*&#160;</td><td class="memItemRight" valign="bottom"><b>deplacement</b> )(struct <a class="el" href="structexpelliarmus__s.html">expelliarmus_s</a> *, int, int)</td></tr>
 <tr class="separator:ac5e84d489d1a1523720f45354fe5987c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5641b9e1fe72da91e37a3ac31de4b3e1"><td class="memItemLeft" align="right" valign="top"><a id="a5641b9e1fe72da91e37a3ac31de4b3e1"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>display</b> )(struct <a class="el" href="structexpelliarmus__s.html">expelliarmus_s</a> *)</td></tr>
-<tr class="separator:a5641b9e1fe72da91e37a3ac31de4b3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8806cf06e2e5e21c6a755a6e99eec07"><td class="memItemLeft" align="right" valign="top"><a id="ae8806cf06e2e5e21c6a755a6e99eec07"></a>
-int(*&#160;</td><td class="memItemRight" valign="bottom"><b>collision_test</b> )(struct <a class="el" href="structexpelliarmus__s.html">expelliarmus_s</a> *, int, int)</td></tr>
-<tr class="separator:ae8806cf06e2e5e21c6a755a6e99eec07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb2874b927c6a5e25ee5956f662f8fc3"><td class="memItemLeft" align="right" valign="top"><a id="aeb2874b927c6a5e25ee5956f662f8fc3"></a>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><b>display</b> )(struct <a class="el" href="structexpelliarmus__s.html">expelliarmus_s</a> *, <a class="el" href="structwindow__s.html">window</a> *)</td></tr>
+<tr class="separator:aeb2874b927c6a5e25ee5956f662f8fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0567c37dc15aebff4cc97db52c4a75c"><td class="memItemLeft" align="right" valign="top"><a id="ae0567c37dc15aebff4cc97db52c4a75c"></a>
+int(*&#160;</td><td class="memItemRight" valign="bottom"><b>collision_test</b> )(struct <a class="el" href="structexpelliarmus__s.html">expelliarmus_s</a> **, int, int, <a class="el" href="structplayer__s.html">player_t</a> *)</td></tr>
+<tr class="separator:ae0567c37dc15aebff4cc97db52c4a75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab27a63f9a09820d6617b710f37991ab7"><td class="memItemLeft" align="right" valign="top"><a id="ab27a63f9a09820d6617b710f37991ab7"></a>
 void(*&#160;</td><td class="memItemRight" valign="bottom"><b>destroy</b> )(struct <a class="el" href="structexpelliarmus__s.html">expelliarmus_s</a> **)</td></tr>
 <tr class="separator:ab27a63f9a09820d6617b710f37991ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Structure du sort expelliarmus_t contanenant toutes les informations. </p>
+</div><hr/>La documentation de cette structure a été générée à partir du fichier suivant :<ul>
 <li>src/player/spell/<a class="el" href="expelliarmus_8h_source.html">expelliarmus.h</a></li>
 </ul>
 </div><!-- contents -->

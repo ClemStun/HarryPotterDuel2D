@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['player_5fs_14',['player_s',['../structplayer__s.html',1,'']]],
-  ['position_15',['Position',['../structPosition.html',1,'']]]
+  ['petrificus_5fs_32',['petrificus_s',['../structpetrificus__s.html',1,'']]],
+  ['player_5fs_33',['player_s',['../structplayer__s.html',1,'']]],
+  ['position_34',['Position',['../structPosition.html',1,'']]]
 ];
