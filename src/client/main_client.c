@@ -10,8 +10,8 @@ int main(int argc, char **argv){
     window *win;
     images_t images;
     text_t * text;
-    t_etat etat_de_jeu = GAME;
-    int should_quit = 0;
+    t_etat etat_de_jeu = HOME;
+    int should_quit = 1;
     const Uint8 *keyboard_state_array = SDL_GetKeyboardState(NULL);
 
     sort_t * sort = NULL;
@@ -29,7 +29,7 @@ int main(int argc, char **argv){
     monPerso->castSpell = createExpelliarmus;
 
     // Boucle de jeu
-    while(!should_quit){
+    while(should_quit){
         
         // Clear du rendu
         SDL_RenderClear(win->pRenderer);
@@ -43,6 +43,10 @@ int main(int argc, char **argv){
             case GAME:
                 should_quit = game_state(win, &images, monPerso, &sort, keyboard_state_array);
             break;
+        }
+        
+        if(should_quit == 2){
+            etat_de_jeu = GAME;
         }
 
         // Actualisation du rendu
