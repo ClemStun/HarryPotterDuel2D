@@ -5,7 +5,7 @@
 Header de \mbox{\hyperlink{move_8c}{move.\+c}}.  
 
 
-{\ttfamily \#include \char`\"{}sdl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../lib/sdl.\+h\char`\"{}}\newline
 Graphe des dépendances par inclusion de sdl.\+c\+:
 % FIG 0
 \doxysubsection*{Macros}
@@ -20,7 +20,7 @@ Graphe des dépendances par inclusion de sdl.\+c\+:
 \doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structwindow__s}{window}} $\ast$ \mbox{\hyperlink{sdl_8c_a37d8093aee94524aaf76edaa53e2a786}{Initialize\+\_\+sdl}} ()
+\mbox{\hyperlink{structwindow__s}{window}} $\ast$ \mbox{\hyperlink{sdl_8c_a0e9760359fc5f7eb266fe5a3b7c105fd}{Initialize\+\_\+sdl}} ()
 \begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}initialisation de notre fenêtre S\+DL dans une structure window. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sdl_8c_a6d45f86589d9728613bcb4af451c462e}{Load\+Images}} (S\+D\+L\+\_\+\+Renderer $\ast$p\+Renderer, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
 \begin{DoxyCompactList}\small\item\em Fonction qui créer la texture d\textquotesingle{}images présentes dans un fichier, et les range dans une structure images\+\_\+t. \end{DoxyCompactList}\item 
@@ -28,7 +28,7 @@ void \mbox{\hyperlink{sdl_8c_a6c07564f680f2f88a466856e832c0c54}{Draw\+Image}} (S
 \begin{DoxyCompactList}\small\item\em Fonction qui affiche une image demandée de la taille souhaitée, à l\textquotesingle{}endroit souhaité sur le rendu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sdl_8c_a6e139edd32e39c7772f5b2f8ec1789dd}{Free\+Images}} (\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
 \begin{DoxyCompactList}\small\item\em Libération mémoire de la structure image\+\_\+t. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$ \mbox{\hyperlink{sdl_8c_a1213cb7f17245d3c40b6af37c448e2ae}{init\+\_\+struct\+\_\+text}} ()
+\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$ \mbox{\hyperlink{sdl_8c_a27bf9a862bf69f9d0554670bb224eb70}{init\+\_\+struct\+\_\+text}} ()
 \begin{DoxyCompactList}\small\item\em Initialisation d\textquotesingle{}une structure text\+\_\+t servant à stocké des textures de textes. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sdl_8c_abd9cf965956654884844521dfa4aee92}{create\+Text}} (S\+D\+L\+\_\+\+Renderer $\ast$p\+Renderer, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, int x, int y, int text\+\_\+width, int text\+\_\+height, const char $\ast$texte, T\+T\+F\+\_\+\+Font $\ast$font, const char color)
 \begin{DoxyCompactList}\small\item\em Fonction de création de texte à l\textquotesingle{}endroit donné sur le rendu, avec sa taille, son contenu, sa police et sa couleur. \end{DoxyCompactList}\item 
@@ -158,11 +158,11 @@ Fonction de libération mémoire d\textquotesingle{}une structure text\+\_\+t.
 {\em text} & Double pointeur sur une structure text\+\_\+t. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{sdl_8c_a1213cb7f17245d3c40b6af37c448e2ae}\label{sdl_8c_a1213cb7f17245d3c40b6af37c448e2ae}} 
+\mbox{\Hypertarget{sdl_8c_a27bf9a862bf69f9d0554670bb224eb70}\label{sdl_8c_a27bf9a862bf69f9d0554670bb224eb70}} 
 \index{sdl.c@{sdl.c}!init\_struct\_text@{init\_struct\_text}}
 \index{init\_struct\_text@{init\_struct\_text}!sdl.c@{sdl.c}}
 \doxysubsubsection{\texorpdfstring{init\_struct\_text()}{init\_struct\_text()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$ init\+\_\+struct\+\_\+text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtext__s}{text\+\_\+t}}$\ast$ init\+\_\+struct\+\_\+text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -171,11 +171,11 @@ Initialisation d\textquotesingle{}une structure text\+\_\+t servant à stocké d
 \begin{DoxyReturn}{Renvoie}
 text\+\_\+t$\ast$ Pointeur sur une structure text\+\_\+t. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{sdl_8c_a37d8093aee94524aaf76edaa53e2a786}\label{sdl_8c_a37d8093aee94524aaf76edaa53e2a786}} 
+\mbox{\Hypertarget{sdl_8c_a0e9760359fc5f7eb266fe5a3b7c105fd}\label{sdl_8c_a0e9760359fc5f7eb266fe5a3b7c105fd}} 
 \index{sdl.c@{sdl.c}!Initialize\_sdl@{Initialize\_sdl}}
 \index{Initialize\_sdl@{Initialize\_sdl}!sdl.c@{sdl.c}}
 \doxysubsubsection{\texorpdfstring{Initialize\_sdl()}{Initialize\_sdl()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structwindow__s}{window}} $\ast$ Initialize\+\_\+sdl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{structwindow__s}{window}}$\ast$ Initialize\+\_\+sdl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 

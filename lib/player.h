@@ -9,8 +9,8 @@
 
 #include <stdio.h>
 
-#include "../sdl/sdl.h"
-#include "./spell/sort.h"
+#include "sdl.h"
+#include "sort.h"
 
 /**
  * \struct player_s

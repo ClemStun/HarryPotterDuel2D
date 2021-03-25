@@ -11,8 +11,8 @@
 #include <string.h>
 #include <math.h>
 
-#include "../player.h"
-#include "expelliarmus.h"
+#include "../../../lib/player.h"
+#include "../../../lib/expelliarmus.h"
 
 static void deplacement(expelliarmus_t *, int, int);
 static void display(expelliarmus_t *, window *);

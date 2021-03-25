@@ -7,7 +7,7 @@
  *
  */
 
-#include "../player/player.h"
+#include "player.h"
 
 extern
 void updatePosition(window * win, player_t * monPerso, images_t * images, int deplX, int deplY, double vitesse);

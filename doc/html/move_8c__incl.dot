@@ -5,13 +5,13 @@ digraph "src/player/move.c"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="src/player/move.c",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Fonctions de déplacement."];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="move.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$move_8h_source.html",tooltip=" "];
+  Node2 [label="../../lib/move.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$move_8h_source.html",tooltip=" "];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="../player/player.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$player_8h_source.html",tooltip=" "];
+  Node3 [label="player.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$player_8h_source.html",tooltip=" "];
   Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="stdio.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="../sdl/sdl.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sdl_8h.html",tooltip="Header du fichier sdl.c."];
+  Node5 [label="sdl.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sdl_8h.html",tooltip="Header du fichier sdl.c."];
   Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="stdlib.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
@@ -26,5 +26,5 @@ digraph "src/player/move.c"
   Node5 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node11 [label="SDL2/SDL_ttf.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node12 [label="./spell/sort.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sort_8h_source.html",tooltip=" "];
+  Node12 [label="sort.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sort_8h_source.html",tooltip=" "];
 }

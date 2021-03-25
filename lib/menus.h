@@ -1,4 +1,4 @@
-#include "../HUD/hud_ingame.h"
+#include "hud_ingame.h"
 
 typedef enum{HOME, GAME} t_etat;
 

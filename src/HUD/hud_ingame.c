@@ -1,4 +1,4 @@
-#include "hud_ingame.h"
+#include "../../lib/hud_ingame.h"
 
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 600

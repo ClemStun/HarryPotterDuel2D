@@ -12,8 +12,8 @@
 #include <string.h>
 #include <math.h>
 
-#include "../player.h"
-#include "petrificus.h"
+#include "../../../lib/player.h"
+#include "../../../lib/petrificus.h"
 
 static void deplacement(petrificus_t *, int, int);
 static void display(petrificus_t *, window *);

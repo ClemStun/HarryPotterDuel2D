@@ -1,6 +1,6 @@
-#include "menus.h"
-#include "../player/spell/expelliarmus.h"
-#include "../player/spell/petrificus.h"
+#include "../../lib/menus.h"
+#include "../../lib/expelliarmus.h"
+#include "../../lib/petrificus.h"
 
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 600

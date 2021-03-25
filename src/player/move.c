@@ -7,7 +7,7 @@
  *
  */
 
-#include "move.h"
+#include "../../lib/move.h"
 
 
 /**

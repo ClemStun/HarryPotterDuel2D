@@ -7,7 +7,7 @@
  *
  */
 
-#include "player.h"
+#include "../../lib/player.h"
 
 static int playerUnstun(int, player_t *);
 
