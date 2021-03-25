@@ -23,12 +23,17 @@ typedef struct player_s{
     char name[16];
     int pos_x;
     int pos_y;
+    double posXfloat;
+    double posYfloat;
     int pos_x_click;
     int pos_y_click;
     int set_sort[5];
     int pt_life;
     int pt_mana;
     int pt_xp;
+    double vitesse;
+    int timerSprite;
+    int numSprite;
     int is_stun;
     SDL_TimerID id_timer;
     SDL_Texture *sprite;

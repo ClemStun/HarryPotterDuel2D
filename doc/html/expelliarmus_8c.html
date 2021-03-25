@@ -89,6 +89,18 @@ Graphe des dépendances par inclusion de expelliarmus.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
+<tr class="memitem:ab0ec819ce0ed517afcf65ec99a138c62"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expelliarmus_8c.html#ab0ec819ce0ed517afcf65ec99a138c62">deplacement</a> (<a class="el" href="structexpelliarmus__s.html">expelliarmus_t</a> *, int, int)</td></tr>
+<tr class="memdesc:ab0ec819ce0ed517afcf65ec99a138c62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mis a jour de la position d'un expelliarmus_t.  <a href="expelliarmus_8c.html#ab0ec819ce0ed517afcf65ec99a138c62">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab0ec819ce0ed517afcf65ec99a138c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41af5a3865f4c55013caea847376973d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expelliarmus_8c.html#a41af5a3865f4c55013caea847376973d">display</a> (<a class="el" href="structexpelliarmus__s.html">expelliarmus_t</a> *, <a class="el" href="structwindow__s.html">window</a> *)</td></tr>
+<tr class="memdesc:a41af5a3865f4c55013caea847376973d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage d'un expelliarmus_t.  <a href="expelliarmus_8c.html#a41af5a3865f4c55013caea847376973d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a41af5a3865f4c55013caea847376973d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b98538e037137e8b2f82c9821b7e6f4"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expelliarmus_8c.html#a2b98538e037137e8b2f82c9821b7e6f4">collision_test</a> (<a class="el" href="structexpelliarmus__s.html">expelliarmus_t</a> **, int, int, <a class="el" href="structplayer__s.html">player_t</a> *)</td></tr>
+<tr class="memdesc:a2b98538e037137e8b2f82c9821b7e6f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test des collisions entre un sort expelliarmus_t et un player_t player.  <a href="expelliarmus_8c.html#a2b98538e037137e8b2f82c9821b7e6f4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2b98538e037137e8b2f82c9821b7e6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195c5e7d522b587ba1e55c0170007a80"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expelliarmus_8c.html#a195c5e7d522b587ba1e55c0170007a80">destroy</a> (<a class="el" href="structexpelliarmus__s.html">expelliarmus_t</a> **)</td></tr>
+<tr class="memdesc:a195c5e7d522b587ba1e55c0170007a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desttruction d'un expelliarmus_t.  <a href="expelliarmus_8c.html#a195c5e7d522b587ba1e55c0170007a80">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a195c5e7d522b587ba1e55c0170007a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55045d83e7bb9892c403eec7d26b2905"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structexpelliarmus__s.html">expelliarmus_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="expelliarmus_8c.html#a55045d83e7bb9892c403eec7d26b2905">createExpelliarmus</a> (<a class="el" href="structplayer__s.html">player_t</a> *player)</td></tr>
 <tr class="memdesc:a55045d83e7bb9892c403eec7d26b2905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un sort expelliarmus.  <a href="expelliarmus_8c.html#a55045d83e7bb9892c403eec7d26b2905">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a55045d83e7bb9892c403eec7d26b2905"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,6 +111,66 @@ Fonctions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>09 feb 2021 </dd></dl>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a2b98538e037137e8b2f82c9821b7e6f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b98538e037137e8b2f82c9821b7e6f4">&#9670;&nbsp;</a></span>collision_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int collision_test </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structexpelliarmus__s.html">expelliarmus_t</a> **&#160;</td>
+          <td class="paramname"><em>spell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td>
+          <td class="paramname"><em>player</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test des collisions entre un sort expelliarmus_t et un player_t player. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell</td><td>Pointeur sur pointeur d'un expelliarmus_t </td></tr>
+    <tr><td class="paramname">x</td><td><a class="el" href="structPosition.html">Position</a> X max du sort </td></tr>
+    <tr><td class="paramname">y</td><td><a class="el" href="structPosition.html">Position</a> Y max du sort </td></tr>
+    <tr><td class="paramname">player</td><td>Pointeur sur un player_t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Renvoie 0 s'il y a eu collision, 1 sinon. </dd></dl>
+
+</div>
+</div>
 <a id="a55045d83e7bb9892c403eec7d26b2905"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55045d83e7bb9892c403eec7d26b2905">&#9670;&nbsp;</a></span>createExpelliarmus()</h2>
 
@@ -123,6 +195,140 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Renvoie le sort créé qui est un élément de type expelliarmus_t. </dd></dl>
+
+</div>
+</div>
+<a id="ab0ec819ce0ed517afcf65ec99a138c62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0ec819ce0ed517afcf65ec99a138c62">&#9670;&nbsp;</a></span>deplacement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void deplacement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structexpelliarmus__s.html">expelliarmus_t</a> *&#160;</td>
+          <td class="paramname"><em>spell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x_dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y_dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mis a jour de la position d'un expelliarmus_t. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell</td><td>Pointeur sur l'élément expelliarmus_t en question </td></tr>
+    <tr><td class="paramname">x_dest</td><td><a class="el" href="structPosition.html">Position</a> X de la destination du sort </td></tr>
+    <tr><td class="paramname">y_dest</td><td><a class="el" href="structPosition.html">Position</a> Y de la destination du sort </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ne renvoie rien. </dd></dl>
+
+</div>
+</div>
+<a id="a195c5e7d522b587ba1e55c0170007a80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a195c5e7d522b587ba1e55c0170007a80">&#9670;&nbsp;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structexpelliarmus__s.html">expelliarmus_t</a> **&#160;</td>
+          <td class="paramname"><em>spell</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Desttruction d'un expelliarmus_t. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell</td><td>Pointeur sur pointeur d'un expelliarmus_t destiné a être détruit </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ne renvoie rien. </dd></dl>
+
+</div>
+</div>
+<a id="a41af5a3865f4c55013caea847376973d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41af5a3865f4c55013caea847376973d">&#9670;&nbsp;</a></span>display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void display </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structexpelliarmus__s.html">expelliarmus_t</a> *&#160;</td>
+          <td class="paramname"><em>spell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Affichage d'un expelliarmus_t. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell</td><td>Pointeur sur l'élément expelliarmus_t en question </td></tr>
+    <tr><td class="paramname">win</td><td>Fenetre dans laquelle le sort sera afficher </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ne renvoie rien. </dd></dl>
 
 </div>
 </div>

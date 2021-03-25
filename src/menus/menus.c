@@ -1,3 +1,12 @@
+/**
+ * \file move.c
+ * \brief Fonctions sur les différents états de jeu.
+ * \author COUTANT Hugo
+ * \version 0.1
+ * \date 14 feb 2021
+ *
+ */
+
 #include "../../lib/menus.h"
 #include "../../lib/expelliarmus.h"
 #include "../../lib/petrificus.h"
@@ -7,6 +16,21 @@
 
 SDL_Event event;
 
+/**
+ * \fn extern void createButton(window *win, text_t * text, int posX, int posY, int rectW, int rectH, const char *texte, TTF_Font *fontButton, const char color)
+ * \brief Fonction de création d'un bouton sur la fenêtre en fonction d'une position donnée, d'une dimension, d'un texte, d'une police et d'une couleur.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param posX Position en X du bouton.
+ * \param posY Position en Y du bouton.
+ * \param rectW Largeur du bouton.
+ * \param rectH Hauteur du bouton.
+ * \param texte Chaine de caractère correspondant au texte du bouton.
+ * \param fontButton Police de texte du bouton.
+ * \param color Couleur du texte du bouton.
+ *
+ */
 extern
 void createButton(window *win, text_t * text, int posX, int posY, int rectW, int rectH, const char *texte, TTF_Font *fontButton, const char color){
 
@@ -29,6 +53,18 @@ int zone_detect(int x, int y, int w, int h, int mouseX, int mouseY){
     return 0;
 }
 
+/**
+ * \fn extern int game_state(window *win, images_t * images, player_t * monPerso, player_t * mannequin, sort_t ** sort, const Uint8 *keyboard_state_array)
+ * \brief Fonction état du jeu en mode jeu principal.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param monPerso Pointeur sur une structure player_t représentant les infos d'un personnage.
+ * \param images Pointeur sur une structure images_t, bibliothèque de textures des images.
+ * \param mannequin Test
+ * \param sort Pointeur de pointeur sur une structure sort_s.
+ * \param keyboard_state_array État des actions claviers.
+ *
+ */
 extern
 int game_state(window *win, images_t * images, player_t * monPerso, player_t * mannequin, sort_t ** sort, const Uint8 *keyboard_state_array){
     // Lecture des évènements
@@ -39,7 +75,7 @@ int game_state(window *win, images_t * images, player_t * monPerso, player_t * m
 				break;
                 case SDL_MOUSEBUTTONDOWN:
                     if(SDL_BUTTON(SDL_BUTTON_LEFT)){
-                        SDL_GetMouseState(&monPerso->pos_x_click, &monPerso->pos_y_click);
+                        SDL_GetMouseState(&(monPerso->pos_x_click), &(monPerso->pos_y_click));
                         monPerso->pos_x_click -= 50;
                         monPerso->pos_y_click -= 50;
                     }
@@ -69,6 +105,17 @@ int game_state(window *win, images_t * images, player_t * monPerso, player_t * m
     return 2;
 }
 
+/**
+ * \fn extern int home_state(window *win, images_t * images, text_t * text, player_t * monPerso, TTF_Font *font)
+ * \brief Fonction état du jeu en mode menu principal.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param images Pointeur sur une structure images_t, bibliothèque de textures des images.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param monPerso Pointeur sur une structure player_t représentant les infos d'un personnage.
+ * \param font Police du menu.
+ *
+ */
 extern
 int home_state(window *win, images_t * images, text_t * text, player_t * monPerso, TTF_Font *font){
     static int mouseX, mouseY, click = 0;

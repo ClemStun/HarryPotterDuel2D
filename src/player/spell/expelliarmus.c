@@ -116,8 +116,8 @@ void display(expelliarmus_t * spell, window * win){
  * \param spell Pointeur sur pointeur d'un expelliarmus_t
  * \param x Position X max du sort
  * \param y Position Y max du sort
- * \param player Pointeur sur un player_t  
- * \return Renvoie 0 s'il y a eu collision, 1 sinon. 
+ * \param player Pointeur sur un player_t
+ * \return Renvoie 0 s'il y a eu collision, 1 sinon.
  */
 static
 int collision_test(expelliarmus_t ** spell, int x, int y, player_t * player){

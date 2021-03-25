@@ -26,14 +26,19 @@ player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite){
     p = malloc(sizeof(player_t));
 
     p->id_player = id_player;
-    p->pos_x = 100;
-    p->pos_y = 100;
-    p->pos_x_click = 100;
-    p->pos_y_click = 100;
+    p->pos_x = 50;
+    p->pos_y = 50;
+    p->posXfloat = 50;
+    p->posYfloat = 50;
+    p->pos_x_click = 200;
+    p->pos_y_click = 200;
     p->pt_life = 100;
     p->pt_mana = 100;
     p->sprite = sprite;
     p->is_stun = 0;
+    p->vitesse = 0.2;
+    p->timerSprite = 1;
+    p->numSprite = 1;
 
     p->unStun = playerUnstun;
     p->castSpell = NULL;

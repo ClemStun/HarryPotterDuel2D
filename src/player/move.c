@@ -24,33 +24,29 @@
  */
  extern
  void updatePosition(window * win, player_t * monPerso, images_t * images, int deplX, int deplY, double vitesse){
-     static double vit = 0.2;
-     static double vX = 0, vY = 0, norme = 0;
-     static double posXfloat = 50;
-     static double posYfloat = 50;
-     static int a = 1, b = 1;
+     double vX = 0, vY = 0, norme = 0;
 
-     vX = (double)deplX - posXfloat;
-     vY = (double)deplY - posYfloat;
+     vX = (double)deplX - (monPerso->posXfloat);
+     vY = (double)deplY - (monPerso->posYfloat);
 
      norme = sqrt(vX*vX + vY*vY);
 
-     posXfloat += (vX/norme)*vit;
-     posYfloat += (vY/norme)*vit;
+     monPerso->posXfloat += (vX/norme)*monPerso->vitesse;
+     monPerso->posYfloat += (vY/norme)*monPerso->vitesse;
 
-     monPerso->pos_x = (int)posXfloat;
-     monPerso->pos_y = (int)posYfloat;
+     monPerso->pos_x = (int)monPerso->posXfloat;
+     monPerso->pos_y = (int)monPerso->posYfloat;
 
      if((monPerso->pos_x < deplX-2 || monPerso->pos_x > deplX+2) || (monPerso->pos_y < deplY-2 || monPerso->pos_y > deplY+2)){
-         vit = vitesse;
-         if(b++ > 100){
-             a++;
-             b = 1;
+         monPerso->vitesse = vitesse;
+         if((monPerso->timerSprite)++ > 100){
+             (monPerso->numSprite)++;
+             monPerso->timerSprite = 1;
          }
-         DrawImage(win->pRenderer, images, "hp.png", (a%5)*32, 64, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
+         DrawImage(win->pRenderer, images, "hp.png", ((monPerso->numSprite)%5)*32, 64, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
      }
      else{
-         vit = 0;
+         monPerso->vitesse = 0;
          DrawImage(win->pRenderer, images, "hp.png", 5*32, 64, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
      }
  }
