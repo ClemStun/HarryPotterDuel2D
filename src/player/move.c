@@ -43,6 +43,9 @@
              (monPerso->numSprite)++;
              monPerso->timerSprite = 1;
          }
+         if(monPerso->numSprite > 5){
+             monPerso->numSprite = 1;
+         }
          DrawImage(win->pRenderer, images, "hp.png", ((monPerso->numSprite)%5)*32, 64, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
      }
      else{

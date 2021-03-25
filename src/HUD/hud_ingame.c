@@ -37,7 +37,7 @@ void update_hud_ingame(window * win, images_t * images, player_t * monPerso){
     mana.h = 20;
 
     DrawImage(win->pRenderer, images, "hud_tmp.png", 0, 0, 1200, 60, 0, SCREEN_HEIGHT-60, SCREEN_WIDTH, 60);
-    
+
     SDL_SetRenderDrawColor(win->pRenderer, 255, 0, 0, 255);
     SDL_RenderFillRect(win->pRenderer, &life);
 
