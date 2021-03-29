@@ -210,7 +210,7 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
  * \return Soit son propre état pour y rester, soit un autre pour changer d'état dans la suite du programme.
  */
 extern
-t_etat training_state(window *win, images_t * images, player_t * monPerso, player_t * mannequin, sort_t ** sort){
+t_etat training_state(window *win, images_t * images, text_t * text, player_t * monPerso, player_t * mannequin, sort_t ** sort, TTF_Font *font){
     const Uint8 *keyboard_state_array = SDL_GetKeyboardState(NULL);
 
     SDL_RenderClear(win->pRenderer);
@@ -244,13 +244,11 @@ t_etat training_state(window *win, images_t * images, player_t * monPerso, playe
 
     //Actualisation du jeu
     updatePosition(win, monPerso, images, monPerso->pos_x_click, monPerso->pos_y_click, 0.2);
+    update_hud_ingame(win, images, monPerso);
 
     rand_click_bot(mannequin);
-
-    updatePosition(win, mannequin, images, mannequin->pos_x_click, mannequin->pos_y_click, 0.2);
-
-
-    update_hud_ingame(win, images, monPerso);
+    updatePosition(win, mannequin, images, mannequin->pos_x_click, mannequin->pos_y_click, 0.1);
+    update_hud_ingame_ennemie(win, images, text, mannequin, font);
 
     if(*sort != NULL){
         (*sort)->deplacement((*sort), (*sort)->destX, (*sort)->destY);

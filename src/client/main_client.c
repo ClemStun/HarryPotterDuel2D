@@ -12,8 +12,6 @@ int main(int argc, char **argv){
     text_t * text;
     t_etat etat_de_jeu = HOME;
 
-    srand(time(NULL));
-
     sort_t * sort = NULL;
 
     win = Initialize_sdl();
@@ -35,7 +33,7 @@ int main(int argc, char **argv){
 
     //Mannequin
     player_t * mannequin;
-    mannequin = createPlayer(2, "Mannequin", searchTexture(&images, "hp.png"), createSort, 900, 250);
+    mannequin = createPlayer(2, "Ennemi", searchTexture(&images, "hp.png"), createSort, 900, 250);
 
     // Boucle de jeu
     while(etat_de_jeu != QUIT){
@@ -49,7 +47,7 @@ int main(int argc, char **argv){
                 etat_de_jeu = game_state(win, &images, monPerso, mannequin, &sort);
             break;
             case TRAINING:
-                etat_de_jeu = training_state(win, &images, monPerso, mannequin, &sort);
+                etat_de_jeu = training_state(win, &images, text, monPerso, mannequin, &sort, font);
             break;
             case WAITING:
                 etat_de_jeu = waiting_state(win, text, font);

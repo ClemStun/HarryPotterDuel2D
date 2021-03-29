@@ -65,3 +65,19 @@ void update_hud_ingame(window * win, images_t * images, player_t * monPerso){
     SDL_RenderFillRect(win->pRenderer, &mana);
 
 }
+
+extern
+void update_hud_ingame_ennemie(window * win, images_t * images, text_t * text, player_t * ennemie, TTF_Font *font){
+
+    SDL_Rect life;
+    life.x = SCREEN_WIDTH - 120;
+    life.y = 30;
+    life.w = ennemie->pt_life;
+    life.h = 10;
+
+    DrawImage(win->pRenderer, images, searchTexture(images, "heart.png"), 0, 0, 46, 41, SCREEN_WIDTH - 150, 25, 23, 20);
+    createText(win->pRenderer, text, SCREEN_WIDTH - 75, 60, 80, 20, ennemie->name, font, "r");
+
+    SDL_SetRenderDrawColor(win->pRenderer, 255, 0, 0, 255);
+    SDL_RenderFillRect(win->pRenderer, &life);
+}
