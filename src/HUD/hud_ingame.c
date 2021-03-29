@@ -1,5 +1,5 @@
 /**
- * \file move.c
+ * \file hud_ingame.c
  * \brief Fonctions de déplacement.
  * \author COUTANT Hugo
  * \version 0.1
@@ -13,8 +13,8 @@
 #define SCREEN_HEIGHT 600
 
 /**
- * \fn extern void updatePosition(window * win, player_t * monPerso, images_t * images, int deplX, int deplY, double vitesse)
- * \brief Mise à jour de position de l'image pour atteindre le clique effectué par l'utilisateur en respectant la vitesse.
+ * \fn extern void update_hud_ingame(window * win, images_t * images, player_t * monPerso)
+ * \brief Mise à jour de l'HUD du jeu (barre de vie et de mana, barre de sorts, etc).
  *
  * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
  * \param images Pointeur sur une structure images_t, bibliothèque de textures des images.
@@ -36,7 +36,7 @@ void update_hud_ingame(window * win, images_t * images, player_t * monPerso){
     mana.w = monPerso->pt_mana*2;
     mana.h = 20;
 
-    DrawImage(win->pRenderer, images, "hud_tmp.png", 0, 0, 1200, 60, 0, SCREEN_HEIGHT-60, SCREEN_WIDTH, 60);
+    DrawImage(win->pRenderer, images, searchTexture(images, "hud_tmp.png"), 0, 0, 1200, 60, 0, SCREEN_HEIGHT-60, SCREEN_WIDTH, 60);
 
     SDL_SetRenderDrawColor(win->pRenderer, 255, 0, 0, 255);
     SDL_RenderFillRect(win->pRenderer, &life);

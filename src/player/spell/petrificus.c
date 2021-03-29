@@ -16,7 +16,7 @@
 #include "../../../lib/petrificus.h"
 
 static void deplacement(petrificus_t *, int, int);
-static void display(petrificus_t *, window *);
+static void display(petrificus_t *, window *, images_t *images);
 static int collision_test(petrificus_t **, int, int, player_t *);
 static void destroy(petrificus_t **);
 
@@ -67,16 +67,9 @@ void deplacement(petrificus_t * spell, int x_dest, int y_dest){
 }
 
 static
-void display(petrificus_t * spell, window * win){
+void display(petrificus_t * spell, window * win, images_t *images){
 
-    SDL_Rect display;
-    display.x = spell->pos_x;
-    display.y = spell->pos_y;
-    display.w = 30;
-    display.h = 30;
-
-    SDL_SetRenderDrawColor(win->pRenderer, 255, 255, 255, 255);
-    SDL_RenderFillRect(win->pRenderer, &display);
+    DrawImage(win->pRenderer, images, searchTexture(images, "petrificus.png"), 0, 0, 64, 64, spell->pos_x, spell->pos_y, 64, 64);
 
 }
 

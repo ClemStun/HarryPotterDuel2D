@@ -88,13 +88,15 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//SDL_Texture * sprite;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    void (*deplacement)(<span class="keyword">struct </span><a class="code" href="structsort__s.html">sort_s</a> *, int, int);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    void (*display)(<span class="keyword">struct </span><a class="code" href="structsort__s.html">sort_s</a> *, <a class="code" href="structwindow__s.html">window</a> *);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    int (*collision_test)(<span class="keyword">struct </span><a class="code" href="structsort__s.html">sort_s</a> **,int , int, <span class="keywordtype">void</span> *);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    void (*display)(<span class="keyword">struct </span><a class="code" href="structsort__s.html">sort_s</a> *, <a class="code" href="structwindow__s.html">window</a> *, <span class="keyword">struct </span><a class="code" href="structimages__s.html">images_s</a> *);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    int (*<a class="code" href="expelliarmus_8c.html#a2b98538e037137e8b2f82c9821b7e6f4">collision_test</a>)(<span class="keyword">struct </span><a class="code" href="structsort__s.html">sort_s</a> **,int , int, <span class="keywordtype">void</span> *);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    void (*destroy)(<span class="keyword">struct </span><a class="code" href="structsort__s.html">sort_s</a> **);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;} <a class="code" href="structsort__s.html">sort_t</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructimages__s_html"><div class="ttname"><a href="structimages__s.html">images_s</a></div><div class="ttdoc">Bibliothèque de textures d'images avec leur nom et le nombre d'images stockées.</div><div class="ttdef"><b>Definition:</b> sdl.h:35</div></div>
 <div class="ttc" id="astructwindow__s_html"><div class="ttname"><a href="structwindow__s.html">window_s</a></div><div class="ttdoc">Information fenêtre SDL.</div><div class="ttdef"><b>Definition:</b> sdl.h:25</div></div>
+<div class="ttc" id="aexpelliarmus_8c_html_a2b98538e037137e8b2f82c9821b7e6f4"><div class="ttname"><a href="expelliarmus_8c.html#a2b98538e037137e8b2f82c9821b7e6f4">collision_test</a></div><div class="ttdeci">static int collision_test(expelliarmus_t **, int, int, player_t *)</div><div class="ttdoc">Test des collisions entre un sort expelliarmus_t et un player_t player.</div><div class="ttdef"><b>Definition:</b> expelliarmus.c:116</div></div>
 <div class="ttc" id="astructsort__s_html"><div class="ttname"><a href="structsort__s.html">sort_s</a></div><div class="ttdef"><b>Definition:</b> sort.h:1</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

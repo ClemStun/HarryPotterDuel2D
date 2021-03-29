@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['send_5fall_63',['send_all',['../utils_8c.html#af3f6b0b2e73c1fa4e9e1eddaba489550',1,'utils.c']]]
+  ['loadimages_87',['LoadImages',['../sdl_8h.html#a6d45f86589d9728613bcb4af451c462e',1,'LoadImages(SDL_Renderer *pRenderer, images_t *images):&#160;sdl.c'],['../sdl_8c.html#a6d45f86589d9728613bcb4af451c462e',1,'LoadImages(SDL_Renderer *pRenderer, images_t *images):&#160;sdl.c']]]
 ];

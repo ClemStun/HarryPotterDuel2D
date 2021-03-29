@@ -6,4 +6,6 @@ digraph "player_s"
   Node1 [label="player_s",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Informations d'un personnage."];
   Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" castSpell" ,fontname="Helvetica"];
   Node2 [label="sort_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsort__s.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" posYfloat\nposXfloat\nvitesse" ,fontname="Helvetica"];
+  Node3 [label="double",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

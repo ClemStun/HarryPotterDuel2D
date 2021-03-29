@@ -1,6 +1,6 @@
 /**
- * \file sdl.h
- * \brief Header du fichier sdl.c.
+ * \file player.h
+ * \brief Header du fichier player.c.
  * \author COUTANT Hugo / COMTE Clément
  * \version 0.1
  * \date 14 feb 2021

@@ -42,7 +42,7 @@ window * Initialize_sdl(){
 
     //Création de la fenêtre et du rendu
 
-    win->pWindow = SDL_CreateWindow("Jeu test", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    win->pWindow = SDL_CreateWindow("Castagne Harry Potter", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 
     win->pRenderer = SDL_CreateRenderer(win->pWindow,-1,SDL_RENDERER_ACCELERATED);
 
@@ -91,12 +91,35 @@ void LoadImages(SDL_Renderer * pRenderer, images_t * images){
 }
 
 /**
+ * \fn extern SDL_Texture * searchTexture(images_t * images, char * nom)
+ * \brief Fonction de recherche de texture dans la structure image_s à partir d'un nom.
+ *
+ * \param images Pointeur sur une structure images_t où vont être rangées les textures des images.
+ * \param nom Nom de l'image texturée recherchée
+ *
+ * \return La texture trouvée.
+ */
+extern
+SDL_Texture * searchTexture(images_t * images, char * nom){
+    char nom2[50];
+    sprintf(nom2, "%s", nom);
+    if(!strstr(nom2, ".png")){
+      strcat(nom2, ".png");
+    }
+      int i;
+      //ici on recherche quel est l'indice de l'image qu'on veux afficher
+      for(i=0; strcmp(images->nomsImages[i], nom2)!=0 && i<images->nb_images; i++);
+
+      return(images->l_textImages[i]);
+}
+
+/**
  * \fn extern void DrawImage(SDL_Renderer * pRenderer, images_t * images, char * nom, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH)
  * \brief Fonction qui affiche une image demandée de la taille souhaitée, à l'endroit souhaité sur le rendu.
  *
  * \param pRenderer Pointeur sur le rendu où vont être affichées les images.
  * \param images Pointeur sur une structure image_t où sont rangées les textures des images.
- * \param nom Chaine de caractère étant le nom de l'image.
+ * \param texture Texture de l'image souhaitée.
  * \param srcX Position en X du rectangle source de l'image.
  * \param srcY Position en Y du rectangle source de l'image.
  * \param srcW Largeur du rectangle source de l'image.
@@ -107,7 +130,7 @@ void LoadImages(SDL_Renderer * pRenderer, images_t * images){
  * \param destH Hauteur du rectangle cible sur le rendu.
  */
 extern
-void DrawImage(SDL_Renderer * pRenderer, images_t * images, char * nom, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH){
+void DrawImage(SDL_Renderer * pRenderer, images_t * images, SDL_Texture * texture, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH){
     SDL_Rect imgDestRect;
     imgDestRect.x = destX;
     imgDestRect.y = destY;
@@ -119,16 +142,9 @@ void DrawImage(SDL_Renderer * pRenderer, images_t * images, char * nom, int srcX
     imgSrcRect.y = srcY;
     imgSrcRect.w = srcW;
     imgSrcRect.h = srcH;
-  char nom2[50];
-  sprintf(nom2, "%s", nom);
-  if(!strstr(nom2, ".png")){
-    strcat(nom2, ".png");
-  }
-    int i;
-    //ici on recherche quel est l'indice de l'image qu'on veux afficher
-    for(i=0; strcmp(images->nomsImages[i], nom2)!=0 && i<images->nb_images; i++);
+    //ici on recherche la texture de l'image recherchée
     //on l'affiche ensuite
-    SDL_RenderCopy(pRenderer, images->l_textImages[i], &imgSrcRect, &imgDestRect);
+    SDL_RenderCopy(pRenderer, texture, &imgSrcRect, &imgDestRect);
 }
 
 /**

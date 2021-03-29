@@ -11,8 +11,6 @@ int main(int argc, char **argv){
     images_t images;
     text_t * text;
     t_etat etat_de_jeu = HOME;
-    int should_quit = 1;
-    const Uint8 *keyboard_state_array = SDL_GetKeyboardState(NULL);
 
     sort_t * sort = NULL;
 
@@ -25,41 +23,39 @@ int main(int argc, char **argv){
 
     // Destiné à dégager
     player_t * monPerso;
-    monPerso = createPlayer(1, "Heaven", NULL);
+    monPerso = createPlayer(1, "Heaven", searchTexture(&images, "hp.png"));
     monPerso->castSpell = createExpelliarmus;
 
     //Mannequin
     player_t * mannequin;
-    mannequin = createPlayer(2, "Mannequin", NULL);
+    mannequin = createPlayer(2, "Mannequin", searchTexture(&images, "hp.png"));
 
     // Boucle de jeu
-    while(should_quit){
-
-        // Clear du rendu
-        SDL_RenderClear(win->pRenderer);
-        SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 255 );
+    while(etat_de_jeu != QUIT){
 
         // Etat
         switch(etat_de_jeu){
             case HOME:
-                should_quit = home_state(win, &images, text, monPerso, font);
+                etat_de_jeu = home_state(win, &images, text, monPerso, font);
             break;
             case GAME:
-                should_quit = game_state(win, &images, monPerso, mannequin, &sort, keyboard_state_array);
+                etat_de_jeu = game_state(win, &images, monPerso, mannequin, &sort);
             break;
-        }
-
-        if(should_quit == 2){
-            etat_de_jeu = GAME;
+            case TRAINING:
+                etat_de_jeu = training_state(win, &images, monPerso, mannequin, &sort);
+            break;
+            case WAITING:
+                etat_de_jeu = waiting_state(win, text, font);
+            break;
         }
 
         // Actualisation du rendu
-        SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 255);
         SDL_RenderPresent(win->pRenderer);
     }
     FreeImages(&images);
     freeText(&text);
     freePlayer(monPerso);
+    freePlayer(mannequin);
 
     TTF_CloseFont(font);
 

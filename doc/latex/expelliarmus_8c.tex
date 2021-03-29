@@ -18,8 +18,9 @@ Graphe des dépendances par inclusion de expelliarmus.\+c\+:
 \item 
 static void \mbox{\hyperlink{expelliarmus_8c_ab0ec819ce0ed517afcf65ec99a138c62}{deplacement}} (\mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$, int, int)
 \begin{DoxyCompactList}\small\item\em Mis a jour de la position d\textquotesingle{}un expelliarmus\+\_\+t. \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{expelliarmus_8c_a41af5a3865f4c55013caea847376973d}{display}} (\mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$, \mbox{\hyperlink{structwindow__s}{window}} $\ast$)
-\begin{DoxyCompactList}\small\item\em Affichage d\textquotesingle{}un expelliarmus\+\_\+t. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{expelliarmus_8c_ab825756c5a63b0bf070e8b5a5e3caf65}\label{expelliarmus_8c_ab825756c5a63b0bf070e8b5a5e3caf65}} 
+static void {\bfseries display} (\mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$spell, \mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
+\item 
 static int \mbox{\hyperlink{expelliarmus_8c_a2b98538e037137e8b2f82c9821b7e6f4}{collision\+\_\+test}} (\mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$$\ast$, int, int, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$)
 \begin{DoxyCompactList}\small\item\em Test des collisions entre un sort expelliarmus\+\_\+t et un player\+\_\+t player. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{expelliarmus_8c_a195c5e7d522b587ba1e55c0170007a80}{destroy}} (\mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$$\ast$)
@@ -120,26 +121,6 @@ Desttruction d\textquotesingle{}un expelliarmus\+\_\+t.
 
 \begin{DoxyParams}{Paramètres}
 {\em spell} & Pointeur sur pointeur d\textquotesingle{}un expelliarmus\+\_\+t destiné a être détruit \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Renvoie}
-Ne renvoie rien. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{expelliarmus_8c_a41af5a3865f4c55013caea847376973d}\label{expelliarmus_8c_a41af5a3865f4c55013caea847376973d}} 
-\index{expelliarmus.c@{expelliarmus.c}!display@{display}}
-\index{display@{display}!expelliarmus.c@{expelliarmus.c}}
-\doxysubsubsection{\texorpdfstring{display()}{display()}}
-{\footnotesize\ttfamily static void display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$}]{spell,  }\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Affichage d\textquotesingle{}un expelliarmus\+\_\+t. 
-
-
-\begin{DoxyParams}{Paramètres}
-{\em spell} & Pointeur sur l\textquotesingle{}élément expelliarmus\+\_\+t en question \\
-\hline
-{\em win} & Fenetre dans laquelle le sort sera afficher \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}

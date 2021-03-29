@@ -13,7 +13,7 @@ digraph "src/player/spell/petrificus.c"
   Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node5 [label="math.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="../../../lib/player.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$player_8h_source.html",tooltip=" "];
+  Node6 [label="../../../lib/player.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$player_8h.html",tooltip="Header du fichier player.c."];
   Node6 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node7 [label="sdl.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sdl_8h.html",tooltip="Header du fichier sdl.c."];

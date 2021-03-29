@@ -1,0 +1,59 @@
+\hypertarget{move_8h}{}\doxysection{Référence du fichier lib/move.h}
+\label{move_8h}\index{lib/move.h@{lib/move.h}}
+
+
+Header de \mbox{\hyperlink{move_8c}{move.\+c}}.  
+
+
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de move.\+h\+:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 1
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{move_8h_a7b4d1874b21614efc956dd082b679aad}{update\+Position}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, int deplX, int deplY, double vitesse)
+\begin{DoxyCompactList}\small\item\em Mise à jour de position de l\textquotesingle{}image pour atteindre le clique effectué par l\textquotesingle{}utilisateur en respectant la vitesse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Header de \mbox{\hyperlink{move_8c}{move.\+c}}. 
+
+\begin{DoxyAuthor}{Auteur}
+C\+O\+U\+T\+A\+NT Hugo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 feb 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{move_8h_a7b4d1874b21614efc956dd082b679aad}\label{move_8h_a7b4d1874b21614efc956dd082b679aad}} 
+\index{move.h@{move.h}!updatePosition@{updatePosition}}
+\index{updatePosition@{updatePosition}!move.h@{move.h}}
+\doxysubsubsection{\texorpdfstring{updatePosition()}{updatePosition()}}
+{\footnotesize\ttfamily void update\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mon\+Perso,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{int}]{deplX,  }\item[{int}]{deplY,  }\item[{double}]{vitesse }\end{DoxyParamCaption})}
+
+
+
+Mise à jour de position de l\textquotesingle{}image pour atteindre le clique effectué par l\textquotesingle{}utilisateur en respectant la vitesse. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em mon\+Perso} & Pointeur sur une structure player\+\_\+t représentant les infos d\textquotesingle{}un personnage. \\
+\hline
+{\em images} & Pointeur sur une structure images\+\_\+t, bibliothèque de textures des images. \\
+\hline
+{\em deplX} & Coordonée en X du clic. \\
+\hline
+{\em deplY} & Coordonée en Y du clic. \\
+\hline
+{\em vitesse} & vitesse de déplacement du personnage. \\
+\hline
+\end{DoxyParams}

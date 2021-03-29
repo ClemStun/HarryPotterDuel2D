@@ -1,0 +1,60 @@
+\hypertarget{hud__ingame_8c}{}\doxysection{Référence du fichier src/\+H\+U\+D/hud\+\_\+ingame.c}
+\label{hud__ingame_8c}\index{src/HUD/hud\_ingame.c@{src/HUD/hud\_ingame.c}}
+
+
+Fonctions de déplacement.  
+
+
+{\ttfamily \#include \char`\"{}../../lib/hud\+\_\+ingame.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de hud\+\_\+ingame.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{hud__ingame_8c_a2cd109632a6dcccaa80b43561b1ab700}\label{hud__ingame_8c_a2cd109632a6dcccaa80b43561b1ab700}} 
+\#define {\bfseries S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH}~1200
+\item 
+\mbox{\Hypertarget{hud__ingame_8c_a6974d08a74da681b3957b2fead2608b8}\label{hud__ingame_8c_a6974d08a74da681b3957b2fead2608b8}} 
+\#define {\bfseries S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT}~600
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{hud__ingame_8c_af699f058f7933a06045fe6df37d90dd2}{update\+\_\+hud\+\_\+ingame}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso)
+\begin{DoxyCompactList}\small\item\em Mise à jour de l\textquotesingle{}H\+UD du jeu (barre de vie et de mana, barre de sorts, etc). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fonctions de déplacement. 
+
+\begin{DoxyAuthor}{Auteur}
+C\+O\+U\+T\+A\+NT Hugo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 feb 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{hud__ingame_8c_af699f058f7933a06045fe6df37d90dd2}\label{hud__ingame_8c_af699f058f7933a06045fe6df37d90dd2}} 
+\index{hud\_ingame.c@{hud\_ingame.c}!update\_hud\_ingame@{update\_hud\_ingame}}
+\index{update\_hud\_ingame@{update\_hud\_ingame}!hud\_ingame.c@{hud\_ingame.c}}
+\doxysubsubsection{\texorpdfstring{update\_hud\_ingame()}{update\_hud\_ingame()}}
+{\footnotesize\ttfamily void update\+\_\+hud\+\_\+ingame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mon\+Perso }\end{DoxyParamCaption})}
+
+
+
+Mise à jour de l\textquotesingle{}H\+UD du jeu (barre de vie et de mana, barre de sorts, etc). 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em images} & Pointeur sur une structure images\+\_\+t, bibliothèque de textures des images. \\
+\hline
+{\em mon\+Perso} & Pointeur sur une structure player\+\_\+t représentant les infos d\textquotesingle{}un personnage. \\
+\hline
+\end{DoxyParams}

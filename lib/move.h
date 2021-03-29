@@ -1,5 +1,5 @@
 /**
- * \file sdl.c
+ * \file move.h
  * \brief Header de move.c.
  * \author COUTANT Hugo
  * \version 0.1

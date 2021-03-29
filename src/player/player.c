@@ -1,5 +1,5 @@
 /**
- * \file sdl.c
+ * \file player.c
  * \brief Fonctions utilisant principalement la SDL2.
  * \author COUTANT Hugo / COMTE Clément
  * \version 0.1
@@ -26,6 +26,7 @@ player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite){
     p = malloc(sizeof(player_t));
 
     p->id_player = id_player;
+    strcpy(p->name, name);
     p->pos_x = 50;
     p->pos_y = 50;
     p->posXfloat = 50;

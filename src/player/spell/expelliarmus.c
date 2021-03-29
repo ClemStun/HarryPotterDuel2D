@@ -15,7 +15,7 @@
 #include "../../../lib/expelliarmus.h"
 
 static void deplacement(expelliarmus_t *, int, int);
-static void display(expelliarmus_t *, window *);
+static void display(expelliarmus_t * spell, window * win, images_t *images);
 static int collision_test(expelliarmus_t **, int, int, player_t *);
 static void destroy(expelliarmus_t **);
 
@@ -94,18 +94,11 @@ void deplacement(expelliarmus_t * spell, int x_dest, int y_dest){
  * \return Ne renvoie rien.
  */
 static
-void display(expelliarmus_t * spell, window * win){
+void display(expelliarmus_t * spell, window * win, images_t *images){
 
     //printf("YO displayed!\n");
 
-    SDL_Rect display;
-    display.x = spell->pos_x;
-    display.y = spell->pos_y;
-    display.w = 30;
-    display.h = 30;
-
-    SDL_SetRenderDrawColor(win->pRenderer, 255, 255, 255, 255);
-    SDL_RenderFillRect(win->pRenderer, &display);
+    DrawImage(win->pRenderer, images, searchTexture(images, "expelliarmus.png"), 0, 0, 64, 64, spell->pos_x, spell->pos_y, 64, 64);
 
 }
 

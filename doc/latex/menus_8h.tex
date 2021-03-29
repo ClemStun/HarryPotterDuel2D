@@ -1,0 +1,162 @@
+\hypertarget{menus_8h}{}\doxysection{Référence du fichier lib/menus.h}
+\label{menus_8h}\index{lib/menus.h@{lib/menus.h}}
+
+
+Header de \mbox{\hyperlink{menus_8c}{menus.\+c}}.  
+
+
+{\ttfamily \#include \char`\"{}hud\+\_\+ingame.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de menus.\+h\+:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 1
+\doxysubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{menus_8h_a0f3684078562a23c3ea21266d10cf275}\label{menus_8h_a0f3684078562a23c3ea21266d10cf275}} 
+enum {\bfseries t\+\_\+etat} \{ \newline
+{\bfseries Q\+U\+IT}, 
+{\bfseries H\+O\+ME}, 
+{\bfseries G\+A\+ME}, 
+{\bfseries T\+R\+A\+I\+N\+I\+NG}, 
+\newline
+{\bfseries O\+T\+H\+ER}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+t\+\_\+etat \mbox{\hyperlink{menus_8h_aeaa0934554efc171242d6c4896089570}{game\+\_\+state}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mannequin, \mbox{\hyperlink{structsort__s}{sort\+\_\+t}} $\ast$$\ast$sort)
+\begin{DoxyCompactList}\small\item\em Fonction état du jeu en mode jeu principal. \end{DoxyCompactList}\item 
+t\+\_\+etat \mbox{\hyperlink{menus_8h_a5e6ba896e144ff35a8536190c2e129ef}{home\+\_\+state}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso, T\+T\+F\+\_\+\+Font $\ast$font)
+\begin{DoxyCompactList}\small\item\em Fonction état du jeu en mode menu principal. \end{DoxyCompactList}\item 
+t\+\_\+etat \mbox{\hyperlink{menus_8h_aaaf9c3e5bf68dccc573a21d88c51f4d3}{training\+\_\+state}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mannequin, \mbox{\hyperlink{structsort__s}{sort\+\_\+t}} $\ast$$\ast$sort)
+\begin{DoxyCompactList}\small\item\em Fonction état du jeu en mode entrainement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menus_8h_a72a4ba9c933a688789ead21550b9d8d0}{create\+Button}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, int posX, int posY, int rectW, int rectH, const char $\ast$texte, T\+T\+F\+\_\+\+Font $\ast$font\+Button, const char color)
+\begin{DoxyCompactList}\small\item\em Fonction de création d\textquotesingle{}un bouton sur la fenêtre en fonction d\textquotesingle{}une position donnée, d\textquotesingle{}une dimension, d\textquotesingle{}un texte, d\textquotesingle{}une police et d\textquotesingle{}une couleur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Header de \mbox{\hyperlink{menus_8c}{menus.\+c}}. 
+
+\begin{DoxyAuthor}{Auteur}
+C\+O\+U\+T\+A\+NT Hugo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 feb 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{menus_8h_a72a4ba9c933a688789ead21550b9d8d0}\label{menus_8h_a72a4ba9c933a688789ead21550b9d8d0}} 
+\index{menus.h@{menus.h}!createButton@{createButton}}
+\index{createButton@{createButton}!menus.h@{menus.h}}
+\doxysubsubsection{\texorpdfstring{createButton()}{createButton()}}
+{\footnotesize\ttfamily void create\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$}]{text,  }\item[{int}]{posX,  }\item[{int}]{posY,  }\item[{int}]{rectW,  }\item[{int}]{rectH,  }\item[{const char $\ast$}]{texte,  }\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font\+Button,  }\item[{const char}]{color }\end{DoxyParamCaption})}
+
+
+
+Fonction de création d\textquotesingle{}un bouton sur la fenêtre en fonction d\textquotesingle{}une position donnée, d\textquotesingle{}une dimension, d\textquotesingle{}un texte, d\textquotesingle{}une police et d\textquotesingle{}une couleur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em text} & Pointeur sur une structure \mbox{\hyperlink{structtext__s}{text\+\_\+s}} regroupant les différents textes déjà créer et leur texture. \\
+\hline
+{\em posX} & \mbox{\hyperlink{structPosition}{Position}} en X du bouton. \\
+\hline
+{\em posY} & \mbox{\hyperlink{structPosition}{Position}} en Y du bouton. \\
+\hline
+{\em rectW} & Largeur du bouton. \\
+\hline
+{\em rectH} & Hauteur du bouton. \\
+\hline
+{\em texte} & Chaine de caractère correspondant au texte du bouton. \\
+\hline
+{\em font\+Button} & Police de texte du bouton. \\
+\hline
+{\em color} & Couleur du texte du bouton. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{menus_8h_aeaa0934554efc171242d6c4896089570}\label{menus_8h_aeaa0934554efc171242d6c4896089570}} 
+\index{menus.h@{menus.h}!game\_state@{game\_state}}
+\index{game\_state@{game\_state}!menus.h@{menus.h}}
+\doxysubsubsection{\texorpdfstring{game\_state()}{game\_state()}}
+{\footnotesize\ttfamily t\+\_\+etat game\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mon\+Perso,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mannequin,  }\item[{\mbox{\hyperlink{structsort__s}{sort\+\_\+t}} $\ast$$\ast$}]{sort }\end{DoxyParamCaption})}
+
+
+
+Fonction état du jeu en mode jeu principal. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em images} & Pointeur sur une structure images\+\_\+t, bibliothèque de textures des images. \\
+\hline
+{\em mon\+Perso} & Pointeur sur une structure player\+\_\+t représentant les infos d\textquotesingle{}un personnage. \\
+\hline
+{\em mannequin} & Test \\
+\hline
+{\em sort} & Pointeur de pointeur sur une structure \mbox{\hyperlink{structsort__s}{sort\+\_\+s}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Soit son propre état pour y rester, soit un autre pour changer d\textquotesingle{}état dans la suite du programme. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{menus_8h_a5e6ba896e144ff35a8536190c2e129ef}\label{menus_8h_a5e6ba896e144ff35a8536190c2e129ef}} 
+\index{menus.h@{menus.h}!home\_state@{home\_state}}
+\index{home\_state@{home\_state}!menus.h@{menus.h}}
+\doxysubsubsection{\texorpdfstring{home\_state()}{home\_state()}}
+{\footnotesize\ttfamily t\+\_\+etat home\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$}]{text,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mon\+Perso,  }\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font }\end{DoxyParamCaption})}
+
+
+
+Fonction état du jeu en mode menu principal. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em images} & Pointeur sur une structure images\+\_\+t, bibliothèque de textures des images. \\
+\hline
+{\em text} & Pointeur sur une structure \mbox{\hyperlink{structtext__s}{text\+\_\+s}} regroupant les différents textes déjà créer et leur texture. \\
+\hline
+{\em mon\+Perso} & Pointeur sur une structure player\+\_\+t représentant les infos d\textquotesingle{}un personnage. \\
+\hline
+{\em font} & Police du menu.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Soit son propre état pour y rester, soit un autre pour changer d\textquotesingle{}état dans la suite du programme. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{menus_8h_aaaf9c3e5bf68dccc573a21d88c51f4d3}\label{menus_8h_aaaf9c3e5bf68dccc573a21d88c51f4d3}} 
+\index{menus.h@{menus.h}!training\_state@{training\_state}}
+\index{training\_state@{training\_state}!menus.h@{menus.h}}
+\doxysubsubsection{\texorpdfstring{training\_state()}{training\_state()}}
+{\footnotesize\ttfamily t\+\_\+etat training\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mon\+Perso,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mannequin,  }\item[{\mbox{\hyperlink{structsort__s}{sort\+\_\+t}} $\ast$$\ast$}]{sort }\end{DoxyParamCaption})}
+
+
+
+Fonction état du jeu en mode entrainement. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em images} & Pointeur sur une structure images\+\_\+t, bibliothèque de textures des images. \\
+\hline
+{\em mon\+Perso} & Pointeur sur une structure player\+\_\+t représentant les infos d\textquotesingle{}un personnage. \\
+\hline
+{\em mannequin} & Test \\
+\hline
+{\em sort} & Pointeur de pointeur sur une structure \mbox{\hyperlink{structsort__s}{sort\+\_\+s}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Soit son propre état pour y rester, soit un autre pour changer d\textquotesingle{}état dans la suite du programme. 
+\end{DoxyReturn}

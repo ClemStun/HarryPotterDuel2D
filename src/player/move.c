@@ -46,10 +46,10 @@
          if(monPerso->numSprite > 5){
              monPerso->numSprite = 1;
          }
-         DrawImage(win->pRenderer, images, "hp.png", ((monPerso->numSprite)%5)*32, 64, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
+         DrawImage(win->pRenderer, images, monPerso->sprite, ((monPerso->numSprite)%5)*32, 64, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
      }
      else{
          monPerso->vitesse = 0;
-         DrawImage(win->pRenderer, images, "hp.png", 5*32, 64, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
+         DrawImage(win->pRenderer, images, monPerso->sprite, 5*32, 64, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
      }
  }

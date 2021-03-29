@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['petrificus_2ec_18',['petrificus.c',['../petrificus_8c.html',1,'']]],
-  ['petrificus_5fs_19',['petrificus_s',['../structpetrificus__s.html',1,'']]],
-  ['player_5fs_20',['player_s',['../structplayer__s.html',1,'']]],
-  ['position_21',['Position',['../structPosition.html',1,'']]]
+  ['loadimages_22',['LoadImages',['../sdl_8h.html#a6d45f86589d9728613bcb4af451c462e',1,'LoadImages(SDL_Renderer *pRenderer, images_t *images):&#160;sdl.c'],['../sdl_8c.html#a6d45f86589d9728613bcb4af451c462e',1,'LoadImages(SDL_Renderer *pRenderer, images_t *images):&#160;sdl.c']]]
 ];
