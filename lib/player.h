@@ -28,7 +28,7 @@ typedef struct player_s{
     double posYfloat;
     int pos_x_click;
     int pos_y_click;
-    sort_t * (*createSort[5])(struct player_s *);
+    cd_t createSort[5];
     int pt_life;
     int pt_mana;
     int pt_xp;
@@ -41,11 +41,10 @@ typedef struct player_s{
     SDL_Texture *sprite;
 
     int (*unStun)(int, struct player_s *);
-    sort_t * (*castSpell)(struct player_s *);
 
 } player_t;
 
-extern player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, sort_t * (*createSort[])(struct player_s *), int x, int y);
+extern player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, cd_t setSort[], int x, int y);
 extern void freePlayer(player_t * p);
 extern int playerPosX(player_t * p);
 extern int playerPosY(player_t * p);

@@ -1,3 +1,5 @@
+#define NB_SORT 5
+
 typedef struct sort_s{
 
     char * name;
@@ -20,3 +22,8 @@ typedef struct sort_s{
     void (*destroy)(struct sort_s **);
 
 } sort_t;
+
+typedef struct cd_s{
+    int timer;
+    sort_t * (*createSort)(void *);
+}cd_t;

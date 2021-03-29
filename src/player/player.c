@@ -21,7 +21,7 @@ static int playerUnstun(int, player_t *);
  * \return p Pointeur sur une structure player_s étant le nouveau personnage créé.
  */
 extern
-player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, sort_t * (*createSort[])(player_t *), int x, int y){
+player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, cd_t setSort[], int x, int y){
     player_t * p;
     p = malloc(sizeof(player_t));
 
@@ -43,12 +43,10 @@ player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, sort_t
     p->numSprite = 1;
 
     for (int i = 0; i < 2; i++){
-        p->createSort[i] = createSort[i];
+        p->createSort[i] = setSort[i];
     }
 
-
     p->unStun = playerUnstun;
-    p->castSpell = p->createSort[p->numSort];
 }
 
 /**

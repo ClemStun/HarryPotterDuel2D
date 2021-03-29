@@ -99,12 +99,12 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                     }
                 break;
                 case SDL_KEYDOWN:
-                    if(keyboard_state_array[SDL_SCANCODE_UP] && *sort == NULL)
+                    /*if(keyboard_state_array[SDL_SCANCODE_UP] && *sort == NULL)
                         *sort = monPerso->castSpell(monPerso);
                     else if(keyboard_state_array[SDL_SCANCODE_1])
                         monPerso->castSpell = monPerso->createSort[0];
                     else if(keyboard_state_array[SDL_SCANCODE_2])
-                        monPerso->castSpell = monPerso->createSort[1];
+                        monPerso->castSpell = monPerso->createSort[1];*/
                 break;
             }
         }
@@ -229,14 +229,13 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
                     }
                 break;
                 case SDL_KEYDOWN:
-                    if(keyboard_state_array[SDL_SCANCODE_UP] && *sort == NULL)
-                        *sort = monPerso->castSpell(monPerso);
-                    else if(keyboard_state_array[SDL_SCANCODE_1]){
+                    if(keyboard_state_array[SDL_SCANCODE_UP] && *sort == NULL && (SDL_GetTicks() - monPerso->createSort[monPerso->numSort].timer >= 3000)){
+                        *sort = monPerso->createSort[monPerso->numSort].createSort(monPerso);
+                        monPerso->createSort[monPerso->numSort].timer = SDL_GetTicks();
+                    }else if(keyboard_state_array[SDL_SCANCODE_1]){
                         monPerso->numSort = 0;
-                        monPerso->castSpell = monPerso->createSort[monPerso->numSort];
                     }else if(keyboard_state_array[SDL_SCANCODE_2]){
                         monPerso->numSort = 1;
-                        monPerso->castSpell = monPerso->createSort[monPerso->numSort];
                     }
                 break;
             }
@@ -246,6 +245,7 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
 
     //Actualisation du jeu
     updatePosition(win, monPerso, images, monPerso->pos_x_click, monPerso->pos_y_click, 0.2);
+
     update_hud_ingame(win, images, monPerso);
 
     rand_click_bot(mannequin);
