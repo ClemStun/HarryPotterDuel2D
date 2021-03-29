@@ -21,19 +21,19 @@ static int playerUnstun(int, player_t *);
  * \return p Pointeur sur une structure player_s étant le nouveau personnage créé.
  */
 extern
-player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, sort_t * (*createSort[])(player_t *)){
+player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, sort_t * (*createSort[])(player_t *), int x, int y){
     player_t * p;
     p = malloc(sizeof(player_t));
 
     p->id_player = id_player;
     strcpy(p->name, name);
-    p->pos_x = 50;
-    p->pos_y = 50;
-    p->posXfloat = 50;
-    p->posYfloat = 50;
+    p->pos_x = x;
+    p->pos_y = y;
+    p->posXfloat = (float)x;
+    p->posYfloat = (float)y;
     p->numSort = 0;
-    p->pos_x_click = 200;
-    p->pos_y_click = 200;
+    p->pos_x_click = x+10;
+    p->pos_y_click = y+10;
     p->pt_life = 100;
     p->pt_mana = 100;
     p->sprite = sprite;
@@ -45,7 +45,7 @@ player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, sort_t
     for (int i = 0; i < 2; i++){
         p->createSort[i] = createSort[i];
     }
-    
+
 
     p->unStun = playerUnstun;
     p->castSpell = p->createSort[p->numSort];
@@ -93,4 +93,13 @@ int playerUnstun(int intervalle, player_t * player){
         printf("Je suis censé ne plus pop après ça \n");
     }
     printf("Player plus stun \n");
+}
+
+extern
+void rand_click_bot(player_t *mannequin){
+
+    if(mannequin->vitesse == 0){
+        mannequin->pos_x_click = rand()%200+900;
+        mannequin->pos_y_click = rand()%400+100;
+    }
 }

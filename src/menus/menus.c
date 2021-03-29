@@ -92,7 +92,7 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
 					return QUIT;
 				break;
                 case SDL_MOUSEBUTTONDOWN:
-                    if(SDL_BUTTON(SDL_BUTTON_LEFT)){
+                    if(event.button.button == SDL_BUTTON_LEFT){
                         SDL_GetMouseState(&(monPerso->pos_x_click), &(monPerso->pos_y_click));
                         monPerso->pos_x_click -= 50;
                         monPerso->pos_y_click -= 50;
@@ -108,7 +108,6 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                 break;
             }
         }
-
     //Actualisation du jeu
     updatePosition(win, monPerso, images, monPerso->pos_x_click, monPerso->pos_y_click, 0.2);
     //updatePosition(win, mannequin, images, 50, 50, 0.2);
@@ -223,7 +222,7 @@ t_etat training_state(window *win, images_t * images, player_t * monPerso, playe
 					return QUIT;
 				break;
                 case SDL_MOUSEBUTTONDOWN:
-                    if(SDL_BUTTON(SDL_BUTTON_LEFT)){
+                    if(event.button.button == SDL_BUTTON_LEFT){
                         SDL_GetMouseState(&(monPerso->pos_x_click), &(monPerso->pos_y_click));
                         monPerso->pos_x_click -= 50;
                         monPerso->pos_y_click -= 50;
@@ -245,7 +244,12 @@ t_etat training_state(window *win, images_t * images, player_t * monPerso, playe
 
     //Actualisation du jeu
     updatePosition(win, monPerso, images, monPerso->pos_x_click, monPerso->pos_y_click, 0.2);
-    //updatePosition(win, mannequin, images, 50, 50, 0.2);
+
+    rand_click_bot(mannequin);
+
+    updatePosition(win, mannequin, images, mannequin->pos_x_click, mannequin->pos_y_click, 0.2);
+
+
     update_hud_ingame(win, images, monPerso);
 
     if(*sort != NULL){
@@ -253,8 +257,6 @@ t_etat training_state(window *win, images_t * images, player_t * monPerso, playe
         (*sort)->display((*sort), win, images);
         (*sort)->collision_test(sort, (*sort)->destX, (*sort)->destY, mannequin);
     }
-
-    DrawImage(win->pRenderer, images, monPerso->sprite, 32, 64, 32, 32, 1000, 200, 100, 100);
 
     SDL_SetRenderDrawColor(win->pRenderer, 150, 150, 150, 0 );
     return TRAINING;

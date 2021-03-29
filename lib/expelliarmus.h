@@ -31,7 +31,7 @@ typedef struct expelliarmus_s{
     int sender;
 
     void (*deplacement)(struct expelliarmus_s *, int, int);
-    void (*display)(struct expelliarmus_s *, window *);
+    void (*display)(struct expelliarmus_s *, window *, images_t *images);
     int (*collision_test)(struct expelliarmus_s **,int , int, player_t *);
     void (*destroy)(struct expelliarmus_s **);
 

@@ -12,6 +12,8 @@ int main(int argc, char **argv){
     text_t * text;
     t_etat etat_de_jeu = HOME;
 
+    srand(time(NULL));
+
     sort_t * sort = NULL;
 
     win = Initialize_sdl();
@@ -27,13 +29,13 @@ int main(int argc, char **argv){
     createSort[1] = createPetrificus;
 
     player_t * monPerso;
-    monPerso = createPlayer(1, "Heaven", searchTexture(&images, "hp.png"), createSort);
+    monPerso = createPlayer(1, "Heaven", searchTexture(&images, "hp.png"), createSort, 200, 250);
 
 
 
     //Mannequin
     player_t * mannequin;
-    mannequin = createPlayer(2, "Mannequin", searchTexture(&images, "hp.png"), createSort);
+    mannequin = createPlayer(2, "Mannequin", searchTexture(&images, "hp.png"), createSort, 900, 250);
 
     // Boucle de jeu
     while(etat_de_jeu != QUIT){

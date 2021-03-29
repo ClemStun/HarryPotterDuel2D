@@ -37,6 +37,26 @@ void update_hud_ingame(window * win, images_t * images, player_t * monPerso){
     mana.h = 20;
 
     DrawImage(win->pRenderer, images, searchTexture(images, "hud_tmp.png"), 0, 0, 1200, 60, 0, SCREEN_HEIGHT-60, SCREEN_WIDTH, 60);
+    DrawImage(win->pRenderer, images, searchTexture(images, "expelliarmus.png"), 0, 0, 1200, 60, 445, SCREEN_HEIGHT-69, 64, 64);
+    DrawImage(win->pRenderer, images, searchTexture(images, "petrificus.png"), 0, 0, 1200, 60, 510, SCREEN_HEIGHT-56, 62, 52);
+
+    switch(monPerso->numSort){
+        case 0:
+            DrawImage(win->pRenderer, images, searchTexture(images, "selection.png"), 0, 0, 1200, 60, 438, SCREEN_HEIGHT-60, 72, 60);
+        break;
+        case 1:
+            DrawImage(win->pRenderer, images, searchTexture(images, "selection.png"), 0, 0, 1200, 60, 506, SCREEN_HEIGHT-60, 70, 60);
+        break;
+        case 2:
+            DrawImage(win->pRenderer, images, searchTexture(images, "selection.png"), 0, 0, 1200, 60, 572, SCREEN_HEIGHT-60, 70, 60);
+        break;
+        case 3:
+            DrawImage(win->pRenderer, images, searchTexture(images, "selection.png"), 0, 0, 1200, 60, 638, SCREEN_HEIGHT-60, 70, 60);
+        break;
+        case 4:
+            DrawImage(win->pRenderer, images, searchTexture(images, "selection.png"), 0, 0, 1200, 60, 704, SCREEN_HEIGHT-60, 70, 60);
+        break;
+    }
 
     SDL_SetRenderDrawColor(win->pRenderer, 255, 0, 0, 255);
     SDL_RenderFillRect(win->pRenderer, &life);

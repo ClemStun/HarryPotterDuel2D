@@ -17,7 +17,7 @@ typedef struct petrificus_s{
     int sender;
 
     void (*deplacement)(struct petrificus_s *, int, int);
-    void (*display)(struct petrificus_s *, window *);
+    void (*display)(struct petrificus_s *, window *, images_t *images);
     int (*collision_test)(struct petrificus_s **,int , int, player_t *);
     void (*destroy)(struct petrificus_s **);
 

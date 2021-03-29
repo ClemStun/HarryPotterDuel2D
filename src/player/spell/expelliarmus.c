@@ -50,7 +50,7 @@ expelliarmus_t * createExpelliarmus(player_t * player){
     spell->collision_test = collision_test;
     spell->destroy = destroy;
 
-    printf("Expelliarmus lancé !\n");
+    //printf("Expelliarmus lancé !\n");
 
     return spell;
 }

@@ -25,6 +25,9 @@
  extern
  void updatePosition(window * win, player_t * monPerso, images_t * images, int deplX, int deplY, double vitesse){
      double vX = 0, vY = 0, norme = 0;
+     int miror = 2;
+
+     if(monPerso->id_player == 2) miror = 1;
 
      vX = (double)deplX - (monPerso->posXfloat);
      vY = (double)deplY - (monPerso->posYfloat);
@@ -46,10 +49,10 @@
          if(monPerso->numSprite > 5){
              monPerso->numSprite = 1;
          }
-         DrawImage(win->pRenderer, images, monPerso->sprite, ((monPerso->numSprite)%5)*32, 64, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
+         DrawImage(win->pRenderer, images, monPerso->sprite, ((monPerso->numSprite)%5)*32, miror*32, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
      }
      else{
          monPerso->vitesse = 0;
-         DrawImage(win->pRenderer, images, monPerso->sprite, 5*32, 64, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
+         DrawImage(win->pRenderer, images, monPerso->sprite, 5*32, miror*32, 32, 32, monPerso->pos_x, monPerso->pos_y, 100, 100);
      }
  }

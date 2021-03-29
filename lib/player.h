@@ -8,6 +8,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "sdl.h"
 #include "sort.h"
@@ -44,7 +45,8 @@ typedef struct player_s{
 
 } player_t;
 
-extern player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, sort_t * (*createSort[])(struct player_s *));
+extern player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, sort_t * (*createSort[])(struct player_s *), int x, int y);
 extern void freePlayer(player_t * p);
 extern int playerPosX(player_t * p);
 extern int playerPosY(player_t * p);
+extern void rand_click_bot(player_t *mannequin);
