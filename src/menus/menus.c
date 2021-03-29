@@ -242,6 +242,8 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
             }
         }
 
+    DrawImage(win->pRenderer, images, searchTexture(images, "background_training.png"), 80, 30, 1000, 540, 0, 0, 1200, 600);
+
     //Actualisation du jeu
     updatePosition(win, monPerso, images, monPerso->pos_x_click, monPerso->pos_y_click, 0.2);
     update_hud_ingame(win, images, monPerso);

@@ -29,8 +29,6 @@ int main(int argc, char **argv){
     player_t * monPerso;
     monPerso = createPlayer(1, "Heaven", searchTexture(&images, "hp.png"), createSort, 200, 250);
 
-
-
     //Mannequin
     player_t * mannequin;
     mannequin = createPlayer(2, "Ennemi", searchTexture(&images, "hp.png"), createSort, 900, 250);
