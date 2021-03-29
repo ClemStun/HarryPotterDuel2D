@@ -23,6 +23,9 @@ static void destroy(petrificus_t **);
 extern
 petrificus_t * createPetrificus(player_t * player){
 
+    if(player->pt_mana - 20 < 0)
+        return NULL;
+
     petrificus_t * spell = malloc(sizeof(petrificus_t));
 
     spell->name = malloc(sizeof(char) * strlen("Petrificus"));
@@ -42,7 +45,7 @@ petrificus_t * createPetrificus(player_t * player){
     spell->collision_test = collision_test;
     spell->destroy = destroy;
 
-    //printf("Petrificus lancé !\n");
+    player->pt_mana -= spell->manaCost;
 
     return spell;
 }

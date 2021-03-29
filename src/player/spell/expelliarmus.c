@@ -29,6 +29,9 @@ static void destroy(expelliarmus_t **);
 extern
 expelliarmus_t * createExpelliarmus(player_t * player){
 
+    if(player->pt_mana - 10 < 0)
+        return NULL;
+
     expelliarmus_t * spell = malloc(sizeof(expelliarmus_t));
 
     spell->name = malloc(sizeof(char) * strlen("Expelliarmus"));
@@ -50,7 +53,7 @@ expelliarmus_t * createExpelliarmus(player_t * player){
     spell->collision_test = collision_test;
     spell->destroy = destroy;
 
-    //printf("Expelliarmus lancé !\n");
+    player->pt_mana -= spell->manaCost;
 
     return spell;
 }
