@@ -1,6 +1,4 @@
-#include "../menus/menus.h"
-#include "../player/move.h"
-#include "../HUD/hud_ingame.h"
+#include "../../lib/sdl.h"
 #include <math.h>
 
 #define SCREEN_WIDTH 1200
@@ -13,11 +11,13 @@ int main(int argc, char **argv){
     SDL_Event event;
 
     win = Initialize_sdl();
-    init_struct_text(text);
+    text = init_struct_text();
+
+    TTF_Font *font = TTF_OpenFont("../../assets/fonts/big_noodle_titling.ttf", 80);
 
     while(!should_quit){
         SDL_RenderClear(win->pRenderer);
-        SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 255 );
+        SDL_SetRenderDrawColor(win->pRenderer, 255, 255, 255, 255);
 
         while(SDL_PollEvent(&event)){
 			switch (event.type){
@@ -27,12 +27,15 @@ int main(int argc, char **argv){
             }
         }
 
+        createText(win->pRenderer, text, 100, 100, 100, 100, "pouette", font, 'r');
+
         // Actualisation du rendu
-        SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 255);
+        SDL_SetRenderDrawColor(win->pRenderer, 255, 255, 255, 255);
         SDL_RenderPresent(win->pRenderer);
     }
 
-    //freeText(&text);
+    TTF_CloseFont(font);
+    freeText(&text);
 
     // Libération mémoire du rendu
     SDL_DestroyRenderer(win->pRenderer);
