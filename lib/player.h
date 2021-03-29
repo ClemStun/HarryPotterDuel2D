@@ -27,10 +27,11 @@ typedef struct player_s{
     double posYfloat;
     int pos_x_click;
     int pos_y_click;
-    int set_sort[5];
+    sort_t * (*createSort[5])(struct player_s *);
     int pt_life;
     int pt_mana;
     int pt_xp;
+    int numSort;
     double vitesse;
     int timerSprite;
     int numSprite;
@@ -43,7 +44,7 @@ typedef struct player_s{
 
 } player_t;
 
-extern player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite);
+extern player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, sort_t * (*createSort[])(struct player_s *));
 extern void freePlayer(player_t * p);
 extern int playerPosX(player_t * p);
 extern int playerPosY(player_t * p);

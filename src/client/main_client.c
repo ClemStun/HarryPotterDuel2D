@@ -22,13 +22,18 @@ int main(int argc, char **argv){
     TTF_Font *font = TTF_OpenFont("../../assets/fonts/big_noodle_titling.ttf", 80);
 
     // Destiné à dégager
+    sort_t * (*createSort[5])(player_t *) = {NULL, NULL, NULL, NULL, NULL};
+    createSort[0] = createExpelliarmus;
+    createSort[1] = createPetrificus;
+
     player_t * monPerso;
-    monPerso = createPlayer(1, "Heaven", searchTexture(&images, "hp.png"));
-    monPerso->castSpell = createExpelliarmus;
+    monPerso = createPlayer(1, "Heaven", searchTexture(&images, "hp.png"), createSort);
+
+
 
     //Mannequin
     player_t * mannequin;
-    mannequin = createPlayer(2, "Mannequin", searchTexture(&images, "hp.png"));
+    mannequin = createPlayer(2, "Mannequin", searchTexture(&images, "hp.png"), createSort);
 
     // Boucle de jeu
     while(etat_de_jeu != QUIT){

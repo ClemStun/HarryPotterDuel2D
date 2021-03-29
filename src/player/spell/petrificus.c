@@ -37,8 +37,6 @@ petrificus_t * createPetrificus(player_t * player){
     spell->height = 10;
     spell->sender = player->id_player;
 
-    //spell->sprite = NULL;
-
     spell->deplacement = deplacement;
     spell->display = display;
     spell->collision_test = collision_test;

@@ -13,9 +13,7 @@ typedef struct sort_s{
     int width;
     int height;
     int sender;
-
-    //SDL_Texture * sprite;
-
+    
     void (*deplacement)(struct sort_s *, int, int);
     void (*display)(struct sort_s *, window *, struct images_s *);
     int (*collision_test)(struct sort_s **,int , int, void *);

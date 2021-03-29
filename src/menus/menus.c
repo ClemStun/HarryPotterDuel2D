@@ -102,9 +102,9 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                     if(keyboard_state_array[SDL_SCANCODE_UP] && *sort == NULL)
                         *sort = monPerso->castSpell(monPerso);
                     else if(keyboard_state_array[SDL_SCANCODE_1])
-                        monPerso->castSpell = createExpelliarmus;
+                        monPerso->castSpell = monPerso->createSort[0];
                     else if(keyboard_state_array[SDL_SCANCODE_2])
-                        monPerso->castSpell = createPetrificus;
+                        monPerso->castSpell = monPerso->createSort[1];
                 break;
             }
         }
@@ -232,10 +232,13 @@ t_etat training_state(window *win, images_t * images, player_t * monPerso, playe
                 case SDL_KEYDOWN:
                     if(keyboard_state_array[SDL_SCANCODE_UP] && *sort == NULL)
                         *sort = monPerso->castSpell(monPerso);
-                    else if(keyboard_state_array[SDL_SCANCODE_1])
-                        monPerso->castSpell = createExpelliarmus;
-                    else if(keyboard_state_array[SDL_SCANCODE_2])
-                        monPerso->castSpell = createPetrificus;
+                    else if(keyboard_state_array[SDL_SCANCODE_1]){
+                        monPerso->numSort = 0;
+                        monPerso->castSpell = monPerso->createSort[monPerso->numSort];
+                    }else if(keyboard_state_array[SDL_SCANCODE_2]){
+                        monPerso->numSort = 1;
+                        monPerso->castSpell = monPerso->createSort[monPerso->numSort];
+                    }
                 break;
             }
         }

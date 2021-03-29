@@ -30,8 +30,6 @@ typedef struct expelliarmus_s{
     int height;
     int sender;
 
-    //SDL_Texture * sprite;
-
     void (*deplacement)(struct expelliarmus_s *, int, int);
     void (*display)(struct expelliarmus_s *, window *);
     int (*collision_test)(struct expelliarmus_s **,int , int, player_t *);

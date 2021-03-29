@@ -16,8 +16,6 @@ typedef struct petrificus_s{
     int height;
     int sender;
 
-    //SDL_Texture * sprite;
-
     void (*deplacement)(struct petrificus_s *, int, int);
     void (*display)(struct petrificus_s *, window *);
     int (*collision_test)(struct petrificus_s **,int , int, player_t *);
