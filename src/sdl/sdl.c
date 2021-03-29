@@ -68,21 +68,21 @@ void LoadImages(SDL_Renderer * pRenderer, images_t * images){
     struct dirent *dir;
     images->nb_images = 0;
 
-    d = opendir("../../assets/images");
+    d = opendir("./assets/images");
     while((dir = readdir(d)) != NULL) images->nb_images++;
     closedir(d);
 
     images->nomsImages = (char**)malloc(sizeof(char*) * images->nb_images);
     images->l_textImages = (SDL_Texture**)malloc(sizeof(SDL_Texture*) * images->nb_images);
 
-    d = opendir("../../assets/images");
+    d = opendir("./assets/images");
     for(int i = 0; (dir = readdir(d)) != NULL; i++){
         images->nomsImages[i] = (char*)malloc(sizeof(char) * strlen(dir->d_name)+1);
         strcpy(images->nomsImages[i], dir->d_name);
     }
     closedir(d);
     for(int i = 0; i < images->nb_images; i++){
-        char nom[50] = "../../assets/images/";
+        char nom[50] = "./assets/images/";
         strcat(nom, images->nomsImages[i]);
         images->l_textImages[i] = IMG_LoadTexture(pRenderer, nom);
         printf("%s\n", nom);

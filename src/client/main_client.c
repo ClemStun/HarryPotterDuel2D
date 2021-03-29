@@ -19,7 +19,7 @@ int main(int argc, char **argv){
     text = init_struct_text();
 
     // fonts
-    TTF_Font *font = TTF_OpenFont("../../assets/fonts/big_noodle_titling.ttf", 80);
+    TTF_Font *font = TTF_OpenFont("./assets/fonts/big_noodle_titling.ttf", 80);
 
     // Destiné à dégager
     cd_t setSort[5];
