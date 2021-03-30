@@ -13,8 +13,8 @@
 typedef enum{QUIT, HOME, GAME, TRAINING, WAITING, OTHER} t_etat;
 SDL_Event event;
 
+#include "menu.h"
 #include "game.h"
 #include "train.h"
 #include "waiting.h"
-#include "menu.h"
 

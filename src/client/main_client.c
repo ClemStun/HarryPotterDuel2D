@@ -1,6 +1,8 @@
 #include "../../lib/menus.h"
 #include "../../lib/expelliarmus.h"
 #include "../../lib/petrificus.h"
+#include "../../lib/incendio.h"
+
 #include <math.h>
 
 #define SCREEN_WIDTH 1200
@@ -28,6 +30,7 @@ int main(int argc, char **argv){
     }
     setSort[0].createSort = createExpelliarmus;
     setSort[1].createSort = createPetrificus;
+    setSort[2].createSort = createIncendio;
 
     player_t * monPerso;
     monPerso = createPlayer(1, "Heaven", searchTexture(&images, "hp.png"), setSort, 200, 250);
