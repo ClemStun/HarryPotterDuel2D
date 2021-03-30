@@ -1,0 +1,1 @@
+extern t_etat waiting_state(window *win, text_t * text, TTF_Font *font);

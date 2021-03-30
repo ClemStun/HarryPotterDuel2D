@@ -1,7 +1,7 @@
 sdl_options = -lSDL2 -lSDL2_image -lSDL2_ttf
 
 BIN = ./main
-OBJ = ./obj/main_client.o ./obj/move.o ./obj/player.o ./obj/sdl.o ./obj/hud_ingame.o ./obj/expelliarmus.o ./obj/petrificus.o ./obj/menus.o
+OBJ = ./obj/main_client.o ./obj/move.o ./obj/player.o ./obj/sdl.o ./obj/hud_ingame.o ./obj/expelliarmus.o ./obj/petrificus.o ./obj/menu.o ./obj/game.o ./obj/waiting.o ./obj/train.o
 
 ./main : $(OBJ)
 	gcc -o $(BIN) $(OBJ) $(sdl_options) -lm -g
@@ -27,8 +27,17 @@ OBJ = ./obj/main_client.o ./obj/move.o ./obj/player.o ./obj/sdl.o ./obj/hud_inga
 ./obj/hud_ingame.o : ./src/HUD/hud_ingame.c
 	gcc -o ./obj/hud_ingame.o -c ./src/HUD/hud_ingame.c
 
-./obj/menus.o : ./src/menus/menus.c
-	gcc -o ./obj/menus.o -c ./src/menus/menus.c
+./obj/menu.o : ./src/states/menu.c
+	gcc -o ./obj/menu.o -c ./src/states/menu.c
+
+./obj/game.o : ./src/states/game.c
+	gcc -o ./obj/game.o -c ./src/states/game.c
+
+./obj/train.o : ./src/states/train.c
+	gcc -o ./obj/train.o -c ./src/states/train.c
+
+./obj/waiting.o : ./src/states/waiting.c
+	gcc -o ./obj/waiting.o -c ./src/states/waiting.c
 
 all : $(BIN) $(OBJ)
 

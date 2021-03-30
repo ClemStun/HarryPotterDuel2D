@@ -1,0 +1,1 @@
+extern t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t * mannequin);

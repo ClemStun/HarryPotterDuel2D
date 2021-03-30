@@ -7,12 +7,14 @@
  *
  */
 
+
 #include "hud_ingame.h"
 
 typedef enum{QUIT, HOME, GAME, TRAINING, WAITING, OTHER} t_etat;
+SDL_Event event;
 
-extern t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t * mannequin);
-extern t_etat home_state(window *win, images_t * images, text_t * text, player_t * monPerso, TTF_Font *font);
-extern t_etat training_state(window *win, images_t * images, text_t * text, player_t * monPerso, player_t * mannequin, TTF_Font *font);
-extern t_etat waiting_state(window *win, text_t * text, TTF_Font *font);
-extern void createButton(window *win, text_t * text, int posX, int posY, int rectW, int rectH, const char *texte, TTF_Font *fontButton, const char color);
+#include "game.h"
+#include "train.h"
+#include "waiting.h"
+#include "menu.h"
+
