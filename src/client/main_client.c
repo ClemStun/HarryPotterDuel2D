@@ -12,8 +12,6 @@ int main(int argc, char **argv){
     text_t * text;
     t_etat etat_de_jeu = HOME;
 
-    sort_t * sort = NULL;
-
     win = Initialize_sdl();
     LoadImages(win->pRenderer, &images);
     text = init_struct_text();
@@ -22,10 +20,11 @@ int main(int argc, char **argv){
     TTF_Font *font = TTF_OpenFont("./assets/fonts/big_noodle_titling.ttf", 80);
 
     // Destiné à dégager
-    cd_t setSort[5];
+    cd_t setSort[NB_SORT];
     for(int i = 0; i < NB_SORT; i++){
         setSort[i].timer = SDL_GetTicks();
         setSort[i].createSort = NULL;
+        setSort[i].sort = NULL;
     }
     setSort[0].createSort = createExpelliarmus;
     setSort[1].createSort = createPetrificus;
@@ -46,10 +45,10 @@ int main(int argc, char **argv){
                 etat_de_jeu = home_state(win, &images, text, monPerso, font);
             break;
             case GAME:
-                etat_de_jeu = game_state(win, &images, monPerso, mannequin, &sort);
+                etat_de_jeu = game_state(win, &images, monPerso, mannequin);
             break;
             case TRAINING:
-                etat_de_jeu = training_state(win, &images, text, monPerso, mannequin, &sort, font);
+                etat_de_jeu = training_state(win, &images, text, monPerso, mannequin, font);
             break;
             case WAITING:
                 etat_de_jeu = waiting_state(win, text, font);

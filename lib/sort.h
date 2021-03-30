@@ -26,4 +26,5 @@ typedef struct sort_s{
 typedef struct cd_s{
     int timer;
     sort_t * (*createSort)(void *);
+    sort_t * sort;
 }cd_t;

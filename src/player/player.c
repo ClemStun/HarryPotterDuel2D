@@ -42,7 +42,7 @@ player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, cd_t s
     p->timerSprite = 1;
     p->numSprite = 1;
 
-    for (int i = 0; i < 2; i++){
+    for (int i = 0; i < NB_SORT; i++){
         p->createSort[i] = setSort[i];
     }
 
@@ -88,9 +88,7 @@ static
 int playerUnstun(int intervalle, player_t * player){
     if(SDL_RemoveTimer(player->id_timer)){
         player->is_stun = 0;
-        printf("Je suis censé ne plus pop après ça \n");
     }
-    printf("Player plus stun \n");
 }
 
 extern
