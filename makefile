@@ -1,13 +1,16 @@
 sdl_options = -lSDL2 -lSDL2_image -lSDL2_ttf
 
 BIN = ./main
-OBJ = ./obj/main_client.o ./obj/move.o ./obj/player.o ./obj/sdl.o ./obj/hud_ingame.o ./obj/expelliarmus.o ./obj/petrificus.o ./obj/incendio.o ./obj/menu.o ./obj/game.o ./obj/waiting.o ./obj/train.o
+OBJ = ./obj/main_client.o ./obj/init_connexion.o ./obj/move.o ./obj/player.o ./obj/sdl.o ./obj/hud_ingame.o ./obj/expelliarmus.o ./obj/petrificus.o ./obj/incendio.o ./obj/menu.o ./obj/game.o ./obj/waiting.o ./obj/train.o
 
 ./main : $(OBJ)
 	gcc -o $(BIN) $(OBJ) $(sdl_options) -lm -g
 
 ./obj/main_client.o : ./src/client/main_client.c
 	gcc -o ./obj/main_client.o -c ./src/client/main_client.c
+
+./obj/init_connexion.o : ./src/client/init_connexion.c
+	gcc -o ./obj/init_connexion.o -c ./src/client/init_connexion.c
 
 ./obj/move.o : ./src/player/move.c
 	gcc -o ./obj/move.o -c ./src/player/move.c

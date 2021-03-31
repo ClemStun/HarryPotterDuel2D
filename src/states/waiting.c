@@ -10,7 +10,7 @@
 #include "../../lib/menus.h"
 
 extern
-t_etat waiting_state(window *win, text_t * text, TTF_Font *font){
+t_etat waiting_state(window *win, text_t * text, TTF_Font *font, int socketClient, socket_t *j1, socket_t *adv){
     static int i = 0, compteur = 1;
 
     SDL_RenderClear(win->pRenderer);
@@ -42,5 +42,10 @@ t_etat waiting_state(window *win, text_t * text, TTF_Font *font){
     }
 
     SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 0 );
-    return WAITING;
+
+    send(socketClient, j1, sizeof(j1), 0);
+    recv(socketClient, adv, sizeof *adv, 0);
+    printf("Votre adversaire est %s\n", adv->pseudo);
+
+    return GAME;
 }

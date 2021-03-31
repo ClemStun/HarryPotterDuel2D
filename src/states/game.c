@@ -25,6 +25,7 @@ extern
 t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t * mannequin){
     const Uint8 *keyboard_state_array = SDL_GetKeyboardState(NULL);
 
+
     SDL_RenderClear(win->pRenderer);
 
     // Lecture des évènements
@@ -38,6 +39,9 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                         SDL_GetMouseState(&(monPerso->pos_x_click), &(monPerso->pos_y_click));
                         monPerso->pos_x_click -= 50;
                         monPerso->pos_y_click -= 50;
+                        /*j1->x_click = monPerso->pos_x_click;
+                        j1->y_click = monPerso->pos_y_click;
+                        send(socketClient, j1, sizeof(j1), 0);*/
                     }
                 break;
                 case SDL_KEYDOWN:

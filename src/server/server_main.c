@@ -1,3 +1,5 @@
+#include "../../lib/sdl.h"
+#include "../../lib/sort.h"
 #include "init.h"
 
 int main(){
@@ -7,10 +9,12 @@ int main(){
     int max = socketServer;
     fd_set readfs;
 
-    player_t *joueur;
-    player_t **joueurs;
-    joueur = malloc(sizeof(player_t));
-    joueurs = malloc(sizeof(player_t)*MAX_CLIENT);
+    socket_t firstPlayer;
+
+    socket_t joueur;
+    socket_t j1;
+    socket_t j2;
+
     //Boucle Principale
     while(1){
         int i;
@@ -35,29 +39,35 @@ int main(){
             max = socketClient > max ? socketClient : max;
             FD_SET(socketClient, &readfs);
             clients[nb_client] = socketClient;
-            nb_client++;
+            int nJoueur = nb_client; //(on détecte le numéro du joueur)
             //On reçoit des informations du client (pseudo, texture etc...)
-            readData(socketClient, joueur);
-            int nJoueur = socketClient-socketServer; //(on détecte le numéro du joueur)
+            readData(socketClient, &joueur);
             //On les stocke dans le tableau 
-            joueurs[nJoueur-1] = joueur;
-            if(nb_client == MAX_CLIENT){
-                send(clients[0], joueurs[0], sizeof (player_t), 0);
-                send(clients[1], joueurs[1], sizeof (player_t), 0);                
+            nb_client++;
+            if(nb_client == 1){
+                j1=joueur;
+            }else{
+                j2=joueur;
             }
-            printf("%s s'est connecté (%i/%i)\n", joueur->pseudo, nb_client, MAX_CLIENT);
+            printf("%s s'est connecté (%i/%i)\nSocket : %i\n", joueur.pseudo, nb_client, MAX_CLIENT, socketClient);
+            printf("\n%s %s\n", j1.pseudo, j2.pseudo);
+            if(nb_client == MAX_CLIENT){
+                printf("\n%i  %s\n", clients[1], j1.pseudo) ;
+                send(clients[1], &j1, sizeof(j1), 0);
+                send(clients[0], &j2, sizeof(j2), 0);
+            }
 
         }else{
             for(i = 0; i < nb_client; i++){
                 if(FD_ISSET(clients[i], &readfs)){
                     SOCKET client = clients[i];
-                    readData(client, joueur);
-                    if(joueur->x == -1){ 
+                    readData(client, &joueur);
+                    if(joueur.x_click == -1){ 
                         closesocket(client);
                         remove_client(clients, i, &nb_client);
                         printf("Le joueur %i s'est deconnecte (%i/%i)\n",client-socketServer, nb_client, MAX_CLIENT);
                     }else{
-                        send_all(clients, clients[i], joueur, nb_client);
+                        send_all(clients, clients[i], &joueur, nb_client);
                     }
                 }
             }
@@ -65,8 +75,5 @@ int main(){
     }
     closesocket(socketServer);
     printf("close\n");
-    free(joueurs[0]);
-    free(joueurs[1]);
-    free(joueurs);
     return 0;
 }

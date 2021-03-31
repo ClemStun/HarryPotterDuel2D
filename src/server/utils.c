@@ -7,7 +7,9 @@
  *
  */
 
-#include "utils.h"
+#include "../../lib/sdl.h"
+#include "../../lib/sort.h"
+#include "init.h"
 
 /**
  * \fn extern void send_all(SOCKET *clients, SOCKET sender, player_t *joueur, int nb_client)
@@ -21,7 +23,7 @@
  * @return Ne retourne rien
  */
 extern
-void send_all(SOCKET *clients, SOCKET sender, player_t *joueur, int nb_client);
+void send_all(SOCKET *clients, SOCKET sender, socket_t *joueur, int nb_client);
 
 /**
  * \fn extern void remove_client(SOCKET *clients, SOCKET client, int *nb_client)
@@ -46,15 +48,15 @@ void remove_client(SOCKET *clients, SOCKET client, int *nb_client);
  * @return Ne retourne rien
  */
 extern
-void readData(SOCKET socket, player_t *joueur);
+void readData(SOCKET socket, socket_t *joueur);
 
 
 extern
-void send_all(SOCKET *clients, SOCKET sender, player_t *joueur, int nb_client){
+void send_all(SOCKET *clients, SOCKET sender, socket_t *joueur, int nb_client){
     int i;
     for(i = 0; i < nb_client; i++){
         if(sender != clients[i]){
-            if(send(clients[i], joueur, sizeof (player_t), 0) < 0){
+            if(send(clients[i], joueur, sizeof (socket_t), 0) < 0){
                 perror("send()");
                 exit(-1);
             }
@@ -69,8 +71,8 @@ void remove_client(SOCKET *clients, SOCKET i, int *nb_client){
 }
 
 extern
-void readData(SOCKET socket, player_t *joueur){
-    if((recv(socket, joueur, sizeof(player_t) , 0)) < 0){
+void readData(SOCKET socket, socket_t *joueur){
+    if((recv(socket, joueur, sizeof(socket_t) , 0)) < 0){
       perror("recv()");
    }
 }

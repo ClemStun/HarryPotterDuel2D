@@ -9,6 +9,7 @@
 
 
 #include "hud_ingame.h"
+#include "init_connexion.h"
 
 /**
  * \enum t_etat;

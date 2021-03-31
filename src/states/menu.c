@@ -6,7 +6,6 @@
  * \date 14 feb 2021
  *
  */
-
 #include "../../lib/menus.h"
 
 #define SCREEN_WIDTH 1200
@@ -103,7 +102,7 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
     }
     else if(zone_detect(SCREEN_WIDTH-250, 50, 200, 100, mouseX, mouseY) && click == 1){
         click = 0;
-        return GAME;
+        return WAITING;
     }
     createButton(win, text, SCREEN_WIDTH-250, SCREEN_HEIGHT-150, 200, 100, "Quitter", font, 'b');
     if(zone_detect(SCREEN_WIDTH-250, SCREEN_HEIGHT-150, 200, 100, mouseX, mouseY) && click == 0){

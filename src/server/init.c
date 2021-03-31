@@ -7,6 +7,8 @@
  *
  */
 
+#include "../../lib/sdl.h"
+#include "../../lib/sort.h"
 #include "init.h"
 
 /**

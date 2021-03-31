@@ -2,7 +2,6 @@
 #include "../../lib/expelliarmus.h"
 #include "../../lib/petrificus.h"
 #include "../../lib/incendio.h"
-
 #include <math.h>
 
 #define SCREEN_WIDTH 1200
@@ -13,6 +12,13 @@ int main(int argc, char **argv){
     images_t images;
     text_t * text;
     t_etat etat_de_jeu = HOME;
+
+    socket_t j1;
+    socket_t j2;
+
+    printf("Quel est votre pseudo : ");
+    scanf("%s", j1.pseudo);
+    int socketClient = init_connexion(j1);
 
     win = Initialize_sdl();
     LoadImages(win->pRenderer, &images);
@@ -54,7 +60,7 @@ int main(int argc, char **argv){
                 etat_de_jeu = training_state(win, &images, text, monPerso, mannequin, font);
             break;
             case WAITING:
-                etat_de_jeu = waiting_state(win, text, font);
+                etat_de_jeu = waiting_state(win, text, font, socketClient, &j1, &j2);
             break;
         }
 
