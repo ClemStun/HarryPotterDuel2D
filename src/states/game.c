@@ -71,6 +71,6 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
         (*sort)->collision_test(sort, (*sort)->destX, (*sort)->destY, mannequin);
     }*/
 
-    SDL_SetRenderDrawColor(win->pRenderer, 150, 150, 150, 0 );
+    SDL_SetRenderDrawColor(win->pRenderer, 150, 150, 150, SDL_ALPHA_OPAQUE );
     return GAME;
 }

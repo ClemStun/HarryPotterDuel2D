@@ -78,6 +78,6 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
             monPerso->createSort[i].sort->collision_test(&(monPerso->createSort[i].sort), monPerso->createSort[i].sort->destX, monPerso->createSort[i].sort->destY, mannequin);
         }
     }
-    SDL_SetRenderDrawColor(win->pRenderer, 150, 150, 150, 0 );
+    SDL_SetRenderDrawColor(win->pRenderer, 150, 150, 150, SDL_ALPHA_OPAQUE );
     return TRAINING;
 }

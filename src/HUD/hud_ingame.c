@@ -29,12 +29,24 @@ void update_hud_ingame(window * win, images_t * images, player_t * monPerso){
     life.y = SCREEN_HEIGHT - 40;
     life.w = monPerso->pt_life*2;
     life.h = 20;
+    
+    SDL_Rect bd_life;
+    bd_life.x = 8;
+    bd_life.y = SCREEN_HEIGHT - 42;
+    bd_life.w = (monPerso->pt_life*2)+4;
+    bd_life.h = 24;
 
     SDL_Rect mana;
     mana.x = SCREEN_WIDTH - 210;
     mana.y = SCREEN_HEIGHT - 40;
     mana.w = monPerso->pt_mana*2;
     mana.h = 20;
+    
+    SDL_Rect bd_mana;
+    bd_mana.x = SCREEN_WIDTH - 212;
+    bd_mana.y = SCREEN_HEIGHT - 42;
+    bd_mana.w = (monPerso->pt_mana*2)+4;
+    bd_mana.h = 24;
 
     DrawImage(win->pRenderer, images, searchTexture(images, "hud_tmp.png"), 0, 0, 1200, 60, 0, SCREEN_HEIGHT-60, SCREEN_WIDTH, 60);
     DrawImage(win->pRenderer, images, searchTexture(images, "expelliarmus.png"), 0, 0, 1200, 60, 445, SCREEN_HEIGHT-69, 64, 64);
@@ -58,10 +70,17 @@ void update_hud_ingame(window * win, images_t * images, player_t * monPerso){
         break;
     }
 
-    SDL_SetRenderDrawColor(win->pRenderer, 255, 0, 0, 255);
+
+	SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
+    SDL_RenderFillRect(win->pRenderer, &bd_life);	
+	
+    SDL_SetRenderDrawColor(win->pRenderer, 255, 0, 0, SDL_ALPHA_OPAQUE);
     SDL_RenderFillRect(win->pRenderer, &life);
 
-    SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 255, 255);
+	SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
+    SDL_RenderFillRect(win->pRenderer, &bd_mana);
+	
+    SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 255, SDL_ALPHA_OPAQUE);
     SDL_RenderFillRect(win->pRenderer, &mana);
 
 }
@@ -71,13 +90,22 @@ void update_hud_ingame_ennemie(window * win, images_t * images, text_t * text, p
 
     SDL_Rect life;
     life.x = SCREEN_WIDTH - 120;
-    life.y = 30;
+    life.y = 28;
     life.w = ennemie->pt_life;
-    life.h = 10;
+    life.h = 14;
+    
+    SDL_Rect bd_life;
+    bd_life.x = SCREEN_WIDTH - 122;
+    bd_life.y = 26;
+    bd_life.w = ennemie->pt_life + 4;
+    bd_life.h = 18;
 
     DrawImage(win->pRenderer, images, searchTexture(images, "heart.png"), 0, 0, 46, 41, SCREEN_WIDTH - 150, 25, 23, 20);
     createText(win->pRenderer, text, SCREEN_WIDTH - 75, 60, 80, 20, ennemie->name, font, "r");
 
-    SDL_SetRenderDrawColor(win->pRenderer, 255, 0, 0, 255);
+	SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
+    SDL_RenderFillRect(win->pRenderer, &bd_life);
+
+    SDL_SetRenderDrawColor(win->pRenderer, 255, 0, 0, SDL_ALPHA_OPAQUE);
     SDL_RenderFillRect(win->pRenderer, &life);
 }
