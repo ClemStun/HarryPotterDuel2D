@@ -1,6 +1,6 @@
 /**
  * \file expelliarmus.h
- * \brief Méthode de l'objet expelliarmus_t
+ * \brief Header de expelliarmus.c.
  * \author Comte Clément
  * \version 0.1
  * \date 09 feb 2021

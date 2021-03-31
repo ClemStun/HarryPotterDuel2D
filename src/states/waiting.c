@@ -1,3 +1,12 @@
+/**
+ * \file waiting.c
+ * \brief Déroulement du jeu dans l'état WWAITING
+ * \author COUTANT Hugo
+ * \version 0.1
+ * \date 14 feb 2021
+ *
+ */
+
 #include "../../lib/menus.h"
 
 extern

@@ -3,7 +3,7 @@
  * \brief Méthode de l'objet incendio_t
  * \author Comte Clément
  * \version 0.1
- * \date 09 feb 2021
+ * \date 31 mar 2021
  *
  */
 #include <stdio.h>
@@ -89,22 +89,30 @@ void deplacement(incendio_t * spell, int x_dest, int y_dest){
 }
 
 /**
- * \fn static void display(incendio_t * spell, window * win)
+ * \fn static void display(incendio_t * spell, window * win, images_t *images)
  * \brief Affichage d'un incendio_t
  *
  * \param spell Pointeur sur l'élément incendio_t en question
  * \param win Fenetre dans laquelle le sort sera afficher
+ * \param images Image du sort
  * \return Ne renvoie rien.
  */
 static
 void display(incendio_t * spell, window * win, images_t *images){
 
-    //printf("YO displayed!\n");
-
     DrawImage(win->pRenderer, images, searchTexture(images, "expelliarmus.png"), 0, 0, 64, 64, spell->pos_x, spell->pos_y, 64, 64);
 
 }
 
+/**
+ * \fn static void display_zone(incendio_t * spell, window * win, images_t *images)
+ * \brief Affichage de la zone au sol pour un incendio_t
+ *
+ * \param spell Pointeur sur l'élément incendio_t en question
+ * \param win Fenetre dans laquelle le sort sera afficher
+ * \param images Image du sort
+ * \return Ne renvoie rien.
+ */
 static
 void display_zone(incendio_t * spell, window * win, images_t *images){
 
@@ -119,6 +127,16 @@ void display_zone(incendio_t * spell, window * win, images_t *images){
 
 }
 
+/**
+ * \fn static int collision_test_zone(incendio_t ** spell, int x, int y, player_t * player)
+ * \brief Test des collisions entre la zone au sol d'un sort incendio_t et un player_t player
+ *
+ * \param spell Pointeur sur pointeur d'un incendio_t
+ * \param x Position X max du sort
+ * \param y Position Y max du sort
+ * \param player Pointeur sur un player_t
+ * \return Renvoie 0 s'il y a eu collision, 1 sinon.
+ */
 static
 int collision_test_zone(incendio_t ** spell, int x, int y, player_t * player){
 

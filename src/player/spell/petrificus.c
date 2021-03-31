@@ -20,6 +20,13 @@ static void display(petrificus_t *, window *, images_t *images);
 static int collision_test(petrificus_t **, int, int, player_t *);
 static void destroy(petrificus_t **);
 
+/**
+ * \fn extern petrificus_t * createPetrificus(player_t * player)
+ * \brief Création d'un sort petrificus.
+ *
+ * \param player Pointeur sur le joueur player_t qui lance le sort.
+ * \return Renvoie le sort créé qui est un élément de type petrificus_t.
+ */
 extern
 petrificus_t * createPetrificus(player_t * player){
 
@@ -50,6 +57,15 @@ petrificus_t * createPetrificus(player_t * player){
     return spell;
 }
 
+/**
+ * \fn static void deplacement(petrificus_t * spell, int x_dest, int y_dest)
+ * \brief Mis a jour de la position d'un petrificus_t
+ *
+ * \param spell Pointeur sur l'élément petrificus_t en question
+ * \param x_dest Position X de la destination du sort
+ * \param y_dest Position Y de la destination du sort
+ * \return Ne renvoie rien.
+ */
 static
 void deplacement(petrificus_t * spell, int x_dest, int y_dest){
 
@@ -67,6 +83,15 @@ void deplacement(petrificus_t * spell, int x_dest, int y_dest){
     spell->pos_y = spell->posYf;
 }
 
+/**
+ * \fn static void display(petrificus_t * spell, window * win, images_t *images)
+ * \brief Affichage d'un petrificus_t
+ *
+ * \param spell Pointeur sur l'élément petrificus_t en question
+ * \param win Fenetre dans laquelle le sort sera afficher
+ * \param images Image de du sort
+ * \return Ne renvoie rien.
+ */
 static
 void display(petrificus_t * spell, window * win, images_t *images){
 
@@ -74,6 +99,16 @@ void display(petrificus_t * spell, window * win, images_t *images){
 
 }
 
+/**
+ * \fn static int collision_test(petrificus_t ** spell, int x, int y, player_t * player)
+ * \brief Test des collisions entre un sort petrificus_t et un player_t player
+ *
+ * \param spell Pointeur sur pointeur d'un petrificus_t
+ * \param x Position X max du sort
+ * \param y Position Y max du sort
+ * \param player Pointeur sur un player_t
+ * \return Renvoie 0 s'il y a eu collision, 1 sinon.
+ */
 static
 int collision_test(petrificus_t ** spell, int x, int y, player_t * player){
 
@@ -102,6 +137,13 @@ int collision_test(petrificus_t ** spell, int x, int y, player_t * player){
     return 1;
 }
 
+/**
+ * \fn static void destroy(petrificus_t ** spell)
+ * \brief Desttruction d'un petrificus_t
+ *
+ * \param spell Pointeur sur pointeur d'un petrificus_t destiné a être détruit
+ * \return Ne renvoie rien.
+ */
 static
 void destroy(petrificus_t ** spell){
     free((*spell)->name);

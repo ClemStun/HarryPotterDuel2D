@@ -10,6 +10,15 @@
 #include <stdio.h>
 
 /**
+ * \file incendio.h
+ * \brief Header de incendio.o
+ * \author Comte Clément
+ * \version 0.1
+ * \date 31 mar 2021
+ *
+ */
+
+/**
  * \struct incendio_s
  * \brief Structure du sort incendio_t contanenant toutes les informations
  *

@@ -5,9 +5,15 @@ digraph "lib/hud_ingame.h"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="lib/hud_ingame.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Header de hud_ingame.c."];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node2 [label="lib/menus.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menus_8h.html",tooltip="Header de menus.c."];
+  Node2 [label="lib/menus.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menus_8h.html",tooltip="Header commun aux différents status du jeu."];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node3 [label="src/menus/menus.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menus_8c.html",tooltip="Fonctions sur les différents états de jeu."];
-  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node4 [label="src/HUD/hud_ingame.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$hud__ingame_8c.html",tooltip="Fonctions de déplacement."];
+  Node3 [label="src/states/game.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game_8c.html",tooltip="Déroulement du jeu dans l'état GAME."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="src/states/menu.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menu_8c.html",tooltip="Déroulement du jeu dans l'état HOME."];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="src/states/train.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$train_8c.html",tooltip="Déroulement du jeu dans l'état TRAIN."];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="src/states/waiting.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$waiting_8c.html",tooltip="Déroulement du jeu dans l'état WWAITING."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="src/HUD/hud_ingame.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$hud__ingame_8c.html",tooltip="Fonctions de déplacement."];
 }

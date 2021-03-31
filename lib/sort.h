@@ -1,5 +1,18 @@
+/**
+ * \file sort.h
+ * \brief Structures générales des sorts
+ * \author COMTE Clément
+ * \version 0.1
+ * \date 14 feb 2021
+ *
+ */
+
 #define NB_SORT 5
 
+/**
+ * \struct sort_t
+ * \brief Structure général d'un joueur
+ */
 typedef struct sort_s{
 
     char * name;
@@ -23,6 +36,10 @@ typedef struct sort_s{
 
 } sort_t;
 
+/**
+ * \struct cd_t
+ * \brief Structure qui contient un sort et son couldown
+ */
 typedef struct cd_s{
     int timer;
     sort_t * (*createSort)(void *);

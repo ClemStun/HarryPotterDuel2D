@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['training_5fstate_93',['training_state',['../menus_8h.html#aaaf9c3e5bf68dccc573a21d88c51f4d3',1,'training_state(window *win, images_t *images, player_t *monPerso, player_t *mannequin, sort_t **sort):&#160;menus.c'],['../menus_8c.html#aaaf9c3e5bf68dccc573a21d88c51f4d3',1,'training_state(window *win, images_t *images, player_t *monPerso, player_t *mannequin, sort_t **sort):&#160;menus.c']]]
+  ['zone_5fdetect_131',['zone_detect',['../menu_8c.html#a310e85cb75bb1093e578dc5be058ee60',1,'menu.c']]]
 ];

@@ -1,0 +1,63 @@
+\hypertarget{petrificus_8h}{}\doxysection{Référence du fichier lib/petrificus.h}
+\label{petrificus_8h}\index{lib/petrificus.h@{lib/petrificus.h}}
+
+
+Header de \mbox{\hyperlink{petrificus_8c}{petrificus.\+c}}.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Graphe des dépendances par inclusion de petrificus.\+h\+:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+s}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{petrificus_8h_a14ef55ebcb7cc1d853ededa55eb3da92}\label{petrificus_8h_a14ef55ebcb7cc1d853ededa55eb3da92}} 
+typedef struct \mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+s}} {\bfseries petrificus\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$ \mbox{\hyperlink{petrificus_8h_ab621137794fe2f909ad445ce751de401}{create\+Petrificus}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Création d\textquotesingle{}un sort petrificus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Header de \mbox{\hyperlink{petrificus_8c}{petrificus.\+c}}. 
+
+\begin{DoxyAuthor}{Auteur}
+Comte Clément 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09 feb 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{petrificus_8h_ab621137794fe2f909ad445ce751de401}\label{petrificus_8h_ab621137794fe2f909ad445ce751de401}} 
+\index{petrificus.h@{petrificus.h}!createPetrificus@{createPetrificus}}
+\index{createPetrificus@{createPetrificus}!petrificus.h@{petrificus.h}}
+\doxysubsubsection{\texorpdfstring{createPetrificus()}{createPetrificus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$ create\+Petrificus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Création d\textquotesingle{}un sort petrificus. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em player} & Pointeur sur le joueur player\+\_\+t qui lance le sort. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Renvoie le sort créé qui est un élément de type petrificus\+\_\+t. 
+\end{DoxyReturn}

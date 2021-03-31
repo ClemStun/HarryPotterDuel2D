@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['loadimages_87',['LoadImages',['../sdl_8h.html#a6d45f86589d9728613bcb4af451c462e',1,'LoadImages(SDL_Renderer *pRenderer, images_t *images):&#160;sdl.c'],['../sdl_8c.html#a6d45f86589d9728613bcb4af451c462e',1,'LoadImages(SDL_Renderer *pRenderer, images_t *images):&#160;sdl.c']]]
+  ['playerposx_123',['playerPosX',['../player_8h.html#ace44c1fa068f2aa5c354c9f355e53ce4',1,'playerPosX(player_t *p):&#160;player.c'],['../player_8c.html#ace44c1fa068f2aa5c354c9f355e53ce4',1,'playerPosX(player_t *p):&#160;player.c']]],
+  ['playerposy_124',['playerPosY',['../player_8h.html#a391d840b0772f256825a2de762d72179',1,'playerPosY(player_t *p):&#160;player.c'],['../player_8c.html#a391d840b0772f256825a2de762d72179',1,'playerPosY(player_t *p):&#160;player.c']]]
 ];

@@ -1,0 +1,469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Harry Potter Battle 2D: Référence du fichier src/player/spell/incendio.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Harry Potter Battle 2D
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_975424cdae97a07db69e55371758444e.html">player</a></li><li class="navelem"><a class="el" href="dir_ea77bc24f4c19d81305d29744b85b3ac.html">spell</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier incendio.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Méthode de l'objet incendio_t.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="player_8h_source.html">../../../lib/player.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="incendio_8h_source.html">../../../lib/incendio.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de incendio.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="incendio_8c__incl.png" border="0" usemap="#src_2player_2spell_2incendio_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a3b363c650a406272a0e130646cddcc31"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="incendio_8c.html#a3b363c650a406272a0e130646cddcc31">deplacement</a> (<a class="el" href="structincendio__s.html">incendio_t</a> *, int, int)</td></tr>
+<tr class="memdesc:a3b363c650a406272a0e130646cddcc31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mis a jour de la position d'un incendio_t.  <a href="incendio_8c.html#a3b363c650a406272a0e130646cddcc31">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3b363c650a406272a0e130646cddcc31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23055c3d6fb2e7d367ffaf6ee2820690"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="incendio_8c.html#a23055c3d6fb2e7d367ffaf6ee2820690">display</a> (<a class="el" href="structincendio__s.html">incendio_t</a> *spell, <a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structimages__s.html">images_t</a> *images)</td></tr>
+<tr class="memdesc:a23055c3d6fb2e7d367ffaf6ee2820690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage d'un incendio_t.  <a href="incendio_8c.html#a23055c3d6fb2e7d367ffaf6ee2820690">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a23055c3d6fb2e7d367ffaf6ee2820690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d14e08a9343e2a34ea1b3fc303f746"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="incendio_8c.html#ad2d14e08a9343e2a34ea1b3fc303f746">collision_test</a> (<a class="el" href="structincendio__s.html">incendio_t</a> **, int, int, <a class="el" href="structplayer__s.html">player_t</a> *)</td></tr>
+<tr class="memdesc:ad2d14e08a9343e2a34ea1b3fc303f746"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test des collisions entre un sort incendio_t et un player_t player.  <a href="incendio_8c.html#ad2d14e08a9343e2a34ea1b3fc303f746">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad2d14e08a9343e2a34ea1b3fc303f746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6d37b3335c75e93c9a63d244a07ef8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="incendio_8c.html#a9e6d37b3335c75e93c9a63d244a07ef8">destroy</a> (<a class="el" href="structincendio__s.html">incendio_t</a> **)</td></tr>
+<tr class="memdesc:a9e6d37b3335c75e93c9a63d244a07ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desttruction d'un incendio_t.  <a href="incendio_8c.html#a9e6d37b3335c75e93c9a63d244a07ef8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9e6d37b3335c75e93c9a63d244a07ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a1669cd1a1c1d41331b38302317c214"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structincendio__s.html">incendio_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="incendio_8c.html#a3a1669cd1a1c1d41331b38302317c214">createIncendio</a> (<a class="el" href="structplayer__s.html">player_t</a> *player)</td></tr>
+<tr class="memdesc:a3a1669cd1a1c1d41331b38302317c214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un sort incendio.  <a href="incendio_8c.html#a3a1669cd1a1c1d41331b38302317c214">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3a1669cd1a1c1d41331b38302317c214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afffb20c73f4074305b297a066986fbed"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="incendio_8c.html#afffb20c73f4074305b297a066986fbed">display_zone</a> (<a class="el" href="structincendio__s.html">incendio_t</a> *spell, <a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structimages__s.html">images_t</a> *images)</td></tr>
+<tr class="memdesc:afffb20c73f4074305b297a066986fbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage de la zone au sol pour un incendio_t.  <a href="incendio_8c.html#afffb20c73f4074305b297a066986fbed">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afffb20c73f4074305b297a066986fbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa66f63c022b2072600d72af43ae9f021"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="incendio_8c.html#aa66f63c022b2072600d72af43ae9f021">collision_test_zone</a> (<a class="el" href="structincendio__s.html">incendio_t</a> **spell, int x, int y, <a class="el" href="structplayer__s.html">player_t</a> *player)</td></tr>
+<tr class="memdesc:aa66f63c022b2072600d72af43ae9f021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test des collisions entre la zone au sol d'un sort incendio_t et un player_t player.  <a href="incendio_8c.html#aa66f63c022b2072600d72af43ae9f021">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa66f63c022b2072600d72af43ae9f021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Méthode de l'objet incendio_t. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Comte Clément </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>31 mar 2021 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ad2d14e08a9343e2a34ea1b3fc303f746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2d14e08a9343e2a34ea1b3fc303f746">&#9670;&nbsp;</a></span>collision_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int collision_test </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structincendio__s.html">incendio_t</a> **&#160;</td>
+          <td class="paramname"><em>spell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td>
+          <td class="paramname"><em>player</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test des collisions entre un sort incendio_t et un player_t player. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell</td><td>Pointeur sur pointeur d'un incendio_t </td></tr>
+    <tr><td class="paramname">x</td><td><a class="el" href="structPosition.html">Position</a> X max du sort </td></tr>
+    <tr><td class="paramname">y</td><td><a class="el" href="structPosition.html">Position</a> Y max du sort </td></tr>
+    <tr><td class="paramname">player</td><td>Pointeur sur un player_t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Renvoie 0 s'il y a eu collision, 1 sinon. </dd></dl>
+
+</div>
+</div>
+<a id="aa66f63c022b2072600d72af43ae9f021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa66f63c022b2072600d72af43ae9f021">&#9670;&nbsp;</a></span>collision_test_zone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int collision_test_zone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structincendio__s.html">incendio_t</a> **&#160;</td>
+          <td class="paramname"><em>spell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td>
+          <td class="paramname"><em>player</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test des collisions entre la zone au sol d'un sort incendio_t et un player_t player. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell</td><td>Pointeur sur pointeur d'un incendio_t </td></tr>
+    <tr><td class="paramname">x</td><td><a class="el" href="structPosition.html">Position</a> X max du sort </td></tr>
+    <tr><td class="paramname">y</td><td><a class="el" href="structPosition.html">Position</a> Y max du sort </td></tr>
+    <tr><td class="paramname">player</td><td>Pointeur sur un player_t </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Renvoie 0 s'il y a eu collision, 1 sinon. </dd></dl>
+
+</div>
+</div>
+<a id="a3a1669cd1a1c1d41331b38302317c214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a1669cd1a1c1d41331b38302317c214">&#9670;&nbsp;</a></span>createIncendio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structincendio__s.html">incendio_t</a>* createIncendio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Création d'un sort incendio. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>Pointeur sur le joueur player_t qui lance le sort. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Renvoie le sort créé qui est un élément de type incendio_t. </dd></dl>
+
+</div>
+</div>
+<a id="a3b363c650a406272a0e130646cddcc31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b363c650a406272a0e130646cddcc31">&#9670;&nbsp;</a></span>deplacement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void deplacement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structincendio__s.html">incendio_t</a> *&#160;</td>
+          <td class="paramname"><em>spell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x_dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y_dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mis a jour de la position d'un incendio_t. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell</td><td>Pointeur sur l'élément incendio_t en question </td></tr>
+    <tr><td class="paramname">x_dest</td><td><a class="el" href="structPosition.html">Position</a> X de la destination du sort </td></tr>
+    <tr><td class="paramname">y_dest</td><td><a class="el" href="structPosition.html">Position</a> Y de la destination du sort </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ne renvoie rien. </dd></dl>
+
+</div>
+</div>
+<a id="a9e6d37b3335c75e93c9a63d244a07ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6d37b3335c75e93c9a63d244a07ef8">&#9670;&nbsp;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structincendio__s.html">incendio_t</a> **&#160;</td>
+          <td class="paramname"><em>spell</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Desttruction d'un incendio_t. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell</td><td>Pointeur sur pointeur d'un incendio_t destiné a être détruit </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ne renvoie rien. </dd></dl>
+
+</div>
+</div>
+<a id="a23055c3d6fb2e7d367ffaf6ee2820690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23055c3d6fb2e7d367ffaf6ee2820690">&#9670;&nbsp;</a></span>display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void display </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structincendio__s.html">incendio_t</a> *&#160;</td>
+          <td class="paramname"><em>spell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structimages__s.html">images_t</a> *&#160;</td>
+          <td class="paramname"><em>images</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Affichage d'un incendio_t. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell</td><td>Pointeur sur l'élément incendio_t en question </td></tr>
+    <tr><td class="paramname">win</td><td>Fenetre dans laquelle le sort sera afficher </td></tr>
+    <tr><td class="paramname">images</td><td>Image du sort </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ne renvoie rien. </dd></dl>
+
+</div>
+</div>
+<a id="afffb20c73f4074305b297a066986fbed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afffb20c73f4074305b297a066986fbed">&#9670;&nbsp;</a></span>display_zone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void display_zone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structincendio__s.html">incendio_t</a> *&#160;</td>
+          <td class="paramname"><em>spell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structimages__s.html">images_t</a> *&#160;</td>
+          <td class="paramname"><em>images</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Affichage de la zone au sol pour un incendio_t. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell</td><td>Pointeur sur l'élément incendio_t en question </td></tr>
+    <tr><td class="paramname">win</td><td>Fenetre dans laquelle le sort sera afficher </td></tr>
+    <tr><td class="paramname">images</td><td>Image du sort </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ne renvoie rien. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

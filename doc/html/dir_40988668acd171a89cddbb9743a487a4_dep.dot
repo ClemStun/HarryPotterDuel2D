@@ -7,5 +7,5 @@ digraph "src/sdl" {
   dir_40988668acd171a89cddbb9743a487a4 [shape=box, label="sdl", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_40988668acd171a89cddbb9743a487a4.html"];
   }
   dir_97aefd0d527b934f1d99a682da8fe6a9 [shape=box label="lib" URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"];
-  dir_40988668acd171a89cddbb9743a487a4->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="1", labeldistance=1.5 headhref="dir_000012_000003.html"];
+  dir_40988668acd171a89cddbb9743a487a4->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="1", labeldistance=1.5 headhref="dir_000009_000003.html"];
 }

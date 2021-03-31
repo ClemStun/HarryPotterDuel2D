@@ -87,11 +87,12 @@ void deplacement(expelliarmus_t * spell, int x_dest, int y_dest){
 }
 
 /**
- * \fn static void display(expelliarmus_t * spell, window * win)
+ * \fn static void display(expelliarmus_t * spell, window * win, images_t *images)
  * \brief Affichage d'un expelliarmus_t
  *
  * \param spell Pointeur sur l'élément expelliarmus_t en question
  * \param win Fenetre dans laquelle le sort sera afficher
+ * \param images Image de du sort
  * \return Ne renvoie rien.
  */
 static

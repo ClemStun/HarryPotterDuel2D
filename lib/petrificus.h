@@ -1,5 +1,19 @@
+/**
+ * \file petrificus.h
+ * \brief Header de petrificus.c.
+ * \author Comte Clément
+ * \version 0.1
+ * \date 09 feb 2021
+ *
+ */
+
 #include <stdio.h>
 
+/**
+ * \struct expelliarmus_s
+ * \brief Structure du sort petrificus_t contanenant toutes les informations
+ *
+ */
 typedef struct petrificus_s{
 
     char * name;

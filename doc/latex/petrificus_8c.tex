@@ -16,21 +16,16 @@ Graphe des dépendances par inclusion de petrificus.\+c\+:
 \doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{petrificus_8c_ad88ce4ff76857e0135ed85a0e9aed648}\label{petrificus_8c_ad88ce4ff76857e0135ed85a0e9aed648}} 
-static void {\bfseries deplacement} (\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$, int, int)
-\item 
-\mbox{\Hypertarget{petrificus_8c_a758af16829d16906015eb27cd4e88928}\label{petrificus_8c_a758af16829d16906015eb27cd4e88928}} 
-static void {\bfseries display} (\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$, \mbox{\hyperlink{structwindow__s}{window}} $\ast$, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
-\item 
-\mbox{\Hypertarget{petrificus_8c_ac018ee287414bd2cce490d3588412dc8}\label{petrificus_8c_ac018ee287414bd2cce490d3588412dc8}} 
-static int {\bfseries collision\+\_\+test} (\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$$\ast$, int, int, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$)
-\item 
-\mbox{\Hypertarget{petrificus_8c_a636f6fbc3cc9d72e892463f8cb7e9f2e}\label{petrificus_8c_a636f6fbc3cc9d72e892463f8cb7e9f2e}} 
-static void {\bfseries destroy} (\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$$\ast$)
-\item 
-\mbox{\Hypertarget{petrificus_8c_a93db01aaf47e88da868e671da54a232a}\label{petrificus_8c_a93db01aaf47e88da868e671da54a232a}} 
-\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$ {\bfseries create\+Petrificus} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$player)
-\end{DoxyCompactItemize}
+static void \mbox{\hyperlink{petrificus_8c_ad88ce4ff76857e0135ed85a0e9aed648}{deplacement}} (\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$, int, int)
+\begin{DoxyCompactList}\small\item\em Mis a jour de la position d\textquotesingle{}un petrificus\+\_\+t. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{petrificus_8c_a758af16829d16906015eb27cd4e88928}{display}} (\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$, \mbox{\hyperlink{structwindow__s}{window}} $\ast$, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
+\begin{DoxyCompactList}\small\item\em Affichage d\textquotesingle{}un petrificus\+\_\+t. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{petrificus_8c_ac018ee287414bd2cce490d3588412dc8}{collision\+\_\+test}} (\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$$\ast$, int, int, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Test des collisions entre un sort petrificus\+\_\+t et un player\+\_\+t player. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{petrificus_8c_a636f6fbc3cc9d72e892463f8cb7e9f2e}{destroy}} (\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$$\ast$)
+\begin{DoxyCompactList}\small\item\em Desttruction d\textquotesingle{}un petrificus\+\_\+t. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$ \mbox{\hyperlink{petrificus_8c_a93db01aaf47e88da868e671da54a232a}{create\+Petrificus}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Création d\textquotesingle{}un sort petrificus. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -45,3 +40,110 @@ Comte Clément
 \begin{DoxyDate}{Date}
 09 feb 2021 
 \end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{petrificus_8c_ac018ee287414bd2cce490d3588412dc8}\label{petrificus_8c_ac018ee287414bd2cce490d3588412dc8}} 
+\index{petrificus.c@{petrificus.c}!collision\_test@{collision\_test}}
+\index{collision\_test@{collision\_test}!petrificus.c@{petrificus.c}}
+\doxysubsubsection{\texorpdfstring{collision\_test()}{collision\_test()}}
+{\footnotesize\ttfamily static int collision\+\_\+test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$$\ast$}]{spell,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Test des collisions entre un sort petrificus\+\_\+t et un player\+\_\+t player. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em spell} & Pointeur sur pointeur d\textquotesingle{}un petrificus\+\_\+t \\
+\hline
+{\em x} & \mbox{\hyperlink{structPosition}{Position}} X max du sort \\
+\hline
+{\em y} & \mbox{\hyperlink{structPosition}{Position}} Y max du sort \\
+\hline
+{\em player} & Pointeur sur un player\+\_\+t \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Renvoie 0 s\textquotesingle{}il y a eu collision, 1 sinon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{petrificus_8c_a93db01aaf47e88da868e671da54a232a}\label{petrificus_8c_a93db01aaf47e88da868e671da54a232a}} 
+\index{petrificus.c@{petrificus.c}!createPetrificus@{createPetrificus}}
+\index{createPetrificus@{createPetrificus}!petrificus.c@{petrificus.c}}
+\doxysubsubsection{\texorpdfstring{createPetrificus()}{createPetrificus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}}$\ast$ create\+Petrificus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Création d\textquotesingle{}un sort petrificus. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em player} & Pointeur sur le joueur player\+\_\+t qui lance le sort. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Renvoie le sort créé qui est un élément de type petrificus\+\_\+t. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{petrificus_8c_ad88ce4ff76857e0135ed85a0e9aed648}\label{petrificus_8c_ad88ce4ff76857e0135ed85a0e9aed648}} 
+\index{petrificus.c@{petrificus.c}!deplacement@{deplacement}}
+\index{deplacement@{deplacement}!petrificus.c@{petrificus.c}}
+\doxysubsubsection{\texorpdfstring{deplacement()}{deplacement()}}
+{\footnotesize\ttfamily static void deplacement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$}]{spell,  }\item[{int}]{x\+\_\+dest,  }\item[{int}]{y\+\_\+dest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Mis a jour de la position d\textquotesingle{}un petrificus\+\_\+t. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em spell} & Pointeur sur l\textquotesingle{}élément petrificus\+\_\+t en question \\
+\hline
+{\em x\+\_\+dest} & \mbox{\hyperlink{structPosition}{Position}} X de la destination du sort \\
+\hline
+{\em y\+\_\+dest} & \mbox{\hyperlink{structPosition}{Position}} Y de la destination du sort \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Ne renvoie rien. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{petrificus_8c_a636f6fbc3cc9d72e892463f8cb7e9f2e}\label{petrificus_8c_a636f6fbc3cc9d72e892463f8cb7e9f2e}} 
+\index{petrificus.c@{petrificus.c}!destroy@{destroy}}
+\index{destroy@{destroy}!petrificus.c@{petrificus.c}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily static void destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$$\ast$}]{spell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Desttruction d\textquotesingle{}un petrificus\+\_\+t. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em spell} & Pointeur sur pointeur d\textquotesingle{}un petrificus\+\_\+t destiné a être détruit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Ne renvoie rien. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{petrificus_8c_a758af16829d16906015eb27cd4e88928}\label{petrificus_8c_a758af16829d16906015eb27cd4e88928}} 
+\index{petrificus.c@{petrificus.c}!display@{display}}
+\index{display@{display}!petrificus.c@{petrificus.c}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily static void display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpetrificus__s}{petrificus\+\_\+t}} $\ast$}]{spell,  }\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Affichage d\textquotesingle{}un petrificus\+\_\+t. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em spell} & Pointeur sur l\textquotesingle{}élément petrificus\+\_\+t en question \\
+\hline
+{\em win} & Fenetre dans laquelle le sort sera afficher \\
+\hline
+{\em images} & Image de du sort \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Ne renvoie rien. 
+\end{DoxyReturn}

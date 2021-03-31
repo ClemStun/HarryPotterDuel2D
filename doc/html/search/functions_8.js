@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['readdata_90',['readData',['../utils_8c.html#a78ac505484f1723cd1b45cf6be28640a',1,'utils.c']]],
-  ['remove_5fclient_91',['remove_client',['../utils_8c.html#af44d72ffb9e53ae43ba194dcc1d81f1f',1,'utils.c']]]
+  ['searchtexture_127',['searchTexture',['../sdl_8h.html#adbde43d552d718d8f02af03ed80821cb',1,'searchTexture(images_t *images, char *nom):&#160;sdl.c'],['../sdl_8c.html#a7b2087565b1bd1650e768180934df1df',1,'searchTexture(images_t *images, char *nom):&#160;sdl.c']]],
+  ['send_5fall_128',['send_all',['../utils_8c.html#af3f6b0b2e73c1fa4e9e1eddaba489550',1,'utils.c']]]
 ];

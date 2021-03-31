@@ -44,8 +44,11 @@ typedef struct \mbox{\hyperlink{structtext__s}{text\+\_\+s}} {\bfseries text\+\_
 \begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}initialisation de notre fenêtre S\+DL dans une structure window. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sdl_8h_a6d45f86589d9728613bcb4af451c462e}{Load\+Images}} (S\+D\+L\+\_\+\+Renderer $\ast$p\+Renderer, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
 \begin{DoxyCompactList}\small\item\em Fonction qui créer la texture d\textquotesingle{}images présentes dans un fichier, et les range dans une structure images\+\_\+t. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{sdl_8h_a6c07564f680f2f88a466856e832c0c54}{Draw\+Image}} (S\+D\+L\+\_\+\+Renderer $\ast$p\+Renderer, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, char $\ast$nom, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH)
-\begin{DoxyCompactList}\small\item\em Fonction qui affiche une image demandée de la taille souhaitée, à l\textquotesingle{}endroit souhaité sur le rendu. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Texture $\ast$ \mbox{\hyperlink{sdl_8h_adbde43d552d718d8f02af03ed80821cb}{search\+Texture}} (\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, char $\ast$nom)
+\begin{DoxyCompactList}\small\item\em Fonction de recherche de texture dans la structure image\+\_\+s à partir d\textquotesingle{}un nom. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sdl_8h_a6f4f1500d35caea0d02752e10b7c6e8b}\label{sdl_8h_a6f4f1500d35caea0d02752e10b7c6e8b}} 
+void {\bfseries Draw\+Image} (S\+D\+L\+\_\+\+Renderer $\ast$p\+Renderer, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, S\+D\+L\+\_\+\+Texture $\ast$texture, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH)
+\item 
 void \mbox{\hyperlink{sdl_8h_a6e139edd32e39c7772f5b2f8ec1789dd}{Free\+Images}} (\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
 \begin{DoxyCompactList}\small\item\em Libération mémoire de la structure image\+\_\+t. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$ \mbox{\hyperlink{sdl_8h_a1213cb7f17245d3c40b6af37c448e2ae}{init\+\_\+struct\+\_\+text}} ()
@@ -100,41 +103,6 @@ Fonction de création de texte à l\textquotesingle{}endroit donné sur le rendu
 {\em font} & Pointeur sur une structure T\+T\+F\+\_\+\+Font étant la police du texte. \\
 \hline
 {\em color} & Caractère représentant la couleur du texte (exemple \+: \textquotesingle{}r\textquotesingle{} pour rouge). \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{sdl_8h_a6c07564f680f2f88a466856e832c0c54}\label{sdl_8h_a6c07564f680f2f88a466856e832c0c54}} 
-\index{sdl.h@{sdl.h}!DrawImage@{DrawImage}}
-\index{DrawImage@{DrawImage}!sdl.h@{sdl.h}}
-\doxysubsubsection{\texorpdfstring{DrawImage()}{DrawImage()}}
-{\footnotesize\ttfamily void Draw\+Image (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Renderer $\ast$}]{p\+Renderer,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{char $\ast$}]{nom,  }\item[{int}]{srcX,  }\item[{int}]{srcY,  }\item[{int}]{srcW,  }\item[{int}]{srcH,  }\item[{int}]{destX,  }\item[{int}]{destY,  }\item[{int}]{destW,  }\item[{int}]{destH }\end{DoxyParamCaption})}
-
-
-
-Fonction qui affiche une image demandée de la taille souhaitée, à l\textquotesingle{}endroit souhaité sur le rendu. 
-
-
-\begin{DoxyParams}{Paramètres}
-{\em p\+Renderer} & Pointeur sur le rendu où vont être affichées les images. \\
-\hline
-{\em images} & Pointeur sur une structure image\+\_\+t où sont rangées les textures des images. \\
-\hline
-{\em nom} & Chaine de caractère étant le nom de l\textquotesingle{}image. \\
-\hline
-{\em srcX} & \mbox{\hyperlink{structPosition}{Position}} en X du rectangle source de l\textquotesingle{}image. \\
-\hline
-{\em srcY} & \mbox{\hyperlink{structPosition}{Position}} en Y du rectangle source de l\textquotesingle{}image. \\
-\hline
-{\em srcW} & Largeur du rectangle source de l\textquotesingle{}image. \\
-\hline
-{\em srcH} & Hauteur du rectangle source de l\textquotesingle{}image. \\
-\hline
-{\em destX} & \mbox{\hyperlink{structPosition}{Position}} en X du rectangle cible sur le rendu. \\
-\hline
-{\em destY} & \mbox{\hyperlink{structPosition}{Position}} en Y du rectangle cible sur le rendu. \\
-\hline
-{\em destW} & Largeur du rectangle cible sur le rendu. \\
-\hline
-{\em destH} & Hauteur du rectangle cible sur le rendu. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{sdl_8h_a6e139edd32e39c7772f5b2f8ec1789dd}\label{sdl_8h_a6e139edd32e39c7772f5b2f8ec1789dd}} 
@@ -210,3 +178,23 @@ Fonction qui créer la texture d\textquotesingle{}images présentes dans un fich
 {\em images} & Pointeur sur une structure images\+\_\+t où vont être rangées les textures des images. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{sdl_8h_adbde43d552d718d8f02af03ed80821cb}\label{sdl_8h_adbde43d552d718d8f02af03ed80821cb}} 
+\index{sdl.h@{sdl.h}!searchTexture@{searchTexture}}
+\index{searchTexture@{searchTexture}!sdl.h@{sdl.h}}
+\doxysubsubsection{\texorpdfstring{searchTexture()}{searchTexture()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Texture $\ast$ search\+Texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{char $\ast$}]{nom }\end{DoxyParamCaption})}
+
+
+
+Fonction de recherche de texture dans la structure image\+\_\+s à partir d\textquotesingle{}un nom. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em images} & Pointeur sur une structure images\+\_\+t où vont être rangées les textures des images. \\
+\hline
+{\em nom} & Nom de l\textquotesingle{}image texturée recherchée\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La texture trouvée. 
+\end{DoxyReturn}

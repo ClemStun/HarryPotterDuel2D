@@ -1,3 +1,12 @@
+/**
+ * \file train.c
+ * \brief Déroulement du jeu dans l'état TRAIN
+ * \author COUTANT Hugo & COMTE Clément
+ * \version 0.1
+ * \date 14 feb 2021
+ *
+ */
+
 #include "../../lib/menus.h"
 
 

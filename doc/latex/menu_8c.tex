@@ -1,0 +1,130 @@
+\hypertarget{menu_8c}{}\doxysection{Référence du fichier src/states/menu.c}
+\label{menu_8c}\index{src/states/menu.c@{src/states/menu.c}}
+
+
+Déroulement du jeu dans l\textquotesingle{}état H\+O\+ME.  
+
+
+{\ttfamily \#include \char`\"{}../../lib/menus.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de menu.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{menu_8c_a2cd109632a6dcccaa80b43561b1ab700}\label{menu_8c_a2cd109632a6dcccaa80b43561b1ab700}} 
+\#define {\bfseries S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH}~1200
+\item 
+\mbox{\Hypertarget{menu_8c_a6974d08a74da681b3957b2fead2608b8}\label{menu_8c_a6974d08a74da681b3957b2fead2608b8}} 
+\#define {\bfseries S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT}~600
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_8c_a72a4ba9c933a688789ead21550b9d8d0}{create\+Button}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, int posX, int posY, int rectW, int rectH, const char $\ast$texte, T\+T\+F\+\_\+\+Font $\ast$font\+Button, const char color)
+\begin{DoxyCompactList}\small\item\em Fonction de création d\textquotesingle{}un bouton sur la fenêtre en fonction d\textquotesingle{}une position donnée, d\textquotesingle{}une dimension, d\textquotesingle{}un texte, d\textquotesingle{}une police et d\textquotesingle{}une couleur. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{menu_8c_a310e85cb75bb1093e578dc5be058ee60}{zone\+\_\+detect}} (int x, int y, int w, int h, int mouseX, int mouseY)
+\begin{DoxyCompactList}\small\item\em Fonction de détection de zone de la souris. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} \mbox{\hyperlink{menu_8c_a5e6ba896e144ff35a8536190c2e129ef}{home\+\_\+state}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso, T\+T\+F\+\_\+\+Font $\ast$font)
+\begin{DoxyCompactList}\small\item\em Fonction état du jeu en mode menu principal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Déroulement du jeu dans l\textquotesingle{}état H\+O\+ME. 
+
+\begin{DoxyAuthor}{Auteur}
+C\+O\+U\+T\+A\+NT Hugo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 feb 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{menu_8c_a72a4ba9c933a688789ead21550b9d8d0}\label{menu_8c_a72a4ba9c933a688789ead21550b9d8d0}} 
+\index{menu.c@{menu.c}!createButton@{createButton}}
+\index{createButton@{createButton}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{createButton()}{createButton()}}
+{\footnotesize\ttfamily void create\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$}]{text,  }\item[{int}]{posX,  }\item[{int}]{posY,  }\item[{int}]{rectW,  }\item[{int}]{rectH,  }\item[{const char $\ast$}]{texte,  }\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font\+Button,  }\item[{const char}]{color }\end{DoxyParamCaption})}
+
+
+
+Fonction de création d\textquotesingle{}un bouton sur la fenêtre en fonction d\textquotesingle{}une position donnée, d\textquotesingle{}une dimension, d\textquotesingle{}un texte, d\textquotesingle{}une police et d\textquotesingle{}une couleur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em text} & Pointeur sur une structure \mbox{\hyperlink{structtext__s}{text\+\_\+s}} regroupant les différents textes déjà créer et leur texture. \\
+\hline
+{\em posX} & \mbox{\hyperlink{structPosition}{Position}} en X du bouton. \\
+\hline
+{\em posY} & \mbox{\hyperlink{structPosition}{Position}} en Y du bouton. \\
+\hline
+{\em rectW} & Largeur du bouton. \\
+\hline
+{\em rectH} & Hauteur du bouton. \\
+\hline
+{\em texte} & Chaine de caractère correspondant au texte du bouton. \\
+\hline
+{\em font\+Button} & Police de texte du bouton. \\
+\hline
+{\em color} & Couleur du texte du bouton. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{menu_8c_a5e6ba896e144ff35a8536190c2e129ef}\label{menu_8c_a5e6ba896e144ff35a8536190c2e129ef}} 
+\index{menu.c@{menu.c}!home\_state@{home\_state}}
+\index{home\_state@{home\_state}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{home\_state()}{home\_state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} home\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$}]{text,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mon\+Perso,  }\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font }\end{DoxyParamCaption})}
+
+
+
+Fonction état du jeu en mode menu principal. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em images} & Pointeur sur une structure images\+\_\+t, bibliothèque de textures des images. \\
+\hline
+{\em text} & Pointeur sur une structure \mbox{\hyperlink{structtext__s}{text\+\_\+s}} regroupant les différents textes déjà créer et leur texture. \\
+\hline
+{\em mon\+Perso} & Pointeur sur une structure player\+\_\+t représentant les infos d\textquotesingle{}un personnage. \\
+\hline
+{\em font} & Police du menu.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Soit son propre état pour y rester, soit un autre pour changer d\textquotesingle{}état dans la suite du programme. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{menu_8c_a310e85cb75bb1093e578dc5be058ee60}\label{menu_8c_a310e85cb75bb1093e578dc5be058ee60}} 
+\index{menu.c@{menu.c}!zone\_detect@{zone\_detect}}
+\index{zone\_detect@{zone\_detect}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{zone\_detect()}{zone\_detect()}}
+{\footnotesize\ttfamily static int zone\+\_\+detect (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{mouseX,  }\item[{int}]{mouseY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Fonction de détection de zone de la souris. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & \mbox{\hyperlink{structPosition}{Position}} en X en haut à gauche de la zone à tester. \\
+\hline
+{\em y} & \mbox{\hyperlink{structPosition}{Position}} en Y en haut à gauche de la zone à tester. \\
+\hline
+{\em w} & Largeur de la zone. \\
+\hline
+{\em h} & Hauteur de la zone. \\
+\hline
+{\em mouseX} & \mbox{\hyperlink{structPosition}{Position}} en X de la souris. \\
+\hline
+{\em mouseY} & \mbox{\hyperlink{structPosition}{Position}} en Y de la souris.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si souris dans la zone, 0 sinon. 
+\end{DoxyReturn}

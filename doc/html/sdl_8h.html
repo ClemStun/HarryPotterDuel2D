@@ -130,9 +130,12 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a6d45f86589d9728613bcb4af451c462e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdl_8h.html#a6d45f86589d9728613bcb4af451c462e">LoadImages</a> (SDL_Renderer *pRenderer, <a class="el" href="structimages__s.html">images_t</a> *images)</td></tr>
 <tr class="memdesc:a6d45f86589d9728613bcb4af451c462e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui créer la texture d'images présentes dans un fichier, et les range dans une structure images_t.  <a href="sdl_8h.html#a6d45f86589d9728613bcb4af451c462e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6d45f86589d9728613bcb4af451c462e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c07564f680f2f88a466856e832c0c54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdl_8h.html#a6c07564f680f2f88a466856e832c0c54">DrawImage</a> (SDL_Renderer *pRenderer, <a class="el" href="structimages__s.html">images_t</a> *images, char *nom, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH)</td></tr>
-<tr class="memdesc:a6c07564f680f2f88a466856e832c0c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui affiche une image demandée de la taille souhaitée, à l'endroit souhaité sur le rendu.  <a href="sdl_8h.html#a6c07564f680f2f88a466856e832c0c54">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a6c07564f680f2f88a466856e832c0c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbde43d552d718d8f02af03ed80821cb"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdl_8h.html#adbde43d552d718d8f02af03ed80821cb">searchTexture</a> (<a class="el" href="structimages__s.html">images_t</a> *images, char *nom)</td></tr>
+<tr class="memdesc:adbde43d552d718d8f02af03ed80821cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de recherche de texture dans la structure image_s à partir d'un nom.  <a href="sdl_8h.html#adbde43d552d718d8f02af03ed80821cb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adbde43d552d718d8f02af03ed80821cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f4f1500d35caea0d02752e10b7c6e8b"><td class="memItemLeft" align="right" valign="top"><a id="a6f4f1500d35caea0d02752e10b7c6e8b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawImage</b> (SDL_Renderer *pRenderer, <a class="el" href="structimages__s.html">images_t</a> *images, SDL_Texture *texture, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH)</td></tr>
+<tr class="separator:a6f4f1500d35caea0d02752e10b7c6e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e139edd32e39c7772f5b2f8ec1789dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdl_8h.html#a6e139edd32e39c7772f5b2f8ec1789dd">FreeImages</a> (<a class="el" href="structimages__s.html">images_t</a> *images)</td></tr>
 <tr class="memdesc:a6e139edd32e39c7772f5b2f8ec1789dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libération mémoire de la structure image_t.  <a href="sdl_8h.html#a6e139edd32e39c7772f5b2f8ec1789dd">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6e139edd32e39c7772f5b2f8ec1789dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,106 +235,6 @@ Fonctions</h2></td></tr>
     <tr><td class="paramname">texte</td><td>Contenu du texte sur le rendu. </td></tr>
     <tr><td class="paramname">font</td><td>Pointeur sur une structure TTF_Font étant la police du texte. </td></tr>
     <tr><td class="paramname">color</td><td>Caractère représentant la couleur du texte (exemple : 'r' pour rouge). </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a6c07564f680f2f88a466856e832c0c54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c07564f680f2f88a466856e832c0c54">&#9670;&nbsp;</a></span>DrawImage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DrawImage </td>
-          <td>(</td>
-          <td class="paramtype">SDL_Renderer *&#160;</td>
-          <td class="paramname"><em>pRenderer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structimages__s.html">images_t</a> *&#160;</td>
-          <td class="paramname"><em>images</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>nom</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>srcX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>srcY</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>srcW</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>srcH</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>destX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>destY</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>destW</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>destH</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Fonction qui affiche une image demandée de la taille souhaitée, à l'endroit souhaité sur le rendu. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pRenderer</td><td>Pointeur sur le rendu où vont être affichées les images. </td></tr>
-    <tr><td class="paramname">images</td><td>Pointeur sur une structure image_t où sont rangées les textures des images. </td></tr>
-    <tr><td class="paramname">nom</td><td>Chaine de caractère étant le nom de l'image. </td></tr>
-    <tr><td class="paramname">srcX</td><td><a class="el" href="structPosition.html">Position</a> en X du rectangle source de l'image. </td></tr>
-    <tr><td class="paramname">srcY</td><td><a class="el" href="structPosition.html">Position</a> en Y du rectangle source de l'image. </td></tr>
-    <tr><td class="paramname">srcW</td><td>Largeur du rectangle source de l'image. </td></tr>
-    <tr><td class="paramname">srcH</td><td>Hauteur du rectangle source de l'image. </td></tr>
-    <tr><td class="paramname">destX</td><td><a class="el" href="structPosition.html">Position</a> en X du rectangle cible sur le rendu. </td></tr>
-    <tr><td class="paramname">destY</td><td><a class="el" href="structPosition.html">Position</a> en Y du rectangle cible sur le rendu. </td></tr>
-    <tr><td class="paramname">destW</td><td>Largeur du rectangle cible sur le rendu. </td></tr>
-    <tr><td class="paramname">destH</td><td>Hauteur du rectangle cible sur le rendu. </td></tr>
   </table>
   </dd>
 </dl>
@@ -464,6 +367,44 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="adbde43d552d718d8f02af03ed80821cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbde43d552d718d8f02af03ed80821cb">&#9670;&nbsp;</a></span>searchTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDL_Texture * searchTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structimages__s.html">images_t</a> *&#160;</td>
+          <td class="paramname"><em>images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>nom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de recherche de texture dans la structure image_s à partir d'un nom. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">images</td><td>Pointeur sur une structure images_t où vont être rangées les textures des images. </td></tr>
+    <tr><td class="paramname">nom</td><td>Nom de l'image texturée recherchée</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La texture trouvée. </dd></dl>
 
 </div>
 </div>

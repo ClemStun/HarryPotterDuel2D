@@ -1,0 +1,76 @@
+\hypertarget{structincendio__s}{}\doxysection{Référence de la structure incendio\+\_\+s}
+\label{structincendio__s}\index{incendio\_s@{incendio\_s}}
+
+
+Structure du sort incendio\+\_\+t contanenant toutes les informations.  
+
+
+
+
+{\ttfamily \#include $<$incendio.\+h$>$}
+
+\doxysubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structincendio__s_a9a3185af39322a4fcd29d7f565b81aee}\label{structincendio__s_a9a3185af39322a4fcd29d7f565b81aee}} 
+char $\ast$ {\bfseries name}
+\item 
+\mbox{\Hypertarget{structincendio__s_a0dcc9e450f115cc2a38aa9d4dc14c3b6}\label{structincendio__s_a0dcc9e450f115cc2a38aa9d4dc14c3b6}} 
+int {\bfseries speed}
+\item 
+\mbox{\Hypertarget{structincendio__s_a5fee7297a5521a4093c52e65141c03a5}\label{structincendio__s_a5fee7297a5521a4093c52e65141c03a5}} 
+int {\bfseries damage}
+\item 
+\mbox{\Hypertarget{structincendio__s_a1ba5b12220392aca9a99c7ba055d70e0}\label{structincendio__s_a1ba5b12220392aca9a99c7ba055d70e0}} 
+int {\bfseries mana\+Cost}
+\item 
+\mbox{\Hypertarget{structincendio__s_ac881be934d4ae33ed88045b206f02e90}\label{structincendio__s_ac881be934d4ae33ed88045b206f02e90}} 
+int {\bfseries pos\+\_\+x}
+\item 
+\mbox{\Hypertarget{structincendio__s_a4243b5379743ea992907901c2d90d6cf}\label{structincendio__s_a4243b5379743ea992907901c2d90d6cf}} 
+int {\bfseries pos\+\_\+y}
+\item 
+\mbox{\Hypertarget{structincendio__s_a2e60c0ec935dcd43ac86628583e5c8ba}\label{structincendio__s_a2e60c0ec935dcd43ac86628583e5c8ba}} 
+int {\bfseries destX}
+\item 
+\mbox{\Hypertarget{structincendio__s_a89751aef952a7612cfe5b796e86653b8}\label{structincendio__s_a89751aef952a7612cfe5b796e86653b8}} 
+int {\bfseries destY}
+\item 
+\mbox{\Hypertarget{structincendio__s_a12efeac5a4b76d609734c2d595f829d2}\label{structincendio__s_a12efeac5a4b76d609734c2d595f829d2}} 
+float {\bfseries pos\+Xf}
+\item 
+\mbox{\Hypertarget{structincendio__s_a04c5263c6b1927ad6a64d876e4393ebb}\label{structincendio__s_a04c5263c6b1927ad6a64d876e4393ebb}} 
+float {\bfseries pos\+Yf}
+\item 
+\mbox{\Hypertarget{structincendio__s_ab6087a969243e3f9c7e72ca193cab67d}\label{structincendio__s_ab6087a969243e3f9c7e72ca193cab67d}} 
+int {\bfseries width}
+\item 
+\mbox{\Hypertarget{structincendio__s_a926ca733ff8154e63919edfb58e6d359}\label{structincendio__s_a926ca733ff8154e63919edfb58e6d359}} 
+int {\bfseries height}
+\item 
+\mbox{\Hypertarget{structincendio__s_a4f896c5ff136a7d00725be942bb641b6}\label{structincendio__s_a4f896c5ff136a7d00725be942bb641b6}} 
+int {\bfseries sender}
+\item 
+\mbox{\Hypertarget{structincendio__s_adccc865280cd8dfe65aada02e5777788}\label{structincendio__s_adccc865280cd8dfe65aada02e5777788}} 
+void($\ast$ {\bfseries deplacement} )(struct \mbox{\hyperlink{structincendio__s}{incendio\+\_\+s}} $\ast$, int, int)
+\item 
+\mbox{\Hypertarget{structincendio__s_a8bba12b03881da458e8e1a70ac834c18}\label{structincendio__s_a8bba12b03881da458e8e1a70ac834c18}} 
+void($\ast$ {\bfseries display} )(struct \mbox{\hyperlink{structincendio__s}{incendio\+\_\+s}} $\ast$, \mbox{\hyperlink{structwindow__s}{window}} $\ast$, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
+\item 
+\mbox{\Hypertarget{structincendio__s_a3a463d8c060c43f08a97c677f740a04e}\label{structincendio__s_a3a463d8c060c43f08a97c677f740a04e}} 
+int($\ast$ {\bfseries collision\+\_\+test} )(struct \mbox{\hyperlink{structincendio__s}{incendio\+\_\+s}} $\ast$$\ast$, int, int, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$)
+\item 
+\mbox{\Hypertarget{structincendio__s_a5df7d8576a4b00cf81592d0e510331c7}\label{structincendio__s_a5df7d8576a4b00cf81592d0e510331c7}} 
+void($\ast$ {\bfseries destroy} )(struct \mbox{\hyperlink{structincendio__s}{incendio\+\_\+s}} $\ast$$\ast$)
+\item 
+\mbox{\Hypertarget{structincendio__s_a26d94b3af8946e8cfc1c2953d2bc3c41}\label{structincendio__s_a26d94b3af8946e8cfc1c2953d2bc3c41}} 
+int {\bfseries timer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Structure du sort incendio\+\_\+t contanenant toutes les informations. 
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{incendio_8h}{incendio.\+h}}\end{DoxyCompactItemize}

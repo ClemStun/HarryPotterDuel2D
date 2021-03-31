@@ -2,7 +2,7 @@
 \label{expelliarmus_8h}\index{lib/expelliarmus.h@{lib/expelliarmus.h}}
 
 
-Méthode de l\textquotesingle{}objet expelliarmus\+\_\+t.  
+Header de \mbox{\hyperlink{expelliarmus_8c}{expelliarmus.\+c}}.  
 
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
@@ -29,7 +29,7 @@ typedef struct \mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+s}} {\b
 
 
 \doxysubsection{Description détaillée}
-Méthode de l\textquotesingle{}objet expelliarmus\+\_\+t. 
+Header de \mbox{\hyperlink{expelliarmus_8c}{expelliarmus.\+c}}. 
 
 \begin{DoxyAuthor}{Auteur}
 Comte Clément 

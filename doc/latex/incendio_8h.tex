@@ -1,0 +1,74 @@
+\hypertarget{incendio_8h}{}\doxysection{Référence du fichier lib/incendio.h}
+\label{incendio_8h}\index{lib/incendio.h@{lib/incendio.h}}
+
+
+Méthode de l\textquotesingle{}objet incendio\+\_\+t.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Graphe des dépendances par inclusion de incendio.\+h\+:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structincendio__s}{incendio\+\_\+s}}
+\begin{DoxyCompactList}\small\item\em Structure du sort incendio\+\_\+t contanenant toutes les informations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{incendio_8h_a28e2fed14e85b951865724b70d6f793d}\label{incendio_8h_a28e2fed14e85b951865724b70d6f793d}} 
+typedef struct \mbox{\hyperlink{structincendio__s}{incendio\+\_\+s}} {\bfseries incendio\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structincendio__s}{incendio\+\_\+t}} $\ast$ \mbox{\hyperlink{incendio_8h_a511de9b514433f9bab3889fd1b8705c0}{create\+Incendio}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Création d\textquotesingle{}un sort incendio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Méthode de l\textquotesingle{}objet incendio\+\_\+t. 
+
+Header de incendio.\+o.
+
+\begin{DoxyAuthor}{Auteur}
+Comte Clément 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09 feb 2021
+\end{DoxyDate}
+\begin{DoxyAuthor}{Auteur}
+Comte Clément 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+31 mar 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{incendio_8h_a511de9b514433f9bab3889fd1b8705c0}\label{incendio_8h_a511de9b514433f9bab3889fd1b8705c0}} 
+\index{incendio.h@{incendio.h}!createIncendio@{createIncendio}}
+\index{createIncendio@{createIncendio}!incendio.h@{incendio.h}}
+\doxysubsubsection{\texorpdfstring{createIncendio()}{createIncendio()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structincendio__s}{incendio\+\_\+t}} $\ast$ create\+Incendio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Création d\textquotesingle{}un sort incendio. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em player} & Pointeur sur le joueur player\+\_\+t qui lance le sort. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Renvoie le sort créé qui est un élément de type incendio\+\_\+t. 
+\end{DoxyReturn}

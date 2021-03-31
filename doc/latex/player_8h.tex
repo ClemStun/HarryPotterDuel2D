@@ -6,6 +6,7 @@ Header du fichier \mbox{\hyperlink{player_8c}{player.\+c}}.
 
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}sdl.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}sort.\+h\char`\"{}}\newline
 Graphe des dépendances par inclusion de player.\+h\+:
@@ -26,14 +27,18 @@ typedef struct \mbox{\hyperlink{structplayer__s}{player\+\_\+s}} {\bfseries play
 \doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$ \mbox{\hyperlink{player_8h_a05318f0e18e85c835dfde20921f63882}{create\+Player}} (int id\+\_\+player, char name\mbox{[}$\,$\mbox{]}, S\+D\+L\+\_\+\+Texture $\ast$sprite)
-\begin{DoxyCompactList}\small\item\em Création d\textquotesingle{}un personnage et initialisation de ses valeurs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{player_8h_a5206dc786c32fe83ef29ed89a8806b6c}\label{player_8h_a5206dc786c32fe83ef29ed89a8806b6c}} 
+\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$ {\bfseries create\+Player} (int id\+\_\+player, char name\mbox{[}$\,$\mbox{]}, S\+D\+L\+\_\+\+Texture $\ast$sprite, \mbox{\hyperlink{structcd__t}{cd\+\_\+t}} set\+Sort\mbox{[}$\,$\mbox{]}, int x, int y)
+\item 
 void \mbox{\hyperlink{player_8h_afe4571d032fdc5a53d8e810cfc1b7603}{free\+Player}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$p)
 \begin{DoxyCompactList}\small\item\em Libération mémoire de la structure de personnage. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{player_8h_ace44c1fa068f2aa5c354c9f355e53ce4}{player\+PosX}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$p)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structPosition}{Position}} du joueur en X. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{player_8h_a391d840b0772f256825a2de762d72179}{player\+PosY}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$p)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structPosition}{Position}} du joueur en Y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structPosition}{Position}} du joueur en Y. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{player_8h_a955601adedc62e9b14f40e5b2dff99a1}\label{player_8h_a955601adedc62e9b14f40e5b2dff99a1}} 
+void {\bfseries rand\+\_\+click\+\_\+bot} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mannequin)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -51,28 +56,6 @@ C\+O\+U\+T\+A\+NT Hugo / C\+O\+M\+TE Clément
 
 
 \doxysubsection{Documentation des fonctions}
-\mbox{\Hypertarget{player_8h_a05318f0e18e85c835dfde20921f63882}\label{player_8h_a05318f0e18e85c835dfde20921f63882}} 
-\index{player.h@{player.h}!createPlayer@{createPlayer}}
-\index{createPlayer@{createPlayer}!player.h@{player.h}}
-\doxysubsubsection{\texorpdfstring{createPlayer()}{createPlayer()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$ create\+Player (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+player,  }\item[{char}]{name\mbox{[}$\,$\mbox{]},  }\item[{S\+D\+L\+\_\+\+Texture $\ast$}]{sprite }\end{DoxyParamCaption})}
-
-
-
-Création d\textquotesingle{}un personnage et initialisation de ses valeurs. 
-
-
-\begin{DoxyParams}{Paramètres}
-{\em id\+\_\+player} & Identifiant du joueur. \\
-\hline
-{\em name} & Nom du personnage. \\
-\hline
-{\em sprite} & Texture des sprites du personnage. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Renvoie}
-p Pointeur sur une structure \mbox{\hyperlink{structplayer__s}{player\+\_\+s}} étant le nouveau personnage créé. 
-\end{DoxyReturn}
 \mbox{\Hypertarget{player_8h_afe4571d032fdc5a53d8e810cfc1b7603}\label{player_8h_afe4571d032fdc5a53d8e810cfc1b7603}} 
 \index{player.h@{player.h}!freePlayer@{freePlayer}}
 \index{freePlayer@{freePlayer}!player.h@{player.h}}

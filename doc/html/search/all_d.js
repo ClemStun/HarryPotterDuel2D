@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['text_5fs_42',['text_s',['../structtext__s.html',1,'']]],
-  ['training_5fstate_43',['training_state',['../menus_8h.html#aaaf9c3e5bf68dccc573a21d88c51f4d3',1,'training_state(window *win, images_t *images, player_t *monPerso, player_t *mannequin, sort_t **sort):&#160;menus.c'],['../menus_8c.html#aaaf9c3e5bf68dccc573a21d88c51f4d3',1,'training_state(window *win, images_t *images, player_t *monPerso, player_t *mannequin, sort_t **sort):&#160;menus.c']]]
+  ['t_5fetat_56',['t_etat',['../menus_8h.html#a0f3684078562a23c3ea21266d10cf275',1,'menus.h']]],
+  ['text_5fs_57',['text_s',['../structtext__s.html',1,'']]],
+  ['train_2ec_58',['train.c',['../train_8c.html',1,'']]],
+  ['train_2eh_59',['train.h',['../train_8h.html',1,'']]]
 ];

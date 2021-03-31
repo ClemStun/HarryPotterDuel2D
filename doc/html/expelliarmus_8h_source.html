@@ -88,19 +88,18 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> height;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> sender;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//SDL_Texture * sprite;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    void (*deplacement)(<span class="keyword">struct </span><a class="code" href="structexpelliarmus__s.html">expelliarmus_s</a> *, int, int);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    void (*display)(<span class="keyword">struct </span><a class="code" href="structexpelliarmus__s.html">expelliarmus_s</a> *, <a class="code" href="structwindow__s.html">window</a> *);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    int (*collision_test)(<span class="keyword">struct </span><a class="code" href="structexpelliarmus__s.html">expelliarmus_s</a> **,int , int, <a class="code" href="structplayer__s.html">player_t</a> *);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    void (*destroy)(<span class="keyword">struct </span><a class="code" href="structexpelliarmus__s.html">expelliarmus_s</a> **);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    void (*deplacement)(<span class="keyword">struct </span><a class="code" href="structexpelliarmus__s.html">expelliarmus_s</a> *, int, int);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    void (*display)(<span class="keyword">struct </span><a class="code" href="structexpelliarmus__s.html">expelliarmus_s</a> *, <a class="code" href="structwindow__s.html">window</a> *, <a class="code" href="structimages__s.html">images_t</a> *images);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    int (*collision_test)(<span class="keyword">struct </span><a class="code" href="structexpelliarmus__s.html">expelliarmus_s</a> **,int , int, <a class="code" href="structplayer__s.html">player_t</a> *);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    void (*destroy)(<span class="keyword">struct </span><a class="code" href="structexpelliarmus__s.html">expelliarmus_s</a> **);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;} <a class="code" href="structexpelliarmus__s.html">expelliarmus_t</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;} <a class="code" href="structexpelliarmus__s.html">expelliarmus_t</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">extern</span> <a class="code" href="structexpelliarmus__s.html">expelliarmus_t</a> * <a class="code" href="expelliarmus_8h.html#abbaa95bb2ae8ac9aa713bca0c7cb0d26">createExpelliarmus</a>(<a class="code" href="structplayer__s.html">player_t</a> *);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">extern</span> <a class="code" href="structexpelliarmus__s.html">expelliarmus_t</a> * <a class="code" href="expelliarmus_8h.html#abbaa95bb2ae8ac9aa713bca0c7cb0d26">createExpelliarmus</a>(<a class="code" href="structplayer__s.html">player_t</a> *);</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructimages__s_html"><div class="ttname"><a href="structimages__s.html">images_s</a></div><div class="ttdoc">Bibliothèque de textures d'images avec leur nom et le nombre d'images stockées.</div><div class="ttdef"><b>Definition:</b> sdl.h:35</div></div>
 <div class="ttc" id="astructwindow__s_html"><div class="ttname"><a href="structwindow__s.html">window_s</a></div><div class="ttdoc">Information fenêtre SDL.</div><div class="ttdef"><b>Definition:</b> sdl.h:25</div></div>
-<div class="ttc" id="astructplayer__s_html"><div class="ttname"><a href="structplayer__s.html">player_s</a></div><div class="ttdoc">Informations d'un personnage.</div><div class="ttdef"><b>Definition:</b> player.h:21</div></div>
+<div class="ttc" id="astructplayer__s_html"><div class="ttname"><a href="structplayer__s.html">player_s</a></div><div class="ttdoc">Informations d'un personnage.</div><div class="ttdef"><b>Definition:</b> player.h:22</div></div>
 <div class="ttc" id="astructexpelliarmus__s_html"><div class="ttname"><a href="structexpelliarmus__s.html">expelliarmus_s</a></div><div class="ttdoc">Structure du sort expelliarmus_t contanenant toutes les informations.</div><div class="ttdef"><b>Definition:</b> expelliarmus.h:17</div></div>
 <div class="ttc" id="aexpelliarmus_8h_html_abbaa95bb2ae8ac9aa713bca0c7cb0d26"><div class="ttname"><a href="expelliarmus_8h.html#abbaa95bb2ae8ac9aa713bca0c7cb0d26">createExpelliarmus</a></div><div class="ttdeci">expelliarmus_t * createExpelliarmus(player_t *)</div><div class="ttdoc">Création d'un sort expelliarmus.</div><div class="ttdef"><b>Definition:</b> expelliarmus.c:30</div></div>
 <!-- start footer part -->

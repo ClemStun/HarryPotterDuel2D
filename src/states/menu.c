@@ -1,6 +1,6 @@
 /**
- * \file menus.c
- * \brief Fonctions sur les différents états de jeu.
+ * \file menu.c
+ * \brief Déroulement du jeu dans l'état HOME
  * \author COUTANT Hugo
  * \version 0.1
  * \date 14 feb 2021

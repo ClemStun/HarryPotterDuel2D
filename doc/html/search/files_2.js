@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['menus_2ec_62',['menus.c',['../menus_8c.html',1,'']]],
-  ['menus_2eh_63',['menus.h',['../menus_8h.html',1,'']]],
-  ['move_2ec_64',['move.c',['../move_8c.html',1,'']]],
-  ['move_2eh_65',['move.h',['../move_8h.html',1,'']]]
+  ['hud_5fingame_2ec_84',['hud_ingame.c',['../hud__ingame_8c.html',1,'']]],
+  ['hud_5fingame_2eh_85',['hud_ingame.h',['../hud__ingame_8h.html',1,'']]]
 ];
