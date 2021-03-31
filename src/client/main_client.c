@@ -8,16 +8,16 @@
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 600
 
-player_t * mannequin;
+player_t * joueur2;
 socket_t j2;
 
 void *function(void *arg){
     int socket = *(int*)arg;
-    
+
         while(1){
             recv(socket, &j2, sizeof j2, 0);
-            mannequin->pos_x_click = SCREEN_WIDTH-100-j2.x_click;
-            mannequin->pos_y_click = SCREEN_HEIGHT-100-j2.y_click;
+            joueur2->pos_x_click = SCREEN_WIDTH-100-j2.x_click;
+            joueur2->pos_y_click = SCREEN_HEIGHT-100-j2.y_click;
         }
 
         free(arg);
@@ -31,11 +31,6 @@ int main(int argc, char **argv){
     t_etat etat_de_jeu = HOME;
 
     socket_t j1;
-    
-
-    printf("Quel est votre pseudo : ");
-    scanf("%s", j1.pseudo);
-    int socketClient = init_connexion(j1);
 
     win = Initialize_sdl();
     LoadImages(win->pRenderer, &images);
@@ -56,15 +51,22 @@ int main(int argc, char **argv){
     setSort[2].createSort = createIncendio;
 
     player_t * monPerso;
-    monPerso = createPlayer(1, "Heaven", searchTexture(&images, "hp.png"), setSort, 200, 250);
+    monPerso = accueil_connexion(&images, setSort);
+
+    strcpy(j1.pseudo, monPerso->name);
+    int socketClient = init_connexion(j1);
 
     //Mannequin
-    
-    mannequin = createPlayer(2, "Ennemi", searchTexture(&images, "hp.png"), setSort, 900, 250);
+
+    player_t * mannequin;
+    mannequin = createPlayer(3, "Pouette", 0, searchTexture(&images, "Mannequin.png"), setSort, 900, 250);
+
+    //Joueur 2
+    joueur2 = createPlayer(2, "Ennemi", 0, searchTexture(&images, "Mannequin.png"), setSort, 900, 250);
 
     // Boucle d'update du second joueur
 
-    
+
     pthread_t thread1;
     int *arg1 = malloc(sizeof(int));
     *arg1 = socketClient;
@@ -79,7 +81,7 @@ int main(int argc, char **argv){
                 etat_de_jeu = home_state(win, &images, text, monPerso, font);
             break;
             case GAME:
-                etat_de_jeu = game_state(win, &images, monPerso, mannequin, socketClient, &j1);
+                etat_de_jeu = game_state(win, &images, monPerso, joueur2, socketClient, &j1);
             break;
             case TRAINING:
                 etat_de_jeu = training_state(win, &images, text, monPerso, mannequin, font);
@@ -96,6 +98,7 @@ int main(int argc, char **argv){
     freeText(&text);
     freePlayer(monPerso);
     freePlayer(mannequin);
+    freePlayer(joueur2);
 
     TTF_CloseFont(font);
 

@@ -21,7 +21,7 @@ static int playerUnstun(int, player_t *);
  * \return p Pointeur sur une structure player_s étant le nouveau personnage créé.
  */
 extern
-player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, cd_t setSort[], int x, int y){
+player_t * createPlayer(int id_player, char name[], int xp, SDL_Texture * sprite, cd_t setSort[], int x, int y){
     player_t * p;
     p = malloc(sizeof(player_t));
 
@@ -36,6 +36,7 @@ player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, cd_t s
     p->pos_y_click = y+10;
     p->pt_life = 100;
     p->pt_mana = 100;
+    p->pt_xp = xp;
     p->sprite = sprite;
     p->is_stun = 0;
     p->vitesse = 0.2;
@@ -99,3 +100,5 @@ void rand_click_bot(player_t *mannequin){
         mannequin->pos_y_click = rand()%400+100;
     }
 }
+
+

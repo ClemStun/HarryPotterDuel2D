@@ -131,7 +131,9 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
     }
 
     createText(win->pRenderer, text, 250, 100, 250, 125, monPerso->name, font, 'w');
-
+	
+	click = 0;
+	
     SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 0 );
     return HOME;
 }

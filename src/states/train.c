@@ -52,6 +52,8 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
                         monPerso->numSort = 2;
                     }else if(keyboard_state_array[SDL_SCANCODE_R]){
                         monPerso->pt_mana = 100;
+                    }else if(keyboard_state_array[SDL_SCANCODE_V]){
+                        mannequin->pt_life = 100;
                     }
                 break;
             }

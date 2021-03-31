@@ -44,8 +44,9 @@ typedef struct player_s{
 
 } player_t;
 
-extern player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite, cd_t setSort[], int x, int y);
+extern player_t * createPlayer(int id_player, char name[], int xp, SDL_Texture * sprite, cd_t setSort[], int x, int y);
 extern void freePlayer(player_t * p);
 extern int playerPosX(player_t * p);
 extern int playerPosY(player_t * p);
 extern void rand_click_bot(player_t *mannequin);
+
