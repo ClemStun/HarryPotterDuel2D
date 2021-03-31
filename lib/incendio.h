@@ -35,6 +35,8 @@ typedef struct incendio_s{
     int (*collision_test)(struct incendio_s **,int , int, player_t *);
     void (*destroy)(struct incendio_s **);
 
+    int timer;
+
 } incendio_t;
 
 extern incendio_t * createIncendio(player_t *);

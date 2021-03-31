@@ -61,7 +61,8 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
 
     for(int i = 0; i < NB_SORT; i++){
         if(monPerso->createSort[i].sort != NULL){
-            monPerso->createSort[i].sort->deplacement(monPerso->createSort[i].sort, monPerso->createSort[i].sort->destX, monPerso->createSort[i].sort->destY);
+            if(monPerso->createSort[i].sort->deplacement != NULL)
+                monPerso->createSort[i].sort->deplacement(monPerso->createSort[i].sort, monPerso->createSort[i].sort->destX, monPerso->createSort[i].sort->destY);
             monPerso->createSort[i].sort->display(monPerso->createSort[i].sort, win, images);
             monPerso->createSort[i].sort->collision_test(&(monPerso->createSort[i].sort), monPerso->createSort[i].sort->destX, monPerso->createSort[i].sort->destY, mannequin);
         }

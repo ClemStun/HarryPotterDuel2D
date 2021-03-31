@@ -53,6 +53,8 @@ incendio_t * createIncendio(player_t * player){
     spell->collision_test = collision_test;
     spell->destroy = destroy;
 
+    spell->timer = 0;
+
     player->pt_mana -= spell->manaCost;
 
     return spell;
@@ -103,6 +105,39 @@ void display(incendio_t * spell, window * win, images_t *images){
 
 }
 
+static
+void display_zone(incendio_t * spell, window * win, images_t *images){
+
+    SDL_Rect zone;
+    zone.x = spell->pos_x;
+    zone.y = spell->pos_y;
+    zone.w = spell->width;
+    zone.h = spell->height;
+
+    SDL_SetRenderDrawColor(win->pRenderer, 255, 0, 0, 255);
+    SDL_RenderDrawRect(win->pRenderer, &zone);
+
+}
+
+static
+int collision_test_zone(incendio_t ** spell, int x, int y, player_t * player){
+
+    if(SDL_GetTicks() - (*spell)->timer >= 3000){
+        (*spell)->destroy(spell);
+        return 1;
+    }
+
+    if((((*spell)->pos_x + (*spell)->width >= player->pos_x) && ((*spell)->pos_x + (*spell)->width <= player->pos_x + 100)) || (((*spell)->pos_x >= player->pos_x) && ((*spell)->pos_x  <= player->pos_x + 100)))
+        if((((*spell)->pos_y + (*spell)->height >= player->pos_y) && ((*spell)->pos_y + (*spell)->height <= player->pos_y + 100)) || (((*spell)->pos_y >= player->pos_y) && ((*spell)->pos_y  <= player->pos_y + 100))){
+    
+            player->pt_life -= (*spell)->damage;
+            return 0;
+
+        }
+
+    return 1;
+}
+
 /**
  * \fn static int collision_test(incendio_t ** spell, int x, int y, player_t * player)
  * \brief Test des collisions entre un sort incendio_t et un player_t player
@@ -120,7 +155,14 @@ int collision_test(incendio_t ** spell, int x, int y, player_t * player){
         if((((*spell)->pos_y + (*spell)->height >= player->pos_y) && ((*spell)->pos_y + (*spell)->height <= player->pos_y + 100)) || (((*spell)->pos_y >= player->pos_y) && ((*spell)->pos_y  <= player->pos_y + 100))){
     
             player->pt_life -= (*spell)->damage;
-            (*spell)->destroy(spell);
+            (*spell)->pos_x -= 50;
+            (*spell)->pos_y -= 100;
+            (*spell)->width = 100;
+            (*spell)->height = 200;
+            (*spell)->timer = SDL_GetTicks();
+            (*spell)->deplacement = NULL;
+            (*spell)->display = display_zone;
+            (*spell)->collision_test = collision_test_zone;
             return 0;
 
         }
@@ -128,7 +170,14 @@ int collision_test(incendio_t ** spell, int x, int y, player_t * player){
     if((((*spell)->pos_x + (*spell)->width >= x) && ((*spell)->pos_x + (*spell)->width <= x + 10)) || (((*spell)->pos_x >= x) && ((*spell)->pos_x  <= x + 10)))
         if((((*spell)->pos_y + (*spell)->height >= y) && ((*spell)->pos_y + (*spell)->height <= y + 10)) || (((*spell)->pos_y >= y) && ((*spell)->pos_y  <= y + 10))){
             
-            (*spell)->destroy(spell);
+            (*spell)->pos_x -= 50;
+            (*spell)->pos_y -= 100;
+            (*spell)->width = 100;
+            (*spell)->height = 200;
+            (*spell)->timer = SDL_GetTicks();
+            (*spell)->deplacement = NULL;
+            (*spell)->display = display_zone;
+            (*spell)->collision_test = collision_test_zone;
             return 0;
 
         }
