@@ -61,13 +61,15 @@ int main(){
             for(i = 0; i < nb_client; i++){
                 if(FD_ISSET(clients[i], &readfs)){
                     SOCKET client = clients[i];
-                    readData(client, &joueur);
-                    if(joueur.x_click == -1){ 
+                    socket_t update;
+                    readData(client, &update);
+                    if(update.x_click == -1){ 
                         closesocket(client);
                         remove_client(clients, i, &nb_client);
                         printf("Le joueur %i s'est deconnecte (%i/%i)\n",client-socketServer, nb_client, MAX_CLIENT);
                     }else{
-                        send_all(clients, clients[i], &joueur, nb_client);
+                        //printf("%i %i %s\n", update.x_click, update.y_click, update.pseudo);
+                        send_all(clients, clients[i], &update, nb_client);                        
                     }
                 }
             }

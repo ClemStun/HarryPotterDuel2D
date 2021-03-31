@@ -3,9 +3,26 @@
 #include "../../lib/petrificus.h"
 #include "../../lib/incendio.h"
 #include <math.h>
+#include <pthread.h>
 
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 600
+
+player_t * mannequin;
+socket_t j2;
+
+void *function(void *arg){
+    int socket = *(int*)arg;
+    
+        while(1){
+            recv(socket, &j2, sizeof j2, 0);
+            mannequin->pos_x_click = SCREEN_WIDTH-100-j2.x_click;
+            mannequin->pos_y_click = SCREEN_HEIGHT-100-j2.y_click;
+        }
+
+        free(arg);
+        pthread_exit(NULL);
+}
 
 int main(int argc, char **argv){
     window *win;
@@ -14,7 +31,7 @@ int main(int argc, char **argv){
     t_etat etat_de_jeu = HOME;
 
     socket_t j1;
-    socket_t j2;
+    
 
     printf("Quel est votre pseudo : ");
     scanf("%s", j1.pseudo);
@@ -42,8 +59,16 @@ int main(int argc, char **argv){
     monPerso = createPlayer(1, "Heaven", searchTexture(&images, "hp.png"), setSort, 200, 250);
 
     //Mannequin
-    player_t * mannequin;
+    
     mannequin = createPlayer(2, "Ennemi", searchTexture(&images, "hp.png"), setSort, 900, 250);
+
+    // Boucle d'update du second joueur
+
+    
+    pthread_t thread1;
+    int *arg1 = malloc(sizeof(int));
+    *arg1 = socketClient;
+    pthread_create(&thread1, NULL, function, arg1);
 
     // Boucle de jeu
     while(etat_de_jeu != QUIT){
@@ -54,7 +79,7 @@ int main(int argc, char **argv){
                 etat_de_jeu = home_state(win, &images, text, monPerso, font);
             break;
             case GAME:
-                etat_de_jeu = game_state(win, &images, monPerso, mannequin);
+                etat_de_jeu = game_state(win, &images, monPerso, mannequin, socketClient, &j1);
             break;
             case TRAINING:
                 etat_de_jeu = training_state(win, &images, text, monPerso, mannequin, font);
