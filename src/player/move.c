@@ -27,7 +27,7 @@
      double vX = 0, vY = 0, norme = 0;
      int miror = 2;
 
-     if(monPerso->id_player == 2) miror = 1;
+     if(monPerso->id_player > 1) miror = 1;
      if(monPerso->is_stun) monPerso->vitesse = 0;
 
      vX = (double)deplX - (monPerso->posXfloat);

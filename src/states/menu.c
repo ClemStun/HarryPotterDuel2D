@@ -93,6 +93,8 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
         }
     }
     SDL_GetMouseState(&mouseX, &mouseY);
+    DrawImage(win->pRenderer, images, searchTexture(images, "logo.png"), 0, 0, 29, 21, SCREEN_WIDTH/2 - 150, 20, 290, 210);
+
 
     if(!(zone_detect(SCREEN_WIDTH-250, 50, 200, 100, mouseX, mouseY))){
         createButton(win, text, SCREEN_WIDTH-250, 50, 200, 100, "Jouer", font, 'b');
@@ -130,10 +132,10 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
         DrawImage(win->pRenderer, images, monPerso->sprite, 7*32, 4*32, 32, 32, 100, 250, 300, 300);
     }
 
-    createText(win->pRenderer, text, 250, 100, 250, 125, monPerso->name, font, 'w');
-	
+    createText(win->pRenderer, text, 250, 200, 125, 63, monPerso->name, font, 'w');
+
 	click = 0;
-	
+
     SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 0 );
     return HOME;
 }

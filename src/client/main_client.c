@@ -29,6 +29,11 @@ int main(int argc, char **argv){
     images_t images;
     text_t * text;
     t_etat etat_de_jeu = HOME;
+    int socketClient;
+    char offline;
+
+    printf("Voulez vous jouer hors ligne (y or n) ?\n");
+    scanf("%c", &offline);
 
     socket_t j1;
 
@@ -53,8 +58,10 @@ int main(int argc, char **argv){
     player_t * monPerso;
     monPerso = accueil_connexion(&images, setSort);
 
-    strcpy(j1.pseudo, monPerso->name);
-    int socketClient = init_connexion(j1);
+    if(offline == 'n'){
+        strcpy(j1.pseudo, monPerso->name);
+        socketClient = init_connexion(j1);
+    }
 
     //Mannequin
 
@@ -67,10 +74,12 @@ int main(int argc, char **argv){
     // Boucle d'update du second joueur
 
 
-    pthread_t thread1;
-    int *arg1 = malloc(sizeof(int));
-    *arg1 = socketClient;
-    pthread_create(&thread1, NULL, function, arg1);
+    if(offline == 'n'){
+        pthread_t thread1;
+        int *arg1 = malloc(sizeof(int));
+        *arg1 = socketClient;
+        pthread_create(&thread1, NULL, function, arg1);
+    }
 
     // Boucle de jeu
     while(etat_de_jeu != QUIT){
@@ -96,7 +105,7 @@ int main(int argc, char **argv){
     }
     FreeImages(&images);
     freeText(&text);
-    freePlayer(monPerso);
+    accueil_deconnexion(monPerso);
     freePlayer(mannequin);
     freePlayer(joueur2);
 
