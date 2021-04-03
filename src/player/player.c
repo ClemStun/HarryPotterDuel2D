@@ -27,6 +27,7 @@ player_t * createPlayer(int id_player, char name[], int xp, SDL_Texture * sprite
 
     p->id_player = id_player;
     strcpy(p->name, name);
+    p->house = 'n';
     p->pos_x = x;
     p->pos_y = y;
     p->posXfloat = (float)x;
@@ -100,5 +101,3 @@ void rand_click_bot(player_t *mannequin){
         mannequin->pos_y_click = rand()%400+100;
     }
 }
-
-

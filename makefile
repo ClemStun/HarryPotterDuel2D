@@ -1,7 +1,7 @@
 sdl_options = -lSDL2 -lSDL2_image -lSDL2_ttf -pthread
 
 BIN = ./main
-OBJ = ./obj/main_client.o ./obj/init_connexion.o ./obj/move.o ./obj/player.o ./obj/sdl.o ./obj/hud_ingame.o ./obj/expelliarmus.o ./obj/petrificus.o ./obj/incendio.o ./obj/menu.o ./obj/game.o ./obj/waiting.o ./obj/train.o ./obj/trait_donnees.o
+OBJ = ./obj/main_client.o ./obj/init_connexion.o ./obj/move.o ./obj/player.o ./obj/sdl.o ./obj/hud_ingame.o ./obj/expelliarmus.o ./obj/petrificus.o ./obj/incendio.o ./obj/menu.o ./obj/game.o ./obj/waiting.o ./obj/train.o ./obj/testMaisons.o ./obj/trait_donnees.o
 
 ./main : $(OBJ)
 	gcc -o $(BIN) $(OBJ) $(sdl_options) -lm -g
@@ -44,7 +44,10 @@ OBJ = ./obj/main_client.o ./obj/init_connexion.o ./obj/move.o ./obj/player.o ./o
 
 ./obj/waiting.o : ./src/states/waiting.c
 	gcc -o ./obj/waiting.o -c ./src/states/waiting.c
-	
+
+./obj/testMaisons.o : ./src/states/testMaisons.c
+	gcc -o ./obj/testMaisons.o -c ./src/states/testMaisons.c
+
 ./obj/trait_donnees.o : ./src/trait_donnees/trait_donnees.c
 	gcc -o ./obj/trait_donnees.o -c ./src/trait_donnees/trait_donnees.c
 

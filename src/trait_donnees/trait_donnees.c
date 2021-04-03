@@ -6,6 +6,7 @@ void load_data(player_t ** monPerso, images_t * images, cd_t setSort[]){
     char pseudo[20];
     char fname[25] = "./svg/";
     char cherche[40];
+    char house;
     int trouve = 0, id, xp;
 
     printf("Quel est le pseudo du personnage à charger : ");
@@ -31,10 +32,16 @@ void load_data(player_t ** monPerso, images_t * images, cd_t setSort[]){
         exit(3);
     }
     else{
-        fscanf(fichier, "%i", &id);
-        fscanf(fichier, "%i", &xp);
+        rewind(fichier);
+        fscanf(fichier, "%s : %i : %i : %c", cherche, &id, &xp, &house);
 
-        *monPerso = createPlayer(id, pseudo, xp, searchTexture(images, pseudo), setSort, 200, 250);
+        if(searchTexture(images, pseudo) == NULL){
+            *monPerso = createPlayer(id, pseudo, xp, searchTexture(images, "Mannequin.png"), setSort, 200, 250);
+        }
+        else{
+            *monPerso = createPlayer(id, pseudo, xp, searchTexture(images, pseudo), setSort, 200, 250);
+        }
+        (*monPerso)->house = house;
     }
     fclose(fichier);
 }
@@ -57,7 +64,7 @@ void save_data(player_t * monPerso){
     if(monPerso == NULL)
         exit(4);
 
-    fprintf(fichier, "%s : %i : %i", monPerso->name, monPerso->id_player, monPerso->pt_xp);
+    fprintf(fichier, "%s : %i : %i : %c", monPerso->name, monPerso->id_player, monPerso->pt_xp, monPerso->house);
     //potion peut etre a venir
 
     fclose(fichier);
@@ -70,12 +77,12 @@ player_t * accueil_connexion(images_t * images, cd_t setSort[]){
 
     player_t * monPerso;
 
-    printf("Voulez-vous vous connecter à un personnage existant ou en créer un nouveau ?\n");
+    printf("\n\n\n\n\nVoulez-vous vous connecter à un personnage existant ou en créer un nouveau ?\n\n");
     printf("\t1- Connexion à un personnage existant.\n");
     printf("\t2- Création d'un nouveau personnage.\n");
 
     do{
-        printf("Saisissez 1 ou 2 : ");
+        printf("\nSaisissez 1 ou 2 : ");
         scanf("%i", &choix);
     }while(choix != 1 && choix != 2);
 
@@ -84,10 +91,14 @@ player_t * accueil_connexion(images_t * images, cd_t setSort[]){
             load_data(&monPerso, images, setSort);
         break;
         case 2:
-            printf("\nQuel est le pseudo de votre personnage : ");
+            printf("\n\nQuel est le pseudo de votre personnage : ");
             scanf("%s", pseudo);
-
-            monPerso = createPlayer(1, pseudo, 0, searchTexture(images, pseudo), setSort, 200, 250);
+            if(searchTexture(images, pseudo) == NULL){
+                monPerso = createPlayer(1, pseudo, 0, searchTexture(images, "Mannequin.png"), setSort, 200, 250);
+            }
+            else{
+                monPerso = createPlayer(1, pseudo, 0, searchTexture(images, pseudo), setSort, 200, 250);
+            }
         break;
     }
 
@@ -98,9 +109,9 @@ extern
 void accueil_deconnexion(player_t * monPerso){
     int choix;
 
-    printf("Voulez vous sauvegarder votre avancement de personnage ?\n");
+    printf("\n\n\n\n\nVoulez vous sauvegarder votre avancement de personnage ?\n\n");
     printf("\t1- Sauvegarder et quitter.\n");
-    printf("\t2- Quitter sans sauvegarder.\n");
+    printf("\t2- Quitter sans sauvegarder.\n\n");
 
     do{
         printf("Saisissez 1 ou 2 : ");

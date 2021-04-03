@@ -54,7 +54,7 @@ void createButton(window *win, text_t * text, int posX, int posY, int rectW, int
  *
  * \return 1 si souris dans la zone, 0 sinon.
  */
-static
+extern
 int zone_detect(int x, int y, int w, int h, int mouseX, int mouseY){
     if((mouseX >= x && mouseY >= y) && (mouseX <= x + w && mouseY <= y + h)){
         return 1;
@@ -133,6 +133,21 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
     }
 
     createText(win->pRenderer, text, 250, 200, 125, 63, monPerso->name, font, 'w');
+    createText(win->pRenderer, text, SCREEN_WIDTH/2, 350, 125, 50, "Maison :", font, 'w');
+    switch (monPerso->house){
+        case 'g':
+            createText(win->pRenderer, text, SCREEN_WIDTH/2, 400, 125, 50, "Griffondor", font, 'r');
+        break;
+        case 's':
+            createText(win->pRenderer, text, SCREEN_WIDTH/2, 400, 125, 50, "Serpentard", font, 'g');
+        break;
+        case 'r':
+            createText(win->pRenderer, text, SCREEN_WIDTH/2, 400, 125, 50, "Serdaigle", font, 'B');
+        break;
+        case 'p':
+            createText(win->pRenderer, text, SCREEN_WIDTH/2, 400, 125, 50, "Poufsouffle", font, 'y');
+        break;
+    }
 
 	click = 0;
 

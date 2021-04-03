@@ -28,7 +28,7 @@ int main(int argc, char **argv){
     window *win;
     images_t images;
     text_t * text;
-    t_etat etat_de_jeu = HOME;
+    t_etat etat_de_jeu = TEST_M;
     int socketClient;
     char offline;
 
@@ -42,7 +42,7 @@ int main(int argc, char **argv){
     text = init_struct_text();
 
     // fonts
-    TTF_Font *font = TTF_OpenFont("./assets/fonts/big_noodle_titling.ttf", 80);
+    TTF_Font *font = TTF_OpenFont("./assets/fonts/big_noodle_titling.ttf", 200);
 
     // Destiné à dégager
     cd_t setSort[NB_SORT];
@@ -57,6 +57,12 @@ int main(int argc, char **argv){
 
     player_t * monPerso;
     monPerso = accueil_connexion(&images, setSort);
+    if(monPerso->house == 'n'){
+        etat_de_jeu = TEST_M;
+    }
+    else{
+        etat_de_jeu = HOME;
+    }
 
     if(offline == 'n'){
         strcpy(j1.pseudo, monPerso->name);
@@ -97,6 +103,9 @@ int main(int argc, char **argv){
             break;
             case WAITING:
                 etat_de_jeu = waiting_state(win, text, font, socketClient, &j1, &j2);
+            break;
+            case TEST_M:
+                etat_de_jeu = test_m_state(win, &images, text, monPerso, font);
             break;
         }
 

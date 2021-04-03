@@ -102,13 +102,17 @@ void LoadImages(SDL_Renderer * pRenderer, images_t * images){
 extern
 SDL_Texture * searchTexture(images_t * images, char * nom){
     char nom2[50];
+    int last_cmp = 1;
     sprintf(nom2, "%s", nom);
     if(!strstr(nom2, ".png")){
       strcat(nom2, ".png");
     }
       int i;
       //ici on recherche quel est l'indice de l'image qu'on veux afficher
-      for(i=0; strcmp(images->nomsImages[i], nom2)!=0 && i<images->nb_images; i++);
+      for(i=0; (last_cmp = strcmp(images->nomsImages[i], nom2)) != 0 && i < images->nb_images-1; i++);
+
+      if(last_cmp != 0)
+        return NULL;
 
       return(images->l_textImages[i]);
 }
@@ -228,6 +232,21 @@ void createText(SDL_Renderer *pRenderer, text_t * text, int x, int y, int text_w
             case 'r':
                 textColor.r = 255;
                 textColor.g = 0;
+                textColor.b = 0;
+            break;
+            case 'g':
+                textColor.r = 0;
+                textColor.g = 255;
+                textColor.b = 0;
+            break;
+            case 'B':
+                textColor.r = 0;
+                textColor.g = 0;
+                textColor.b = 255;
+            break;
+            case 'y':
+                textColor.r = 255;
+                textColor.g = 255;
                 textColor.b = 0;
             break;
         }

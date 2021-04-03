@@ -22,6 +22,7 @@
 typedef struct player_s{
     int id_player;
     char name[16];
+    char house; // g pour Griffondor, s pour Serpentard, r pour Serdaigle, p pour Poufsouffle
     int pos_x;
     int pos_y;
     double posXfloat;
@@ -49,4 +50,3 @@ extern void freePlayer(player_t * p);
 extern int playerPosX(player_t * p);
 extern int playerPosY(player_t * p);
 extern void rand_click_bot(player_t *mannequin);
-
