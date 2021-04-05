@@ -97,7 +97,7 @@ void LoadImages(SDL_Renderer * pRenderer, images_t * images){
  * \param images Pointeur sur une structure images_t où vont être rangées les textures des images.
  * \param nom Nom de l'image texturée recherchée
  *
- * \return La texture trouvée.
+ * \return La texture trouvée ou NULL si non trouvée.
  */
 extern
 SDL_Texture * searchTexture(images_t * images, char * nom){

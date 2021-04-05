@@ -1,6 +1,6 @@
 /**
  * \file player.c
- * \brief Fonctions utilisant principalement la SDL2.
+ * \brief Fonctions d'actions sur une entité joueur.
  * \author COUTANT Hugo / COMTE Clément
  * \version 0.1
  * \date 14 feb 2021
@@ -12,12 +12,17 @@
 static int playerUnstun(int, player_t *);
 
 /**
- * \fn extern player_t * createPlayer(int id_player, char name[], SDL_Texture * sprite)
+ * \fn extern player_t * createPlayer(int id_player, char name[], int xp, SDL_Texture * sprite, cd_t setSort[], int x, int y)
  * \brief Création d'un personnage et initialisation de ses valeurs.
  *
  * \param id_player Identifiant du joueur.
  * \param name Nom du personnage.
+ * \param xp Experience du personnage.
  * \param sprite Texture des sprites du personnage.
+ * \param setSort Tableau de sort du personnage.
+ * \param x Position en X initiale du personnage.
+ * \param y Position en Y initiale du personnage.
+ *
  * \return p Pointeur sur une structure player_s étant le nouveau personnage créé.
  */
 extern
@@ -49,6 +54,8 @@ player_t * createPlayer(int id_player, char name[], int xp, SDL_Texture * sprite
     }
 
     p->unStun = playerUnstun;
+
+    return p;
 }
 
 /**
@@ -93,6 +100,12 @@ int playerUnstun(int intervalle, player_t * player){
     }
 }
 
+/**
+ * \fn extern void rand_click_bot(player_t *mannequin)
+ * \brief Genereration d'une position de click pour un personnage ennemi dans la zone ennemie.
+ *
+ * \param mannequin Pointeur sur une structure player_s à déplacer aléatoirement.
+ */
 extern
 void rand_click_bot(player_t *mannequin){
 

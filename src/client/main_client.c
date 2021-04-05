@@ -1,3 +1,12 @@
+/**
+ * \file main_client.c
+ * \brief Fonction principale du jeu.
+ * \author COUTANT Hugo & COMTE Clement & COLLET Matthieu
+ * \version 0.1
+ * \date 14 feb 2021
+ *
+ */
+
 #include "../../lib/menus.h"
 #include "../../lib/expelliarmus.h"
 #include "../../lib/petrificus.h"
@@ -5,6 +14,7 @@
 #include <math.h>
 #include <pthread.h>
 
+//Dimensions de la fenêtre
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 600
 

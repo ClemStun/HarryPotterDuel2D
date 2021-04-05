@@ -10,14 +10,15 @@
 #include "../../lib/menus.h"
 
 /**
- * \fn extern t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t * mannequin, sort_t ** sort)
+ * \fn extern t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t * mannequin, int socketClient, socket_t *j1)
  * \brief Fonction état du jeu en mode jeu principal.
  *
  * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
  * \param images Pointeur sur une structure images_t, bibliothèque de textures des images.
  * \param monPerso Pointeur sur une structure player_t représentant les infos d'un personnage.
- * \param mannequin Test
- * \param sort Pointeur de pointeur sur une structure sort_s.
+ * \param mannequin Pointeur sur une structure player_t représentant les infos d'un personnage ennemi.
+ * \param socketClient Numéro du socket de client actuel.
+ * \param j1 Pointeur sur un socket_s du joueur 1.
  *
  * \return Soit son propre état pour y rester, soit un autre pour changer d'état dans la suite du programme.
  */

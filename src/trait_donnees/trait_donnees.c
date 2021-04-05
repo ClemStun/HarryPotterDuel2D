@@ -1,5 +1,23 @@
+/**
+ * \file trait_donnees.c
+ * \brief Fonction de chargement et sauvegarde de donnees
+ * \author COUTANT Hugo
+ * \version 0.1
+ * \date 14 feb 2021
+ *
+ */
+
 #include "../../lib/trait_donnees.h"
 
+/**
+ * \fn static void load_data(player_t ** monPerso, images_t * images, cd_t setSort[])
+ * \brief Fonction de chargement de donnees à partir d'un fichier.
+ *
+ * \param monPerso Double pointeur sur une structure player_t représentant les infos d'un personnage.
+ * \param images Pointeur sur une structure images_t, bibliothèque de textures des images.
+ * \param setSort Tableau de sort d'un personnage.
+ *
+ */
 static
 void load_data(player_t ** monPerso, images_t * images, cd_t setSort[]){
     FILE * fichier;
@@ -46,6 +64,13 @@ void load_data(player_t ** monPerso, images_t * images, cd_t setSort[]){
     fclose(fichier);
 }
 
+/**
+ * \fn static void save_data(player_t * monPerso)
+ * \brief Fonction de sauvegarde de donnees dans un fichier.
+ *
+ * \param monPerso Pointeur sur une structure player_t représentant les infos d'un personnage à sauvegarder.
+ *
+ */
 static
 void save_data(player_t * monPerso){
     FILE * fichier;

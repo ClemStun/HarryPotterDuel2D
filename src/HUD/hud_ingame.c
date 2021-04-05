@@ -29,7 +29,7 @@ void update_hud_ingame(window * win, images_t * images, player_t * monPerso){
     life.y = SCREEN_HEIGHT - 40;
     life.w = monPerso->pt_life*2;
     life.h = 20;
-    
+
     SDL_Rect bd_life;
     bd_life.x = 8;
     bd_life.y = SCREEN_HEIGHT - 42;
@@ -41,7 +41,7 @@ void update_hud_ingame(window * win, images_t * images, player_t * monPerso){
     mana.y = SCREEN_HEIGHT - 40;
     mana.w = monPerso->pt_mana*2;
     mana.h = 20;
-    
+
     SDL_Rect bd_mana;
     bd_mana.x = SCREEN_WIDTH - 212;
     bd_mana.y = SCREEN_HEIGHT - 42;
@@ -72,19 +72,30 @@ void update_hud_ingame(window * win, images_t * images, player_t * monPerso){
 
 
 	SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
-    SDL_RenderFillRect(win->pRenderer, &bd_life);	
-	
+    SDL_RenderFillRect(win->pRenderer, &bd_life);
+
     SDL_SetRenderDrawColor(win->pRenderer, 255, 0, 0, SDL_ALPHA_OPAQUE);
     SDL_RenderFillRect(win->pRenderer, &life);
 
 	SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
     SDL_RenderFillRect(win->pRenderer, &bd_mana);
-	
+
     SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 255, SDL_ALPHA_OPAQUE);
     SDL_RenderFillRect(win->pRenderer, &mana);
 
 }
 
+/**
+ * \fn extern void update_hud_ingame_ennemie(window * win, images_t * images, text_t * text, player_t * ennemie, TTF_Font *font)
+ * \brief Mise à jour de l'HUD du jeu pour les informations ennemies (barre de vie, pseudo, etc).
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param images Pointeur sur une structure images_t, bibliothèque de textures des images.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param ennemie Pointeur sur une structure player_t représentant les infos d'un personnage.
+ * \param font Pointeur sur une police de texte.
+ *
+ */
 extern
 void update_hud_ingame_ennemie(window * win, images_t * images, text_t * text, player_t * ennemie, TTF_Font *font){
 
@@ -93,7 +104,7 @@ void update_hud_ingame_ennemie(window * win, images_t * images, text_t * text, p
     life.y = 28;
     life.w = ennemie->pt_life;
     life.h = 14;
-    
+
     SDL_Rect bd_life;
     bd_life.x = SCREEN_WIDTH - 122;
     bd_life.y = 26;

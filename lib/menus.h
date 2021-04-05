@@ -1,6 +1,6 @@
 /**
  * \file menus.h
- * \brief Header commun aux différents status du jeu
+ * \brief Header commun aux différents statuts du jeu
  * \author COUTANT Hugo
  * \version 0.1
  * \date 14 feb 2021
@@ -23,3 +23,4 @@ SDL_Event event;
 #include "game.h"
 #include "train.h"
 #include "waiting.h"
+#include "testMaisons.h"

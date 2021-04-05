@@ -17,7 +17,8 @@
  * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
  * \param images Pointeur sur une structure images_t, bibliothèque de textures des images.
  * \param monPerso Pointeur sur une structure player_t représentant les infos d'un personnage.
- * \param mannequin Test
+ * \param mannequin Pointeur sur une structure player_t représentant les infos d'un personnage ennemi controlé par un ordinateur.
+ * \param font Pointeur sur une police de caractère.
  *
  * \return Soit son propre état pour y rester, soit un autre pour changer d'état dans la suite du programme.
  */

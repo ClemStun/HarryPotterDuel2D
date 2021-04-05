@@ -1,9 +1,30 @@
+/**
+ * \file testMaisons.c
+ * \brief Déroulement du jeu dans l'état TEST_M
+ * \author COUTANT Hugo
+ * \version 0.1
+ * \date 14 feb 2021
+ *
+ */
+
 #include "../../lib/menus.h"
 
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 600
 
-
+/**
+ * \fn static int begin_test(window *win, text_t * text, TTF_Font *font, int mouseX, int mouseY, int click)
+ * \brief Fonction de début du test.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param mouseX Position en X de la souris.
+ * \param mouseY Position en Y de la souris.
+ * \param click Valeur du click, 1 = click detecté, 0 sinon.
+ *
+ * \return Soit son propre état donc 0 ici, soit 1 pour passer à la page suivante.
+ */
 static
 int begin_test(window *win, text_t * text, TTF_Font *font, int mouseX, int mouseY, int click){
     createText(win->pRenderer, text, SCREEN_WIDTH/2, 150, 1100, 150, "Quelle maison vous acceptera ?", font, 'w');
@@ -21,6 +42,18 @@ int begin_test(window *win, text_t * text, TTF_Font *font, int mouseX, int mouse
     return 0;
 }
 
+/**
+ * \fn static int test_un(window *win, text_t * text, TTF_Font *font, int house[], char choix)
+ * \brief Fonction de la premiere page du test.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param house Tableau état des valeurs de chaque maison suite aux réponses du test.
+ * \param choix Touche de réponse appuyé sur le clavier.
+ *
+ * \return Soit son propre état donc 1 ici, soit 2 pour passer à la page suivante.
+ */
 static
 int test_un(window *win, text_t * text, TTF_Font *font, int house[], char choix){
     createText(win->pRenderer, text, SCREEN_WIDTH/2, 100, 800, 75, "Quelle est ta plus grande qualite ?", font, 'w');
@@ -61,6 +94,18 @@ int test_un(window *win, text_t * text, TTF_Font *font, int house[], char choix)
     }
 }
 
+/**
+ * \fn static int test_deux(window *win, text_t * text, TTF_Font *font, int house[], char choix)
+ * \brief Fonction de la seconde page du test.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param house Tableau état des valeurs de chaque maison suite aux réponses du test.
+ * \param choix Touche de réponse appuyé sur le clavier.
+ *
+ * \return Soit son propre état donc 2 ici, soit 3 pour passer à la page suivante.
+ */
 static
 int test_deux(window *win, text_t * text, TTF_Font *font, int house[], char choix){
     createText(win->pRenderer, text, SCREEN_WIDTH/2, 100, 800, 75, "Quel est ton plus gros defaut ?", font, 'w');
@@ -101,6 +146,18 @@ int test_deux(window *win, text_t * text, TTF_Font *font, int house[], char choi
     }
 }
 
+/**
+ * \fn static int test_trois(window *win, text_t * text, TTF_Font *font, int house[], char choix)
+ * \brief Fonction de la troisieme page du test.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param house Tableau état des valeurs de chaque maison suite aux réponses du test.
+ * \param choix Touche de réponse appuyé sur le clavier.
+ *
+ * \return Soit son propre état donc 3 ici, soit 4 pour passer à la page suivante.
+ */
 static
 int test_trois(window *win, text_t * text, TTF_Font *font, int house[], char choix){
     createText(win->pRenderer, text, SCREEN_WIDTH/2, 100, 800, 75, "Quelle activite preferes-tu ?", font, 'w');
@@ -141,6 +198,18 @@ int test_trois(window *win, text_t * text, TTF_Font *font, int house[], char cho
     }
 }
 
+/**
+ * \fn static int test_quatre(window *win, text_t * text, TTF_Font *font, int house[], char choix)
+ * \brief Fonction de la quatrieme page du test.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param house Tableau état des valeurs de chaque maison suite aux réponses du test.
+ * \param choix Touche de réponse appuyé sur le clavier.
+ *
+ * \return Soit son propre état donc 4 ici, soit 5 pour passer à la page suivante.
+ */
 static
 int test_quatre(window *win, text_t * text, TTF_Font *font, int house[], char choix){
     createText(win->pRenderer, text, SCREEN_WIDTH/2, 100, 800, 75, "Dans ton groupe d'amis, tu es plutot :", font, 'w');
@@ -181,6 +250,18 @@ int test_quatre(window *win, text_t * text, TTF_Font *font, int house[], char ch
     }
 }
 
+/**
+ * \fn static int test_cinq(window *win, text_t * text, TTF_Font *font, int house[], char choix)
+ * \brief Fonction de la cinquieme page du test.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param house Tableau état des valeurs de chaque maison suite aux réponses du test.
+ * \param choix Touche de réponse appuyé sur le clavier.
+ *
+ * \return Soit son propre état donc 5 ici, soit 6 pour passer à la page suivante.
+ */
 static
 int test_cinq(window *win, text_t * text, TTF_Font *font, int house[], char choix){
     createText(win->pRenderer, text, SCREEN_WIDTH/2, 100, 1000, 75, "Quelle matiere magique t'attire le plus a l'ecole de Poudlard ?", font, 'w');
@@ -221,6 +302,18 @@ int test_cinq(window *win, text_t * text, TTF_Font *font, int house[], char choi
     }
 }
 
+/**
+ * \fn static int test_six(window *win, text_t * text, TTF_Font *font, int house[], char choix)
+ * \brief Fonction de la sixieme page du test.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param house Tableau état des valeurs de chaque maison suite aux réponses du test.
+ * \param choix Touche de réponse appuyé sur le clavier.
+ *
+ * \return Soit son propre état donc 6 ici, soit 7 pour passer à la page suivante.
+ */
 static
 int test_six(window *win, text_t * text, TTF_Font *font, int house[], char choix){
     createText(win->pRenderer, text, SCREEN_WIDTH/2, 100, 1000, 75, "Si tu ne pouvais utiliser qu'un seul sortilege, ce serait :", font, 'w');
@@ -261,6 +354,18 @@ int test_six(window *win, text_t * text, TTF_Font *font, int house[], char choix
     }
 }
 
+/**
+ * \fn static int test_sept(window *win, text_t * text, TTF_Font *font, int house[], char choix)
+ * \brief Fonction de la septieme page du test.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param house Tableau état des valeurs de chaque maison suite aux réponses du test.
+ * \param choix Touche de réponse appuyé sur le clavier.
+ *
+ * \return Soit son propre état donc 7 ici, soit 8 pour passer à la page suivante.
+ */
 static
 int test_sept(window *win, text_t * text, TTF_Font *font, int house[], char choix){
     createText(win->pRenderer, text, SCREEN_WIDTH/2, 100, 1000, 75, "Quelle creature choisirais-tu pour t'accompagner a poudlard ?", font, 'w');
@@ -301,6 +406,18 @@ int test_sept(window *win, text_t * text, TTF_Font *font, int house[], char choi
     }
 }
 
+/**
+ * \fn static int test_huit(window *win, text_t * text, TTF_Font *font, int house[], char choix)
+ * \brief Fonction de la huitieme page du test.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param house Tableau état des valeurs de chaque maison suite aux réponses du test.
+ * \param choix Touche de réponse appuyé sur le clavier.
+ *
+ * \return Soit son propre état donc 8 ici, soit 9 pour passer à la page suivante.
+ */
 static
 int test_huit(window *win, text_t * text, TTF_Font *font, int house[], char choix){
     createText(win->pRenderer, text, SCREEN_WIDTH/2, 100, 1000, 75, "Quel objet magique aimerais-tu avoir le plus ?", font, 'w');
@@ -341,6 +458,18 @@ int test_huit(window *win, text_t * text, TTF_Font *font, int house[], char choi
     }
 }
 
+/**
+ * \fn static int test_neuf(window *win, text_t * text, TTF_Font *font, int house[], char choix)
+ * \brief Fonction de la neuvieme page du test.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param house Tableau état des valeurs de chaque maison suite aux réponses du test.
+ * \param choix Touche de réponse appuyé sur le clavier.
+ *
+ * \return Soit son propre état donc 9 ici, soit 10 pour passer à la page suivante.
+ */
 static
 int test_neuf(window *win, text_t * text, TTF_Font *font, int house[], char choix){
     createText(win->pRenderer, text, SCREEN_WIDTH/2, 100, 1000, 75, "Quelle potion aimerais-tu utiliser parmi celles-ci ?", font, 'w');
@@ -385,6 +514,18 @@ int test_neuf(window *win, text_t * text, TTF_Font *font, int house[], char choi
     }
 }
 
+/**
+ * \fn static int test_dix(window *win, text_t * text, TTF_Font *font, int house[], char choix)
+ * \brief Fonction de la dixieme page du test.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param house Tableau état des valeurs de chaque maison suite aux réponses du test.
+ * \param choix Touche de réponse appuyé sur le clavier.
+ *
+ * \return Soit son propre état donc 10 ici, soit 11 pour passer à la page suivante.
+ */
 static
 int test_dix(window *win, text_t * text, TTF_Font *font, int house[], char choix){
     createText(win->pRenderer, text, SCREEN_WIDTH/2, 75, 1000, 75, "Enfin, parce qu'il faut bien penser a l'avenir,", font, 'w');
@@ -426,6 +567,18 @@ int test_dix(window *win, text_t * text, TTF_Font *font, int house[], char choix
     }
 }
 
+/**
+ * \fn static int final_test(window *win, text_t * text, TTF_Font *font, int house[], char choix)
+ * \brief Fonction de la page finale du test qui sert uniquement en cas d'égalité.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param house Tableau état des valeurs de chaque maison suite aux réponses du test.
+ * \param choix Touche de réponse appuyé sur le clavier.
+ *
+ * \return Soit son propre état donc 11 ici, soit 12 pour passer à la page suivante.
+ */
 static
 int final_test(window *win, text_t * text, TTF_Font *font, int house[], char choix){
     static int last_test = 0, i, max;
@@ -489,6 +642,21 @@ int final_test(window *win, text_t * text, TTF_Font *font, int house[], char cho
     }
 }
 
+/**
+ * \fn static int end_test(window *win, text_t * text, TTF_Font *font, int mouseX, int mouseY, int click, int house[], player_t * monPerso)
+ * \brief Fonction de fin du test.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param mouseX Position en X de la souris.
+ * \param mouseY Position en Y de la souris.
+ * \param click Valeur du click, 1 = click detecté, 0 sinon.
+ * \param house Tableau état des valeurs de chaque maison suite aux réponses du test.
+ * \param monPerso Pointeur sur une structure player_t représentant les infos d'un personnage.
+ *
+ * \return Soit son propre état donc 12 ici, soit 13 pour terminer le test et aller au menu du jeu.
+ */
 static
 int end_test(window *win, text_t * text, TTF_Font *font, int mouseX, int mouseY, int click, int house[], player_t * monPerso){
     static int i, max;
@@ -532,8 +700,20 @@ int end_test(window *win, text_t * text, TTF_Font *font, int mouseX, int mouseY,
     return 12;
 }
 
+/**
+ * \fn extern
+ t_etat test_m_state(window *win, text_t * text, player_t * monPerso, TTF_Font *font)
+ * \brief Fonction de fin du test.
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param monPerso Pointeur sur une structure player_t représentant les infos d'un personnage.
+ * \param font Pointeur sur une police de caractère.
+ *
+ * \return Soit son propre état pour y rester, soit un autre pour changer d'état dans la suite du programme.
+ */
 extern
-t_etat test_m_state(window *win, images_t * images, text_t * text, player_t * monPerso, TTF_Font *font){
+t_etat test_m_state(window *win, text_t * text, player_t * monPerso, TTF_Font *font){
     const Uint8 *keyboard_state_array = SDL_GetKeyboardState(NULL);
     static int mouseX, mouseY, click = 0, suivant = 0;
     static int house[4] = {0}; //Grifondor = 0, Serpentard = 1, Serdaigle = 2, Poufsouffle = 3
