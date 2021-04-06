@@ -14,25 +14,7 @@
 #include <math.h>
 #include <pthread.h>
 
-//Dimensions de la fenêtre
-#define SCREEN_WIDTH 1200
-#define SCREEN_HEIGHT 600
 
-player_t * joueur2;
-socket_t j2;
-
-void *function(void *arg){
-    int socket = *(int*)arg;
-
-        while(1){
-            recv(socket, &j2, sizeof j2, 0);
-            joueur2->pos_x_click = SCREEN_WIDTH-100-j2.x_click;
-            joueur2->pos_y_click = SCREEN_HEIGHT-100-j2.y_click;
-        }
-
-        free(arg);
-        pthread_exit(NULL);
-}
 
 int main(int argc, char **argv){
     window *win;
@@ -85,17 +67,9 @@ int main(int argc, char **argv){
     mannequin = createPlayer(3, "Pouette", 0, searchTexture(&images, "Mannequin.png"), setSort, 900, 250);
 
     //Joueur 2
+
+    player_t * joueur2;
     joueur2 = createPlayer(2, "Ennemi", 0, searchTexture(&images, "Mannequin.png"), setSort, 900, 250);
-
-    // Boucle d'update du second joueur
-
-
-    if(offline == 'n'){
-        pthread_t thread1;
-        int *arg1 = malloc(sizeof(int));
-        *arg1 = socketClient;
-        pthread_create(&thread1, NULL, function, arg1);
-    }
 
     // Boucle de jeu
     while(etat_de_jeu != QUIT){
@@ -112,10 +86,10 @@ int main(int argc, char **argv){
                 etat_de_jeu = training_state(win, &images, text, monPerso, mannequin, font);
             break;
             case WAITING:
-                etat_de_jeu = waiting_state(win, text, font, socketClient, &j1, &j2);
+                etat_de_jeu = waiting_state(win, text, font, socketClient, &j1);
             break;
             case TEST_M:
-                etat_de_jeu = test_m_state(win, &images, text, monPerso, font);
+                etat_de_jeu = test_m_state(win, text, monPerso, font);
             break;
         }
 

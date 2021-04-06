@@ -19,6 +19,10 @@
 typedef enum{QUIT, HOME, GAME, TRAINING, WAITING, TEST_M, OTHER} t_etat;
 SDL_Event event;
 
+//Dimensions de la fenêtre
+#define SCREEN_WIDTH 1200
+#define SCREEN_HEIGHT 600
+
 #include "menu.h"
 #include "game.h"
 #include "train.h"

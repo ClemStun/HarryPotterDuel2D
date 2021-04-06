@@ -9,6 +9,22 @@
 
 #include "../../lib/menus.h"
 
+player_t * joueur2;
+
+void *function(void *arg){
+    socket_t j2;
+    int socket = *(int*)arg;
+
+        while(1){
+            recv(socket, &j2, sizeof j2, 0);
+            joueur2->pos_x_click = SCREEN_WIDTH-100-j2.x_click;
+            joueur2->pos_y_click = SCREEN_HEIGHT-100-j2.y_click;
+        }
+
+        free(arg);
+        pthread_exit(NULL);
+}
+
 /**
  * \fn extern t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t * mannequin, int socketClient, socket_t *j1)
  * \brief Fonction état du jeu en mode jeu principal.
@@ -23,8 +39,16 @@
  * \return Soit son propre état pour y rester, soit un autre pour changer d'état dans la suite du programme.
  */
 extern
-t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t * mannequin, int socketClient, socket_t *j1){
+t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t * j2, int socketClient, socket_t *j1){
+
+    joueur2 = j2;    
+
     const Uint8 *keyboard_state_array = SDL_GetKeyboardState(NULL);
+
+    pthread_t thread1;
+    int *arg1 = malloc(sizeof(int));
+    *arg1 = socketClient;
+    pthread_create(&thread1, NULL, function, arg1);
 
 
     SDL_RenderClear(win->pRenderer);
@@ -44,7 +68,6 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                         strcpy(update.pseudo, j1->pseudo);
                         update.x_click = monPerso->pos_x_click;
                         update.y_click = monPerso->pos_y_click;
-                        printf("%i %i, %s\n", update.x_click, update.y_click, update.pseudo);
                         send(socketClient, &update, sizeof(update), 0);
                     }
                 break;
@@ -63,8 +86,8 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
     //updatePosition(win, mannequin, images, 50, 50, 0.2);
     update_hud_ingame(win, images, monPerso);
     //printf("%i %i    %i %i\n", mannequin->pos_x_click, mannequin->pos_y_click, mannequin->pos_x, mannequin->pos_y);
-    updatePosition(win, mannequin, images, mannequin->pos_x_click, mannequin->pos_y_click, 0.2);
-    update_hud_ingame(win, images, mannequin);
+    updatePosition(win, joueur2, images, joueur2->pos_x_click, joueur2->pos_y_click, 0.2);
+    update_hud_ingame(win, images, joueur2);
 
     /*if(*sort != NULL){
         (*sort)->deplacement((*sort), (*sort)->destX, (*sort)->destY);
