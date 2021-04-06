@@ -48,4 +48,4 @@ typedef struct protego_s{
 
 } protego_t;
 
-extern protego_t * createProtego(player_t *);
+extern protego_t * createProtego(player_t *, int x, int y);

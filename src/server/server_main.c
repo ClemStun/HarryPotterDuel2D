@@ -67,7 +67,7 @@ int main(){
                         closesocket(client);
                         remove_client(clients, i, &nb_client);
                         printf("Le joueur %i s'est deconnecte (%i/%i)\n",client-socketServer, nb_client, MAX_CLIENT);
-                    }else{
+                    }else if(update.x_click != 0 && update.y_click != 0){
                         //printf("%i %i %s\n", update.x_click, update.y_click, update.pseudo);
                         send_all(clients, clients[i], &update, nb_client);                        
                     }

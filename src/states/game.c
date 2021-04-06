@@ -14,11 +14,21 @@ player_t * joueur2;
 void *function(void *arg){
     socket_t j2;
     int socket = *(int*)arg;
-
+        int x, y;
         while(1){
             recv(socket, &j2, sizeof j2, 0);
-            joueur2->pos_x_click = SCREEN_WIDTH-100-j2.x_click;
-            joueur2->pos_y_click = SCREEN_HEIGHT-100-j2.y_click;
+            x = SCREEN_WIDTH-100-j2.x_click;
+            y = SCREEN_HEIGHT-100-j2.y_click;
+            if(j2.x_click != 0 && j2.y_click != 0){
+                if(j2.sort != -1){
+                    joueur2->numSort = j2.sort;
+                    joueur2->createSort[joueur2->numSort].sort = joueur2->createSort[joueur2->numSort].createSort(joueur2, x, y);
+                    joueur2->createSort[joueur2->numSort].timer = SDL_GetTicks();
+                }else{
+                    joueur2->pos_x_click = x;
+                    joueur2->pos_y_click = y;
+                }
+            }
         }
 
         free(arg);
@@ -50,6 +60,7 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
     *arg1 = socketClient;
     pthread_create(&thread1, NULL, function, arg1);
 
+    socket_t update;
 
     SDL_RenderClear(win->pRenderer);
 
@@ -64,10 +75,19 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                         SDL_GetMouseState(&(monPerso->pos_x_click), &(monPerso->pos_y_click));
                         monPerso->pos_x_click -= 50;
                         monPerso->pos_y_click -= 50;
-                        socket_t update;
                         strcpy(update.pseudo, j1->pseudo);
                         update.x_click = monPerso->pos_x_click;
                         update.y_click = monPerso->pos_y_click;
+                        update.sort = -1;
+                        send(socketClient, &update, sizeof(update), 0);
+                    }else if(event.button.button == SDL_BUTTON_RIGHT && monPerso->createSort[monPerso->numSort].sort == NULL && (SDL_GetTicks() - monPerso->createSort[monPerso->numSort].timer >= 3000)){
+                        int x, y;
+                        SDL_GetMouseState(&x, &y);
+                        update.x_click = x;
+                        update.y_click = y;
+                        update.sort = monPerso->numSort;
+                        monPerso->createSort[monPerso->numSort].sort = monPerso->createSort[monPerso->numSort].createSort(monPerso, x, y);
+                        monPerso->createSort[monPerso->numSort].timer = SDL_GetTicks();
                         send(socketClient, &update, sizeof(update), 0);
                     }
                 break;
@@ -90,7 +110,6 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
     update_hud_ingame(win, images, monPerso);
     //printf("%i %i    %i %i\n", mannequin->pos_x_click, mannequin->pos_y_click, mannequin->pos_x, mannequin->pos_y);
     updatePosition(win, joueur2, images, joueur2->pos_x_click, joueur2->pos_y_click, 0.2);
-    update_hud_ingame(win, images, joueur2);
 
     for(int i = 0; i < NB_SORT; i++){
         if(monPerso->createSort[i].sort != NULL){
@@ -101,6 +120,18 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                 monPerso->createSort[i].sort->collision_test(&(monPerso->createSort[i].sort), monPerso->createSort[i].sort->destX, monPerso->createSort[i].sort->destY, joueur2);
             else
                 monPerso->createSort[i].sort->collision_test(&(monPerso->createSort[i].sort), 0, 0, monPerso);
+        }
+    }
+
+    for(int i = 0; i < NB_SORT; i++){
+        if(joueur2->createSort[i].sort != NULL){
+            if(joueur2->createSort[i].sort->deplacement != NULL)
+                joueur2->createSort[i].sort->deplacement(joueur2->createSort[i].sort, joueur2->createSort[i].sort->destX, joueur2->createSort[i].sort->destY);
+            joueur2->createSort[i].sort->display(joueur2->createSort[i].sort, win, images);
+            if(joueur2->is_protego == 0)
+                joueur2->createSort[i].sort->collision_test(&(joueur2->createSort[i].sort), joueur2->createSort[i].sort->destX, joueur2->createSort[i].sort->destY, monPerso);
+            else
+                joueur2->createSort[i].sort->collision_test(&(joueur2->createSort[i].sort), 0, 0, joueur2);
         }
     }
 

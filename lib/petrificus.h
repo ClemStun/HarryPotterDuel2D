@@ -37,4 +37,4 @@ typedef struct petrificus_s{
 
 } petrificus_t;
 
-extern petrificus_t * createPetrificus(player_t *);
+extern petrificus_t * createPetrificus(player_t *, int x, int y);

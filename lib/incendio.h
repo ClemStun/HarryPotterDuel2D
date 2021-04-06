@@ -48,4 +48,4 @@ typedef struct incendio_s{
 
 } incendio_t;
 
-extern incendio_t * createIncendio(player_t *);
+extern incendio_t * createIncendio(player_t *, int x, int y);

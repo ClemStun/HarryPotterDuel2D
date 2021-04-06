@@ -37,4 +37,4 @@ typedef struct expelliarmus_s{
 
 } expelliarmus_t;
 
-extern expelliarmus_t * createExpelliarmus(player_t *);
+extern expelliarmus_t * createExpelliarmus(player_t *, int x, int y);

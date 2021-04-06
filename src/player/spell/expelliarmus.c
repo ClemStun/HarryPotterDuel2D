@@ -27,7 +27,7 @@ static void destroy(expelliarmus_t **);
  * \return Renvoie le sort créé qui est un élément de type expelliarmus_t.
  */
 extern
-expelliarmus_t * createExpelliarmus(player_t * player){
+expelliarmus_t * createExpelliarmus(player_t * player, int x, int y){
 
     if(player->pt_mana - 10 < 0)
         return NULL;
@@ -41,9 +41,8 @@ expelliarmus_t * createExpelliarmus(player_t * player){
     spell->manaCost = 10;
     spell->posXf = player->pos_x;
     spell->posYf = player->pos_y;
-    spell->destX;
-    spell->destY;
-    SDL_GetMouseState(&(spell->destX), &(spell->destY));
+    spell->destX = x;
+    spell->destY = y;
     spell->width = 10;
     spell->height = 10;
     spell->sender = player->id_player;

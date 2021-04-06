@@ -26,7 +26,7 @@ static void destroy(protego_t **);
  * \return Renvoie le sort créé qui est un élément de type protego_t.
  */
 extern
-protego_t * createProtego(player_t * player){
+protego_t * createProtego(player_t * player, int x, int y){
 
     if(player->pt_mana - 10 < 0)
         return NULL;

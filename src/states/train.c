@@ -40,7 +40,9 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
                         monPerso->pos_x_click -= 50;
                         monPerso->pos_y_click -= 50;
                     }else if(event.button.button == SDL_BUTTON_RIGHT && monPerso->createSort[monPerso->numSort].sort == NULL && (SDL_GetTicks() - monPerso->createSort[monPerso->numSort].timer >= 3000)){
-                        monPerso->createSort[monPerso->numSort].sort = monPerso->createSort[monPerso->numSort].createSort(monPerso);
+                        int x, y;
+                        SDL_GetMouseState(&x, &y);
+                        monPerso->createSort[monPerso->numSort].sort = monPerso->createSort[monPerso->numSort].createSort(monPerso, x, y);
                         monPerso->createSort[monPerso->numSort].timer = SDL_GetTicks();
                     }
                 break;

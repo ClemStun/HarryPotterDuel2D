@@ -27,7 +27,7 @@ static void destroy(incendio_t **);
  * \return Renvoie le sort créé qui est un élément de type incendio_t.
  */
 extern
-incendio_t * createIncendio(player_t * player){
+incendio_t * createIncendio(player_t * player, int x, int y){
 
     if(player->pt_mana - 20 < 0)
         return NULL;
@@ -41,9 +41,8 @@ incendio_t * createIncendio(player_t * player){
     spell->manaCost = 20;
     spell->posXf = player->pos_x;
     spell->posYf = player->pos_y;
-    spell->destX;
-    spell->destY;
-    SDL_GetMouseState(&(spell->destX), &(spell->destY));
+    spell->destX = x;
+    spell->destY = y;
     spell->width = 10;
     spell->height = 10;
     spell->sender = player->id_player;
