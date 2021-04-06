@@ -115,11 +115,13 @@ int collision_test(petrificus_t ** spell, int x, int y, player_t * player){
     if((((*spell)->pos_x + (*spell)->width >= player->pos_x) && ((*spell)->pos_x + (*spell)->width <= player->pos_x + 100)) || (((*spell)->pos_x >= player->pos_x) && ((*spell)->pos_x  <= player->pos_x + 100)))
         if((((*spell)->pos_y + (*spell)->height >= player->pos_y) && ((*spell)->pos_y + (*spell)->height <= player->pos_y + 100)) || (((*spell)->pos_y >= player->pos_y) && ((*spell)->pos_y  <= player->pos_y + 100))){
     
-            player->pt_life -= (*spell)->damage;
-            player->is_stun = 1;
-            player->id_timer = SDL_AddTimer(1000, player->unStun, player);
-            if(player->id_timer == 0){
-                printf("Error : %s\n", SDL_GetError());
+            if(player->is_protego == 0){
+                player->pt_life -= (*spell)->damage;
+                player->is_stun = 1;
+                player->id_timer = SDL_AddTimer(1000, player->unStun, player);
+                if(player->id_timer == 0){
+                    printf("Error : %s\n", SDL_GetError());
+                }
             }
             (*spell)->destroy(spell);
             return 0;

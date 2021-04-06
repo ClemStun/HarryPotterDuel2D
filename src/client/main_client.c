@@ -11,6 +11,7 @@
 #include "../../lib/expelliarmus.h"
 #include "../../lib/petrificus.h"
 #include "../../lib/incendio.h"
+#include "../../lib/protego.h"
 #include <math.h>
 #include <pthread.h>
 
@@ -46,6 +47,7 @@ int main(int argc, char **argv){
     setSort[0].createSort = createExpelliarmus;
     setSort[1].createSort = createPetrificus;
     setSort[2].createSort = createIncendio;
+    setSort[3].createSort = createProtego;
 
     player_t * monPerso;
     monPerso = accueil_connexion(&images, setSort);

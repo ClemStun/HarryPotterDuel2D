@@ -45,6 +45,7 @@ player_t * createPlayer(int id_player, char name[], int xp, SDL_Texture * sprite
     p->pt_xp = xp;
     p->sprite = sprite;
     p->is_stun = 0;
+    p->is_protego = 0;
     p->vitesse = 0.2;
     p->timerSprite = 1;
     p->numSprite = 1;

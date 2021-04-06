@@ -51,6 +51,8 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
                         monPerso->numSort = 1;
                     }else if(keyboard_state_array[SDL_SCANCODE_3]){
                         monPerso->numSort = 2;
+                    }else if(keyboard_state_array[SDL_SCANCODE_4]){
+                        monPerso->numSort = 3;
                     }else if(keyboard_state_array[SDL_SCANCODE_R]){
                         monPerso->pt_mana = 100;
                     }else if(keyboard_state_array[SDL_SCANCODE_V]){
@@ -76,7 +78,10 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
             if(monPerso->createSort[i].sort->deplacement != NULL)
                 monPerso->createSort[i].sort->deplacement(monPerso->createSort[i].sort, monPerso->createSort[i].sort->destX, monPerso->createSort[i].sort->destY);
             monPerso->createSort[i].sort->display(monPerso->createSort[i].sort, win, images);
-            monPerso->createSort[i].sort->collision_test(&(monPerso->createSort[i].sort), monPerso->createSort[i].sort->destX, monPerso->createSort[i].sort->destY, mannequin);
+            if(monPerso->is_protego == 0)
+                monPerso->createSort[i].sort->collision_test(&(monPerso->createSort[i].sort), monPerso->createSort[i].sort->destX, monPerso->createSort[i].sort->destY, mannequin);
+            else
+                monPerso->createSort[i].sort->collision_test(&(monPerso->createSort[i].sort), 0, 0, monPerso);
         }
     }
     SDL_SetRenderDrawColor(win->pRenderer, 150, 150, 150, SDL_ALPHA_OPAQUE );

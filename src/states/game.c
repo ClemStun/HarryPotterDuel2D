@@ -72,12 +72,15 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                     }
                 break;
                 case SDL_KEYDOWN:
-                    /*if(keyboard_state_array[SDL_SCANCODE_UP] && *sort == NULL)
-                        *sort = monPerso->castSpell(monPerso);
-                    else if(keyboard_state_array[SDL_SCANCODE_1])
-                        monPerso->castSpell = monPerso->createSort[0];
-                    else if(keyboard_state_array[SDL_SCANCODE_2])
-                        monPerso->castSpell = monPerso->createSort[1];*/
+                    if(keyboard_state_array[SDL_SCANCODE_1]){
+                        monPerso->numSort = 0;
+                    }else if(keyboard_state_array[SDL_SCANCODE_2]){
+                        monPerso->numSort = 1;
+                    }else if(keyboard_state_array[SDL_SCANCODE_3]){
+                        monPerso->numSort = 2;
+                    }else if(keyboard_state_array[SDL_SCANCODE_4]){
+                        monPerso->numSort = 3;
+                    }
                 break;
             }
         }
@@ -89,11 +92,17 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
     updatePosition(win, joueur2, images, joueur2->pos_x_click, joueur2->pos_y_click, 0.2);
     update_hud_ingame(win, images, joueur2);
 
-    /*if(*sort != NULL){
-        (*sort)->deplacement((*sort), (*sort)->destX, (*sort)->destY);
-        (*sort)->display((*sort), win, images);
-        (*sort)->collision_test(sort, (*sort)->destX, (*sort)->destY, mannequin);
-    }*/
+    for(int i = 0; i < NB_SORT; i++){
+        if(monPerso->createSort[i].sort != NULL){
+            if(monPerso->createSort[i].sort->deplacement != NULL)
+                monPerso->createSort[i].sort->deplacement(monPerso->createSort[i].sort, monPerso->createSort[i].sort->destX, monPerso->createSort[i].sort->destY);
+            monPerso->createSort[i].sort->display(monPerso->createSort[i].sort, win, images);
+            if(monPerso->is_protego == 0)
+                monPerso->createSort[i].sort->collision_test(&(monPerso->createSort[i].sort), monPerso->createSort[i].sort->destX, monPerso->createSort[i].sort->destY, joueur2);
+            else
+                monPerso->createSort[i].sort->collision_test(&(monPerso->createSort[i].sort), 0, 0, monPerso);
+        }
+    }
 
     SDL_SetRenderDrawColor(win->pRenderer, 150, 150, 150, SDL_ALPHA_OPAQUE );
     return GAME;

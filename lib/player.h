@@ -38,6 +38,7 @@ typedef struct player_s{
     int timerSprite;
     int numSprite;
     int is_stun;
+    int is_protego;
     SDL_TimerID id_timer;
     SDL_Texture *sprite;
 
