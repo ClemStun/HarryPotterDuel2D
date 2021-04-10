@@ -50,8 +50,10 @@ player_t * createPlayer(int id_player, char name[], int xp, SDL_Texture * sprite
     p->timerSprite = 1;
     p->numSprite = 1;
 
-    for (int i = 0; i < NB_SORT; i++){
-        p->createSort[i] = setSort[i];
+    if(setSort != NULL){
+        for (int i = 0; i < NB_SORT; i++){
+            p->createSort[i] = setSort[i];
+        }
     }
 
     p->unStun = playerUnstun;

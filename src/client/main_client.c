@@ -24,6 +24,7 @@ int main(int argc, char **argv){
     t_etat etat_de_jeu = TEST_M;
     int socketClient;
     char offline;
+    char data_storage[] = "./svg/";
 
     printf("Voulez vous jouer hors ligne (y or n) ?\n");
     scanf("%c", &offline);
@@ -50,7 +51,7 @@ int main(int argc, char **argv){
     setSort[3].createSort = createProtego;
 
     player_t * monPerso;
-    monPerso = accueil_connexion(&images, setSort);
+    monPerso = accueil_connexion(&images, setSort, data_storage);
     if(monPerso->house == 'n'){
         etat_de_jeu = TEST_M;
     }
@@ -100,7 +101,7 @@ int main(int argc, char **argv){
     }
     FreeImages(&images);
     freeText(&text);
-    accueil_deconnexion(monPerso);
+    accueil_deconnexion(monPerso, data_storage);
     freePlayer(mannequin);
     freePlayer(joueur2);
 
