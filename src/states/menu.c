@@ -30,15 +30,18 @@
 extern
 void createButton(window *win, text_t * text, int posX, int posY, int rectW, int rectH, const char *texte, TTF_Font *fontButton, const char color){
 
+    //Parametres rectangle du bouton
     SDL_Rect button;
     button.x = posX;
     button.y = posY;
     button.w = rectW;
     button.h = rectH;
 
+    //Couleur et intégration de la texture du rectangle sur le rendu
     SDL_SetRenderDrawColor(win->pRenderer, 255, 255, 255, 255);
     SDL_RenderFillRect(win->pRenderer, &button);
 
+    //Ecriture du texte sur le bouton
     createText(win->pRenderer, text, posX + rectW/2, posY + rectH/2, rectW-100, rectH-50, texte, fontButton, color);
 }
 
@@ -81,6 +84,7 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
 
     SDL_RenderClear(win->pRenderer);
 
+    //Lecture des évènements
     while(SDL_PollEvent(&event)){
         switch (event.type){
             case SDL_QUIT:
@@ -94,8 +98,15 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
         }
     }
     SDL_GetMouseState(&mouseX, &mouseY);
+
+    //Affichage du logo
     DrawImage(win->pRenderer, images, searchTexture(images, "logo.png"), 0, 0, 29, 21, SCREEN_WIDTH/2 - 150, 20, 290, 210);
 
+    /*Fonctionnement du test des boutons,
+    Si souris hors zone du bouton, alors le bouton s'affiche en blanc et ecriture noire,
+    si souris sur bouton sans cliquer, alors bouton s'affiche en blanc et ecriture rouge,
+    si un click est effectué sur le bouton, alors on a redirection vers un autre état.
+    */
 
     if(!(zone_detect(SCREEN_WIDTH-250, 50, 200, 100, mouseX, mouseY))){
         createButton(win, text, SCREEN_WIDTH-250, 50, 200, 100, "Jouer", font, 'b');
@@ -126,6 +137,7 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
         return TRAINING;
     }
 
+    //Petit easter egg sur le personnage ;)
     if(!(zone_detect(100, 250, 300, 300, mouseX, mouseY))){
         DrawImage(win->pRenderer, images, monPerso->sprite, 7*32, 0, 32, 32, 100, 250, 300, 300);
     }
@@ -133,6 +145,7 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
         DrawImage(win->pRenderer, images, monPerso->sprite, 7*32, 4*32, 32, 32, 100, 250, 300, 300);
     }
 
+    //Affichage du nom de joueur et sa maison
     createText(win->pRenderer, text, 250, 200, 125, 63, monPerso->name, font, 'w');
     createText(win->pRenderer, text, SCREEN_WIDTH/2, 350, 125, 50, "Maison :", font, 'w');
     switch (monPerso->house){
@@ -152,6 +165,7 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
 
 	click = 0;
 
+    //Couleur du fond
     SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 0 );
     return HOME;
 }

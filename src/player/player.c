@@ -30,6 +30,7 @@ player_t * createPlayer(int id_player, char name[], int xp, SDL_Texture * sprite
     player_t * p;
     p = malloc(sizeof(player_t));
 
+    //initialisation de tous les éléments de la structure
     p->id_player = id_player;
     strcpy(p->name, name);
     p->house = 'n';

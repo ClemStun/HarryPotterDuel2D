@@ -51,7 +51,7 @@ void *function(void *arg){
 extern
 t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t * j2, int socketClient, socket_t *j1){
 
-    joueur2 = j2;    
+    joueur2 = j2;
 
     const Uint8 *keyboard_state_array = SDL_GetKeyboardState(NULL);
 
@@ -71,6 +71,7 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
 					return QUIT;
 				break;
                 case SDL_MOUSEBUTTONDOWN:
+                    //Si le click de déplacement est effectué, on change tout ce qui doit etre changé (position, envoi de paquet, etc)
                     if(event.button.button == SDL_BUTTON_LEFT){
                         SDL_GetMouseState(&(monPerso->pos_x_click), &(monPerso->pos_y_click));
                         monPerso->pos_x_click -= 50;
@@ -80,7 +81,9 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                         update.y_click = monPerso->pos_y_click;
                         update.sort = -1;
                         send(socketClient, &update, sizeof(update), 0);
-                    }else if(event.button.button == SDL_BUTTON_RIGHT && monPerso->createSort[monPerso->numSort].sort == NULL && (SDL_GetTicks() - monPerso->createSort[monPerso->numSort].timer >= 3000)){
+                    }
+                    //Si le click de sort est effectué, on lance le sort selectionné et on envoi le paquet
+                    else if(event.button.button == SDL_BUTTON_RIGHT && monPerso->createSort[monPerso->numSort].sort == NULL && (SDL_GetTicks() - monPerso->createSort[monPerso->numSort].timer >= 3000)){
                         int x, y;
                         SDL_GetMouseState(&x, &y);
                         update.x_click = x;
@@ -92,6 +95,7 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                     }
                 break;
                 case SDL_KEYDOWN:
+                    //Selection des sort en fonction de la touche appuyée
                     if(keyboard_state_array[SDL_SCANCODE_1]){
                         monPerso->numSort = 0;
                     }else if(keyboard_state_array[SDL_SCANCODE_2]){
@@ -106,10 +110,10 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
         }
     //Actualisation du jeu
     updatePosition(win, monPerso, images, monPerso->pos_x_click, monPerso->pos_y_click, 0.2);
-    //updatePosition(win, mannequin, images, 50, 50, 0.2);
     update_hud_ingame(win, images, monPerso);
-    //printf("%i %i    %i %i\n", mannequin->pos_x_click, mannequin->pos_y_click, mannequin->pos_x, mannequin->pos_y);
     updatePosition(win, joueur2, images, joueur2->pos_x_click, joueur2->pos_y_click, 0.2);
+    //rajouter hud ennemi si possible
+
 
     for(int i = 0; i < NB_SORT; i++){
         if(monPerso->createSort[i].sort != NULL){
@@ -135,6 +139,7 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
         }
     }
 
+    //Couleur de fond
     SDL_SetRenderDrawColor(win->pRenderer, 150, 150, 150, SDL_ALPHA_OPAQUE );
     return GAME;
 }

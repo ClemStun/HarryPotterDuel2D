@@ -29,12 +29,12 @@ window * Initialize_sdl(){
         return 0;
     }
 
-    // Initialisation format PNG
+    // Initialisation SDL image format PNG
     if (!(IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG)) {
         fprintf(stderr, "could not initialize sdl2_image: %s\n", IMG_GetError());
         return 0;
     }
-
+    // Initialisation SDL texte
     if(TTF_Init() == -1){
         printf("TTF_Init: %s\n", TTF_GetError());
         return 0;
@@ -68,19 +68,24 @@ void LoadImages(SDL_Renderer * pRenderer, images_t * images){
     struct dirent *dir;
     images->nb_images = 0;
 
+    //Ouverture répertoire image et comptage de chaque fichier présent
     d = opendir("./assets/images");
     while((dir = readdir(d)) != NULL) images->nb_images++;
     closedir(d);
 
+    //Allocation mémoire de la structure avec le nombre d'image obtenue précédement
     images->nomsImages = (char**)malloc(sizeof(char*) * images->nb_images);
     images->l_textImages = (SDL_Texture**)malloc(sizeof(SDL_Texture*) * images->nb_images);
 
+    //réouverture du répertoire et écriture du nom des fichiers dans le tableau de nom dans la structure
     d = opendir("./assets/images");
     for(int i = 0; (dir = readdir(d)) != NULL; i++){
         images->nomsImages[i] = (char*)malloc(sizeof(char) * strlen(dir->d_name)+1);
         strcpy(images->nomsImages[i], dir->d_name);
     }
     closedir(d);
+
+    //Chargement des textures dans la structure
     for(int i = 0; i < images->nb_images; i++){
         char nom[50] = "./assets/images/";
         strcat(nom, images->nomsImages[i]);
@@ -90,7 +95,7 @@ void LoadImages(SDL_Renderer * pRenderer, images_t * images){
     printf("Images chargées: %d\n", images->nb_images);
 }
 
-//fonction pour les test
+//fonction pour les test. Seul la destination des images diffère
 extern
 void LoadImages_for_test(SDL_Renderer * pRenderer, images_t * images){
     printf("Chargement des images...\n");
@@ -133,11 +138,13 @@ extern
 SDL_Texture * searchTexture(images_t * images, char * nom){
     char nom2[50];
     int last_cmp = 1;
+    int i;
+
+    //Si le .png pas présent, on le rajoute
     sprintf(nom2, "%s", nom);
     if(!strstr(nom2, ".png")){
       strcat(nom2, ".png");
     }
-      int i;
 
       if(images == NULL) return NULL;
       //ici on recherche quel est l'indice de l'image qu'on veux afficher
@@ -167,19 +174,22 @@ SDL_Texture * searchTexture(images_t * images, char * nom){
  */
 extern
 void DrawImage(SDL_Renderer * pRenderer, images_t * images, SDL_Texture * texture, int srcX, int srcY, int srcW, int srcH, int destX, int destY, int destW, int destH){
+
+    //Parametres du rectangle de destination de l'image à afficher sur le rendu
     SDL_Rect imgDestRect;
     imgDestRect.x = destX;
     imgDestRect.y = destY;
     imgDestRect.w = destW;
     imgDestRect.h = destH;
 
+    //Parametres du rectangle source sur l'image
     SDL_Rect imgSrcRect;
     imgSrcRect.x = srcX;
     imgSrcRect.y = srcY;
     imgSrcRect.w = srcW;
     imgSrcRect.h = srcH;
-    //ici on recherche la texture de l'image recherchée
-    //on l'affiche ensuite
+
+    //On met la texture sur le rendu
     SDL_RenderCopy(pRenderer, texture, &imgSrcRect, &imgDestRect);
 }
 
@@ -235,17 +245,20 @@ void createText(SDL_Renderer *pRenderer, text_t * text, int x, int y, int text_w
     SDL_Rect textRect;
     SDL_Texture *textTexture;
 
+    //Parametres du rectangle de texte de destination sur le rendu
     textRect.x = x - (text_width/2);
     textRect.y = y - (text_height/2);
     textRect.w = text_width;
     textRect.h = text_height;
 
+    //Ici on cherche si le texte existe déjà dans les textures créées
     if(text->nb_text > 0){
         for(i = 0; i < text->nb_text; i++){
             if(strcmp(text->text[i], texte) == 0) flag = i;
         }
     }
 
+    //Si c'est non alors on choisi la couleur du texte, son format et on créer sa texture que l'on range ensuite dans la structure
     if(!flag){
         SDL_Surface *textSurface;
         SDL_Color textColor;
@@ -294,6 +307,7 @@ void createText(SDL_Renderer *pRenderer, text_t * text, int x, int y, int text_w
         text->l_textText = realloc(text->l_textText, sizeof(SDL_Texture *) * text->nb_text);
         text->l_textText[text->nb_text - 1] = textTexture;
     }
+    //Si on a trouvé le texte déjà créé, alors on l'attribue à la variable qui va etre utilisé pour l'afficher
     else{
         textTexture = text->l_textText[flag];
     }

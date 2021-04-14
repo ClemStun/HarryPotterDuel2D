@@ -27,9 +27,11 @@
      double vX = 0, vY = 0, norme = 0;
      int miror = 2;
 
+
      if(monPerso->id_player > 1) miror = 1;
      if(monPerso->is_stun) monPerso->vitesse = 0;
 
+     //Calcul vectoriel du déplacement
      vX = (double)deplX - (monPerso->posXfloat);
      vY = (double)deplY - (monPerso->posYfloat);
 
@@ -41,6 +43,8 @@
      monPerso->pos_x = (int)monPerso->posXfloat;
      monPerso->pos_y = (int)monPerso->posYfloat;
 
+     /*Test de position du joueur pour savoir si oui ou non il a atteint la position de click (intervalle de 4x4 px)
+     et fonctionnement de l'animation du sprite */
      if(((monPerso->pos_x < deplX-2 || monPerso->pos_x > deplX+2) || (monPerso->pos_y < deplY-2 || monPerso->pos_y > deplY+2)) && monPerso->is_stun == 0){
          monPerso->vitesse = vitesse;
          if((monPerso->timerSprite)++ > 100){

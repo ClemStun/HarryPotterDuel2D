@@ -24,34 +24,40 @@
 extern
 void update_hud_ingame(window * win, images_t * images, player_t * monPerso){
 
+    //parametres rectangle de vie
     SDL_Rect life;
     life.x = 10;
     life.y = SCREEN_HEIGHT - 40;
     life.w = monPerso->pt_life*2;
     life.h = 20;
 
+    //parametres contour du rectangle de vie
     SDL_Rect bd_life;
     bd_life.x = 8;
     bd_life.y = SCREEN_HEIGHT - 42;
     bd_life.w = (monPerso->pt_life*2)+4;
     bd_life.h = 24;
 
+    //parametres rectangle de mana
     SDL_Rect mana;
     mana.x = SCREEN_WIDTH - 210;
     mana.y = SCREEN_HEIGHT - 40;
     mana.w = monPerso->pt_mana*2;
     mana.h = 20;
 
+    //parametres contour rectangle de mana
     SDL_Rect bd_mana;
     bd_mana.x = SCREEN_WIDTH - 212;
     bd_mana.y = SCREEN_HEIGHT - 42;
     bd_mana.w = (monPerso->pt_mana*2)+4;
     bd_mana.h = 24;
 
+    //Affichage de la barre des sorts et de ses sorts
     DrawImage(win->pRenderer, images, searchTexture(images, "hud_tmp.png"), 0, 0, 1200, 60, 0, SCREEN_HEIGHT-60, SCREEN_WIDTH, 60);
     DrawImage(win->pRenderer, images, searchTexture(images, "expelliarmus.png"), 0, 0, 1200, 60, 445, SCREEN_HEIGHT-69, 64, 64);
     DrawImage(win->pRenderer, images, searchTexture(images, "petrificus.png"), 0, 0, 1200, 60, 510, SCREEN_HEIGHT-56, 62, 52);
 
+    //Affichage du carré de selection rouge autour du sort selectionné en fonction du numSort
     switch(monPerso->numSort){
         case 0:
             DrawImage(win->pRenderer, images, searchTexture(images, "selection.png"), 0, 0, 1200, 60, 438, SCREEN_HEIGHT-60, 72, 60);
@@ -70,7 +76,7 @@ void update_hud_ingame(window * win, images_t * images, player_t * monPerso){
         break;
     }
 
-
+    //mise dans le rendu des textures des rectangles et choix de leur couleur
 	SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
     SDL_RenderFillRect(win->pRenderer, &bd_life);
 
@@ -99,21 +105,25 @@ void update_hud_ingame(window * win, images_t * images, player_t * monPerso){
 extern
 void update_hud_ingame_ennemie(window * win, images_t * images, text_t * text, player_t * ennemie, TTF_Font *font){
 
+    //parametres rectangle de vie
     SDL_Rect life;
     life.x = SCREEN_WIDTH - 120;
     life.y = 28;
     life.w = ennemie->pt_life;
     life.h = 14;
 
+    //parametres contour rectangle de vie
     SDL_Rect bd_life;
     bd_life.x = SCREEN_WIDTH - 122;
     bd_life.y = 26;
     bd_life.w = ennemie->pt_life + 4;
     bd_life.h = 18;
 
+    //affichage de l'image coeur devant la barre de vie ennemie ainsi que le pseudo en dessous de celle-ci
     DrawImage(win->pRenderer, images, searchTexture(images, "heart.png"), 0, 0, 46, 41, SCREEN_WIDTH - 150, 25, 23, 20);
     createText(win->pRenderer, text, SCREEN_WIDTH - 75, 60, 80, 20, ennemie->name, font, "r");
 
+    //mise dans le rendu des textures des rectangles et choix de leur couleur
 	SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
     SDL_RenderFillRect(win->pRenderer, &bd_life);
 
