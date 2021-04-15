@@ -16,7 +16,7 @@
  * \brief Enumération des différents états du jeu
  *
  */
-typedef enum{QUIT, HOME, GAME, TRAINING, WAITING, TEST_M, OTHER} t_etat;
+typedef enum{QUIT, HOME, GAME, TRAINING, WAITING, TEST_M, POTION, OTHER} t_etat;
 SDL_Event event;
 
 //Dimensions de la fenêtre

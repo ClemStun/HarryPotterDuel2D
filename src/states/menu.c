@@ -136,6 +136,16 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
         click = 0;
         return TRAINING;
     }
+    if(!(zone_detect(SCREEN_WIDTH-250, 320, 200, 100, mouseX, mouseY))){
+        createButton(win, text, SCREEN_WIDTH-250, 320, 200, 100, "Potion", font, 'b');
+    }
+    else if(zone_detect(SCREEN_WIDTH-250, 320, 200, 100, mouseX, mouseY) && click == 0){
+        createButton(win, text, SCREEN_WIDTH-250, 320, 200, 100, "potion", font, 'r');
+    }
+    else if(zone_detect(SCREEN_WIDTH-250, 320, 200, 100, mouseX, mouseY) && click == 1){
+        click = 0;
+        return POTION;
+    }
 
     //Petit easter egg sur le personnage ;)
     if(!(zone_detect(100, 275, 300, 300, mouseX, mouseY))){
