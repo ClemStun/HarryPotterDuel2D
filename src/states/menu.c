@@ -138,28 +138,32 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
     }
 
     //Petit easter egg sur le personnage ;)
-    if(!(zone_detect(100, 250, 300, 300, mouseX, mouseY))){
-        DrawImage(win->pRenderer, images, monPerso->sprite, 7*32, 0, 32, 32, 100, 250, 300, 300);
+    if(!(zone_detect(100, 275, 300, 300, mouseX, mouseY))){
+        DrawImage(win->pRenderer, images, monPerso->sprite, 7*32, 0, 32, 32, 100, 275, 300, 300);
     }
-    else if(zone_detect(100, 250, 300, 300, mouseX, mouseY)){
-        DrawImage(win->pRenderer, images, monPerso->sprite, 7*32, 4*32, 32, 32, 100, 250, 300, 300);
+    else if(zone_detect(100, 275, 300, 300, mouseX, mouseY)){
+        DrawImage(win->pRenderer, images, monPerso->sprite, 7*32, 4*32, 32, 32, 100, 275, 300, 300);
     }
 
     //Affichage du nom de joueur et sa maison
-    createText(win->pRenderer, text, 250, 200, 125, 63, monPerso->name, font, 'w');
+    createText(win->pRenderer, text, 250, 225, 125, 63, monPerso->name, font, 'w');
     createText(win->pRenderer, text, SCREEN_WIDTH/2, 350, 125, 50, "Maison :", font, 'w');
     switch (monPerso->house){
         case 'g':
             createText(win->pRenderer, text, SCREEN_WIDTH/2, 400, 125, 50, "Griffondor", font, 'r');
+            DrawImage(win->pRenderer, images, searchTexture(images, "griffondor.png"), 375, 129, 245, 756, 215, 10, 61, 189);
         break;
         case 's':
             createText(win->pRenderer, text, SCREEN_WIDTH/2, 400, 125, 50, "Serpentard", font, 'g');
+            DrawImage(win->pRenderer, images, searchTexture(images, "serpentard.png"), 375, 129, 245, 756, 215, 10, 61, 189);
         break;
         case 'r':
             createText(win->pRenderer, text, SCREEN_WIDTH/2, 400, 125, 50, "Serdaigle", font, 'B');
+            DrawImage(win->pRenderer, images, searchTexture(images, "serdaigle.png"), 375, 129, 245, 756, 215, 10, 61, 189);
         break;
         case 'p':
             createText(win->pRenderer, text, SCREEN_WIDTH/2, 400, 125, 50, "Poufsouffle", font, 'y');
+            DrawImage(win->pRenderer, images, searchTexture(images, "poufsouffle.png"), 375, 129, 245, 756, 215, 10, 61, 189);
         break;
     }
 
@@ -169,3 +173,6 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
     SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 0 );
     return HOME;
 }
+
+
+

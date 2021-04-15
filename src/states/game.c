@@ -108,6 +108,8 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                 break;
             }
         }
+        
+    DrawImage(win->pRenderer, images, searchTexture(images, "Battle.png"), 0, 0, 1036, 600, 0, 0, 1200, 600);
     //Actualisation du jeu
     updatePosition(win, monPerso, images, monPerso->pos_x_click, monPerso->pos_y_click, 0.2);
     update_hud_ingame(win, images, monPerso);
