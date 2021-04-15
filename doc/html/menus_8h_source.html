@@ -71,22 +71,28 @@ $(function() {
 <div class="contents">
 <a href="menus_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="hud__ingame_8h.html">hud_ingame.h</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{QUIT, HOME, GAME, TRAINING, WAITING, OTHER} <a class="code" href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;SDL_Event event;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="menu_8h.html">menu.h</a>&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="game_8h.html">game.h</a>&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="train_8h.html">train.h</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="waiting_8h.html">waiting.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;init_connexion.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">   19</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>{QUIT, HOME, GAME, TRAINING, WAITING, TEST_M, OTHER} <a class="code" href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;SDL_Event event;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//Dimensions de la fenêtre</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define SCREEN_WIDTH 1200</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define SCREEN_HEIGHT 600</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="menu_8h.html">menu.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="game_8h.html">game.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="train_8h.html">train.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="waiting_8h.html">waiting.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="testMaisons_8h.html">testMaisons.h</a>&quot;</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="atrain_8h_html"><div class="ttname"><a href="train_8h.html">train.h</a></div><div class="ttdoc">Header de train.c.</div></div>
 <div class="ttc" id="amenu_8h_html"><div class="ttname"><a href="menu_8h.html">menu.h</a></div><div class="ttdoc">Header de menu.c.</div></div>
-<div class="ttc" id="amenus_8h_html_a0f3684078562a23c3ea21266d10cf275"><div class="ttname"><a href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a></div><div class="ttdeci">t_etat</div><div class="ttdoc">Enumération des différents états du jeu.</div><div class="ttdef"><b>Definition:</b> menus.h:18</div></div>
+<div class="ttc" id="amenus_8h_html_a0f3684078562a23c3ea21266d10cf275"><div class="ttname"><a href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a></div><div class="ttdeci">t_etat</div><div class="ttdoc">Enumération des différents états du jeu.</div><div class="ttdef"><b>Definition:</b> menus.h:19</div></div>
 <div class="ttc" id="awaiting_8h_html"><div class="ttname"><a href="waiting_8h.html">waiting.h</a></div><div class="ttdoc">Header de waiting.c.</div></div>
 <div class="ttc" id="agame_8h_html"><div class="ttname"><a href="game_8h.html">game.h</a></div><div class="ttdoc">Header de game.c.</div></div>
 <div class="ttc" id="ahud__ingame_8h_html"><div class="ttname"><a href="hud__ingame_8h.html">hud_ingame.h</a></div><div class="ttdoc">Header de hud_ingame.c.</div></div>
+<div class="ttc" id="atestMaisons_8h_html"><div class="ttname"><a href="testMaisons_8h.html">testMaisons.h</a></div><div class="ttdoc">Header de testMaisons.c.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par &#160;<a href="http://www.doxygen.org/index.html">

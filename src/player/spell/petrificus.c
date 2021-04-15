@@ -40,14 +40,22 @@ petrificus_t * createPetrificus(player_t * player, int x, int y){
     spell->speed = 2;
     spell->damage = 10;
     spell->manaCost = 20;
+
+    //position réel du sort
     spell->posXf = player->pos_x;
     spell->posYf = player->pos_y;
+
+    //point de destination du sort
     spell->destX = x;
     spell->destY = y;
+
+    //taille du sort
     spell->width = 10;
     spell->height = 10;
+
     spell->sender = player->id_player;
 
+    //méthode du sort
     spell->deplacement = deplacement;
     spell->display = display;
     spell->collision_test = collision_test;
@@ -70,16 +78,20 @@ petrificus_t * createPetrificus(player_t * player, int x, int y){
 static
 void deplacement(petrificus_t * spell, int x_dest, int y_dest){
 
+    //calcul du vecteur direction
     float vx = x_dest - spell->posXf;
     float vy = y_dest - spell->posYf;
 
+    //mis en norme 1 du vecteur
     double v = sqrt(vx*vx + vy*vy);
     float vxx = vx/v;
     float vyy = vy/v;
 
+    //calcul de la nouvelle position du sort
     spell->posXf += vxx * spell->speed;
     spell->posYf += vyy * spell->speed;
 
+    //transformation du float en int pour afficher le sort
     spell->pos_x = spell->posXf;
     spell->pos_y = spell->posYf;
 }
@@ -113,12 +125,14 @@ void display(petrificus_t * spell, window * win, images_t *images){
 static
 int collision_test(petrificus_t ** spell, int x, int y, player_t * player){
 
+    //si le sort touche le joueur
     if((((*spell)->pos_x + (*spell)->width >= player->pos_x) && ((*spell)->pos_x + (*spell)->width <= player->pos_x + 100)) || (((*spell)->pos_x >= player->pos_x) && ((*spell)->pos_x  <= player->pos_x + 100)))
         if((((*spell)->pos_y + (*spell)->height >= player->pos_y) && ((*spell)->pos_y + (*spell)->height <= player->pos_y + 100)) || (((*spell)->pos_y >= player->pos_y) && ((*spell)->pos_y  <= player->pos_y + 100))){
     
             if(player->is_protego == 0){
                 player->pt_life -= (*spell)->damage;
                 player->is_stun = 1;
+                //démarrage du timer d'enlevement de l'étourdissement (thread)
                 player->id_timer = SDL_AddTimer(1000, player->unStun, player);
                 if(player->id_timer == 0){
                     printf("Error : %s\n", SDL_GetError());
@@ -129,6 +143,7 @@ int collision_test(petrificus_t ** spell, int x, int y, player_t * player){
 
         }
 
+    //si le sort arrive a la destination finale
     if((((*spell)->pos_x + (*spell)->width >= x) && ((*spell)->pos_x + (*spell)->width <= x + 10)) || (((*spell)->pos_x >= x) && ((*spell)->pos_x  <= x + 10)))
         if((((*spell)->pos_y + (*spell)->height >= y) && ((*spell)->pos_y + (*spell)->height <= y + 10)) || (((*spell)->pos_y >= y) && ((*spell)->pos_y  <= y + 10))){
             

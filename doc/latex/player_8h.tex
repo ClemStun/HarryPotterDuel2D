@@ -27,18 +27,16 @@ typedef struct \mbox{\hyperlink{structplayer__s}{player\+\_\+s}} {\bfseries play
 \doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{player_8h_a5206dc786c32fe83ef29ed89a8806b6c}\label{player_8h_a5206dc786c32fe83ef29ed89a8806b6c}} 
-\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$ {\bfseries create\+Player} (int id\+\_\+player, char name\mbox{[}$\,$\mbox{]}, S\+D\+L\+\_\+\+Texture $\ast$sprite, \mbox{\hyperlink{structcd__t}{cd\+\_\+t}} set\+Sort\mbox{[}$\,$\mbox{]}, int x, int y)
-\item 
+\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$ \mbox{\hyperlink{player_8h_ac954521c6d197fa39b7e1c91c26409c1}{create\+Player}} (int id\+\_\+player, char name\mbox{[}$\,$\mbox{]}, int xp, S\+D\+L\+\_\+\+Texture $\ast$sprite, \mbox{\hyperlink{structcd__t}{cd\+\_\+t}} set\+Sort\mbox{[}$\,$\mbox{]}, int x, int y)
+\begin{DoxyCompactList}\small\item\em Création d\textquotesingle{}un personnage et initialisation de ses valeurs. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{player_8h_afe4571d032fdc5a53d8e810cfc1b7603}{free\+Player}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$p)
 \begin{DoxyCompactList}\small\item\em Libération mémoire de la structure de personnage. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{player_8h_ace44c1fa068f2aa5c354c9f355e53ce4}{player\+PosX}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$p)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structPosition}{Position}} du joueur en X. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{player_8h_a391d840b0772f256825a2de762d72179}{player\+PosY}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$p)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structPosition}{Position}} du joueur en Y. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{player_8h_a955601adedc62e9b14f40e5b2dff99a1}\label{player_8h_a955601adedc62e9b14f40e5b2dff99a1}} 
-void {\bfseries rand\+\_\+click\+\_\+bot} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mannequin)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{player_8h_a955601adedc62e9b14f40e5b2dff99a1}{rand\+\_\+click\+\_\+bot}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mannequin)
+\begin{DoxyCompactList}\small\item\em Genereration d\textquotesingle{}une position de click pour un personnage ennemi dans la zone ennemie. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -56,6 +54,36 @@ C\+O\+U\+T\+A\+NT Hugo / C\+O\+M\+TE Clément
 
 
 \doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{player_8h_ac954521c6d197fa39b7e1c91c26409c1}\label{player_8h_ac954521c6d197fa39b7e1c91c26409c1}} 
+\index{player.h@{player.h}!createPlayer@{createPlayer}}
+\index{createPlayer@{createPlayer}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{createPlayer()}{createPlayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$ create\+Player (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+player,  }\item[{char}]{name\mbox{[}$\,$\mbox{]},  }\item[{int}]{xp,  }\item[{S\+D\+L\+\_\+\+Texture $\ast$}]{sprite,  }\item[{\mbox{\hyperlink{structcd__t}{cd\+\_\+t}}}]{set\+Sort\mbox{[}$\,$\mbox{]},  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Création d\textquotesingle{}un personnage et initialisation de ses valeurs. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id\+\_\+player} & Identifiant du joueur. \\
+\hline
+{\em name} & Nom du personnage. \\
+\hline
+{\em xp} & Experience du personnage. \\
+\hline
+{\em sprite} & Texture des sprites du personnage. \\
+\hline
+{\em set\+Sort} & Tableau de sort du personnage. \\
+\hline
+{\em x} & \mbox{\hyperlink{structPosition}{Position}} en X initiale du personnage. \\
+\hline
+{\em y} & \mbox{\hyperlink{structPosition}{Position}} en Y initiale du personnage.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+p Pointeur sur une structure \mbox{\hyperlink{structplayer__s}{player\+\_\+s}} étant le nouveau personnage créé. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{player_8h_afe4571d032fdc5a53d8e810cfc1b7603}\label{player_8h_afe4571d032fdc5a53d8e810cfc1b7603}} 
 \index{player.h@{player.h}!freePlayer@{freePlayer}}
 \index{freePlayer@{freePlayer}!player.h@{player.h}}
@@ -107,3 +135,18 @@ int \mbox{\hyperlink{structPosition}{Position}} en X.
 \begin{DoxyReturn}{Renvoie}
 int \mbox{\hyperlink{structPosition}{Position}} en Y. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{player_8h_a955601adedc62e9b14f40e5b2dff99a1}\label{player_8h_a955601adedc62e9b14f40e5b2dff99a1}} 
+\index{player.h@{player.h}!rand\_click\_bot@{rand\_click\_bot}}
+\index{rand\_click\_bot@{rand\_click\_bot}!player.h@{player.h}}
+\doxysubsubsection{\texorpdfstring{rand\_click\_bot()}{rand\_click\_bot()}}
+{\footnotesize\ttfamily void rand\+\_\+click\+\_\+bot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mannequin }\end{DoxyParamCaption})}
+
+
+
+Genereration d\textquotesingle{}une position de click pour un personnage ennemi dans la zone ennemie. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em mannequin} & Pointeur sur une structure \mbox{\hyperlink{structplayer__s}{player\+\_\+s}} à déplacer aléatoirement. \\
+\hline
+\end{DoxyParams}

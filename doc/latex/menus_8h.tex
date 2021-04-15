@@ -2,18 +2,29 @@
 \label{menus_8h}\index{lib/menus.h@{lib/menus.h}}
 
 
-Header commun aux différents status du jeu.  
+Header commun aux différents statuts du jeu.  
 
 
 {\ttfamily \#include \char`\"{}hud\+\_\+ingame.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init\+\_\+connexion.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}menu.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}train.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}waiting.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test\+Maisons.\+h\char`\"{}}\newline
 Graphe des dépendances par inclusion de menus.\+h\+:
 % FIG 0
 Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
 % FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{menus_8h_a2cd109632a6dcccaa80b43561b1ab700}\label{menus_8h_a2cd109632a6dcccaa80b43561b1ab700}} 
+\#define {\bfseries S\+C\+R\+E\+E\+N\+\_\+\+W\+I\+D\+TH}~1200
+\item 
+\mbox{\Hypertarget{menus_8h_a6974d08a74da681b3957b2fead2608b8}\label{menus_8h_a6974d08a74da681b3957b2fead2608b8}} 
+\#define {\bfseries S\+C\+R\+E\+E\+N\+\_\+\+H\+E\+I\+G\+HT}~600
+\end{DoxyCompactItemize}
 \doxysubsection*{Énumérations}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,6 +35,7 @@ enum \mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} 
 {\bfseries T\+R\+A\+I\+N\+I\+NG}, 
 \newline
 {\bfseries W\+A\+I\+T\+I\+NG}, 
+{\bfseries T\+E\+S\+T\+\_\+M}, 
 {\bfseries O\+T\+H\+ER}
  \}
 \begin{DoxyCompactList}\small\item\em Enumération des différents états du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -36,7 +48,7 @@ S\+D\+L\+\_\+\+Event {\bfseries event}
 
 
 \doxysubsection{Description détaillée}
-Header commun aux différents status du jeu. 
+Header commun aux différents statuts du jeu. 
 
 \begin{DoxyAuthor}{Auteur}
 C\+O\+U\+T\+A\+NT Hugo 

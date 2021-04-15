@@ -72,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Fonctions utilisant principalement la SDL2.  
+<p>Fonctions d'actions sur une entité joueur.  
 <a href="#details">Plus de détails...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="player_8h_source.html">../../lib/player.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -87,9 +87,9 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a6aa6d1476d4aabee8241c1028f57a498"><td class="memItemLeft" align="right" valign="top"><a id="a6aa6d1476d4aabee8241c1028f57a498"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><b>playerUnstun</b> (int, <a class="el" href="structplayer__s.html">player_t</a> *)</td></tr>
 <tr class="separator:a6aa6d1476d4aabee8241c1028f57a498"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5206dc786c32fe83ef29ed89a8806b6c"><td class="memItemLeft" align="right" valign="top"><a id="a5206dc786c32fe83ef29ed89a8806b6c"></a>
-<a class="el" href="structplayer__s.html">player_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>createPlayer</b> (int id_player, char name[], SDL_Texture *sprite, <a class="el" href="structcd__t.html">cd_t</a> setSort[], int x, int y)</td></tr>
-<tr class="separator:a5206dc786c32fe83ef29ed89a8806b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf53a91319cea912373e574bbeb761bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#aaf53a91319cea912373e574bbeb761bd">createPlayer</a> (int id_player, char name[], int xp, SDL_Texture *sprite, <a class="el" href="structcd__t.html">cd_t</a> setSort[], int x, int y)</td></tr>
+<tr class="memdesc:aaf53a91319cea912373e574bbeb761bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un personnage et initialisation de ses valeurs.  <a href="player_8c.html#aaf53a91319cea912373e574bbeb761bd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aaf53a91319cea912373e574bbeb761bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe4571d032fdc5a53d8e810cfc1b7603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#afe4571d032fdc5a53d8e810cfc1b7603">freePlayer</a> (<a class="el" href="structplayer__s.html">player_t</a> *p)</td></tr>
 <tr class="memdesc:afe4571d032fdc5a53d8e810cfc1b7603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libération mémoire de la structure de personnage.  <a href="player_8c.html#afe4571d032fdc5a53d8e810cfc1b7603">Plus de détails...</a><br /></td></tr>
 <tr class="separator:afe4571d032fdc5a53d8e810cfc1b7603"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,16 +99,89 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>playerUnstun</b
 <tr class="memitem:a391d840b0772f256825a2de762d72179"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a391d840b0772f256825a2de762d72179">playerPosY</a> (<a class="el" href="structplayer__s.html">player_t</a> *p)</td></tr>
 <tr class="memdesc:a391d840b0772f256825a2de762d72179"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structPosition.html">Position</a> du joueur en Y.  <a href="player_8c.html#a391d840b0772f256825a2de762d72179">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a391d840b0772f256825a2de762d72179"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a955601adedc62e9b14f40e5b2dff99a1"><td class="memItemLeft" align="right" valign="top"><a id="a955601adedc62e9b14f40e5b2dff99a1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>rand_click_bot</b> (<a class="el" href="structplayer__s.html">player_t</a> *mannequin)</td></tr>
+<tr class="memitem:a955601adedc62e9b14f40e5b2dff99a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8c.html#a955601adedc62e9b14f40e5b2dff99a1">rand_click_bot</a> (<a class="el" href="structplayer__s.html">player_t</a> *mannequin)</td></tr>
+<tr class="memdesc:a955601adedc62e9b14f40e5b2dff99a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genereration d'une position de click pour un personnage ennemi dans la zone ennemie.  <a href="player_8c.html#a955601adedc62e9b14f40e5b2dff99a1">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a955601adedc62e9b14f40e5b2dff99a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Fonctions utilisant principalement la SDL2. </p>
+<div class="textblock"><p>Fonctions d'actions sur une entité joueur. </p>
 <dl class="section author"><dt>Auteur</dt><dd>COUTANT Hugo / COMTE Clément </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>14 feb 2021 </dd></dl>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="aaf53a91319cea912373e574bbeb761bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf53a91319cea912373e574bbeb761bd">&#9670;&nbsp;</a></span>createPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structplayer__s.html">player_t</a>* createPlayer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>name</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SDL_Texture *&#160;</td>
+          <td class="paramname"><em>sprite</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcd__t.html">cd_t</a>&#160;</td>
+          <td class="paramname"><em>setSort</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Création d'un personnage et initialisation de ses valeurs. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id_player</td><td>Identifiant du joueur. </td></tr>
+    <tr><td class="paramname">name</td><td>Nom du personnage. </td></tr>
+    <tr><td class="paramname">xp</td><td>Experience du personnage. </td></tr>
+    <tr><td class="paramname">sprite</td><td>Texture des sprites du personnage. </td></tr>
+    <tr><td class="paramname">setSort</td><td>Tableau de sort du personnage. </td></tr>
+    <tr><td class="paramname">x</td><td><a class="el" href="structPosition.html">Position</a> en X initiale du personnage. </td></tr>
+    <tr><td class="paramname">y</td><td><a class="el" href="structPosition.html">Position</a> en Y initiale du personnage.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>p Pointeur sur une structure <a class="el" href="structplayer__s.html" title="Informations d&#39;un personnage.">player_s</a> étant le nouveau personnage créé. </dd></dl>
+
+</div>
+</div>
 <a id="afe4571d032fdc5a53d8e810cfc1b7603"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe4571d032fdc5a53d8e810cfc1b7603">&#9670;&nbsp;</a></span>freePlayer()</h2>
 
@@ -186,6 +259,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rand_click_bot</b> (<
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>int <a class="el" href="structPosition.html">Position</a> en Y. </dd></dl>
+
+</div>
+</div>
+<a id="a955601adedc62e9b14f40e5b2dff99a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a955601adedc62e9b14f40e5b2dff99a1">&#9670;&nbsp;</a></span>rand_click_bot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rand_click_bot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td>
+          <td class="paramname"><em>mannequin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Genereration d'une position de click pour un personnage ennemi dans la zone ennemie. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mannequin</td><td>Pointeur sur une structure <a class="el" href="structplayer__s.html" title="Informations d&#39;un personnage.">player_s</a> à déplacer aléatoirement. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

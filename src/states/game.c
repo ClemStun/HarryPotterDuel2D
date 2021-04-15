@@ -1,7 +1,7 @@
 /**
  * \file game.c
  * \brief Déroulement du jeu dans l'état GAME
- * \author COUTANT Hugo & COMTE Clément
+ * \author COUTANT Hugo & COMTE Clément & COLLET Matthieu
  * \version 0.1
  * \date 14 feb 2021
  *
@@ -114,7 +114,7 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
     updatePosition(win, joueur2, images, joueur2->pos_x_click, joueur2->pos_y_click, 0.2);
     //rajouter hud ennemi si possible
 
-
+    //appel des méthodes des sorts pour le joueurs local
     for(int i = 0; i < NB_SORT; i++){
         if(monPerso->createSort[i].sort != NULL){
             if(monPerso->createSort[i].sort->deplacement != NULL)
@@ -127,6 +127,7 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
         }
     }
 
+    //appel des méthodes des sorts pour le joueurs adverse
     for(int i = 0; i < NB_SORT; i++){
         if(joueur2->createSort[i].sort != NULL){
             if(joueur2->createSort[i].sort->deplacement != NULL)

@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Harry Potter Battle 2D: Référence du fichier src/player/spell/protego.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Harry Potter Battle 2D
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_975424cdae97a07db69e55371758444e.html">player</a></li><li class="navelem"><a class="el" href="dir_ea77bc24f4c19d81305d29744b85b3ac.html">spell</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier protego.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Méthode de l'objet protego_t.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="player_8h_source.html">../../../lib/player.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="protego_8h_source.html">../../../lib/protego.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de protego.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="protego_8c__incl.png" border="0" usemap="#src_2player_2spell_2protego_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a829c06ad3cd47ccc765e819f1634e8df"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protego_8c.html#a829c06ad3cd47ccc765e819f1634e8df">timer_end</a> (<a class="el" href="structprotego__s.html">protego_t</a> **, int, int, <a class="el" href="structplayer__s.html">player_t</a> *)</td></tr>
+<tr class="memdesc:a829c06ad3cd47ccc765e819f1634e8df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de fin de timer de protection + déplacement du sort sur le joueur.  <a href="protego_8c.html#a829c06ad3cd47ccc765e819f1634e8df">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a829c06ad3cd47ccc765e819f1634e8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe4b53bc685871cd9dfc767e0afe4587"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protego_8c.html#abe4b53bc685871cd9dfc767e0afe4587">display</a> (<a class="el" href="structprotego__s.html">protego_t</a> *spell, <a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structimages__s.html">images_t</a> *images)</td></tr>
+<tr class="memdesc:abe4b53bc685871cd9dfc767e0afe4587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affichage d'un protego_t.  <a href="protego_8c.html#abe4b53bc685871cd9dfc767e0afe4587">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abe4b53bc685871cd9dfc767e0afe4587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14f73178a39df5280ff0594ca8469c6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protego_8c.html#ac14f73178a39df5280ff0594ca8469c6">destroy</a> (<a class="el" href="structprotego__s.html">protego_t</a> **)</td></tr>
+<tr class="memdesc:ac14f73178a39df5280ff0594ca8469c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desttruction d'un protego_t.  <a href="protego_8c.html#ac14f73178a39df5280ff0594ca8469c6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac14f73178a39df5280ff0594ca8469c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1ec5281f7dfca190682ad70d1dc8dc"><td class="memItemLeft" align="right" valign="top"><a id="aac1ec5281f7dfca190682ad70d1dc8dc"></a>
+<a class="el" href="structprotego__s.html">protego_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>createProtego</b> (<a class="el" href="structplayer__s.html">player_t</a> *player, int x, int y)</td></tr>
+<tr class="separator:aac1ec5281f7dfca190682ad70d1dc8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Méthode de l'objet protego_t. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Comte Clément </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>09 feb 2021 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ac14f73178a39df5280ff0594ca8469c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac14f73178a39df5280ff0594ca8469c6">&#9670;&nbsp;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structprotego__s.html">protego_t</a> **&#160;</td>
+          <td class="paramname"><em>spell</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Desttruction d'un protego_t. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell</td><td>Pointeur sur pointeur d'un protego_t destiné a être détruit </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ne renvoie rien. </dd></dl>
+
+</div>
+</div>
+<a id="abe4b53bc685871cd9dfc767e0afe4587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe4b53bc685871cd9dfc767e0afe4587">&#9670;&nbsp;</a></span>display()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void display </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structprotego__s.html">protego_t</a> *&#160;</td>
+          <td class="paramname"><em>spell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structimages__s.html">images_t</a> *&#160;</td>
+          <td class="paramname"><em>images</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Affichage d'un protego_t. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell</td><td>Pointeur sur l'élément protego_t en question </td></tr>
+    <tr><td class="paramname">win</td><td>Fenetre dans laquelle le sort sera afficher </td></tr>
+    <tr><td class="paramname">images</td><td>Image de du sort </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ne renvoie rien. </dd></dl>
+
+</div>
+</div>
+<a id="a829c06ad3cd47ccc765e819f1634e8df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a829c06ad3cd47ccc765e819f1634e8df">&#9670;&nbsp;</a></span>timer_end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int timer_end </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structprotego__s.html">protego_t</a> **&#160;</td>
+          <td class="paramname"><em>spell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td>
+          <td class="paramname"><em>player</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test de fin de timer de protection + déplacement du sort sur le joueur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spell</td><td>Pointeur sur l'élément protego_t en question </td></tr>
+    <tr><td class="paramname">x</td><td>non utiliser (utilisé pour garder la forme général de la fonction) </td></tr>
+    <tr><td class="paramname">y</td><td>non utiliser (utilisé pour garder la forme général de la fonction) </td></tr>
+    <tr><td class="paramname">player</td><td><a class="el" href="structJoueur.html">Joueur</a> qui a lancer le sort de protection </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Renvoie 1 si le timer est fini 0 sinon </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

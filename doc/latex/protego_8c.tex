@@ -1,0 +1,108 @@
+\hypertarget{protego_8c}{}\doxysection{Référence du fichier src/player/spell/protego.c}
+\label{protego_8c}\index{src/player/spell/protego.c@{src/player/spell/protego.c}}
+
+
+Méthode de l\textquotesingle{}objet protego\+\_\+t.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../../../lib/player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../../lib/protego.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de protego.\+c\+:
+% FIG 0
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{protego_8c_a829c06ad3cd47ccc765e819f1634e8df}{timer\+\_\+end}} (\mbox{\hyperlink{structprotego__s}{protego\+\_\+t}} $\ast$$\ast$, int, int, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Test de fin de timer de protection + déplacement du sort sur le joueur. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{protego_8c_abe4b53bc685871cd9dfc767e0afe4587}{display}} (\mbox{\hyperlink{structprotego__s}{protego\+\_\+t}} $\ast$spell, \mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
+\begin{DoxyCompactList}\small\item\em Affichage d\textquotesingle{}un protego\+\_\+t. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{protego_8c_ac14f73178a39df5280ff0594ca8469c6}{destroy}} (\mbox{\hyperlink{structprotego__s}{protego\+\_\+t}} $\ast$$\ast$)
+\begin{DoxyCompactList}\small\item\em Desttruction d\textquotesingle{}un protego\+\_\+t. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{protego_8c_aac1ec5281f7dfca190682ad70d1dc8dc}\label{protego_8c_aac1ec5281f7dfca190682ad70d1dc8dc}} 
+\mbox{\hyperlink{structprotego__s}{protego\+\_\+t}} $\ast$ {\bfseries create\+Protego} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$player, int x, int y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Méthode de l\textquotesingle{}objet protego\+\_\+t. 
+
+\begin{DoxyAuthor}{Auteur}
+Comte Clément 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09 feb 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{protego_8c_ac14f73178a39df5280ff0594ca8469c6}\label{protego_8c_ac14f73178a39df5280ff0594ca8469c6}} 
+\index{protego.c@{protego.c}!destroy@{destroy}}
+\index{destroy@{destroy}!protego.c@{protego.c}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily static void destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprotego__s}{protego\+\_\+t}} $\ast$$\ast$}]{spell }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Desttruction d\textquotesingle{}un protego\+\_\+t. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em spell} & Pointeur sur pointeur d\textquotesingle{}un protego\+\_\+t destiné a être détruit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Ne renvoie rien. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{protego_8c_abe4b53bc685871cd9dfc767e0afe4587}\label{protego_8c_abe4b53bc685871cd9dfc767e0afe4587}} 
+\index{protego.c@{protego.c}!display@{display}}
+\index{display@{display}!protego.c@{protego.c}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily static void display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprotego__s}{protego\+\_\+t}} $\ast$}]{spell,  }\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Affichage d\textquotesingle{}un protego\+\_\+t. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em spell} & Pointeur sur l\textquotesingle{}élément protego\+\_\+t en question \\
+\hline
+{\em win} & Fenetre dans laquelle le sort sera afficher \\
+\hline
+{\em images} & Image de du sort \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Ne renvoie rien. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{protego_8c_a829c06ad3cd47ccc765e819f1634e8df}\label{protego_8c_a829c06ad3cd47ccc765e819f1634e8df}} 
+\index{protego.c@{protego.c}!timer\_end@{timer\_end}}
+\index{timer\_end@{timer\_end}!protego.c@{protego.c}}
+\doxysubsubsection{\texorpdfstring{timer\_end()}{timer\_end()}}
+{\footnotesize\ttfamily static int timer\+\_\+end (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprotego__s}{protego\+\_\+t}} $\ast$$\ast$}]{spell,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Test de fin de timer de protection + déplacement du sort sur le joueur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em spell} & Pointeur sur l\textquotesingle{}élément protego\+\_\+t en question \\
+\hline
+{\em x} & non utiliser (utilisé pour garder la forme général de la fonction) \\
+\hline
+{\em y} & non utiliser (utilisé pour garder la forme général de la fonction) \\
+\hline
+{\em player} & \mbox{\hyperlink{structJoueur}{Joueur}} qui a lancer le sort de protection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Renvoie 1 si le timer est fini 0 sinon 
+\end{DoxyReturn}

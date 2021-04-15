@@ -39,14 +39,22 @@ expelliarmus_t * createExpelliarmus(player_t * player, int x, int y){
     spell->speed = 5;
     spell->damage = 10;
     spell->manaCost = 10;
+
+    //position réel du sort
     spell->posXf = player->pos_x;
     spell->posYf = player->pos_y;
+
+    //point de destination du sort
     spell->destX = x;
     spell->destY = y;
+
+    //taille du sort
     spell->width = 10;
     spell->height = 10;
+
     spell->sender = player->id_player;
 
+    //méthode du sort
     spell->deplacement = deplacement;
     spell->display = display;
     spell->collision_test = collision_test;
@@ -69,18 +77,20 @@ expelliarmus_t * createExpelliarmus(player_t * player, int x, int y){
 static
 void deplacement(expelliarmus_t * spell, int x_dest, int y_dest){
 
-    //printf("YO!\n");
-
+    //calcul du vecteur direction
     float vx = x_dest - spell->posXf;
     float vy = y_dest - spell->posYf;
 
+    //mis en norme 1 du vecteur
     double v = sqrt(vx*vx + vy*vy);
     float vxx = vx/v;
     float vyy = vy/v;
 
+    //calcul de la nouvelle position du sort
     spell->posXf += vxx * spell->speed;
     spell->posYf += vyy * spell->speed;
 
+    //transformation du float en int pour afficher le sort
     spell->pos_x = spell->posXf;
     spell->pos_y = spell->posYf;
 }
@@ -96,8 +106,6 @@ void deplacement(expelliarmus_t * spell, int x_dest, int y_dest){
  */
 static
 void display(expelliarmus_t * spell, window * win, images_t *images){
-
-    //printf("YO displayed!\n");
 
     DrawImage(win->pRenderer, images, searchTexture(images, "expelliarmus.png"), 0, 0, 64, 64, spell->pos_x, spell->pos_y, 64, 64);
 
@@ -116,9 +124,10 @@ void display(expelliarmus_t * spell, window * win, images_t *images){
 static
 int collision_test(expelliarmus_t ** spell, int x, int y, player_t * player){
 
+    //si on touche le sort
     if((((*spell)->pos_x + (*spell)->width >= player->pos_x) && ((*spell)->pos_x + (*spell)->width <= player->pos_x + 100)) || (((*spell)->pos_x >= player->pos_x) && ((*spell)->pos_x  <= player->pos_x + 100)))
         if((((*spell)->pos_y + (*spell)->height >= player->pos_y) && ((*spell)->pos_y + (*spell)->height <= player->pos_y + 100)) || (((*spell)->pos_y >= player->pos_y) && ((*spell)->pos_y  <= player->pos_y + 100))){
-    
+            
             if(player->is_protego == 0)
                 player->pt_life -= (*spell)->damage;
             (*spell)->destroy(spell);
@@ -126,6 +135,7 @@ int collision_test(expelliarmus_t ** spell, int x, int y, player_t * player){
 
         }
 
+    //si on touche le point de destination
     if((((*spell)->pos_x + (*spell)->width >= x) && ((*spell)->pos_x + (*spell)->width <= x + 10)) || (((*spell)->pos_x >= x) && ((*spell)->pos_x  <= x + 10)))
         if((((*spell)->pos_y + (*spell)->height >= y) && ((*spell)->pos_y + (*spell)->height <= y + 10)) || (((*spell)->pos_y >= y) && ((*spell)->pos_y  <= y + 10))){
             

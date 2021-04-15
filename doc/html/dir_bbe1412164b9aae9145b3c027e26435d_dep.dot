@@ -1,0 +1,11 @@
+digraph "src/trait_donnees" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_68267d1309a1af8e8297ef4c3efbcdba {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_68267d1309a1af8e8297ef4c3efbcdba.html"]
+  dir_bbe1412164b9aae9145b3c027e26435d [shape=box, label="trait_donnees", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_bbe1412164b9aae9145b3c027e26435d.html"];
+  }
+  dir_97aefd0d527b934f1d99a682da8fe6a9 [shape=box label="lib" URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"];
+  dir_bbe1412164b9aae9145b3c027e26435d->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="1", labeldistance=1.5 headhref="dir_000012_000003.html"];
+}

@@ -24,6 +24,9 @@ Graphe des dépendances par inclusion de sdl.\+c\+:
 \begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}initialisation de notre fenêtre S\+DL dans une structure window. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sdl_8c_a6d45f86589d9728613bcb4af451c462e}{Load\+Images}} (S\+D\+L\+\_\+\+Renderer $\ast$p\+Renderer, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
 \begin{DoxyCompactList}\small\item\em Fonction qui créer la texture d\textquotesingle{}images présentes dans un fichier, et les range dans une structure images\+\_\+t. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{sdl_8c_ae98a5ae11c708cbed9e128f5a7379eff}\label{sdl_8c_ae98a5ae11c708cbed9e128f5a7379eff}} 
+void {\bfseries Load\+Images\+\_\+for\+\_\+test} (S\+D\+L\+\_\+\+Renderer $\ast$p\+Renderer, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
+\item 
 S\+D\+L\+\_\+\+Texture $\ast$ \mbox{\hyperlink{sdl_8c_a7b2087565b1bd1650e768180934df1df}{search\+Texture}} (\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, char $\ast$nom)
 \begin{DoxyCompactList}\small\item\em Fonction de recherche de texture dans la structure image\+\_\+s à partir d\textquotesingle{}un nom. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{sdl_8c_a6f4f1500d35caea0d02752e10b7c6e8b}\label{sdl_8c_a6f4f1500d35caea0d02752e10b7c6e8b}} 
@@ -176,5 +179,5 @@ Fonction de recherche de texture dans la structure image\+\_\+s à partir d\text
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
-La texture trouvée. 
+La texture trouvée ou N\+U\+LL si non trouvée. 
 \end{DoxyReturn}

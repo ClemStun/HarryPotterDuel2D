@@ -38,18 +38,21 @@ int main(int argc, char **argv){
     // fonts
     TTF_Font *font = TTF_OpenFont("./assets/fonts/big_noodle_titling.ttf", 200);
 
-    // Destiné à dégager
+    //création des set de sorts pour les joueurs
     cd_t setSort[NB_SORT];
     for(int i = 0; i < NB_SORT; i++){
         setSort[i].timer = SDL_GetTicks();
         setSort[i].createSort = NULL;
         setSort[i].sort = NULL;
     }
+
+    //assignement des fonctions de crétation des sorts
     setSort[0].createSort = createExpelliarmus;
     setSort[1].createSort = createPetrificus;
     setSort[2].createSort = createIncendio;
     setSort[3].createSort = createProtego;
 
+    //joueur local
     player_t * monPerso;
     monPerso = accueil_connexion(&images, setSort, data_storage);
     if(monPerso->house == 'n'){
@@ -65,12 +68,10 @@ int main(int argc, char **argv){
     }
 
     //Mannequin
-
     player_t * mannequin;
     mannequin = createPlayer(3, "Pouette", 0, searchTexture(&images, "Mannequin.png"), setSort, 900, 250);
 
     //Joueur 2
-
     player_t * joueur2;
     joueur2 = createPlayer(2, "Ennemi", 0, searchTexture(&images, "Mannequin.png"), setSort, 900, 250);
 

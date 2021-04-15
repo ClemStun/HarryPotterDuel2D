@@ -24,8 +24,9 @@ typedef struct \mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+s}} {\b
 \doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$ \mbox{\hyperlink{expelliarmus_8h_abbaa95bb2ae8ac9aa713bca0c7cb0d26}{create\+Expelliarmus}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$)
-\begin{DoxyCompactList}\small\item\em Création d\textquotesingle{}un sort expelliarmus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{expelliarmus_8h_a80cd8d3bee3c264fd558b7c8c8b3f16e}\label{expelliarmus_8h_a80cd8d3bee3c264fd558b7c8c8b3f16e}} 
+\mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$ {\bfseries create\+Expelliarmus} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$, int x, int y)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -40,24 +41,3 @@ Comte Clément
 \begin{DoxyDate}{Date}
 09 feb 2021 
 \end{DoxyDate}
-
-
-\doxysubsection{Documentation des fonctions}
-\mbox{\Hypertarget{expelliarmus_8h_abbaa95bb2ae8ac9aa713bca0c7cb0d26}\label{expelliarmus_8h_abbaa95bb2ae8ac9aa713bca0c7cb0d26}} 
-\index{expelliarmus.h@{expelliarmus.h}!createExpelliarmus@{createExpelliarmus}}
-\index{createExpelliarmus@{createExpelliarmus}!expelliarmus.h@{expelliarmus.h}}
-\doxysubsubsection{\texorpdfstring{createExpelliarmus()}{createExpelliarmus()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$ create\+Expelliarmus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{player }\end{DoxyParamCaption})}
-
-
-
-Création d\textquotesingle{}un sort expelliarmus. 
-
-
-\begin{DoxyParams}{Paramètres}
-{\em player} & Pointeur sur le joueur player\+\_\+t qui lance le sort. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Renvoie}
-Renvoie le sort créé qui est un élément de type expelliarmus\+\_\+t. 
-\end{DoxyReturn}

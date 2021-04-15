@@ -38,19 +38,31 @@ protego_t * createProtego(player_t * player, int x, int y){
     spell->speed = 0;
     spell->damage = 0;
     spell->manaCost = 20;
+
+    //position réel du sort = celle du personnage
     spell->posXf = 0;
     spell->posYf = 0;
+
+    //pas de destination
     spell->destX = 0;
     spell->destY = 0;
+
+    //la taille correspond a celle du joueur
     spell->width = 0;
     spell->height = 0;
+
     spell->sender = player->id_player;
 
+    //pas de méthode de déplacement (gérer dans timer_end)
     spell->deplacement = NULL;
+    //méthode d'affichage de protego_t
     spell->display = display;
+    //méthode de fin de sort de protego_t
     spell->collision_test = timer_end;
+    //méthode de destruction de protego_t
     spell->destroy = destroy;
 
+    //timer fin de protection
     spell->timer = SDL_GetTicks();
 
     player->pt_mana -= spell->manaCost;
@@ -82,14 +94,26 @@ void display(protego_t * spell, window * win, images_t *images){
     SDL_RenderDrawRect(win->pRenderer, &protego);
 }
 
+/**
+ * \fn static int timer_end(protego_t ** spell, int x, int y, player_t * player)
+ * \brief Test de fin de timer de protection + déplacement du sort sur le joueur
+ *
+ * \param spell Pointeur sur l'élément protego_t en question
+ * \param x non utiliser (utilisé pour garder la forme général de la fonction)
+ * \param y non utiliser (utilisé pour garder la forme général de la fonction)
+ * \param player Joueur qui a lancer le sort de protection
+ * \return Renvoie 1 si le timer est fini 0 sinon
+ */
 static
 int timer_end(protego_t ** spell, int x, int y, player_t * player){
 
+    //si le timer de protection est fini
     if(SDL_GetTicks() - (*spell)->timer >= 6000){
         (*spell)->destroy(spell);
         return 1;
     }
 
+    //déplacement du sort sur le joueur
     (*spell)->pos_x = player->pos_x;
     (*spell)->pos_y = player->pos_y;
     return 0;

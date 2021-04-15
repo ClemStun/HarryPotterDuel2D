@@ -88,6 +88,9 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a72a4ba9c933a688789ead21550b9d8d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8h.html#a72a4ba9c933a688789ead21550b9d8d0">createButton</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, int posX, int posY, int rectW, int rectH, const char *texte, TTF_Font *fontButton, const char color)</td></tr>
 <tr class="memdesc:a72a4ba9c933a688789ead21550b9d8d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de création d'un bouton sur la fenêtre en fonction d'une position donnée, d'une dimension, d'un texte, d'une police et d'une couleur.  <a href="menu_8h.html#a72a4ba9c933a688789ead21550b9d8d0">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a72a4ba9c933a688789ead21550b9d8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a310e85cb75bb1093e578dc5be058ee60"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8h.html#a310e85cb75bb1093e578dc5be058ee60">zone_detect</a> (int x, int y, int w, int h, int mouseX, int mouseY)</td></tr>
+<tr class="memdesc:a310e85cb75bb1093e578dc5be058ee60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de détection de zone de la souris.  <a href="menu_8h.html#a310e85cb75bb1093e578dc5be058ee60">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a310e85cb75bb1093e578dc5be058ee60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e6ba896e144ff35a8536190c2e129ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="menu_8h.html#a5e6ba896e144ff35a8536190c2e129ef">home_state</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structimages__s.html">images_t</a> *images, <a class="el" href="structtext__s.html">text_t</a> *text, <a class="el" href="structplayer__s.html">player_t</a> *monPerso, TTF_Font *font)</td></tr>
 <tr class="memdesc:a5e6ba896e144ff35a8536190c2e129ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction état du jeu en mode menu principal.  <a href="menu_8h.html#a5e6ba896e144ff35a8536190c2e129ef">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5e6ba896e144ff35a8536190c2e129ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,6 +243,72 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état pour y rester, soit un autre pour changer d'état dans la suite du programme. </dd></dl>
+
+</div>
+</div>
+<a id="a310e85cb75bb1093e578dc5be058ee60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a310e85cb75bb1093e578dc5be058ee60">&#9670;&nbsp;</a></span>zone_detect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int zone_detect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mouseX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mouseY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction de détection de zone de la souris. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td><a class="el" href="structPosition.html">Position</a> en X en haut à gauche de la zone à tester. </td></tr>
+    <tr><td class="paramname">y</td><td><a class="el" href="structPosition.html">Position</a> en Y en haut à gauche de la zone à tester. </td></tr>
+    <tr><td class="paramname">w</td><td>Largeur de la zone. </td></tr>
+    <tr><td class="paramname">h</td><td>Hauteur de la zone. </td></tr>
+    <tr><td class="paramname">mouseX</td><td><a class="el" href="structPosition.html">Position</a> en X de la souris. </td></tr>
+    <tr><td class="paramname">mouseY</td><td><a class="el" href="structPosition.html">Position</a> en Y de la souris.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 si souris dans la zone, 0 sinon. </dd></dl>
 
 </div>
 </div>

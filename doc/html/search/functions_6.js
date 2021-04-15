@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['playerposx_123',['playerPosX',['../player_8h.html#ace44c1fa068f2aa5c354c9f355e53ce4',1,'playerPosX(player_t *p):&#160;player.c'],['../player_8c.html#ace44c1fa068f2aa5c354c9f355e53ce4',1,'playerPosX(player_t *p):&#160;player.c']]],
-  ['playerposy_124',['playerPosY',['../player_8h.html#a391d840b0772f256825a2de762d72179',1,'playerPosY(player_t *p):&#160;player.c'],['../player_8c.html#a391d840b0772f256825a2de762d72179',1,'playerPosY(player_t *p):&#160;player.c']]]
+  ['game_5fstate_158',['game_state',['../game_8h.html#afab08395b5ecc990c503963a767d6969',1,'game_state(window *win, images_t *images, player_t *monPerso, player_t *mannequin, int socketClient, socket_t *j1):&#160;game.c'],['../game_8c.html#a5e042bdd13c6a8222a453dfd9ec3aeaf',1,'game_state(window *win, images_t *images, player_t *monPerso, player_t *j2, int socketClient, socket_t *j1):&#160;game.c']]]
 ];

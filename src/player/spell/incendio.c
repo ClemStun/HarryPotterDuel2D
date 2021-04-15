@@ -39,19 +39,28 @@ incendio_t * createIncendio(player_t * player, int x, int y){
     spell->speed = 5;
     spell->damage = 2;
     spell->manaCost = 20;
+
+    //position réel du sort
     spell->posXf = player->pos_x;
     spell->posYf = player->pos_y;
+
+    //point de destination du sort
     spell->destX = x;
     spell->destY = y;
+
+    //taille du sort
     spell->width = 10;
     spell->height = 10;
+
     spell->sender = player->id_player;
 
+    //méthode du sort
     spell->deplacement = deplacement;
     spell->display = display;
     spell->collision_test = collision_test;
     spell->destroy = destroy;
 
+    //timer de la zone au sol après collision
     spell->timer = 0;
 
     player->pt_mana -= spell->manaCost;
@@ -71,18 +80,20 @@ incendio_t * createIncendio(player_t * player, int x, int y){
 static
 void deplacement(incendio_t * spell, int x_dest, int y_dest){
 
-    //printf("YO!\n");
-
+    //calcul du vecteur direction
     float vx = x_dest - spell->posXf;
     float vy = y_dest - spell->posYf;
 
+    //mis en norme 1 du vecteur
     double v = sqrt(vx*vx + vy*vy);
     float vxx = vx/v;
     float vyy = vy/v;
 
+    //calcul de la nouvelle position du sort
     spell->posXf += vxx * spell->speed;
     spell->posYf += vyy * spell->speed;
 
+    //transformation du float en int pour afficher le sort
     spell->pos_x = spell->posXf;
     spell->pos_y = spell->posYf;
 }
@@ -139,11 +150,13 @@ void display_zone(incendio_t * spell, window * win, images_t *images){
 static
 int collision_test_zone(incendio_t ** spell, int x, int y, player_t * player){
 
+    //si on arrive a la fin du timer
     if(SDL_GetTicks() - (*spell)->timer >= 3000){
         (*spell)->destroy(spell);
         return 1;
     }
 
+    //si le joueur rentre dans la zone
     if((((*spell)->pos_x + (*spell)->width >= player->pos_x) && ((*spell)->pos_x + (*spell)->width <= player->pos_x + 100)) || (((*spell)->pos_x >= player->pos_x) && ((*spell)->pos_x  <= player->pos_x + 100)))
         if((((*spell)->pos_y + (*spell)->height >= player->pos_y) && ((*spell)->pos_y + (*spell)->height <= player->pos_y + 100)) || (((*spell)->pos_y >= player->pos_y) && ((*spell)->pos_y  <= player->pos_y + 100))){
     
@@ -169,11 +182,12 @@ int collision_test_zone(incendio_t ** spell, int x, int y, player_t * player){
 static
 int collision_test(incendio_t ** spell, int x, int y, player_t * player){
 
+    //si le sort touche le joueur
     if((((*spell)->pos_x + (*spell)->width >= player->pos_x) && ((*spell)->pos_x + (*spell)->width <= player->pos_x + 100)) || (((*spell)->pos_x >= player->pos_x) && ((*spell)->pos_x  <= player->pos_x + 100)))
         if((((*spell)->pos_y + (*spell)->height >= player->pos_y) && ((*spell)->pos_y + (*spell)->height <= player->pos_y + 100)) || (((*spell)->pos_y >= player->pos_y) && ((*spell)->pos_y  <= player->pos_y + 100))){
     
             if(player->is_protego == 0)
-                player->pt_life -= (*spell)->damage;
+                player->pt_life -= (*spell)->damage * 2;
             (*spell)->pos_x -= 50;
             (*spell)->pos_y -= 100;
             (*spell)->width = 100;
@@ -186,6 +200,7 @@ int collision_test(incendio_t ** spell, int x, int y, player_t * player){
 
         }
 
+    //si le sort arrive au point de destination
     if((((*spell)->pos_x + (*spell)->width >= x) && ((*spell)->pos_x + (*spell)->width <= x + 10)) || (((*spell)->pos_x >= x) && ((*spell)->pos_x  <= x + 10)))
         if((((*spell)->pos_y + (*spell)->height >= y) && ((*spell)->pos_y + (*spell)->height <= y + 10)) || (((*spell)->pos_y >= y) && ((*spell)->pos_y  <= y + 10))){
             

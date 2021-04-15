@@ -41,7 +41,7 @@ typedef struct sort_s{
  * \brief Structure qui contient un sort et son couldown
  */
 typedef struct cd_s{
-    int timer;
-    sort_t * (*createSort)(void *, int, int);
-    sort_t * sort;
+    int timer; /*!< Timer de couldown du sort */
+    sort_t * (*createSort)(void *, int, int); /*!< Fonction de création du sort */
+    sort_t * sort; /*!< Sort lancé */
 }cd_t;

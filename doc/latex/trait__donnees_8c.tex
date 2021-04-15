@@ -1,0 +1,79 @@
+\hypertarget{trait__donnees_8c}{}\doxysection{Référence du fichier src/trait\+\_\+donnees/trait\+\_\+donnees.c}
+\label{trait__donnees_8c}\index{src/trait\_donnees/trait\_donnees.c@{src/trait\_donnees/trait\_donnees.c}}
+
+
+Fonction de chargement et sauvegarde de donnees.  
+
+
+{\ttfamily \#include \char`\"{}../../lib/trait\+\_\+donnees.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de trait\+\_\+donnees.\+c\+:
+% FIG 0
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{trait__donnees_8c_a051da7e9876eb6e147756b4548982d4b}\label{trait__donnees_8c_a051da7e9876eb6e147756b4548982d4b}} 
+static void {\bfseries load\+\_\+data} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$$\ast$mon\+Perso, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structcd__t}{cd\+\_\+t}} set\+Sort\mbox{[}$\,$\mbox{]}, char fname\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{trait__donnees_8c_aa426e8d6caaeb2cd678dc26639b77f49}\label{trait__donnees_8c_aa426e8d6caaeb2cd678dc26639b77f49}} 
+static void {\bfseries save\+\_\+data} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso, char fname\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$ \mbox{\hyperlink{trait__donnees_8c_a81b271f18871a7a5dc2c98a50cdec173}{accueil\+\_\+connexion}} (\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structcd__t}{cd\+\_\+t}} set\+Sort\mbox{[}$\,$\mbox{]}, char fname\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}accueil de la connexion à un personnage sauvegardé ou création d\textquotesingle{}un personnage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{trait__donnees_8c_a5f47660c931b21f6759f46ab64a04f14}{accueil\+\_\+deconnexion}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso, char fname\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}accueil de la deconnexion du jeu avec le choix de sauvergarder ou non. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fonction de chargement et sauvegarde de donnees. 
+
+\begin{DoxyAuthor}{Auteur}
+C\+O\+U\+T\+A\+NT Hugo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 feb 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{trait__donnees_8c_a81b271f18871a7a5dc2c98a50cdec173}\label{trait__donnees_8c_a81b271f18871a7a5dc2c98a50cdec173}} 
+\index{trait\_donnees.c@{trait\_donnees.c}!accueil\_connexion@{accueil\_connexion}}
+\index{accueil\_connexion@{accueil\_connexion}!trait\_donnees.c@{trait\_donnees.c}}
+\doxysubsubsection{\texorpdfstring{accueil\_connexion()}{accueil\_connexion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structplayer__s}{player\+\_\+t}}$\ast$ accueil\+\_\+connexion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{\mbox{\hyperlink{structcd__t}{cd\+\_\+t}}}]{set\+Sort\mbox{[}$\,$\mbox{]},  }\item[{char}]{fname\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Fonction d\textquotesingle{}accueil de la connexion à un personnage sauvegardé ou création d\textquotesingle{}un personnage. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em images} & Pointeur sur une structure images\+\_\+t, bibliothèque de textures des images. \\
+\hline
+{\em set\+Sort} & Tableau de sort d\textquotesingle{}un personnage. \\
+\hline
+{\em fname} & Chaine de caractere du fichier où se trouve les sauvegardes.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+p Pointeur sur une structure \mbox{\hyperlink{structplayer__s}{player\+\_\+s}} étant le nouveau personnage créé. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{trait__donnees_8c_a5f47660c931b21f6759f46ab64a04f14}\label{trait__donnees_8c_a5f47660c931b21f6759f46ab64a04f14}} 
+\index{trait\_donnees.c@{trait\_donnees.c}!accueil\_deconnexion@{accueil\_deconnexion}}
+\index{accueil\_deconnexion@{accueil\_deconnexion}!trait\_donnees.c@{trait\_donnees.c}}
+\doxysubsubsection{\texorpdfstring{accueil\_deconnexion()}{accueil\_deconnexion()}}
+{\footnotesize\ttfamily void accueil\+\_\+deconnexion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mon\+Perso,  }\item[{char}]{fname\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Fonction d\textquotesingle{}accueil de la deconnexion du jeu avec le choix de sauvergarder ou non. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em mon\+Perso} & Pointeur sur une structure player\+\_\+t représentant les infos d\textquotesingle{}un personnage à sauvegarder. \\
+\hline
+{\em fname} & Chaine de caractere du fichier où se trouve les sauvegardes. \\
+\hline
+\end{DoxyParams}

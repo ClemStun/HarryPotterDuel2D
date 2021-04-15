@@ -7,5 +7,5 @@ digraph "src/player/spell" {
   dir_ea77bc24f4c19d81305d29744b85b3ac [shape=box, label="spell", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ea77bc24f4c19d81305d29744b85b3ac.html"];
   }
   dir_97aefd0d527b934f1d99a682da8fe6a9 [shape=box label="lib" URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"];
-  dir_ea77bc24f4c19d81305d29744b85b3ac->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="6", labeldistance=1.5 headhref="dir_000008_000003.html"];
+  dir_ea77bc24f4c19d81305d29744b85b3ac->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="8", labeldistance=1.5 headhref="dir_000008_000003.html"];
 }

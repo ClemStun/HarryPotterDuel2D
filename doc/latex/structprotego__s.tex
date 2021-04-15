@@ -1,0 +1,76 @@
+\hypertarget{structprotego__s}{}\doxysection{Référence de la structure protego\+\_\+s}
+\label{structprotego__s}\index{protego\_s@{protego\_s}}
+
+
+Structure du sort protego\+\_\+t contanenant toutes les informations.  
+
+
+
+
+{\ttfamily \#include $<$protego.\+h$>$}
+
+\doxysubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structprotego__s_a2597631876c9ca5b768286670a2a802b}\label{structprotego__s_a2597631876c9ca5b768286670a2a802b}} 
+char $\ast$ {\bfseries name}
+\item 
+\mbox{\Hypertarget{structprotego__s_ab472ca0e70d0ed4b1eda76a062031155}\label{structprotego__s_ab472ca0e70d0ed4b1eda76a062031155}} 
+int {\bfseries speed}
+\item 
+\mbox{\Hypertarget{structprotego__s_a5345fd05b8406459365b73a2594e72e1}\label{structprotego__s_a5345fd05b8406459365b73a2594e72e1}} 
+int {\bfseries damage}
+\item 
+\mbox{\Hypertarget{structprotego__s_af01e2e93fc5611f94b2a1078600fa80a}\label{structprotego__s_af01e2e93fc5611f94b2a1078600fa80a}} 
+int {\bfseries mana\+Cost}
+\item 
+\mbox{\Hypertarget{structprotego__s_a2b9deb807ff744c624b3fbca4e9e7ad4}\label{structprotego__s_a2b9deb807ff744c624b3fbca4e9e7ad4}} 
+int {\bfseries pos\+\_\+x}
+\item 
+\mbox{\Hypertarget{structprotego__s_adafa1e77f6baa0a75ca85b99968c4c52}\label{structprotego__s_adafa1e77f6baa0a75ca85b99968c4c52}} 
+int {\bfseries pos\+\_\+y}
+\item 
+\mbox{\Hypertarget{structprotego__s_ac01aab382209a229217a3a44bfdb2cef}\label{structprotego__s_ac01aab382209a229217a3a44bfdb2cef}} 
+int {\bfseries destX}
+\item 
+\mbox{\Hypertarget{structprotego__s_ac66f68fadd22a3a55344f0c441e7680f}\label{structprotego__s_ac66f68fadd22a3a55344f0c441e7680f}} 
+int {\bfseries destY}
+\item 
+\mbox{\Hypertarget{structprotego__s_a900c301aaa1e1d77f8d25791df864c98}\label{structprotego__s_a900c301aaa1e1d77f8d25791df864c98}} 
+float {\bfseries pos\+Xf}
+\item 
+\mbox{\Hypertarget{structprotego__s_a442e5206649e7ffc8849cb420b4d433a}\label{structprotego__s_a442e5206649e7ffc8849cb420b4d433a}} 
+float {\bfseries pos\+Yf}
+\item 
+\mbox{\Hypertarget{structprotego__s_affd812ab522b5bee6e4e7379863fa1a3}\label{structprotego__s_affd812ab522b5bee6e4e7379863fa1a3}} 
+int {\bfseries width}
+\item 
+\mbox{\Hypertarget{structprotego__s_a44d7bf31e8af8d9111a085b8cbee749f}\label{structprotego__s_a44d7bf31e8af8d9111a085b8cbee749f}} 
+int {\bfseries height}
+\item 
+\mbox{\Hypertarget{structprotego__s_a7606b6c6f06e2068b32ee99f74c1453a}\label{structprotego__s_a7606b6c6f06e2068b32ee99f74c1453a}} 
+int {\bfseries sender}
+\item 
+\mbox{\Hypertarget{structprotego__s_a7b9de91f08557adaca59e5be3a7fb17a}\label{structprotego__s_a7b9de91f08557adaca59e5be3a7fb17a}} 
+void($\ast$ {\bfseries deplacement} )(struct \mbox{\hyperlink{structprotego__s}{protego\+\_\+s}} $\ast$, int, int)
+\item 
+\mbox{\Hypertarget{structprotego__s_abca95df9abcf780aa772f749ab4ed776}\label{structprotego__s_abca95df9abcf780aa772f749ab4ed776}} 
+void($\ast$ {\bfseries display} )(struct \mbox{\hyperlink{structprotego__s}{protego\+\_\+s}} $\ast$, \mbox{\hyperlink{structwindow__s}{window}} $\ast$, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
+\item 
+\mbox{\Hypertarget{structprotego__s_a6897f0a08f977f9147b2a8b13997ad87}\label{structprotego__s_a6897f0a08f977f9147b2a8b13997ad87}} 
+int($\ast$ {\bfseries collision\+\_\+test} )(struct \mbox{\hyperlink{structprotego__s}{protego\+\_\+s}} $\ast$$\ast$, int, int, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$)
+\item 
+\mbox{\Hypertarget{structprotego__s_a10da8ffc02ba2b898aa1013c4cc32051}\label{structprotego__s_a10da8ffc02ba2b898aa1013c4cc32051}} 
+void($\ast$ {\bfseries destroy} )(struct \mbox{\hyperlink{structprotego__s}{protego\+\_\+s}} $\ast$$\ast$)
+\item 
+\mbox{\Hypertarget{structprotego__s_a730092d5e641c8443e2d6e59d142347d}\label{structprotego__s_a730092d5e641c8443e2d6e59d142347d}} 
+int {\bfseries timer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Structure du sort protego\+\_\+t contanenant toutes les informations. 
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{protego_8h}{protego.\+h}}\end{DoxyCompactItemize}

@@ -35,10 +35,13 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
 					return QUIT;
 				break;
                 case SDL_MOUSEBUTTONDOWN:
+                    //Si clique gauche on déplace le personnage
                     if(event.button.button == SDL_BUTTON_LEFT){
                         SDL_GetMouseState(&(monPerso->pos_x_click), &(monPerso->pos_y_click));
                         monPerso->pos_x_click -= 50;
                         monPerso->pos_y_click -= 50;
+                    
+                    //Si clique droit on lance le sort sélectionné
                     }else if(event.button.button == SDL_BUTTON_RIGHT && monPerso->createSort[monPerso->numSort].sort == NULL && (SDL_GetTicks() - monPerso->createSort[monPerso->numSort].timer >= 3000)){
                         int x, y;
                         SDL_GetMouseState(&x, &y);
@@ -47,6 +50,7 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
                     }
                 break;
                 case SDL_KEYDOWN:
+                    //Sélection des sort + recharge mana et pv
                     if(keyboard_state_array[SDL_SCANCODE_1]){
                         monPerso->numSort = 0;
                     }else if(keyboard_state_array[SDL_SCANCODE_2]){
@@ -71,10 +75,12 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
 
     update_hud_ingame(win, images, monPerso);
 
+    //update du bot
     rand_click_bot(mannequin);
     updatePosition(win, mannequin, images, mannequin->pos_x_click, mannequin->pos_y_click, 0.1);
     update_hud_ingame_ennemie(win, images, text, mannequin, font);
 
+    //appel des méthodes des sort du joueurs
     for(int i = 0; i < NB_SORT; i++){
         if(monPerso->createSort[i].sort != NULL){
             if(monPerso->createSort[i].sort->deplacement != NULL)

@@ -5,8 +5,10 @@ digraph "test" {
   subgraph clusterdir_13e138d54eb8818da29c3992edef070a {
     graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_13e138d54eb8818da29c3992edef070a.html"];
     dir_13e138d54eb8818da29c3992edef070a [shape=plaintext label="test"];
+    dir_6fbb7c0568e9f0e6ac109019026bcc62 [shape=box label="test_svg" color="black" fillcolor="white" style="filled" URL="dir_6fbb7c0568e9f0e6ac109019026bcc62.html"];
     dir_6f25de7efed268321409c7b29615c3a6 [shape=box label="test_text" color="black" fillcolor="white" style="filled" URL="dir_6f25de7efed268321409c7b29615c3a6.html"];
   }
   dir_97aefd0d527b934f1d99a682da8fe6a9 [shape=box label="lib" URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"];
-  dir_6f25de7efed268321409c7b29615c3a6->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="1", labeldistance=1.5 headhref="dir_000013_000003.html"];
+  dir_6fbb7c0568e9f0e6ac109019026bcc62->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="1", labeldistance=1.5 headhref="dir_000014_000003.html"];
+  dir_6f25de7efed268321409c7b29615c3a6->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="1", labeldistance=1.5 headhref="dir_000015_000003.html"];
 }

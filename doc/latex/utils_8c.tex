@@ -5,18 +5,22 @@
 Fonctions utiles pour les sockets.  
 
 
-{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../lib/sdl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../lib/sort.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init.\+h\char`\"{}}\newline
 Graphe des dépendances par inclusion de utils.\+c\+:
 % FIG 0
 \doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{utils_8c_af3f6b0b2e73c1fa4e9e1eddaba489550}{send\+\_\+all}} (S\+O\+C\+K\+ET $\ast$clients, S\+O\+C\+K\+ET sender, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$joueur, int nb\+\_\+client)
-\begin{DoxyCompactList}\small\item\em Envoie de socket à tous les clients en dehors du sender. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{utils_8c_a341eeeff71cd4ee3d615f18b575ae0ec}\label{utils_8c_a341eeeff71cd4ee3d615f18b575ae0ec}} 
+void {\bfseries send\+\_\+all} (S\+O\+C\+K\+ET $\ast$clients, S\+O\+C\+K\+ET sender, \mbox{\hyperlink{structsocket__s}{socket\+\_\+t}} $\ast$joueur, int nb\+\_\+client)
+\item 
 void \mbox{\hyperlink{utils_8c_af44d72ffb9e53ae43ba194dcc1d81f1f}{remove\+\_\+client}} (S\+O\+C\+K\+ET $\ast$clients, S\+O\+C\+K\+ET client, int $\ast$nb\+\_\+client)
 \begin{DoxyCompactList}\small\item\em Retire un client du server. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{utils_8c_a78ac505484f1723cd1b45cf6be28640a}{read\+Data}} (S\+O\+C\+K\+ET socket, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$joueur)
-\begin{DoxyCompactList}\small\item\em Fonction de lecture d\textquotesingle{}une socket. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{utils_8c_a7f28bbef90fe3e05efd2675e1ca3db45}\label{utils_8c_a7f28bbef90fe3e05efd2675e1ca3db45}} 
+void {\bfseries read\+Data} (S\+O\+C\+K\+ET socket, \mbox{\hyperlink{structsocket__s}{socket\+\_\+t}} $\ast$joueur)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -34,26 +38,6 @@ C\+O\+L\+L\+ET Matthieu
 
 
 \doxysubsection{Documentation des fonctions}
-\mbox{\Hypertarget{utils_8c_a78ac505484f1723cd1b45cf6be28640a}\label{utils_8c_a78ac505484f1723cd1b45cf6be28640a}} 
-\index{utils.c@{utils.c}!readData@{readData}}
-\index{readData@{readData}!utils.c@{utils.c}}
-\doxysubsubsection{\texorpdfstring{readData()}{readData()}}
-{\footnotesize\ttfamily void read\+Data (\begin{DoxyParamCaption}\item[{S\+O\+C\+K\+ET}]{socket,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{joueur }\end{DoxyParamCaption})}
-
-
-
-Fonction de lecture d\textquotesingle{}une socket. 
-
-
-\begin{DoxyParams}{Paramètres}
-{\em socket} & Socket du client qui envoie la donnée \\
-\hline
-{\em joueur} & Pointeur du joueur à modifier\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Renvoie}
-Ne retourne rien 
-\end{DoxyReturn}
 \mbox{\Hypertarget{utils_8c_af44d72ffb9e53ae43ba194dcc1d81f1f}\label{utils_8c_af44d72ffb9e53ae43ba194dcc1d81f1f}} 
 \index{utils.c@{utils.c}!remove\_client@{remove\_client}}
 \index{remove\_client@{remove\_client}!utils.c@{utils.c}}
@@ -69,30 +53,6 @@ Retire un client du server.
 {\em clients} & Tous les clients connectés au server \\
 \hline
 {\em client} & Client a retirer \\
-\hline
-{\em nb\+\_\+client} & Nombre de client connectés au server\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Renvoie}
-Ne retourne rien 
-\end{DoxyReturn}
-\mbox{\Hypertarget{utils_8c_af3f6b0b2e73c1fa4e9e1eddaba489550}\label{utils_8c_af3f6b0b2e73c1fa4e9e1eddaba489550}} 
-\index{utils.c@{utils.c}!send\_all@{send\_all}}
-\index{send\_all@{send\_all}!utils.c@{utils.c}}
-\doxysubsubsection{\texorpdfstring{send\_all()}{send\_all()}}
-{\footnotesize\ttfamily void send\+\_\+all (\begin{DoxyParamCaption}\item[{S\+O\+C\+K\+ET $\ast$}]{clients,  }\item[{S\+O\+C\+K\+ET}]{sender,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{joueur,  }\item[{int}]{nb\+\_\+client }\end{DoxyParamCaption})}
-
-
-
-Envoie de socket à tous les clients en dehors du sender. 
-
-
-\begin{DoxyParams}{Paramètres}
-{\em clients} & Tous les clients connectés au server \\
-\hline
-{\em sender} & Client qui a envoyé le socket \\
-\hline
-{\em joueur} & Donnée à transmettre à tous les clients \\
 \hline
 {\em nb\+\_\+client} & Nombre de client connectés au server\\
 \hline

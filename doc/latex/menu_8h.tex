@@ -12,6 +12,8 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 \item 
 void \mbox{\hyperlink{menu_8h_a72a4ba9c933a688789ead21550b9d8d0}{create\+Button}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, int posX, int posY, int rectW, int rectH, const char $\ast$texte, T\+T\+F\+\_\+\+Font $\ast$font\+Button, const char color)
 \begin{DoxyCompactList}\small\item\em Fonction de création d\textquotesingle{}un bouton sur la fenêtre en fonction d\textquotesingle{}une position donnée, d\textquotesingle{}une dimension, d\textquotesingle{}un texte, d\textquotesingle{}une police et d\textquotesingle{}une couleur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu_8h_a310e85cb75bb1093e578dc5be058ee60}{zone\+\_\+detect}} (int x, int y, int w, int h, int mouseX, int mouseY)
+\begin{DoxyCompactList}\small\item\em Fonction de détection de zone de la souris. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} \mbox{\hyperlink{menu_8h_a5e6ba896e144ff35a8536190c2e129ef}{home\+\_\+state}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso, T\+T\+F\+\_\+\+Font $\ast$font)
 \begin{DoxyCompactList}\small\item\em Fonction état du jeu en mode menu principal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -87,4 +89,32 @@ Fonction état du jeu en mode menu principal.
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
 Soit son propre état pour y rester, soit un autre pour changer d\textquotesingle{}état dans la suite du programme. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{menu_8h_a310e85cb75bb1093e578dc5be058ee60}\label{menu_8h_a310e85cb75bb1093e578dc5be058ee60}} 
+\index{menu.h@{menu.h}!zone\_detect@{zone\_detect}}
+\index{zone\_detect@{zone\_detect}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{zone\_detect()}{zone\_detect()}}
+{\footnotesize\ttfamily static int zone\+\_\+detect (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{mouseX,  }\item[{int}]{mouseY }\end{DoxyParamCaption})}
+
+
+
+Fonction de détection de zone de la souris. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & \mbox{\hyperlink{structPosition}{Position}} en X en haut à gauche de la zone à tester. \\
+\hline
+{\em y} & \mbox{\hyperlink{structPosition}{Position}} en Y en haut à gauche de la zone à tester. \\
+\hline
+{\em w} & Largeur de la zone. \\
+\hline
+{\em h} & Hauteur de la zone. \\
+\hline
+{\em mouseX} & \mbox{\hyperlink{structPosition}{Position}} en X de la souris. \\
+\hline
+{\em mouseY} & \mbox{\hyperlink{structPosition}{Position}} en Y de la souris.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si souris dans la zone, 0 sinon. 
 \end{DoxyReturn}

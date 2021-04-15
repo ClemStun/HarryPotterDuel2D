@@ -1,0 +1,75 @@
+\hypertarget{trait__donnees_8h}{}\doxysection{Référence du fichier lib/trait\+\_\+donnees.h}
+\label{trait__donnees_8h}\index{lib/trait\_donnees.h@{lib/trait\_donnees.h}}
+
+
+Header de \mbox{\hyperlink{trait__donnees_8c}{trait\+\_\+donnees.\+c}}.  
+
+
+{\ttfamily \#include \char`\"{}player.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de trait\+\_\+donnees.\+h\+:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 1
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$ \mbox{\hyperlink{trait__donnees_8h_a53fec180fdf83acde886a703299fdced}{accueil\+\_\+connexion}} (\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structcd__t}{cd\+\_\+t}} set\+Sort\mbox{[}$\,$\mbox{]}, char fname\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}accueil de la connexion à un personnage sauvegardé ou création d\textquotesingle{}un personnage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{trait__donnees_8h_a5f47660c931b21f6759f46ab64a04f14}{accueil\+\_\+deconnexion}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso, char fname\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}accueil de la deconnexion du jeu avec le choix de sauvergarder ou non. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Header de \mbox{\hyperlink{trait__donnees_8c}{trait\+\_\+donnees.\+c}}. 
+
+\begin{DoxyAuthor}{Auteur}
+C\+O\+U\+T\+A\+NT Hugo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14 feb 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{trait__donnees_8h_a53fec180fdf83acde886a703299fdced}\label{trait__donnees_8h_a53fec180fdf83acde886a703299fdced}} 
+\index{trait\_donnees.h@{trait\_donnees.h}!accueil\_connexion@{accueil\_connexion}}
+\index{accueil\_connexion@{accueil\_connexion}!trait\_donnees.h@{trait\_donnees.h}}
+\doxysubsubsection{\texorpdfstring{accueil\_connexion()}{accueil\_connexion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$ accueil\+\_\+connexion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{\mbox{\hyperlink{structcd__t}{cd\+\_\+t}}}]{set\+Sort\mbox{[}$\,$\mbox{]},  }\item[{char}]{fname\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Fonction d\textquotesingle{}accueil de la connexion à un personnage sauvegardé ou création d\textquotesingle{}un personnage. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em images} & Pointeur sur une structure images\+\_\+t, bibliothèque de textures des images. \\
+\hline
+{\em set\+Sort} & Tableau de sort d\textquotesingle{}un personnage. \\
+\hline
+{\em fname} & Chaine de caractere du fichier où se trouve les sauvegardes.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+p Pointeur sur une structure \mbox{\hyperlink{structplayer__s}{player\+\_\+s}} étant le nouveau personnage créé. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{trait__donnees_8h_a5f47660c931b21f6759f46ab64a04f14}\label{trait__donnees_8h_a5f47660c931b21f6759f46ab64a04f14}} 
+\index{trait\_donnees.h@{trait\_donnees.h}!accueil\_deconnexion@{accueil\_deconnexion}}
+\index{accueil\_deconnexion@{accueil\_deconnexion}!trait\_donnees.h@{trait\_donnees.h}}
+\doxysubsubsection{\texorpdfstring{accueil\_deconnexion()}{accueil\_deconnexion()}}
+{\footnotesize\ttfamily void accueil\+\_\+deconnexion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mon\+Perso,  }\item[{char}]{fname\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Fonction d\textquotesingle{}accueil de la deconnexion du jeu avec le choix de sauvergarder ou non. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em mon\+Perso} & Pointeur sur une structure player\+\_\+t représentant les infos d\textquotesingle{}un personnage à sauvegarder. \\
+\hline
+{\em fname} & Chaine de caractere du fichier où se trouve les sauvegardes. \\
+\hline
+\end{DoxyParams}

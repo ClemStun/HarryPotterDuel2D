@@ -22,9 +22,8 @@ Graphe des dépendances par inclusion de hud\+\_\+ingame.\+c\+:
 \item 
 void \mbox{\hyperlink{hud__ingame_8c_af699f058f7933a06045fe6df37d90dd2}{update\+\_\+hud\+\_\+ingame}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso)
 \begin{DoxyCompactList}\small\item\em Mise à jour de l\textquotesingle{}H\+UD du jeu (barre de vie et de mana, barre de sorts, etc). \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{hud__ingame_8c_acc9f287d8b546dba62e9dc64fd73e5bb}\label{hud__ingame_8c_acc9f287d8b546dba62e9dc64fd73e5bb}} 
-void {\bfseries update\+\_\+hud\+\_\+ingame\+\_\+ennemie} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$ennemie, T\+T\+F\+\_\+\+Font $\ast$font)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{hud__ingame_8c_acc9f287d8b546dba62e9dc64fd73e5bb}{update\+\_\+hud\+\_\+ingame\+\_\+ennemie}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$ennemie, T\+T\+F\+\_\+\+Font $\ast$font)
+\begin{DoxyCompactList}\small\item\em Mise à jour de l\textquotesingle{}H\+UD du jeu pour les informations ennemies (barre de vie, pseudo, etc). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -59,5 +58,28 @@ Mise à jour de l\textquotesingle{}H\+UD du jeu (barre de vie et de mana, barre 
 {\em images} & Pointeur sur une structure images\+\_\+t, bibliothèque de textures des images. \\
 \hline
 {\em mon\+Perso} & Pointeur sur une structure player\+\_\+t représentant les infos d\textquotesingle{}un personnage. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{hud__ingame_8c_acc9f287d8b546dba62e9dc64fd73e5bb}\label{hud__ingame_8c_acc9f287d8b546dba62e9dc64fd73e5bb}} 
+\index{hud\_ingame.c@{hud\_ingame.c}!update\_hud\_ingame\_ennemie@{update\_hud\_ingame\_ennemie}}
+\index{update\_hud\_ingame\_ennemie@{update\_hud\_ingame\_ennemie}!hud\_ingame.c@{hud\_ingame.c}}
+\doxysubsubsection{\texorpdfstring{update\_hud\_ingame\_ennemie()}{update\_hud\_ingame\_ennemie()}}
+{\footnotesize\ttfamily void update\+\_\+hud\+\_\+ingame\+\_\+ennemie (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$}]{text,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{ennemie,  }\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font }\end{DoxyParamCaption})}
+
+
+
+Mise à jour de l\textquotesingle{}H\+UD du jeu pour les informations ennemies (barre de vie, pseudo, etc). 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em images} & Pointeur sur une structure images\+\_\+t, bibliothèque de textures des images. \\
+\hline
+{\em text} & Pointeur sur une structure \mbox{\hyperlink{structtext__s}{text\+\_\+s}} regroupant les différents textes déjà créer et leur texture. \\
+\hline
+{\em ennemie} & Pointeur sur une structure player\+\_\+t représentant les infos d\textquotesingle{}un personnage. \\
+\hline
+{\em font} & Pointeur sur une police de texte. \\
 \hline
 \end{DoxyParams}

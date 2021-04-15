@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['t_5fetat_56',['t_etat',['../menus_8h.html#a0f3684078562a23c3ea21266d10cf275',1,'menus.h']]],
-  ['text_5fs_57',['text_s',['../structtext__s.html',1,'']]],
-  ['train_2ec_58',['train.c',['../train_8c.html',1,'']]],
-  ['train_2eh_59',['train.h',['../train_8h.html',1,'']]]
+  ['readme_55',['README',['../md_README.html',1,'']]],
+  ['rand_5fclick_5fbot_56',['rand_click_bot',['../player_8h.html#a955601adedc62e9b14f40e5b2dff99a1',1,'rand_click_bot(player_t *mannequin):&#160;player.c'],['../player_8c.html#a955601adedc62e9b14f40e5b2dff99a1',1,'rand_click_bot(player_t *mannequin):&#160;player.c']]],
+  ['remove_5fclient_57',['remove_client',['../utils_8c.html#af44d72ffb9e53ae43ba194dcc1d81f1f',1,'utils.c']]]
 ];

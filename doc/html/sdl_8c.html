@@ -100,6 +100,9 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a6d45f86589d9728613bcb4af451c462e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdl_8c.html#a6d45f86589d9728613bcb4af451c462e">LoadImages</a> (SDL_Renderer *pRenderer, <a class="el" href="structimages__s.html">images_t</a> *images)</td></tr>
 <tr class="memdesc:a6d45f86589d9728613bcb4af451c462e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui créer la texture d'images présentes dans un fichier, et les range dans une structure images_t.  <a href="sdl_8c.html#a6d45f86589d9728613bcb4af451c462e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6d45f86589d9728613bcb4af451c462e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98a5ae11c708cbed9e128f5a7379eff"><td class="memItemLeft" align="right" valign="top"><a id="ae98a5ae11c708cbed9e128f5a7379eff"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadImages_for_test</b> (SDL_Renderer *pRenderer, <a class="el" href="structimages__s.html">images_t</a> *images)</td></tr>
+<tr class="separator:ae98a5ae11c708cbed9e128f5a7379eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b2087565b1bd1650e768180934df1df"><td class="memItemLeft" align="right" valign="top">SDL_Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sdl_8c.html#a7b2087565b1bd1650e768180934df1df">searchTexture</a> (<a class="el" href="structimages__s.html">images_t</a> *images, char *nom)</td></tr>
 <tr class="memdesc:a7b2087565b1bd1650e768180934df1df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de recherche de texture dans la structure image_s à partir d'un nom.  <a href="sdl_8c.html#a7b2087565b1bd1650e768180934df1df">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a7b2087565b1bd1650e768180934df1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -374,7 +377,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawImage</b> (SDL_Re
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>La texture trouvée. </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La texture trouvée ou NULL si non trouvée. </dd></dl>
 
 </div>
 </div>

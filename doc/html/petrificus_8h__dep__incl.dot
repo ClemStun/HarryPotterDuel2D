@@ -5,5 +5,7 @@ digraph "lib/petrificus.h"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="lib/petrificus.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Header de petrificus.c."];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="src/player/spell/petrificus.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$petrificus_8c.html",tooltip="Méthode de l'objet petrificus_t."];
+  Node2 [label="src/client/main_client.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main__client_8c.html",tooltip="Fonction principale du jeu."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="src/player/spell/petrificus.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$petrificus_8c.html",tooltip="Méthode de l'objet petrificus_t."];
 }

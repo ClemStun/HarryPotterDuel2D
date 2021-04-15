@@ -24,8 +24,9 @@ static int \mbox{\hyperlink{incendio_8c_ad2d14e08a9343e2a34ea1b3fc303f746}{colli
 \begin{DoxyCompactList}\small\item\em Test des collisions entre un sort incendio\+\_\+t et un player\+\_\+t player. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{incendio_8c_a9e6d37b3335c75e93c9a63d244a07ef8}{destroy}} (\mbox{\hyperlink{structincendio__s}{incendio\+\_\+t}} $\ast$$\ast$)
 \begin{DoxyCompactList}\small\item\em Desttruction d\textquotesingle{}un incendio\+\_\+t. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structincendio__s}{incendio\+\_\+t}} $\ast$ \mbox{\hyperlink{incendio_8c_a3a1669cd1a1c1d41331b38302317c214}{create\+Incendio}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$player)
-\begin{DoxyCompactList}\small\item\em Création d\textquotesingle{}un sort incendio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{incendio_8c_a05d0dbbc05dc4cddae4747f0777cae9e}\label{incendio_8c_a05d0dbbc05dc4cddae4747f0777cae9e}} 
+\mbox{\hyperlink{structincendio__s}{incendio\+\_\+t}} $\ast$ {\bfseries create\+Incendio} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$player, int x, int y)
+\item 
 static void \mbox{\hyperlink{incendio_8c_afffb20c73f4074305b297a066986fbed}{display\+\_\+zone}} (\mbox{\hyperlink{structincendio__s}{incendio\+\_\+t}} $\ast$spell, \mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images)
 \begin{DoxyCompactList}\small\item\em Affichage de la zone au sol pour un incendio\+\_\+t. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{incendio_8c_aa66f63c022b2072600d72af43ae9f021}{collision\+\_\+test\+\_\+zone}} (\mbox{\hyperlink{structincendio__s}{incendio\+\_\+t}} $\ast$$\ast$spell, int x, int y, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$player)
@@ -94,24 +95,6 @@ Test des collisions entre la zone au sol d\textquotesingle{}un sort incendio\+\_
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
 Renvoie 0 s\textquotesingle{}il y a eu collision, 1 sinon. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{incendio_8c_a3a1669cd1a1c1d41331b38302317c214}\label{incendio_8c_a3a1669cd1a1c1d41331b38302317c214}} 
-\index{incendio.c@{incendio.c}!createIncendio@{createIncendio}}
-\index{createIncendio@{createIncendio}!incendio.c@{incendio.c}}
-\doxysubsubsection{\texorpdfstring{createIncendio()}{createIncendio()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structincendio__s}{incendio\+\_\+t}}$\ast$ create\+Incendio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{player }\end{DoxyParamCaption})}
-
-
-
-Création d\textquotesingle{}un sort incendio. 
-
-
-\begin{DoxyParams}{Paramètres}
-{\em player} & Pointeur sur le joueur player\+\_\+t qui lance le sort. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Renvoie}
-Renvoie le sort créé qui est un élément de type incendio\+\_\+t. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{incendio_8c_a3b363c650a406272a0e130646cddcc31}\label{incendio_8c_a3b363c650a406272a0e130646cddcc31}} 
 \index{incendio.c@{incendio.c}!deplacement@{deplacement}}

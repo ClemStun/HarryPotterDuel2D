@@ -24,8 +24,9 @@ static int \mbox{\hyperlink{expelliarmus_8c_a2b98538e037137e8b2f82c9821b7e6f4}{c
 \begin{DoxyCompactList}\small\item\em Test des collisions entre un sort expelliarmus\+\_\+t et un player\+\_\+t player. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{expelliarmus_8c_a195c5e7d522b587ba1e55c0170007a80}{destroy}} (\mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$$\ast$)
 \begin{DoxyCompactList}\small\item\em Desttruction d\textquotesingle{}un expelliarmus\+\_\+t. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$ \mbox{\hyperlink{expelliarmus_8c_a55045d83e7bb9892c403eec7d26b2905}{create\+Expelliarmus}} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$player)
-\begin{DoxyCompactList}\small\item\em Création d\textquotesingle{}un sort expelliarmus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{expelliarmus_8c_ad984f9f6a3d8bb22eedde27855f548ee}\label{expelliarmus_8c_ad984f9f6a3d8bb22eedde27855f548ee}} 
+\mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}} $\ast$ {\bfseries create\+Expelliarmus} (\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$player, int x, int y)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -66,24 +67,6 @@ Test des collisions entre un sort expelliarmus\+\_\+t et un player\+\_\+t player
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
 Renvoie 0 s\textquotesingle{}il y a eu collision, 1 sinon. 
-\end{DoxyReturn}
-\mbox{\Hypertarget{expelliarmus_8c_a55045d83e7bb9892c403eec7d26b2905}\label{expelliarmus_8c_a55045d83e7bb9892c403eec7d26b2905}} 
-\index{expelliarmus.c@{expelliarmus.c}!createExpelliarmus@{createExpelliarmus}}
-\index{createExpelliarmus@{createExpelliarmus}!expelliarmus.c@{expelliarmus.c}}
-\doxysubsubsection{\texorpdfstring{createExpelliarmus()}{createExpelliarmus()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structexpelliarmus__s}{expelliarmus\+\_\+t}}$\ast$ create\+Expelliarmus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{player }\end{DoxyParamCaption})}
-
-
-
-Création d\textquotesingle{}un sort expelliarmus. 
-
-
-\begin{DoxyParams}{Paramètres}
-{\em player} & Pointeur sur le joueur player\+\_\+t qui lance le sort. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Renvoie}
-Renvoie le sort créé qui est un élément de type expelliarmus\+\_\+t. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{expelliarmus_8c_ab0ec819ce0ed517afcf65ec99a138c62}\label{expelliarmus_8c_ab0ec819ce0ed517afcf65ec99a138c62}} 
 \index{expelliarmus.c@{expelliarmus.c}!deplacement@{deplacement}}

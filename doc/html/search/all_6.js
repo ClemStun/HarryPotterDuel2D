@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['images_5fs_24',['images_s',['../structimages__s.html',1,'']]],
-  ['incendio_2ec_25',['incendio.c',['../incendio_8c.html',1,'']]],
-  ['incendio_2eh_26',['incendio.h',['../incendio_8h.html',1,'']]],
-  ['incendio_5fs_27',['incendio_s',['../structincendio__s.html',1,'']]],
-  ['init_5fstruct_5ftext_28',['init_struct_text',['../sdl_8h.html#a1213cb7f17245d3c40b6af37c448e2ae',1,'init_struct_text():&#160;sdl.c'],['../sdl_8c.html#a27bf9a862bf69f9d0554670bb224eb70',1,'init_struct_text():&#160;sdl.c']]],
-  ['initialize_5fsdl_29',['Initialize_sdl',['../sdl_8h.html#a37d8093aee94524aaf76edaa53e2a786',1,'Initialize_sdl():&#160;sdl.c'],['../sdl_8c.html#a0e9760359fc5f7eb266fe5a3b7c105fd',1,'Initialize_sdl():&#160;sdl.c']]]
+  ['game_2ec_23',['game.c',['../game_8c.html',1,'']]],
+  ['game_2eh_24',['game.h',['../game_8h.html',1,'']]],
+  ['game_5fstate_25',['game_state',['../game_8h.html#afab08395b5ecc990c503963a767d6969',1,'game_state(window *win, images_t *images, player_t *monPerso, player_t *mannequin, int socketClient, socket_t *j1):&#160;game.c'],['../game_8c.html#a5e042bdd13c6a8222a453dfd9ec3aeaf',1,'game_state(window *win, images_t *images, player_t *monPerso, player_t *j2, int socketClient, socket_t *j1):&#160;game.c']]]
 ];

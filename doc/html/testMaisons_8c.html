@@ -1,0 +1,1053 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Harry Potter Battle 2D: Référence du fichier src/states/testMaisons.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Harry Potter Battle 2D
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_61a31ff85c95043c98241b02dc2a1804.html">states</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier testMaisons.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Déroulement du jeu dans l'état TEST_M.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="menus_8h_source.html">../../lib/menus.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de testMaisons.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="testMaisons_8c__incl.png" border="0" usemap="#src_2states_2testMaisons_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a2cd109632a6dcccaa80b43561b1ab700"><td class="memItemLeft" align="right" valign="top"><a id="a2cd109632a6dcccaa80b43561b1ab700"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SCREEN_WIDTH</b>&#160;&#160;&#160;1200</td></tr>
+<tr class="separator:a2cd109632a6dcccaa80b43561b1ab700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6974d08a74da681b3957b2fead2608b8"><td class="memItemLeft" align="right" valign="top"><a id="a6974d08a74da681b3957b2fead2608b8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SCREEN_HEIGHT</b>&#160;&#160;&#160;600</td></tr>
+<tr class="separator:a6974d08a74da681b3957b2fead2608b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ac16fe7fb45325feb98e89b8b115f16c2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testMaisons_8c.html#ac16fe7fb45325feb98e89b8b115f16c2">begin_test</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font, int mouseX, int mouseY, int click)</td></tr>
+<tr class="memdesc:ac16fe7fb45325feb98e89b8b115f16c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de début du test.  <a href="testMaisons_8c.html#ac16fe7fb45325feb98e89b8b115f16c2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac16fe7fb45325feb98e89b8b115f16c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5888b7049944d47e84516ebf3692a1d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testMaisons_8c.html#af5888b7049944d47e84516ebf3692a1d">test_un</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font, int house[], char choix)</td></tr>
+<tr class="memdesc:af5888b7049944d47e84516ebf3692a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de la premiere page du test.  <a href="testMaisons_8c.html#af5888b7049944d47e84516ebf3692a1d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af5888b7049944d47e84516ebf3692a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e14b28e95c95b7b023dac0de203b915"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testMaisons_8c.html#a2e14b28e95c95b7b023dac0de203b915">test_deux</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font, int house[], char choix)</td></tr>
+<tr class="memdesc:a2e14b28e95c95b7b023dac0de203b915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de la seconde page du test.  <a href="testMaisons_8c.html#a2e14b28e95c95b7b023dac0de203b915">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2e14b28e95c95b7b023dac0de203b915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386343648731352c230ad183c03a3ccb"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testMaisons_8c.html#a386343648731352c230ad183c03a3ccb">test_trois</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font, int house[], char choix)</td></tr>
+<tr class="memdesc:a386343648731352c230ad183c03a3ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de la troisieme page du test.  <a href="testMaisons_8c.html#a386343648731352c230ad183c03a3ccb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a386343648731352c230ad183c03a3ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec201efaf8a75c356208e3e647e24b72"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testMaisons_8c.html#aec201efaf8a75c356208e3e647e24b72">test_quatre</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font, int house[], char choix)</td></tr>
+<tr class="memdesc:aec201efaf8a75c356208e3e647e24b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de la quatrieme page du test.  <a href="testMaisons_8c.html#aec201efaf8a75c356208e3e647e24b72">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aec201efaf8a75c356208e3e647e24b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aec13956ef7b88a9ad85616e67045f5"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testMaisons_8c.html#a6aec13956ef7b88a9ad85616e67045f5">test_cinq</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font, int house[], char choix)</td></tr>
+<tr class="memdesc:a6aec13956ef7b88a9ad85616e67045f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de la cinquieme page du test.  <a href="testMaisons_8c.html#a6aec13956ef7b88a9ad85616e67045f5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6aec13956ef7b88a9ad85616e67045f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c3dacf7b6fa1dbbae6cd8a21ef8cd8e"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testMaisons_8c.html#a2c3dacf7b6fa1dbbae6cd8a21ef8cd8e">test_six</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font, int house[], char choix)</td></tr>
+<tr class="memdesc:a2c3dacf7b6fa1dbbae6cd8a21ef8cd8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de la sixieme page du test.  <a href="testMaisons_8c.html#a2c3dacf7b6fa1dbbae6cd8a21ef8cd8e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2c3dacf7b6fa1dbbae6cd8a21ef8cd8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f57e09720fe43eda8919b9bfc40561"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testMaisons_8c.html#a34f57e09720fe43eda8919b9bfc40561">test_sept</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font, int house[], char choix)</td></tr>
+<tr class="memdesc:a34f57e09720fe43eda8919b9bfc40561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de la septieme page du test.  <a href="testMaisons_8c.html#a34f57e09720fe43eda8919b9bfc40561">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a34f57e09720fe43eda8919b9bfc40561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06b2ce726ef6632304253f9a07b2b4ce"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testMaisons_8c.html#a06b2ce726ef6632304253f9a07b2b4ce">test_huit</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font, int house[], char choix)</td></tr>
+<tr class="memdesc:a06b2ce726ef6632304253f9a07b2b4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de la huitieme page du test.  <a href="testMaisons_8c.html#a06b2ce726ef6632304253f9a07b2b4ce">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a06b2ce726ef6632304253f9a07b2b4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacf4effbdc866de9c7c559e3f259ea84"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testMaisons_8c.html#aacf4effbdc866de9c7c559e3f259ea84">test_neuf</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font, int house[], char choix)</td></tr>
+<tr class="memdesc:aacf4effbdc866de9c7c559e3f259ea84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de la neuvieme page du test.  <a href="testMaisons_8c.html#aacf4effbdc866de9c7c559e3f259ea84">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aacf4effbdc866de9c7c559e3f259ea84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c5b9e9f45571660583be28143002f1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testMaisons_8c.html#a76c5b9e9f45571660583be28143002f1">test_dix</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font, int house[], char choix)</td></tr>
+<tr class="memdesc:a76c5b9e9f45571660583be28143002f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de la dixieme page du test.  <a href="testMaisons_8c.html#a76c5b9e9f45571660583be28143002f1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a76c5b9e9f45571660583be28143002f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abff976a5de50280495fd2dd10961e627"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testMaisons_8c.html#abff976a5de50280495fd2dd10961e627">final_test</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font, int house[], char choix)</td></tr>
+<tr class="memdesc:abff976a5de50280495fd2dd10961e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de la page finale du test qui sert uniquement en cas d'égalité.  <a href="testMaisons_8c.html#abff976a5de50280495fd2dd10961e627">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abff976a5de50280495fd2dd10961e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad632f5faa75df4897fb50dbf13aa2a74"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="testMaisons_8c.html#ad632f5faa75df4897fb50dbf13aa2a74">end_test</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font, int mouseX, int mouseY, int click, int house[], <a class="el" href="structplayer__s.html">player_t</a> *monPerso)</td></tr>
+<tr class="memdesc:ad632f5faa75df4897fb50dbf13aa2a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction de fin du test.  <a href="testMaisons_8c.html#ad632f5faa75df4897fb50dbf13aa2a74">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad632f5faa75df4897fb50dbf13aa2a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5568e6890657b11c601272a64c952bda"><td class="memItemLeft" align="right" valign="top"><a id="a5568e6890657b11c601272a64c952bda"></a>
+<a class="el" href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>test_m_state</b> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, <a class="el" href="structplayer__s.html">player_t</a> *monPerso, TTF_Font *font)</td></tr>
+<tr class="separator:a5568e6890657b11c601272a64c952bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Déroulement du jeu dans l'état TEST_M. </p>
+<dl class="section author"><dt>Auteur</dt><dd>COUTANT Hugo </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>14 feb 2021 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ac16fe7fb45325feb98e89b8b115f16c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac16fe7fb45325feb98e89b8b115f16c2">&#9670;&nbsp;</a></span>begin_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int begin_test </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mouseX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mouseY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>click</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction de début du test. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère. </td></tr>
+    <tr><td class="paramname">mouseX</td><td><a class="el" href="structPosition.html">Position</a> en X de la souris. </td></tr>
+    <tr><td class="paramname">mouseY</td><td><a class="el" href="structPosition.html">Position</a> en Y de la souris. </td></tr>
+    <tr><td class="paramname">click</td><td>Valeur du click, 1 = click detecté, 0 sinon.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état donc 0 ici, soit 1 pour passer à la page suivante. </dd></dl>
+
+</div>
+</div>
+<a id="ad632f5faa75df4897fb50dbf13aa2a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad632f5faa75df4897fb50dbf13aa2a74">&#9670;&nbsp;</a></span>end_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int end_test </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mouseX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mouseY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>click</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>house</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td>
+          <td class="paramname"><em>monPerso</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction de fin du test. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère. </td></tr>
+    <tr><td class="paramname">mouseX</td><td><a class="el" href="structPosition.html">Position</a> en X de la souris. </td></tr>
+    <tr><td class="paramname">mouseY</td><td><a class="el" href="structPosition.html">Position</a> en Y de la souris. </td></tr>
+    <tr><td class="paramname">click</td><td>Valeur du click, 1 = click detecté, 0 sinon. </td></tr>
+    <tr><td class="paramname">house</td><td>Tableau état des valeurs de chaque maison suite aux réponses du test. </td></tr>
+    <tr><td class="paramname">monPerso</td><td>Pointeur sur une structure player_t représentant les infos d'un personnage.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état donc 12 ici, soit 13 pour terminer le test et aller au menu du jeu. </dd></dl>
+
+</div>
+</div>
+<a id="abff976a5de50280495fd2dd10961e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abff976a5de50280495fd2dd10961e627">&#9670;&nbsp;</a></span>final_test()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int final_test </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>house</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>choix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction de la page finale du test qui sert uniquement en cas d'égalité. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère. </td></tr>
+    <tr><td class="paramname">house</td><td>Tableau état des valeurs de chaque maison suite aux réponses du test. </td></tr>
+    <tr><td class="paramname">choix</td><td>Touche de réponse appuyé sur le clavier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état donc 11 ici, soit 12 pour passer à la page suivante. </dd></dl>
+
+</div>
+</div>
+<a id="a6aec13956ef7b88a9ad85616e67045f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aec13956ef7b88a9ad85616e67045f5">&#9670;&nbsp;</a></span>test_cinq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int test_cinq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>house</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>choix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction de la cinquieme page du test. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère. </td></tr>
+    <tr><td class="paramname">house</td><td>Tableau état des valeurs de chaque maison suite aux réponses du test. </td></tr>
+    <tr><td class="paramname">choix</td><td>Touche de réponse appuyé sur le clavier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état donc 5 ici, soit 6 pour passer à la page suivante. </dd></dl>
+
+</div>
+</div>
+<a id="a2e14b28e95c95b7b023dac0de203b915"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e14b28e95c95b7b023dac0de203b915">&#9670;&nbsp;</a></span>test_deux()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int test_deux </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>house</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>choix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction de la seconde page du test. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère. </td></tr>
+    <tr><td class="paramname">house</td><td>Tableau état des valeurs de chaque maison suite aux réponses du test. </td></tr>
+    <tr><td class="paramname">choix</td><td>Touche de réponse appuyé sur le clavier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état donc 2 ici, soit 3 pour passer à la page suivante. </dd></dl>
+
+</div>
+</div>
+<a id="a76c5b9e9f45571660583be28143002f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c5b9e9f45571660583be28143002f1">&#9670;&nbsp;</a></span>test_dix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int test_dix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>house</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>choix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction de la dixieme page du test. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère. </td></tr>
+    <tr><td class="paramname">house</td><td>Tableau état des valeurs de chaque maison suite aux réponses du test. </td></tr>
+    <tr><td class="paramname">choix</td><td>Touche de réponse appuyé sur le clavier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état donc 10 ici, soit 11 pour passer à la page suivante. </dd></dl>
+
+</div>
+</div>
+<a id="a06b2ce726ef6632304253f9a07b2b4ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06b2ce726ef6632304253f9a07b2b4ce">&#9670;&nbsp;</a></span>test_huit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int test_huit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>house</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>choix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction de la huitieme page du test. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère. </td></tr>
+    <tr><td class="paramname">house</td><td>Tableau état des valeurs de chaque maison suite aux réponses du test. </td></tr>
+    <tr><td class="paramname">choix</td><td>Touche de réponse appuyé sur le clavier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état donc 8 ici, soit 9 pour passer à la page suivante. </dd></dl>
+
+</div>
+</div>
+<a id="aacf4effbdc866de9c7c559e3f259ea84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacf4effbdc866de9c7c559e3f259ea84">&#9670;&nbsp;</a></span>test_neuf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int test_neuf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>house</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>choix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction de la neuvieme page du test. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère. </td></tr>
+    <tr><td class="paramname">house</td><td>Tableau état des valeurs de chaque maison suite aux réponses du test. </td></tr>
+    <tr><td class="paramname">choix</td><td>Touche de réponse appuyé sur le clavier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état donc 9 ici, soit 10 pour passer à la page suivante. </dd></dl>
+
+</div>
+</div>
+<a id="aec201efaf8a75c356208e3e647e24b72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec201efaf8a75c356208e3e647e24b72">&#9670;&nbsp;</a></span>test_quatre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int test_quatre </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>house</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>choix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction de la quatrieme page du test. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère. </td></tr>
+    <tr><td class="paramname">house</td><td>Tableau état des valeurs de chaque maison suite aux réponses du test. </td></tr>
+    <tr><td class="paramname">choix</td><td>Touche de réponse appuyé sur le clavier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état donc 4 ici, soit 5 pour passer à la page suivante. </dd></dl>
+
+</div>
+</div>
+<a id="a34f57e09720fe43eda8919b9bfc40561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f57e09720fe43eda8919b9bfc40561">&#9670;&nbsp;</a></span>test_sept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int test_sept </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>house</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>choix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction de la septieme page du test. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère. </td></tr>
+    <tr><td class="paramname">house</td><td>Tableau état des valeurs de chaque maison suite aux réponses du test. </td></tr>
+    <tr><td class="paramname">choix</td><td>Touche de réponse appuyé sur le clavier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état donc 7 ici, soit 8 pour passer à la page suivante. </dd></dl>
+
+</div>
+</div>
+<a id="a2c3dacf7b6fa1dbbae6cd8a21ef8cd8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c3dacf7b6fa1dbbae6cd8a21ef8cd8e">&#9670;&nbsp;</a></span>test_six()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int test_six </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>house</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>choix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction de la sixieme page du test. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère. </td></tr>
+    <tr><td class="paramname">house</td><td>Tableau état des valeurs de chaque maison suite aux réponses du test. </td></tr>
+    <tr><td class="paramname">choix</td><td>Touche de réponse appuyé sur le clavier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état donc 6 ici, soit 7 pour passer à la page suivante. </dd></dl>
+
+</div>
+</div>
+<a id="a386343648731352c230ad183c03a3ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a386343648731352c230ad183c03a3ccb">&#9670;&nbsp;</a></span>test_trois()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int test_trois </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>house</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>choix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction de la troisieme page du test. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère. </td></tr>
+    <tr><td class="paramname">house</td><td>Tableau état des valeurs de chaque maison suite aux réponses du test. </td></tr>
+    <tr><td class="paramname">choix</td><td>Touche de réponse appuyé sur le clavier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état donc 3 ici, soit 4 pour passer à la page suivante. </dd></dl>
+
+</div>
+</div>
+<a id="af5888b7049944d47e84516ebf3692a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5888b7049944d47e84516ebf3692a1d">&#9670;&nbsp;</a></span>test_un()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int test_un </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
+          <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtext__s.html">text_t</a> *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TTF_Font *&#160;</td>
+          <td class="paramname"><em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>house</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>choix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fonction de la premiere page du test. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
+    <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère. </td></tr>
+    <tr><td class="paramname">house</td><td>Tableau état des valeurs de chaque maison suite aux réponses du test. </td></tr>
+    <tr><td class="paramname">choix</td><td>Touche de réponse appuyé sur le clavier.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état donc 1 ici, soit 2 pour passer à la page suivante. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
