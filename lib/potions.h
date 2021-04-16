@@ -10,4 +10,4 @@ char nomPotions[NB_POT][20] = {"Felix Felicis",
                                "Polynectar",
                                "Healing"};
 
-extern t_etat potion_state(void);
+extern t_etat potion_state(window *win, text_t * text, TTF_Font *font);

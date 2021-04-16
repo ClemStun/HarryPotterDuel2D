@@ -96,7 +96,7 @@ int main(int argc, char **argv){
                 etat_de_jeu = test_m_state(win, text, monPerso, font);
             break;
             case POTION:
-                etat_de_jeu = potion_state();
+                etat_de_jeu = potion_state(win, text, font);
             break;
         }
 

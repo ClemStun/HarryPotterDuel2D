@@ -23,8 +23,10 @@ SDL_Event event;
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 600
 
+
 #include "menu.h"
 #include "game.h"
 #include "train.h"
 #include "waiting.h"
 #include "testMaisons.h"
+#include "potions.h"
