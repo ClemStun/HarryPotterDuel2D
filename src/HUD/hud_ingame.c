@@ -1,9 +1,9 @@
 /**
  * \file hud_ingame.c
- * \brief Fonctions de déplacement.
+ * \brief Fonctions de generation d'interface.
  * \author COUTANT Hugo
- * \version 0.1
- * \date 14 feb 2021
+ * \version 1
+ * \date 17 avril 2021
  *
  */
 

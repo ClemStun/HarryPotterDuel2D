@@ -1,12 +1,13 @@
 /**
  * \file potion.c
  * \brief Menu de création de potions
- * \author COMTE Clément
- * \version 0.1
- * \date 14 feb 2021
+ * \author COMTE Clément & COUTANT Hugo
+ * \version 1
+ * \date 17 avril 2021
  *
  */
 #include "../../lib/menus.h"
+#include "../../lib/potions.h"
 #include "../../lib/ingredients.h"
 
 /**
@@ -30,10 +31,17 @@ int GetPotionIndex(int potion){
 }
 
 /**
- * \fn static void MakePotion(void)
+ * \fn static int MakePotion(window *win, text_t * text, TTF_Font *font, int mouseX, int mouseY, int click)
  * \brief Menu de création de potion
  *
- * \return Retourne rien.
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param mouseX Position en X de la souris.
+ * \param mouseY Position en Y de la souris.
+ * \param click Valeur du click, 1 = click detecté, 0 sinon.
+ *
+ * \return Retourne soit son propre état, soit un autre.
  */
 static
 int MakePotion(window *win, text_t * text, TTF_Font *font, int mouseX, int mouseY, int click){
@@ -133,6 +141,19 @@ int MakePotion(window *win, text_t * text, TTF_Font *font, int mouseX, int mouse
     return 1;
 }
 
+/**
+ * \fn static int AfficherPotion(window *win, text_t * text, TTF_Font *font, int mouseX, int mouseY, int click)
+ * \brief Menu d'affichage de potions
+ *
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ * \param mouseX Position en X de la souris.
+ * \param mouseY Position en Y de la souris.
+ * \param click Valeur du click, 1 = click detecté, 0 sinon.
+ *
+ * \return Retourne soit son propre état, soit un autre.
+ */
 static
 int AfficherPotion(window *win, text_t * text, TTF_Font *font, int mouseX, int mouseY, int click){
     static int noPotion = 1;
@@ -191,10 +212,14 @@ int AfficherPotion(window *win, text_t * text, TTF_Font *font, int mouseX, int m
 }
 
 /**
- * \fn extern t_etat potion_state()
+ * \fn extern t_etat potion_state(window *win, text_t * text, TTF_Font *font)
  * \brief Menu principal des potions choix entre potion, ingrédient et quitter
  *
- * \return Retourne le prochaine état du jeu
+ * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
+ * \param font Pointeur sur une police de caractère.
+ *
+ * \return Retourne soit son propre état soit le prochain état du jeu
  */
 extern
 t_etat potion_state(window *win, text_t * text, TTF_Font *font){

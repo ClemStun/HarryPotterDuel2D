@@ -2,8 +2,8 @@
  * \file incendio.h
  * \brief Méthode de l'objet incendio_t
  * \author Comte Clément
- * \version 0.1
- * \date 09 feb 2021
+ * \version 1
+ * \date 17 avril 2021
  *
  */
 

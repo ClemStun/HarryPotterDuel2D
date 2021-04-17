@@ -77,7 +77,4 @@ digraph "src/client/main_client.c"
   Node1 -> Node33 [color="midnightblue",fontsize="10",style="solid"];
   Node33 [label="../../lib/protego.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$protego_8h.html",tooltip="Méthode de l'objet protego_t."];
   Node33 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
-  Node1 -> Node34 [color="midnightblue",fontsize="10",style="solid"];
-  Node34 [label="math.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node1 -> Node24 [color="midnightblue",fontsize="10",style="solid"];
 }

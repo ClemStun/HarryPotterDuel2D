@@ -2,8 +2,8 @@
  * \file petrificus.c
  * \brief Méthode de l'objet petrificus_t
  * \author Comte Clément
- * \version 0.1
- * \date 09 feb 2021
+ * \version 1
+ * \date 17 avril 2021
  *
  */
 
@@ -128,7 +128,7 @@ int collision_test(petrificus_t ** spell, int x, int y, player_t * player){
     //si le sort touche le joueur
     if((((*spell)->pos_x + (*spell)->width >= player->pos_x) && ((*spell)->pos_x + (*spell)->width <= player->pos_x + 100)) || (((*spell)->pos_x >= player->pos_x) && ((*spell)->pos_x  <= player->pos_x + 100)))
         if((((*spell)->pos_y + (*spell)->height >= player->pos_y) && ((*spell)->pos_y + (*spell)->height <= player->pos_y + 100)) || (((*spell)->pos_y >= player->pos_y) && ((*spell)->pos_y  <= player->pos_y + 100))){
-    
+
             if(player->is_protego == 0){
                 player->pt_life -= (*spell)->damage;
                 player->is_stun = 1;
@@ -146,10 +146,10 @@ int collision_test(petrificus_t ** spell, int x, int y, player_t * player){
     //si le sort arrive a la destination finale
     if((((*spell)->pos_x + (*spell)->width >= x) && ((*spell)->pos_x + (*spell)->width <= x + 10)) || (((*spell)->pos_x >= x) && ((*spell)->pos_x  <= x + 10)))
         if((((*spell)->pos_y + (*spell)->height >= y) && ((*spell)->pos_y + (*spell)->height <= y + 10)) || (((*spell)->pos_y >= y) && ((*spell)->pos_y  <= y + 10))){
-            
+
             (*spell)->destroy(spell);
             return 0;
-            
+
         }
 
     return 1;

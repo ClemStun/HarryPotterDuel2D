@@ -13,9 +13,11 @@ digraph "lib/testMaisons.h"
   Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node5 [label="src/states/menu.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menu_8c.html",tooltip="Déroulement du jeu dans l'état HOME."];
   Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="src/states/testMaisons.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$testMaisons_8c.html",tooltip="Déroulement du jeu dans l'état TEST_M."];
+  Node6 [label="src/states/potion.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$potion_8c.html",tooltip="Menu de création de potions."];
   Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="src/states/train.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$train_8c.html",tooltip="Déroulement du jeu dans l'état TRAIN."];
+  Node7 [label="src/states/testMaisons.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$testMaisons_8c.html",tooltip="Déroulement du jeu dans l'état TEST_M."];
   Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node8 [label="src/states/waiting.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$waiting_8c.html",tooltip="Déroulement du jeu dans l'état WAITING."];
+  Node8 [label="src/states/train.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$train_8c.html",tooltip="Déroulement du jeu dans l'état TRAIN."];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="src/states/waiting.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$waiting_8c.html",tooltip="Déroulement du jeu dans l'état WAITING."];
 }

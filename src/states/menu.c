@@ -2,8 +2,8 @@
  * \file menu.c
  * \brief Déroulement du jeu dans l'état HOME
  * \author COUTANT Hugo
- * \version 0.1
- * \date 14 feb 2021
+ * \version 1
+ * \date 17 avril 2021
  *
  */
 
@@ -183,6 +183,3 @@ t_etat home_state(window *win, images_t * images, text_t * text, player_t * monP
     SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 0 );
     return HOME;
 }
-
-
-

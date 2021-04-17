@@ -2,8 +2,8 @@
  * \file menus.h
  * \brief Header commun aux différents statuts du jeu
  * \author COUTANT Hugo
- * \version 0.1
- * \date 14 feb 2021
+ * \version 1
+ * \date 17 avril 2021
  *
  */
 
@@ -24,9 +24,9 @@ SDL_Event event;
 #define SCREEN_HEIGHT 600
 
 
+
 #include "menu.h"
 #include "game.h"
 #include "train.h"
 #include "waiting.h"
 #include "testMaisons.h"
-#include "potions.h"

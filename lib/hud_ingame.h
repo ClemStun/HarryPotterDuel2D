@@ -2,8 +2,8 @@
  * \file hud_ingame.h
  * \brief Header de hud_ingame.c.
  * \author COUTANT Hugo
- * \version 0.1
- * \date 14 feb 2021
+ * \version 1
+ * \date 17 avril 2021
  *
  */
 

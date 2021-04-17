@@ -2,8 +2,8 @@
  * \file sort.h
  * \brief Structures générales des sorts
  * \author COMTE Clément
- * \version 0.1
- * \date 14 feb 2021
+ * \version 1
+ * \date 17 avril 2021
  *
  */
 
@@ -28,7 +28,7 @@ typedef struct sort_s{
     int width;
     int height;
     int sender;
-    
+
     void (*deplacement)(struct sort_s *, int, int);
     void (*display)(struct sort_s *, window *, struct images_s *);
     int (*collision_test)(struct sort_s **,int , int, void *);

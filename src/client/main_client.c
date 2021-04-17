@@ -2,8 +2,8 @@
  * \file main_client.c
  * \brief Fonction principale du jeu.
  * \author COUTANT Hugo & COMTE Clement & COLLET Matthieu
- * \version 0.1
- * \date 14 feb 2021
+ * \version 1
+ * \date 17 feb 2021
  *
  */
 
@@ -12,8 +12,6 @@
 #include "../../lib/petrificus.h"
 #include "../../lib/incendio.h"
 #include "../../lib/protego.h"
-#include <math.h>
-#include <pthread.h>
 
 
 

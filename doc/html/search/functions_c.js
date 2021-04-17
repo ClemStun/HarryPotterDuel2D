@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['searchtexture_167',['searchTexture',['../sdl_8h.html#adbde43d552d718d8f02af03ed80821cb',1,'searchTexture(images_t *images, char *nom):&#160;sdl.c'],['../sdl_8c.html#a7b2087565b1bd1650e768180934df1df',1,'searchTexture(images_t *images, char *nom):&#160;sdl.c']]]
+  ['rand_5fclick_5fbot_175',['rand_click_bot',['../player_8h.html#a955601adedc62e9b14f40e5b2dff99a1',1,'rand_click_bot(player_t *mannequin):&#160;player.c'],['../player_8c.html#a955601adedc62e9b14f40e5b2dff99a1',1,'rand_click_bot(player_t *mannequin):&#160;player.c']]],
+  ['remove_5fclient_176',['remove_client',['../utils_8c.html#af44d72ffb9e53ae43ba194dcc1d81f1f',1,'utils.c']]]
 ];

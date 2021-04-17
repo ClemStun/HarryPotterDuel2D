@@ -2,8 +2,8 @@
  * \file game.c
  * \brief Déroulement du jeu dans l'état GAME
  * \author COUTANT Hugo & COMTE Clément & COLLET Matthieu
- * \version 0.1
- * \date 14 feb 2021
+ * \version 1
+ * \date 17 avril 2021
  *
  */
 
@@ -108,7 +108,7 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                 break;
             }
         }
-        
+
     DrawImage(win->pRenderer, images, searchTexture(images, "Battle.png"), 0, 0, 1036, 600, 0, 0, 1200, 600);
     //Actualisation du jeu
     updatePosition(win, monPerso, images, monPerso->pos_x_click, monPerso->pos_y_click, 0.2);

@@ -2,8 +2,8 @@
  * \file petrificus.h
  * \brief Header de petrificus.c.
  * \author Comte Clément
- * \version 0.1
- * \date 09 feb 2021
+ * \version 1
+ * \date 17 avril 2021
  *
  */
 

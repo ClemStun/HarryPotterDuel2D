@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['zone_5fdetect_182',['zone_detect',['../menu_8h.html#a310e85cb75bb1093e578dc5be058ee60',1,'zone_detect(int x, int y, int w, int h, int mouseX, int mouseY):&#160;menu.c'],['../menu_8c.html#aa600a1575530654c2c3aa5db9e3cae0d',1,'zone_detect(int x, int y, int w, int h, int mouseX, int mouseY):&#160;menu.c']]]
+  ['update_5fhud_5fingame_189',['update_hud_ingame',['../hud__ingame_8h.html#af699f058f7933a06045fe6df37d90dd2',1,'update_hud_ingame(window *win, images_t *images, player_t *monPerso):&#160;hud_ingame.c'],['../hud__ingame_8c.html#af699f058f7933a06045fe6df37d90dd2',1,'update_hud_ingame(window *win, images_t *images, player_t *monPerso):&#160;hud_ingame.c']]],
+  ['update_5fhud_5fingame_5fennemie_190',['update_hud_ingame_ennemie',['../hud__ingame_8h.html#acc9f287d8b546dba62e9dc64fd73e5bb',1,'update_hud_ingame_ennemie(window *win, images_t *images, text_t *text, player_t *ennemie, TTF_Font *font):&#160;hud_ingame.c'],['../hud__ingame_8c.html#acc9f287d8b546dba62e9dc64fd73e5bb',1,'update_hud_ingame_ennemie(window *win, images_t *images, text_t *text, player_t *ennemie, TTF_Font *font):&#160;hud_ingame.c']]],
+  ['updateposition_191',['updatePosition',['../move_8h.html#a7b4d1874b21614efc956dd082b679aad',1,'updatePosition(window *win, player_t *monPerso, images_t *images, int deplX, int deplY, double vitesse):&#160;move.c'],['../move_8c.html#a7b4d1874b21614efc956dd082b679aad',1,'updatePosition(window *win, player_t *monPerso, images_t *images, int deplX, int deplY, double vitesse):&#160;move.c']]]
 ];

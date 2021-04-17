@@ -1,0 +1,136 @@
+\hypertarget{potion_8c}{}\doxysection{Référence du fichier src/states/potion.c}
+\label{potion_8c}\index{src/states/potion.c@{src/states/potion.c}}
+
+
+Menu de création de potions.  
+
+
+{\ttfamily \#include \char`\"{}../../lib/menus.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../lib/potions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../lib/ingredients.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de potion.\+c\+:
+% FIG 0
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{potion_8c_a642c8bf517e617ef0a52a05bdc04c27c}{Get\+Potion\+Index}} (int potion)
+\begin{DoxyCompactList}\small\item\em Recherche l\textquotesingle{}index de la potion dans le tableau général. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{potion_8c_abe3d9790a7a890940c6c03b692087f74}{Make\+Potion}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, T\+T\+F\+\_\+\+Font $\ast$font, int mouseX, int mouseY, int click)
+\begin{DoxyCompactList}\small\item\em Menu de création de potion. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{potion_8c_a972578a344c3c75a7854b0ef5f29a0a5}{Afficher\+Potion}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, T\+T\+F\+\_\+\+Font $\ast$font, int mouseX, int mouseY, int click)
+\begin{DoxyCompactList}\small\item\em Menu d\textquotesingle{}affichage de potions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} \mbox{\hyperlink{potion_8c_a30bfb00b952ee8c8a7814e478506761c}{potion\+\_\+state}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, T\+T\+F\+\_\+\+Font $\ast$font)
+\begin{DoxyCompactList}\small\item\em Menu principal des potions choix entre potion, ingrédient et quitter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Menu de création de potions. 
+
+\begin{DoxyAuthor}{Auteur}
+C\+O\+M\+TE Clément \& C\+O\+U\+T\+A\+NT Hugo 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+17 avril 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{potion_8c_a972578a344c3c75a7854b0ef5f29a0a5}\label{potion_8c_a972578a344c3c75a7854b0ef5f29a0a5}} 
+\index{potion.c@{potion.c}!AfficherPotion@{AfficherPotion}}
+\index{AfficherPotion@{AfficherPotion}!potion.c@{potion.c}}
+\doxysubsubsection{\texorpdfstring{AfficherPotion()}{AfficherPotion()}}
+{\footnotesize\ttfamily static int Afficher\+Potion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$}]{text,  }\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font,  }\item[{int}]{mouseX,  }\item[{int}]{mouseY,  }\item[{int}]{click }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Menu d\textquotesingle{}affichage de potions. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em text} & Pointeur sur une structure \mbox{\hyperlink{structtext__s}{text\+\_\+s}} regroupant les différents textes déjà créer et leur texture. \\
+\hline
+{\em font} & Pointeur sur une police de caractère. \\
+\hline
+{\em mouseX} & \mbox{\hyperlink{structPosition}{Position}} en X de la souris. \\
+\hline
+{\em mouseY} & \mbox{\hyperlink{structPosition}{Position}} en Y de la souris. \\
+\hline
+{\em click} & Valeur du click, 1 = click detecté, 0 sinon.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne soit son propre état, soit un autre. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{potion_8c_a642c8bf517e617ef0a52a05bdc04c27c}\label{potion_8c_a642c8bf517e617ef0a52a05bdc04c27c}} 
+\index{potion.c@{potion.c}!GetPotionIndex@{GetPotionIndex}}
+\index{GetPotionIndex@{GetPotionIndex}!potion.c@{potion.c}}
+\doxysubsubsection{\texorpdfstring{GetPotionIndex()}{GetPotionIndex()}}
+{\footnotesize\ttfamily static int Get\+Potion\+Index (\begin{DoxyParamCaption}\item[{int}]{potion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Recherche l\textquotesingle{}index de la potion dans le tableau général. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em potion} & numero de la potion créer précédement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne l\textquotesingle{}index de la potion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{potion_8c_abe3d9790a7a890940c6c03b692087f74}\label{potion_8c_abe3d9790a7a890940c6c03b692087f74}} 
+\index{potion.c@{potion.c}!MakePotion@{MakePotion}}
+\index{MakePotion@{MakePotion}!potion.c@{potion.c}}
+\doxysubsubsection{\texorpdfstring{MakePotion()}{MakePotion()}}
+{\footnotesize\ttfamily static int Make\+Potion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$}]{text,  }\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font,  }\item[{int}]{mouseX,  }\item[{int}]{mouseY,  }\item[{int}]{click }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Menu de création de potion. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em text} & Pointeur sur une structure \mbox{\hyperlink{structtext__s}{text\+\_\+s}} regroupant les différents textes déjà créer et leur texture. \\
+\hline
+{\em font} & Pointeur sur une police de caractère. \\
+\hline
+{\em mouseX} & \mbox{\hyperlink{structPosition}{Position}} en X de la souris. \\
+\hline
+{\em mouseY} & \mbox{\hyperlink{structPosition}{Position}} en Y de la souris. \\
+\hline
+{\em click} & Valeur du click, 1 = click detecté, 0 sinon.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne soit son propre état, soit un autre. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{potion_8c_a30bfb00b952ee8c8a7814e478506761c}\label{potion_8c_a30bfb00b952ee8c8a7814e478506761c}} 
+\index{potion.c@{potion.c}!potion\_state@{potion\_state}}
+\index{potion\_state@{potion\_state}!potion.c@{potion.c}}
+\doxysubsubsection{\texorpdfstring{potion\_state()}{potion\_state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} potion\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$}]{text,  }\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font }\end{DoxyParamCaption})}
+
+
+
+Menu principal des potions choix entre potion, ingrédient et quitter. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em text} & Pointeur sur une structure \mbox{\hyperlink{structtext__s}{text\+\_\+s}} regroupant les différents textes déjà créer et leur texture. \\
+\hline
+{\em font} & Pointeur sur une police de caractère.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne soit son propre état soit le prochain état du jeu 
+\end{DoxyReturn}

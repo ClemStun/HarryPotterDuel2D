@@ -2,8 +2,8 @@
  * \file train.c
  * \brief Déroulement du jeu dans l'état TRAIN
  * \author COUTANT Hugo & COMTE Clément
- * \version 0.1
- * \date 14 feb 2021
+ * \version 1
+ * \date 17 avril 2021
  *
  */
 
@@ -40,7 +40,7 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
                         SDL_GetMouseState(&(monPerso->pos_x_click), &(monPerso->pos_y_click));
                         monPerso->pos_x_click -= 50;
                         monPerso->pos_y_click -= 50;
-                    
+
                     //Si clique droit on lance le sort sélectionné
                     }else if(event.button.button == SDL_BUTTON_RIGHT && monPerso->createSort[monPerso->numSort].sort == NULL && (SDL_GetTicks() - monPerso->createSort[monPerso->numSort].timer >= 3000)){
                         int x, y;
@@ -63,6 +63,9 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
                         monPerso->pt_mana = 100;
                     }else if(keyboard_state_array[SDL_SCANCODE_V]){
                         mannequin->pt_life = 100;
+                    }
+                    else if(keyboard_state_array[SDL_SCANCODE_ESCAPE]){
+                        return HOME;
                     }
                 break;
             }

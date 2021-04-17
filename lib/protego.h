@@ -2,8 +2,8 @@
  * \file protego.h
  * \brief Méthode de l'objet protego_t
  * \author Comte Clément
- * \version 0.1
- * \date 31 mar 2021
+ * \version 1
+ * \date 17 avril 2021
  *
  */
 

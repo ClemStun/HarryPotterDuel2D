@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['playerposx_163',['playerPosX',['../player_8h.html#ace44c1fa068f2aa5c354c9f355e53ce4',1,'playerPosX(player_t *p):&#160;player.c'],['../player_8c.html#ace44c1fa068f2aa5c354c9f355e53ce4',1,'playerPosX(player_t *p):&#160;player.c']]],
-  ['playerposy_164',['playerPosY',['../player_8h.html#a391d840b0772f256825a2de762d72179',1,'playerPosY(player_t *p):&#160;player.c'],['../player_8c.html#a391d840b0772f256825a2de762d72179',1,'playerPosY(player_t *p):&#160;player.c']]]
+  ['makepotion_171',['MakePotion',['../potion_8c.html#abe3d9790a7a890940c6c03b692087f74',1,'potion.c']]]
 ];
