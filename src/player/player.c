@@ -73,30 +73,6 @@ void freePlayer(player_t * p){
     free(p);
 }
 
-/**
- * \fn extern int playerPosX(player_t * p)
- * \brief Position du joueur en X.
- *
- * \param p Pointeur sur une structure player_s.
- * \return int Position en X.
- */
-extern
-int playerPosX(player_t * p){
-    return p->pos_x;
-}
-
-/**
- * \fn extern int playerPosY(player_t * p)
- * \brief Position du joueur en Y.
- *
- * \param p Pointeur sur une structure player_s.
- * \return int Position en Y.
- */
-extern
-int playerPosY(player_t * p){
-    return p->pos_y;
-}
-
 static
 int playerUnstun(int intervalle, player_t * player){
     if(SDL_RemoveTimer(player->id_timer)){
