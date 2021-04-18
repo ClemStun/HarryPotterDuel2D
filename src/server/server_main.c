@@ -1,3 +1,12 @@
+/**
+ * \file server_main.c
+ * \brief Fonction principale du serveur.
+ * \author COLLET Matthieu
+ * \version 1
+ * \date 17 feb 2021
+ *
+ */
+
 #include "../../lib/sdl.h"
 #include "../../lib/sort.h"
 #include "init.h"
@@ -64,7 +73,7 @@ int main(){
                     SOCKET client = clients[i];
                     socket_t update;
                     readData(client, &update);
-                    if(update.x_click == -1){ 
+                    if(update.quit == 1){ //Si le client se déconnecte
                         closesocket(client);
                         remove_client(clients, i, &nb_client);
                         printf("Le joueur %i s'est deconnecte (%i/%i)\n",client-socketServer, nb_client, MAX_CLIENT);

@@ -1,3 +1,12 @@
+/**
+ * \file init.h
+ * \brief Header de init.c.
+ * \author COLLET Matthieu
+ * \version 1
+ * \date 17 avril 2021
+ *
+ */
+
 #include "utils.h"
 #include <sys/types.h>
 #include <sys/socket.h>

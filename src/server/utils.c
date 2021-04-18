@@ -53,6 +53,7 @@ void readData(SOCKET socket, socket_t *joueur);
 
 extern
 void send_all(SOCKET *clients, SOCKET sender, socket_t *joueur, int nb_client){
+    //Pour tous les clients, on envoie la donnée si le client n'est pas le client qui a envoyé la donnée
     int i;
     for(i = 0; i < nb_client; i++){
         if(sender != clients[i]){

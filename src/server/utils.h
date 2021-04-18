@@ -1,3 +1,12 @@
+/**
+ * \file utils.h
+ * \brief Header de utils.c
+ * \author COLLET Matthieu
+ * \version 1
+ * \date 17 avril 2021
+ *
+ */
+
 #include "../../lib/socket_struc.h"
 typedef int SOCKET;
 typedef struct sockaddr_in SOCKADDR_IN;
