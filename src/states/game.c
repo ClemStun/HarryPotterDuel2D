@@ -11,19 +11,30 @@
 
 player_t * joueur2;
 
+/**
+ * \fn *function(void *arg)
+ * \brief Thread qui écoute en permanance si le serveur envoie une info
+ *
+ * \param *arg Le socket du client
+ * \return Ne retourne rien
+ */
 void *function(void *arg){
     socket_t j2;
     int socket = *(int*)arg;
         int x, y;
         while(1){
+            //Fonction bloquante, dès que le client reçoit une donnée, le code suivant s'execute
             recv(socket, &j2, sizeof j2, 0);
+
             x = SCREEN_WIDTH-100-j2.x_click;
             y = SCREEN_HEIGHT-100-j2.y_click;
             if(j2.x_click != 0 && j2.y_click != 0){
+                //Le joueur a envoyé un sort
                 if(j2.sort != -1){
                     joueur2->numSort = j2.sort;
                     joueur2->createSort[joueur2->numSort].sort = joueur2->createSort[joueur2->numSort].createSort(joueur2, x, y);
                     joueur2->createSort[joueur2->numSort].timer = SDL_GetTicks();
+                //Le joueur a changer de position
                 }else{
                     joueur2->pos_x_click = x;
                     joueur2->pos_y_click = y;
@@ -80,6 +91,7 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                         update.x_click = monPerso->pos_x_click;
                         update.y_click = monPerso->pos_y_click;
                         update.sort = -1;
+                        //On envoie le changement de position au serveur
                         send(socketClient, &update, sizeof(update), 0);
                     }
                     //Si le click de sort est effectué, on lance le sort selectionné et on envoi le paquet
@@ -91,6 +103,7 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
                         update.sort = monPerso->numSort;
                         monPerso->createSort[monPerso->numSort].sort = monPerso->createSort[monPerso->numSort].createSort(monPerso, x, y);
                         monPerso->createSort[monPerso->numSort].timer = SDL_GetTicks();
+                        //On envoie le sort au serveur
                         send(socketClient, &update, sizeof(update), 0);
                     }
                 break;

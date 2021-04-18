@@ -67,7 +67,7 @@ int main(int argc, char **argv){
 
     //Mannequin
     player_t * mannequin;
-    mannequin = createPlayer(3, "Pouette", 0, searchTexture(&images, "Mannequin.png"), setSort, 900, 250);
+    mannequin = createPlayer(3, "Ennemi", 0, searchTexture(&images, "Mannequin.png"), setSort, 900, 250);
 
     //Joueur 2
     player_t * joueur2;

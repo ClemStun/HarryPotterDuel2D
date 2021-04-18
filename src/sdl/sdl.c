@@ -42,7 +42,7 @@ window * Initialize_sdl(){
 
     //Création de la fenêtre et du rendu
 
-    win->pWindow = SDL_CreateWindow("Castagne Harry Potter", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    win->pWindow = SDL_CreateWindow("Harry Potter Battle 2D", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 
     win->pRenderer = SDL_CreateRenderer(win->pWindow,-1,SDL_RENDERER_ACCELERATED);
 

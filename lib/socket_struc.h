@@ -3,4 +3,5 @@ typedef struct socket_s{
     int x_click;
     int y_click;
     int sort;
+    int quit = 0;
 }socket_t;

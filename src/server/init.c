@@ -1,6 +1,6 @@
  /**
  * \file utils.c
- * \brief Fonctions utiles pour les sockets
+ * \brief Fonctions d'initialisation pour les sockets
  * \author COLLET Matthieu
  * \version 0.1
  * \date 19 feb 2021
@@ -22,6 +22,7 @@ SOCKET init_connexion(void);
  
 extern
 SOCKET init_connexion(void){
+    //Initialisation du réseau pour le serveur
     SOCKET socketServer = socket(AF_INET, SOCK_STREAM, 0);
     SOCKADDR_IN addrServer = { 0 };
     addrServer.sin_addr.s_addr = INADDR_ANY;
