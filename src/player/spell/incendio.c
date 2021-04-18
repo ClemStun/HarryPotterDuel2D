@@ -110,7 +110,7 @@ void deplacement(incendio_t * spell, int x_dest, int y_dest){
 static
 void display(incendio_t * spell, window * win, images_t *images){
 
-    DrawImage(win->pRenderer, images, searchTexture(images, "expelliarmus.png"), 0, 0, 64, 64, spell->pos_x, spell->pos_y, 64, 64);
+    DrawImage(win->pRenderer, images, searchTexture(images, "incendio.png"), 0, 0, 600, 600, spell->pos_x, spell->pos_y, 64, 64);
 
 }
 

@@ -54,8 +54,10 @@ void update_hud_ingame(window * win, images_t * images, player_t * monPerso){
 
     //Affichage de la barre des sorts et de ses sorts
     DrawImage(win->pRenderer, images, searchTexture(images, "hud_tmp.png"), 0, 0, 1200, 60, 0, SCREEN_HEIGHT-60, SCREEN_WIDTH, 60);
-    DrawImage(win->pRenderer, images, searchTexture(images, "expelliarmus.png"), 0, 0, 1200, 60, 445, SCREEN_HEIGHT-69, 64, 64);
-    DrawImage(win->pRenderer, images, searchTexture(images, "petrificus.png"), 0, 0, 1200, 60, 510, SCREEN_HEIGHT-56, 62, 52);
+    DrawImage(win->pRenderer, images, searchTexture(images, "expelliarmus.png"), 0, 0, 64, 64, 445, SCREEN_HEIGHT-69, 64, 64);
+    DrawImage(win->pRenderer, images, searchTexture(images, "petrificus.png"), 0, 0, 64, 61, 510, SCREEN_HEIGHT-56, 62, 52);
+    DrawImage(win->pRenderer, images, searchTexture(images, "incendio.png"), 0, 0, 600, 600, 575, SCREEN_HEIGHT-62, 64, 64);
+    DrawImage(win->pRenderer, images, searchTexture(images, "protego.png"), 0, 0, 556, 556, 645, SCREEN_HEIGHT-57, 54, 54);
 
     //Affichage du carré de selection rouge autour du sort selectionné en fonction du numSort
     switch(monPerso->numSort){

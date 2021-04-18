@@ -29,7 +29,7 @@ int main(){
         int i;
         FD_ZERO(&readfs);
         FD_SET(socketServer, &readfs);
-        //On définie sur quels clients se feront les conditions suivantes
+        //On défini sur quels clients se feront les conditions suivantes
         for(i = 0; i < nb_client; i++){
             FD_SET(clients[i], &readfs);
         }

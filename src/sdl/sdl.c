@@ -332,3 +332,8 @@ void freeText(text_t ** text){
     free(*text);
     *text = NULL;
 }
+
+
+
+
+

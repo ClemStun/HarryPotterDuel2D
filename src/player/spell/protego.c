@@ -83,15 +83,7 @@ protego_t * createProtego(player_t * player, int x, int y){
 static
 void display(protego_t * spell, window * win, images_t *images){
 
-    //DrawImage(win->pRenderer, images, searchTexture(images, "protego.png"), 0, 0, 64, 64, spell->pos_x, spell->pos_y, 64, 64);
-    SDL_Rect protego;
-    protego.x = spell->pos_x;
-    protego.y = spell->pos_y;
-    protego.h = 100;
-    protego.w = 100;
-
-    SDL_SetRenderDrawColor(win->pRenderer, 0, 255, 0, 75);
-    SDL_RenderDrawRect(win->pRenderer, &protego);
+    DrawImage(win->pRenderer, images, searchTexture(images, "protego.png"), 0, 0, 556, 556, spell->pos_x-10, spell->pos_y-30, 120, 150);
 }
 
 /**
