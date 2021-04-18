@@ -1,0 +1,71 @@
+\hypertarget{init_8h}{}\doxysection{Référence du fichier src/server/init.h}
+\label{init_8h}\index{src/server/init.h@{src/server/init.h}}
+
+
+Header de init.\+c.  
+
+
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$netdb.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Graphe des dépendances par inclusion de init.\+h\+:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{init_8h_ab8ba2d8f79af5ca38005742bbc29a927}\label{init_8h_ab8ba2d8f79af5ca38005742bbc29a927}} 
+\#define {\bfseries M\+A\+X\+\_\+\+C\+L\+I\+E\+NT}~2
+\item 
+\mbox{\Hypertarget{init_8h_a26769957ec1a2beaf223f33b66ee64ab}\label{init_8h_a26769957ec1a2beaf223f33b66ee64ab}} 
+\#define {\bfseries I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+O\+C\+K\+ET}~-\/1
+\item 
+\mbox{\Hypertarget{init_8h_a633b0396ff93d336a088412a190a5072}\label{init_8h_a633b0396ff93d336a088412a190a5072}} 
+\#define {\bfseries S\+O\+C\+K\+E\+T\+\_\+\+E\+R\+R\+OR}~-\/1
+\item 
+\mbox{\Hypertarget{init_8h_a5a3eb971b466278ada4f7f87399a537c}\label{init_8h_a5a3eb971b466278ada4f7f87399a537c}} 
+\#define {\bfseries closesocket}(s)~close(s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+S\+O\+C\+K\+ET \mbox{\hyperlink{init_8h_a66849c7282378b4561deef61a1c1b77d}{init\+\_\+connexion}} (void)
+\begin{DoxyCompactList}\small\item\em Initialise la connexion du server pour écouter d\textquotesingle{}éventuelles connexions de nouveaux clients. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Header de init.\+c. 
+
+\begin{DoxyAuthor}{Auteur}
+C\+O\+L\+L\+ET Matthieu 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+17 avril 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{init_8h_a66849c7282378b4561deef61a1c1b77d}\label{init_8h_a66849c7282378b4561deef61a1c1b77d}} 
+\index{init.h@{init.h}!init\_connexion@{init\_connexion}}
+\index{init\_connexion@{init\_connexion}!init.h@{init.h}}
+\doxysubsubsection{\texorpdfstring{init\_connexion()}{init\_connexion()}}
+{\footnotesize\ttfamily S\+O\+C\+K\+ET init\+\_\+connexion (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialise la connexion du server pour écouter d\textquotesingle{}éventuelles connexions de nouveaux clients. 
+
+\begin{DoxyReturn}{Renvoie}
+Retourne le socket du server 
+\end{DoxyReturn}

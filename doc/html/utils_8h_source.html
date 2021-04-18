@@ -69,23 +69,24 @@ $(function() {
 <div class="title">utils.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;../../lib/socket_struc.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">int</span> SOCKET;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>sockaddr_in SOCKADDR_IN;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>sockaddr SOCKADDR;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>in_addr IN_ADDR;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">extern</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> send_all(SOCKET *clients, SOCKET sender, <a class="code" href="structsocket__s.html">socket_t</a> *joueur, <span class="keywordtype">int</span> nb_client);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">extern</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8c.html#af44d72ffb9e53ae43ba194dcc1d81f1f">remove_client</a>(SOCKET *clients, SOCKET client, <span class="keywordtype">int</span> *nb_client);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> readData(SOCKET socket, <a class="code" href="structsocket__s.html">socket_t</a> *joueur);</div>
+<a href="utils_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../../lib/socket_struc.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">int</span> SOCKET;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>sockaddr_in SOCKADDR_IN;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>sockaddr SOCKADDR;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>in_addr IN_ADDR;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">extern</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> send_all(SOCKET *clients, SOCKET sender, <a class="code" href="structsocket__s.html">socket_t</a> *joueur, <span class="keywordtype">int</span> nb_client);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">extern</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#af44d72ffb9e53ae43ba194dcc1d81f1f">remove_client</a>(SOCKET *clients, SOCKET client, <span class="keywordtype">int</span> *nb_client);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">extern</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> readData(SOCKET socket, <a class="code" href="structsocket__s.html">socket_t</a> *joueur);</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="autils_8c_html_af44d72ffb9e53ae43ba194dcc1d81f1f"><div class="ttname"><a href="utils_8c.html#af44d72ffb9e53ae43ba194dcc1d81f1f">remove_client</a></div><div class="ttdeci">void remove_client(SOCKET *clients, SOCKET client, int *nb_client)</div><div class="ttdoc">Retire un client du server.</div><div class="ttdef"><b>Definition:</b> utils.c:68</div></div>
-<div class="ttc" id="astructsocket__s_html"><div class="ttname"><a href="structsocket__s.html">socket_s</a></div><div class="ttdef"><b>Definition:</b> socket_struc.h:1</div></div>
+<div class="ttc" id="autils_8h_html_af44d72ffb9e53ae43ba194dcc1d81f1f"><div class="ttname"><a href="utils_8h.html#af44d72ffb9e53ae43ba194dcc1d81f1f">remove_client</a></div><div class="ttdeci">void remove_client(SOCKET *clients, SOCKET client, int *nb_client)</div><div class="ttdoc">Retire un client du server.</div><div class="ttdef"><b>Definition:</b> utils.c:69</div></div>
+<div class="ttc" id="astructsocket__s_html"><div class="ttname"><a href="structsocket__s.html">socket_s</a></div><div class="ttdef"><b>Definition:</b> socket_struc.h:10</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par &#160;<a href="http://www.doxygen.org/index.html">

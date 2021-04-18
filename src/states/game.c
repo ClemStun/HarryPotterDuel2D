@@ -72,6 +72,7 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
     pthread_create(&thread1, NULL, function, arg1);
 
     socket_t update;
+    update.quit = 0;
 
     SDL_RenderClear(win->pRenderer);
 
@@ -79,6 +80,8 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
     while(SDL_PollEvent(&event)){
 			switch (event.type){
 				case SDL_QUIT:
+					update.quit = 1;
+					send(socketClient, &update, sizeof(update), 0);
 					return QUIT;
 				break;
                 case SDL_MOUSEBUTTONDOWN:

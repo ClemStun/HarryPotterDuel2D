@@ -9,7 +9,7 @@
 
 #include "../../lib/sdl.h"
 #include "../../lib/sort.h"
-#include "init.h"
+#include "../../lib/init.h"
 
 int main(){
     SOCKET socketServer = init_connexion();
@@ -79,7 +79,7 @@ int main(){
                         printf("Le joueur %i s'est deconnecte (%i/%i)\n",client-socketServer, nb_client, MAX_CLIENT);
                     }else if(update.x_click != 0 && update.y_click != 0){
                         //On envoie les infos à l'autre client
-                        send_all(clients, clients[i], &update, nb_client);                        
+                        send_all(clients, clients[i], &update, nb_client);
                     }
                 }
             }

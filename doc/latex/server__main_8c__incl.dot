@@ -1,0 +1,46 @@
+digraph "src/server/server_main.c"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="src/server/server_main.c",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Fonction principale du serveur."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="../../lib/sdl.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sdl_8h.html",tooltip="Header du fichier sdl.c."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="stdlib.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="stdio.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="string.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="dirent.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="SDL2/SDL.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="SDL2/SDL_image.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="SDL2/SDL_ttf.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="../../lib/sort.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sort_8h.html",tooltip="Structures générales des sorts."];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="init.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$init_8h.html",tooltip="Header de init.c."];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="utils.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$utils_8h.html",tooltip="Header de utils.c."];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="../../lib/socket_struc.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$socket__struc_8h.html",tooltip="Structure envoyé par les clients au serveur."];
+  Node11 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="sys/types.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="sys/socket.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="netinet/in.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node17 [color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="arpa/inet.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node18 [color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="unistd.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node19 [color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="netdb.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+}

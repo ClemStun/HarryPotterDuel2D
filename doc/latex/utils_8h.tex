@@ -1,0 +1,77 @@
+\hypertarget{utils_8h}{}\doxysection{Référence du fichier src/server/utils.h}
+\label{utils_8h}\index{src/server/utils.h@{src/server/utils.h}}
+
+
+Header de \mbox{\hyperlink{utils_8c}{utils.\+c}}.  
+
+
+{\ttfamily \#include \char`\"{}../../lib/socket\+\_\+struc.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de utils.\+h\+:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 1
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{utils_8h_a8dc8083897335125630f1af5dafd5831}\label{utils_8h_a8dc8083897335125630f1af5dafd5831}} 
+typedef int {\bfseries S\+O\+C\+K\+ET}
+\item 
+\mbox{\Hypertarget{utils_8h_a29046dc0232f0e5c70adbc25090d77b8}\label{utils_8h_a29046dc0232f0e5c70adbc25090d77b8}} 
+typedef struct sockaddr\+\_\+in {\bfseries S\+O\+C\+K\+A\+D\+D\+R\+\_\+\+IN}
+\item 
+\mbox{\Hypertarget{utils_8h_ae334b73cedf7204187dce3f817576009}\label{utils_8h_ae334b73cedf7204187dce3f817576009}} 
+typedef struct sockaddr {\bfseries S\+O\+C\+K\+A\+D\+DR}
+\item 
+\mbox{\Hypertarget{utils_8h_a328d951616d1a7f289fef8e6b23a926b}\label{utils_8h_a328d951616d1a7f289fef8e6b23a926b}} 
+typedef struct in\+\_\+addr {\bfseries I\+N\+\_\+\+A\+D\+DR}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{utils_8h_a341eeeff71cd4ee3d615f18b575ae0ec}\label{utils_8h_a341eeeff71cd4ee3d615f18b575ae0ec}} 
+void {\bfseries send\+\_\+all} (S\+O\+C\+K\+ET $\ast$clients, S\+O\+C\+K\+ET sender, \mbox{\hyperlink{structsocket__s}{socket\+\_\+t}} $\ast$joueur, int nb\+\_\+client)
+\item 
+void \mbox{\hyperlink{utils_8h_af44d72ffb9e53ae43ba194dcc1d81f1f}{remove\+\_\+client}} (S\+O\+C\+K\+ET $\ast$clients, S\+O\+C\+K\+ET client, int $\ast$nb\+\_\+client)
+\begin{DoxyCompactList}\small\item\em Retire un client du server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{utils_8h_a7f28bbef90fe3e05efd2675e1ca3db45}\label{utils_8h_a7f28bbef90fe3e05efd2675e1ca3db45}} 
+void {\bfseries read\+Data} (S\+O\+C\+K\+ET socket, \mbox{\hyperlink{structsocket__s}{socket\+\_\+t}} $\ast$joueur)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Header de \mbox{\hyperlink{utils_8c}{utils.\+c}}. 
+
+\begin{DoxyAuthor}{Auteur}
+C\+O\+L\+L\+ET Matthieu 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+17 avril 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{utils_8h_af44d72ffb9e53ae43ba194dcc1d81f1f}\label{utils_8h_af44d72ffb9e53ae43ba194dcc1d81f1f}} 
+\index{utils.h@{utils.h}!remove\_client@{remove\_client}}
+\index{remove\_client@{remove\_client}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{remove\_client()}{remove\_client()}}
+{\footnotesize\ttfamily void remove\+\_\+client (\begin{DoxyParamCaption}\item[{S\+O\+C\+K\+ET $\ast$}]{clients,  }\item[{S\+O\+C\+K\+ET}]{client,  }\item[{int $\ast$}]{nb\+\_\+client }\end{DoxyParamCaption})}
+
+
+
+Retire un client du server. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em clients} & Tous les clients connectés au server \\
+\hline
+{\em client} & Client a retirer \\
+\hline
+{\em nb\+\_\+client} & Nombre de client connectés au server\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Ne retourne rien 
+\end{DoxyReturn}

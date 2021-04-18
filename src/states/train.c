@@ -42,7 +42,7 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
                         monPerso->pos_y_click -= 50;
 
                     //Si clique droit on lance le sort sélectionné
-                    }else if(event.button.button == SDL_BUTTON_RIGHT && monPerso->createSort[monPerso->numSort].sort == NULL && (SDL_GetTicks() - monPerso->createSort[monPerso->numSort].timer >= 3000)){
+                }else if(event.button.button == SDL_BUTTON_RIGHT && monPerso->createSort[monPerso->numSort].sort == NULL && (SDL_GetTicks() - monPerso->createSort[monPerso->numSort].timer >= 3000) && monPerso->is_protego == 0){
                         int x, y;
                         SDL_GetMouseState(&x, &y);
                         monPerso->createSort[monPerso->numSort].sort = monPerso->createSort[monPerso->numSort].createSort(monPerso, x, y);

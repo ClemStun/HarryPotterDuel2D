@@ -1,17 +1,6 @@
 var searchData=
 [
-  ['petrificus_2ec_46',['petrificus.c',['../petrificus_8c.html',1,'']]],
-  ['petrificus_2eh_47',['petrificus.h',['../petrificus_8h.html',1,'']]],
-  ['petrificus_5fs_48',['petrificus_s',['../structpetrificus__s.html',1,'']]],
-  ['player_2ec_49',['player.c',['../player_8c.html',1,'']]],
-  ['player_2eh_50',['player.h',['../player_8h.html',1,'']]],
-  ['player_5fs_51',['player_s',['../structplayer__s.html',1,'']]],
-  ['playerposx_52',['playerPosX',['../player_8h.html#ace44c1fa068f2aa5c354c9f355e53ce4',1,'playerPosX(player_t *p):&#160;player.c'],['../player_8c.html#ace44c1fa068f2aa5c354c9f355e53ce4',1,'playerPosX(player_t *p):&#160;player.c']]],
-  ['playerposy_53',['playerPosY',['../player_8h.html#a391d840b0772f256825a2de762d72179',1,'playerPosY(player_t *p):&#160;player.c'],['../player_8c.html#a391d840b0772f256825a2de762d72179',1,'playerPosY(player_t *p):&#160;player.c']]],
-  ['position_54',['Position',['../structPosition.html',1,'']]],
-  ['potion_2ec_55',['potion.c',['../potion_8c.html',1,'']]],
-  ['potion_5fstate_56',['potion_state',['../potion_8c.html#a30bfb00b952ee8c8a7814e478506761c',1,'potion.c']]],
-  ['protego_2ec_57',['protego.c',['../protego_8c.html',1,'']]],
-  ['protego_2eh_58',['protego.h',['../protego_8h.html',1,'']]],
-  ['protego_5fs_59',['protego_s',['../structprotego__s.html',1,'']]]
+  ['readme_62',['README',['../md_README.html',1,'']]],
+  ['rand_5fclick_5fbot_63',['rand_click_bot',['../player_8h.html#a955601adedc62e9b14f40e5b2dff99a1',1,'rand_click_bot(player_t *mannequin):&#160;player.c'],['../player_8c.html#a955601adedc62e9b14f40e5b2dff99a1',1,'rand_click_bot(player_t *mannequin):&#160;player.c']]],
+  ['remove_5fclient_64',['remove_client',['../utils_8c.html#af44d72ffb9e53ae43ba194dcc1d81f1f',1,'remove_client(SOCKET *clients, SOCKET client, int *nb_client):&#160;utils.c'],['../utils_8h.html#af44d72ffb9e53ae43ba194dcc1d81f1f',1,'remove_client(SOCKET *clients, SOCKET client, int *nb_client):&#160;utils.c']]]
 ];

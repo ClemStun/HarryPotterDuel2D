@@ -110,6 +110,7 @@ int timer_end(protego_t ** spell, int x, int y, player_t * player){
     //si le timer de protection est fini
     if(SDL_GetTicks() - (*spell)->timer >= 6000){
         (*spell)->destroy(spell);
+        player->is_protego = 0;
         return 1;
     }
 

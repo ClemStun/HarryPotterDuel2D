@@ -9,7 +9,7 @@
 
 #include "../../lib/sdl.h"
 #include "../../lib/sort.h"
-#include "init.h"
+#include "../../lib/init.h"
 
 /**
  * \fn extern void send_all(SOCKET *clients, SOCKET sender, player_t *joueur, int nb_client)

@@ -1,0 +1,11 @@
+digraph "test/test_potion" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_13e138d54eb8818da29c3992edef070a {
+    graph [ bgcolor="#ddddee", pencolor="black", label="test" fontname="Helvetica", fontsize="10", URL="dir_13e138d54eb8818da29c3992edef070a.html"]
+  dir_fb71cc5f53887d20becc2ee1faf0de3b [shape=box, label="test_potion", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_fb71cc5f53887d20becc2ee1faf0de3b.html"];
+  }
+  dir_97aefd0d527b934f1d99a682da8fe6a9 [shape=box label="lib" URL="dir_97aefd0d527b934f1d99a682da8fe6a9.html"];
+  dir_fb71cc5f53887d20becc2ee1faf0de3b->dir_97aefd0d527b934f1d99a682da8fe6a9 [headlabel="1", labeldistance=1.5 headhref="dir_000014_000003.html"];
+}
