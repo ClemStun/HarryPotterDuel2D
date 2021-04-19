@@ -7,7 +7,7 @@ digraph "player_s"
   Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" posYfloat\nposXfloat\nvitesse" ];
   Node2 [label="double",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
   Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" createSort" ];
-  Node3 [label="cd_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcd__s.html",tooltip=" "];
+  Node3 [label="cd_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcd__s.html",tooltip="Structure qui contient un sort et son couldown."];
   Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" createSort\nsort" ];
-  Node4 [label="sort_t",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsort__t.html",tooltip="Structure général d'un joueur."];
+  Node4 [label="sort_s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsort__s.html",tooltip="Structure général d'un joueur."];
 }

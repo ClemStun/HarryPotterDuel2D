@@ -88,9 +88,9 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a3b729d995a6e8a995749a069819c0116"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a3b729d995a6e8a995749a069819c0116">function</a> (void *arg)</td></tr>
 <tr class="memdesc:a3b729d995a6e8a995749a069819c0116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread qui écoute en permanance si le serveur envoie une info.  <a href="game_8c.html#a3b729d995a6e8a995749a069819c0116">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3b729d995a6e8a995749a069819c0116"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e042bdd13c6a8222a453dfd9ec3aeaf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game_8c.html#a5e042bdd13c6a8222a453dfd9ec3aeaf">game_state</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structimages__s.html">images_t</a> *images, <a class="el" href="structplayer__s.html">player_t</a> *monPerso, <a class="el" href="structplayer__s.html">player_t</a> *j2, int socketClient, <a class="el" href="structsocket__s.html">socket_t</a> *j1)</td></tr>
-<tr class="memdesc:a5e042bdd13c6a8222a453dfd9ec3aeaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction état du jeu en mode jeu principal.  <a href="game_8c.html#a5e042bdd13c6a8222a453dfd9ec3aeaf">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a5e042bdd13c6a8222a453dfd9ec3aeaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad50697227ef075c55e09d2a336d48546"><td class="memItemLeft" align="right" valign="top"><a id="ad50697227ef075c55e09d2a336d48546"></a>
+<a class="el" href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a>&#160;</td><td class="memItemRight" valign="bottom"><b>game_state</b> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structimages__s.html">images_t</a> *images, <a class="el" href="structtext__s.html">text_t</a> *text, <a class="el" href="structplayer__s.html">player_t</a> *monPerso, <a class="el" href="structplayer__s.html">player_t</a> *j2, TTF_Font *font, int socketClient, <a class="el" href="structsocket__s.html">socket_t</a> *j1)</td></tr>
+<tr class="separator:ad50697227ef075c55e09d2a336d48546"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -128,72 +128,6 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Ne retourne rien </dd></dl>
-
-</div>
-</div>
-<a id="a5e042bdd13c6a8222a453dfd9ec3aeaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e042bdd13c6a8222a453dfd9ec3aeaf">&#9670;&nbsp;</a></span>game_state()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a> game_state </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
-          <td class="paramname"><em>win</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structimages__s.html">images_t</a> *&#160;</td>
-          <td class="paramname"><em>images</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td>
-          <td class="paramname"><em>monPerso</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td>
-          <td class="paramname"><em>j2</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>socketClient</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structsocket__s.html">socket_t</a> *&#160;</td>
-          <td class="paramname"><em>j1</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Fonction état du jeu en mode jeu principal. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
-    <tr><td class="paramname">images</td><td>Pointeur sur une structure images_t, bibliothèque de textures des images. </td></tr>
-    <tr><td class="paramname">monPerso</td><td>Pointeur sur une structure player_t représentant les infos d'un personnage. </td></tr>
-    <tr><td class="paramname">mannequin</td><td>Pointeur sur une structure player_t représentant les infos d'un personnage ennemi. </td></tr>
-    <tr><td class="paramname">socketClient</td><td>Numéro du socket de client actuel. </td></tr>
-    <tr><td class="paramname">j1</td><td>Pointeur sur un <a class="el" href="structsocket__s.html">socket_s</a> du joueur 1.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Renvoie</dt><dd>Soit son propre état pour y rester, soit un autre pour changer d'état dans la suite du programme. </dd></dl>
 
 </div>
 </div>

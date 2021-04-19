@@ -10,7 +10,7 @@
 #include <stdio.h>
 
 /**
- * \struct expelliarmus_s
+ * \struct petrificus_s
  * \brief Structure du sort petrificus_t contanenant toutes les informations
  *
  */

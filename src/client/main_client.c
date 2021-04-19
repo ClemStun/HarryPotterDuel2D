@@ -82,7 +82,7 @@ int main(int argc, char **argv){
                 etat_de_jeu = home_state(win, &images, text, monPerso, font);
             break;
             case GAME:
-                etat_de_jeu = game_state(win, &images, monPerso, joueur2, socketClient, &j1);
+                etat_de_jeu = game_state(win, &images, text, monPerso, joueur2, font, socketClient, &j1);
             break;
             case TRAINING:
                 etat_de_jeu = training_state(win, &images, text, monPerso, mannequin, font);

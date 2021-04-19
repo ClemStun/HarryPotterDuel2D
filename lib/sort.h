@@ -10,7 +10,7 @@
 #define NB_SORT 5
 
 /**
- * \struct sort_t
+ * \struct sort_s
  * \brief Structure général d'un joueur
  */
 typedef struct sort_s{
@@ -37,7 +37,7 @@ typedef struct sort_s{
 } sort_t;
 
 /**
- * \struct cd_t
+ * \struct cd_s
  * \brief Structure qui contient un sort et son couldown
  */
 typedef struct cd_s{

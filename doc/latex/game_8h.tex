@@ -10,8 +10,9 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 \doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} \mbox{\hyperlink{game_8h_afab08395b5ecc990c503963a767d6969}{game\+\_\+state}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mannequin, int socket\+Client, \mbox{\hyperlink{structsocket__s}{socket\+\_\+t}} $\ast$j1)
-\begin{DoxyCompactList}\small\item\em Fonction état du jeu en mode jeu principal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{game_8h_ad50697227ef075c55e09d2a336d48546}\label{game_8h_ad50697227ef075c55e09d2a336d48546}} 
+\mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} {\bfseries game\+\_\+state} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$images, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$j2, T\+T\+F\+\_\+\+Font $\ast$font, int socket\+Client, \mbox{\hyperlink{structsocket__s}{socket\+\_\+t}} $\ast$j1)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -26,34 +27,3 @@ C\+O\+U\+T\+A\+NT Hugo \& C\+O\+M\+TE Clément
 \begin{DoxyDate}{Date}
 17 avril 2021 
 \end{DoxyDate}
-
-
-\doxysubsection{Documentation des fonctions}
-\mbox{\Hypertarget{game_8h_afab08395b5ecc990c503963a767d6969}\label{game_8h_afab08395b5ecc990c503963a767d6969}} 
-\index{game.h@{game.h}!game\_state@{game\_state}}
-\index{game\_state@{game\_state}!game.h@{game.h}}
-\doxysubsubsection{\texorpdfstring{game\_state()}{game\_state()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} game\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structimages__s}{images\+\_\+t}} $\ast$}]{images,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mon\+Perso,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mannequin,  }\item[{int}]{socket\+Client,  }\item[{\mbox{\hyperlink{structsocket__s}{socket\+\_\+t}} $\ast$}]{j1 }\end{DoxyParamCaption})}
-
-
-
-Fonction état du jeu en mode jeu principal. 
-
-
-\begin{DoxyParams}{Paramètres}
-{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
-\hline
-{\em images} & Pointeur sur une structure images\+\_\+t, bibliothèque de textures des images. \\
-\hline
-{\em mon\+Perso} & Pointeur sur une structure player\+\_\+t représentant les infos d\textquotesingle{}un personnage. \\
-\hline
-{\em mannequin} & Pointeur sur une structure player\+\_\+t représentant les infos d\textquotesingle{}un personnage ennemi. \\
-\hline
-{\em socket\+Client} & Numéro du socket de client actuel. \\
-\hline
-{\em j1} & Pointeur sur un \mbox{\hyperlink{structsocket__s}{socket\+\_\+s}} du joueur 1.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Renvoie}
-Soit son propre état pour y rester, soit un autre pour changer d\textquotesingle{}état dans la suite du programme. 
-\end{DoxyReturn}

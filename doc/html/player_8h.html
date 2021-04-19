@@ -109,17 +109,17 @@ typedef struct <a class="el" href="structplayer__s.html">player_s</a>&#160;</td>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:ac954521c6d197fa39b7e1c91c26409c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#ac954521c6d197fa39b7e1c91c26409c1">createPlayer</a> (int id_player, char name[], int xp, SDL_Texture *sprite, <a class="el" href="structcd__t.html">cd_t</a> setSort[], int x, int y)</td></tr>
+<tr class="memitem:ac954521c6d197fa39b7e1c91c26409c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#ac954521c6d197fa39b7e1c91c26409c1">createPlayer</a> (int id_player, char name[], int xp, SDL_Texture *sprite, <a class="el" href="structcd__s.html">cd_t</a> setSort[], int x, int y)</td></tr>
 <tr class="memdesc:ac954521c6d197fa39b7e1c91c26409c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Création d'un personnage et initialisation de ses valeurs.  <a href="player_8h.html#ac954521c6d197fa39b7e1c91c26409c1">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac954521c6d197fa39b7e1c91c26409c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe4571d032fdc5a53d8e810cfc1b7603"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#afe4571d032fdc5a53d8e810cfc1b7603">freePlayer</a> (<a class="el" href="structplayer__s.html">player_t</a> *p)</td></tr>
 <tr class="memdesc:afe4571d032fdc5a53d8e810cfc1b7603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libération mémoire de la structure de personnage.  <a href="player_8h.html#afe4571d032fdc5a53d8e810cfc1b7603">Plus de détails...</a><br /></td></tr>
 <tr class="separator:afe4571d032fdc5a53d8e810cfc1b7603"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace44c1fa068f2aa5c354c9f355e53ce4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#ace44c1fa068f2aa5c354c9f355e53ce4">playerPosX</a> (<a class="el" href="structplayer__s.html">player_t</a> *p)</td></tr>
-<tr class="memdesc:ace44c1fa068f2aa5c354c9f355e53ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position du joueur en X.  <a href="player_8h.html#ace44c1fa068f2aa5c354c9f355e53ce4">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:ace44c1fa068f2aa5c354c9f355e53ce4"><td class="memItemLeft" align="right" valign="top"><a id="ace44c1fa068f2aa5c354c9f355e53ce4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>playerPosX</b> (<a class="el" href="structplayer__s.html">player_t</a> *p)</td></tr>
 <tr class="separator:ace44c1fa068f2aa5c354c9f355e53ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a391d840b0772f256825a2de762d72179"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a391d840b0772f256825a2de762d72179">playerPosY</a> (<a class="el" href="structplayer__s.html">player_t</a> *p)</td></tr>
-<tr class="memdesc:a391d840b0772f256825a2de762d72179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position du joueur en Y.  <a href="player_8h.html#a391d840b0772f256825a2de762d72179">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a391d840b0772f256825a2de762d72179"><td class="memItemLeft" align="right" valign="top"><a id="a391d840b0772f256825a2de762d72179"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>playerPosY</b> (<a class="el" href="structplayer__s.html">player_t</a> *p)</td></tr>
 <tr class="separator:a391d840b0772f256825a2de762d72179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a955601adedc62e9b14f40e5b2dff99a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="player_8h.html#a955601adedc62e9b14f40e5b2dff99a1">rand_click_bot</a> (<a class="el" href="structplayer__s.html">player_t</a> *mannequin)</td></tr>
 <tr class="memdesc:a955601adedc62e9b14f40e5b2dff99a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genereration d'une position de click pour un personnage ennemi dans la zone ennemie.  <a href="player_8h.html#a955601adedc62e9b14f40e5b2dff99a1">Plus de détails...</a><br /></td></tr>
@@ -164,7 +164,7 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structcd__t.html">cd_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="structcd__s.html">cd_t</a>&#160;</td>
           <td class="paramname"><em>setSort</em>[], </td>
         </tr>
         <tr>
@@ -227,60 +227,6 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="ace44c1fa068f2aa5c354c9f355e53ce4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace44c1fa068f2aa5c354c9f355e53ce4">&#9670;&nbsp;</a></span>playerPosX()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int playerPosX </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Position du joueur en X. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">p</td><td>Pointeur sur une structure <a class="el" href="structplayer__s.html" title="Informations d&#39;un personnage.">player_s</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Renvoie</dt><dd>int Position en X. </dd></dl>
-
-</div>
-</div>
-<a id="a391d840b0772f256825a2de762d72179"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a391d840b0772f256825a2de762d72179">&#9670;&nbsp;</a></span>playerPosY()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int playerPosY </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Position du joueur en Y. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">p</td><td>Pointeur sur une structure <a class="el" href="structplayer__s.html" title="Informations d&#39;un personnage.">player_s</a>. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Renvoie</dt><dd>int Position en Y. </dd></dl>
 
 </div>
 </div>

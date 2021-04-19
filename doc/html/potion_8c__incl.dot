@@ -66,7 +66,7 @@ digraph "src/states/potion.c"
   Node2 -> Node29 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node29 [label="testMaisons.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$testMaisons_8h.html",tooltip="Header de testMaisons.c."];
   Node1 -> Node30 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node30 [label="../../lib/potions.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$potions_8h_source.html",tooltip=" "];
+  Node30 [label="../../lib/potions.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$potions_8h.html",tooltip="Header du fichier potion.c."];
   Node1 -> Node31 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node31 [label="../../lib/ingredients.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ingredients_8h_source.html",tooltip=" "];
+  Node31 [label="../../lib/ingredients.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

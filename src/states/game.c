@@ -52,15 +52,17 @@ void *function(void *arg){
  *
  * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
  * \param images Pointeur sur une structure images_t, bibliothèque de textures des images.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
  * \param monPerso Pointeur sur une structure player_t représentant les infos d'un personnage.
- * \param mannequin Pointeur sur une structure player_t représentant les infos d'un personnage ennemi.
+ * \param j2 Pointeur sur une structure player_t représentant les infos du personnage ennemi.
+ * \param font Pointeur sur une police de caractère
  * \param socketClient Numéro du socket de client actuel.
  * \param j1 Pointeur sur un socket_s du joueur 1.
  *
  * \return Soit son propre état pour y rester, soit un autre pour changer d'état dans la suite du programme.
  */
 extern
-t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t * j2, int socketClient, socket_t *j1){
+t_etat game_state(window *win, images_t * images, text_t * text, player_t * monPerso, player_t * j2, TTF_Font *font, int socketClient, socket_t *j1){
 
     joueur2 = j2;
 
@@ -130,6 +132,7 @@ t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t 
     updatePosition(win, monPerso, images, monPerso->pos_x_click, monPerso->pos_y_click, 0.2);
     update_hud_ingame(win, images, monPerso);
     updatePosition(win, joueur2, images, joueur2->pos_x_click, joueur2->pos_y_click, 0.2);
+    update_hud_ingame_ennemie(win, images, text, joueur2, font);
     //rajouter hud ennemi si possible
 
     //appel des méthodes des sorts pour le joueurs local

@@ -69,23 +69,27 @@ $(function() {
 <div class="title">potions.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#define NB_POT 3</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define FELICIS 123</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define POLYNECTAR 213</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define HEALING 132</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">int</span> potions[NB_POT] = {FELICIS, POLYNECTAR, HEALING};</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">int</span> potions_unlock[NB_POT] = {0};</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">char</span> nomPotions[NB_POT][20] = {<span class="stringliteral">&quot;Felix Felicis&quot;</span>,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                               <span class="stringliteral">&quot;Polynectar&quot;</span>,</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                               <span class="stringliteral">&quot;Healing&quot;</span>};</div>
+<a href="potions_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define NB_POT 3</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define NB_IN 3</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">extern</span> <a class="code" href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a> <a class="code" href="potion_8c.html#a30bfb00b952ee8c8a7814e478506761c">potion_state</a>(<a class="code" href="structwindow__s.html">window</a> *win, <a class="code" href="structtext__s.html">text_t</a> * text, TTF_Font *font);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define FELICIS 123</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define POLYNECTAR 213</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define HEALING 132</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">char</span> ingredients[NB_IN][20] = {<span class="stringliteral">&quot;Asphodele&quot;</span>, <span class="stringliteral">&quot;Ecrain de licorne&quot;</span>, <span class="stringliteral">&quot;Mandragore&quot;</span>};</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">int</span> potions[NB_POT] = {FELICIS, POLYNECTAR, HEALING};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">int</span> potions_unlock[NB_POT] = {0};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">char</span> nomPotions[NB_POT][20] = {<span class="stringliteral">&quot;Felix Felicis&quot;</span>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                               <span class="stringliteral">&quot;Polynectar&quot;</span>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                               <span class="stringliteral">&quot;Healing&quot;</span>};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">extern</span> <a class="code" href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a> <a class="code" href="potions_8h.html#a30bfb00b952ee8c8a7814e478506761c">potion_state</a>(<a class="code" href="structwindow__s.html">window</a> *win, <a class="code" href="structtext__s.html">text_t</a> * text, TTF_Font *font);</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructwindow__s_html"><div class="ttname"><a href="structwindow__s.html">window_s</a></div><div class="ttdoc">Information fenêtre SDL.</div><div class="ttdef"><b>Definition:</b> sdl.h:25</div></div>
-<div class="ttc" id="apotion_8c_html_a30bfb00b952ee8c8a7814e478506761c"><div class="ttname"><a href="potion_8c.html#a30bfb00b952ee8c8a7814e478506761c">potion_state</a></div><div class="ttdeci">t_etat potion_state(window *win, text_t *text, TTF_Font *font)</div><div class="ttdoc">Menu principal des potions choix entre potion, ingrédient et quitter.</div><div class="ttdef"><b>Definition:</b> potion.c:225</div></div>
 <div class="ttc" id="amenus_8h_html_a0f3684078562a23c3ea21266d10cf275"><div class="ttname"><a href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a></div><div class="ttdeci">t_etat</div><div class="ttdoc">Enumération des différents états du jeu.</div><div class="ttdef"><b>Definition:</b> menus.h:19</div></div>
+<div class="ttc" id="apotions_8h_html_a30bfb00b952ee8c8a7814e478506761c"><div class="ttname"><a href="potions_8h.html#a30bfb00b952ee8c8a7814e478506761c">potion_state</a></div><div class="ttdeci">t_etat potion_state(window *win, text_t *text, TTF_Font *font)</div><div class="ttdoc">Menu principal des potions choix entre potion, ingrédient et quitter.</div><div class="ttdef"><b>Definition:</b> potion.c:225</div></div>
 <div class="ttc" id="astructtext__s_html"><div class="ttname"><a href="structtext__s.html">text_s</a></div><div class="ttdoc">Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.</div><div class="ttdef"><b>Definition:</b> sdl.h:46</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

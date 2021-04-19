@@ -9,13 +9,13 @@
 
 #include "../../lib/menus.h"
 
-
 /**
  * \fn extern t_etat training_state(window *win, images_t * images, player_t * monPerso, player_t * mannequin, sort_t ** sort)
  * \brief Fonction état du jeu en mode entrainement.
  *
  * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
  * \param images Pointeur sur une structure images_t, bibliothèque de textures des images.
+ * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
  * \param monPerso Pointeur sur une structure player_t représentant les infos d'un personnage.
  * \param mannequin Pointeur sur une structure player_t représentant les infos d'un personnage ennemi controlé par un ordinateur.
  * \param font Pointeur sur une police de caractère.
@@ -95,6 +95,7 @@ t_etat training_state(window *win, images_t * images, text_t * text, player_t * 
                 monPerso->createSort[i].sort->collision_test(&(monPerso->createSort[i].sort), 0, 0, monPerso);
         }
     }
+
     SDL_SetRenderDrawColor(win->pRenderer, 150, 150, 150, SDL_ALPHA_OPAQUE );
     return TRAINING;
 }

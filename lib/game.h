@@ -7,4 +7,4 @@
  *
  */
 
-extern t_etat game_state(window *win, images_t * images, player_t * monPerso, player_t * mannequin, int socketClient, socket_t *j1);
+extern t_etat game_state(window *win, images_t * images, text_t * text, player_t * monPerso, player_t * j2, TTF_Font *font, int socketClient, socket_t *j1);

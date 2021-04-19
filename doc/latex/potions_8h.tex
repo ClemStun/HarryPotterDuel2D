@@ -1,0 +1,101 @@
+\hypertarget{potions_8h}{}\doxysection{Référence du fichier lib/potions.h}
+\label{potions_8h}\index{lib/potions.h@{lib/potions.h}}
+
+
+Header du fichier \mbox{\hyperlink{potion_8c}{potion.\+c}}.  
+
+
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{potions_8h_a87ea6a242e935725c4c02699b780c911}\label{potions_8h_a87ea6a242e935725c4c02699b780c911}} 
+\#define {\bfseries N\+B\+\_\+\+P\+OT}~3
+\item 
+\mbox{\Hypertarget{potions_8h_ae5b7e715d1a7eac6807d09d9738ddfb8}\label{potions_8h_ae5b7e715d1a7eac6807d09d9738ddfb8}} 
+\#define {\bfseries N\+B\+\_\+\+IN}~3
+\item 
+\mbox{\Hypertarget{potions_8h_a64a8455c115d6ff6b15222616dd5a5f3}\label{potions_8h_a64a8455c115d6ff6b15222616dd5a5f3}} 
+\#define {\bfseries F\+E\+L\+I\+C\+IS}~123
+\item 
+\mbox{\Hypertarget{potions_8h_af3809266b86e937ecb8bfac20196d886}\label{potions_8h_af3809266b86e937ecb8bfac20196d886}} 
+\#define {\bfseries P\+O\+L\+Y\+N\+E\+C\+T\+AR}~213
+\item 
+\mbox{\Hypertarget{potions_8h_a9a28bab9731761c2a55f417d48956442}\label{potions_8h_a9a28bab9731761c2a55f417d48956442}} 
+\#define {\bfseries H\+E\+A\+L\+I\+NG}~132
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} \mbox{\hyperlink{potions_8h_a30bfb00b952ee8c8a7814e478506761c}{potion\+\_\+state}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, T\+T\+F\+\_\+\+Font $\ast$font)
+\begin{DoxyCompactList}\small\item\em Menu principal des potions choix entre potion, ingrédient et quitter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{potions_8h_a057ffdbd340fe4571c0d39ec1553d95e}\label{potions_8h_a057ffdbd340fe4571c0d39ec1553d95e}} 
+char {\bfseries ingredients} \mbox{[}N\+B\+\_\+\+IN\mbox{]}\mbox{[}20\mbox{]} = \{\char`\"{}Asphodele\char`\"{}, \char`\"{}Ecrain de licorne\char`\"{}, \char`\"{}Mandragore\char`\"{}\}
+\item 
+\mbox{\Hypertarget{potions_8h_adfc7b40300f63c6506d904106e1c30ef}\label{potions_8h_adfc7b40300f63c6506d904106e1c30ef}} 
+int {\bfseries potions} \mbox{[}N\+B\+\_\+\+P\+OT\mbox{]} = \{F\+E\+L\+I\+C\+IS, P\+O\+L\+Y\+N\+E\+C\+T\+AR, H\+E\+A\+L\+I\+NG\}
+\item 
+\mbox{\Hypertarget{potions_8h_aff6084b58a87ebab766af5bf1e6a7aa0}\label{potions_8h_aff6084b58a87ebab766af5bf1e6a7aa0}} 
+int {\bfseries potions\+\_\+unlock} \mbox{[}N\+B\+\_\+\+P\+OT\mbox{]} = \{0\}
+\item 
+char {\bfseries nom\+Potions} \mbox{[}N\+B\+\_\+\+P\+OT\mbox{]}\mbox{[}20\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Header du fichier \mbox{\hyperlink{potion_8c}{potion.\+c}}. 
+
+\begin{DoxyAuthor}{Auteur}
+C\+O\+M\+TE Clément 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+17 avril 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{potions_8h_a30bfb00b952ee8c8a7814e478506761c}\label{potions_8h_a30bfb00b952ee8c8a7814e478506761c}} 
+\index{potions.h@{potions.h}!potion\_state@{potion\_state}}
+\index{potion\_state@{potion\_state}!potions.h@{potions.h}}
+\doxysubsubsection{\texorpdfstring{potion\_state()}{potion\_state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} potion\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$}]{text,  }\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font }\end{DoxyParamCaption})}
+
+
+
+Menu principal des potions choix entre potion, ingrédient et quitter. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em text} & Pointeur sur une structure \mbox{\hyperlink{structtext__s}{text\+\_\+s}} regroupant les différents textes déjà créer et leur texture. \\
+\hline
+{\em font} & Pointeur sur une police de caractère.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Retourne soit son propre état soit le prochain état du jeu 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{potions_8h_acbe1fcfb2e94e5f7f3675895600e5b31}\label{potions_8h_acbe1fcfb2e94e5f7f3675895600e5b31}} 
+\index{potions.h@{potions.h}!nomPotions@{nomPotions}}
+\index{nomPotions@{nomPotions}!potions.h@{potions.h}}
+\doxysubsubsection{\texorpdfstring{nomPotions}{nomPotions}}
+{\footnotesize\ttfamily char nom\+Potions\mbox{[}N\+B\+\_\+\+P\+OT\mbox{]}\mbox{[}20\mbox{]}}
+
+{\bfseries Valeur initiale \+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{\textcolor{stringliteral}{"Felix Felicis"},}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"Polynectar"},}
+\DoxyCodeLine{                               \textcolor{stringliteral}{"Healing"}\}}
+
+\end{DoxyCode}

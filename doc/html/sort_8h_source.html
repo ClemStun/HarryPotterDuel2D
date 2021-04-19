@@ -93,22 +93,20 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    int (*<a class="code" href="expelliarmus_8c.html#a2b98538e037137e8b2f82c9821b7e6f4">collision_test</a>)(<span class="keyword">struct </span><a class="code" href="structsort__s.html">sort_s</a> **,int , int, <span class="keywordtype">void</span> *);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    void (*destroy)(<span class="keyword">struct </span><a class="code" href="structsort__s.html">sort_s</a> **);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;} <a class="code" href="structsort__t.html">sort_t</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;} <a class="code" href="structsort__s.html">sort_t</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structcd__s.html">   43</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structcd__s.html">cd_s</a>{</div>
 <div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structcd__s.html#a22fab2d7a6523d2b76708503f190b639">   44</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structcd__s.html#a22fab2d7a6523d2b76708503f190b639">timer</a>; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structcd__s.html#aafdd24fbd126584ed4b66523ec9cea7e">   45</a></span>&#160;    <a class="code" href="structsort__t.html">sort_t</a> * (*createSort)(<span class="keywordtype">void</span> *, int, int); </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structcd__s.html#ad67abe78a3630bcf99e4d0c51e85a3e9">   46</a></span>&#160;    <a class="code" href="structsort__t.html">sort_t</a> * <a class="code" href="structcd__s.html#ad67abe78a3630bcf99e4d0c51e85a3e9">sort</a>; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}<a class="code" href="structcd__t.html">cd_t</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structcd__s.html#aafdd24fbd126584ed4b66523ec9cea7e">   45</a></span>&#160;    <a class="code" href="structsort__s.html">sort_t</a> * (*createSort)(<span class="keywordtype">void</span> *, int, int); </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structcd__s.html#ad67abe78a3630bcf99e4d0c51e85a3e9">   46</a></span>&#160;    <a class="code" href="structsort__s.html">sort_t</a> * <a class="code" href="structcd__s.html#ad67abe78a3630bcf99e4d0c51e85a3e9">sort</a>; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}<a class="code" href="structcd__s.html">cd_t</a>;</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructimages__s_html"><div class="ttname"><a href="structimages__s.html">images_s</a></div><div class="ttdoc">Bibliothèque de textures d'images avec leur nom et le nombre d'images stockées.</div><div class="ttdef"><b>Definition:</b> sdl.h:35</div></div>
-<div class="ttc" id="astructcd__s_html"><div class="ttname"><a href="structcd__s.html">cd_s</a></div><div class="ttdef"><b>Definition:</b> sort.h:43</div></div>
+<div class="ttc" id="astructcd__s_html"><div class="ttname"><a href="structcd__s.html">cd_s</a></div><div class="ttdoc">Structure qui contient un sort et son couldown.</div><div class="ttdef"><b>Definition:</b> sort.h:43</div></div>
 <div class="ttc" id="astructwindow__s_html"><div class="ttname"><a href="structwindow__s.html">window_s</a></div><div class="ttdoc">Information fenêtre SDL.</div><div class="ttdef"><b>Definition:</b> sdl.h:25</div></div>
 <div class="ttc" id="astructcd__s_html_a22fab2d7a6523d2b76708503f190b639"><div class="ttname"><a href="structcd__s.html#a22fab2d7a6523d2b76708503f190b639">cd_s::timer</a></div><div class="ttdeci">int timer</div><div class="ttdef"><b>Definition:</b> sort.h:44</div></div>
 <div class="ttc" id="aexpelliarmus_8c_html_a2b98538e037137e8b2f82c9821b7e6f4"><div class="ttname"><a href="expelliarmus_8c.html#a2b98538e037137e8b2f82c9821b7e6f4">collision_test</a></div><div class="ttdeci">static int collision_test(expelliarmus_t **, int, int, player_t *)</div><div class="ttdoc">Test des collisions entre un sort expelliarmus_t et un player_t player.</div><div class="ttdef"><b>Definition:</b> expelliarmus.c:125</div></div>
-<div class="ttc" id="astructsort__t_html"><div class="ttname"><a href="structsort__t.html">sort_t</a></div><div class="ttdoc">Structure général d'un joueur.</div></div>
-<div class="ttc" id="astructsort__s_html"><div class="ttname"><a href="structsort__s.html">sort_s</a></div><div class="ttdef"><b>Definition:</b> sort.h:16</div></div>
-<div class="ttc" id="astructcd__t_html"><div class="ttname"><a href="structcd__t.html">cd_t</a></div><div class="ttdoc">Structure qui contient un sort et son couldown.</div></div>
+<div class="ttc" id="astructsort__s_html"><div class="ttname"><a href="structsort__s.html">sort_s</a></div><div class="ttdoc">Structure général d'un joueur.</div><div class="ttdef"><b>Definition:</b> sort.h:16</div></div>
 <div class="ttc" id="astructcd__s_html_ad67abe78a3630bcf99e4d0c51e85a3e9"><div class="ttname"><a href="structcd__s.html#ad67abe78a3630bcf99e4d0c51e85a3e9">cd_s::sort</a></div><div class="ttdeci">sort_t * sort</div><div class="ttdef"><b>Definition:</b> sort.h:46</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
