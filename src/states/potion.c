@@ -8,7 +8,6 @@
  */
 #include "../../lib/menus.h"
 #include "../../lib/potions.h"
-#include "../../lib/ingredients.h"
 
 /**
  * \fn static int GetPotionIndex(int potion)
@@ -49,14 +48,18 @@ int MakePotion(window *win, text_t * text, TTF_Font *font, int mouseX, int mouse
     static int ingredient = 0, potion = 0, restant = 3, i;
     static char r[3], aj[] = "Ajoutez ", ingr[] = " ingredient(s)", final[35] = "";
 
+    //On regarde si nous avons saisi trois ingrédients, si non on continu de demandé un prochain ingrédient
     if(restant > 0){
         SDL_RenderClear(win->pRenderer);
+
+        //Chaine de caractere adaptive en fonction du nombre restant d'ingrédients à ajouter
         strcpy(final, "");
         sprintf(r, "%i", restant);
         strcat(final, aj);
         strcat(final, r);
         strcat(final, ingr);
 
+        //Texte + boutons
         createText(win->pRenderer, text, SCREEN_WIDTH/2, 50, 1100, 125, final, font, 'w');
 
         if(!(zone_detect(SCREEN_WIDTH/2-125, 150, 300, 100, mouseX, mouseY))){
@@ -93,13 +96,17 @@ int MakePotion(window *win, text_t * text, TTF_Font *font, int mouseX, int mouse
         }
         else if(zone_detect(SCREEN_WIDTH/2-125, 450, 300, 100, mouseX, mouseY) && click == 1){
             ingredient = 3;
+            //code représentant les différents ingrédients ajoutés
             potion = potion * 10 + ingredient;
             restant --;
             click = 0;
         }
     }
+    //Quand on a assez d'ingrédient on rentre ici
     if(restant <= 0){
+        //On cherche l'index de la potion par rapport au ingrédients entrés
         i = GetPotionIndex(potion);
+        //Si la potion créée n'existe pas
         if(i < 0){
             createText(win->pRenderer, text, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, 1100, 125, "Cette potion n'existe pas", font, 'w');
 
@@ -117,6 +124,7 @@ int MakePotion(window *win, text_t * text, TTF_Font *font, int mouseX, int mouse
                 return 0;
             }
         }
+        //Si elle existe
         else{
             createText(win->pRenderer, text, SCREEN_WIDTH/2, 100, 1100, 125, "Vous avez confectionne une potion :", font, 'w');
             createText(win->pRenderer, text, SCREEN_WIDTH/2, 300, 800, 125, nomPotions[i], font, 'w');
@@ -164,7 +172,7 @@ int AfficherPotion(window *win, text_t * text, TTF_Font *font, int mouseX, int m
         strcat(in[i], " ");
     }
 
-
+    //Affichage des potions et de leur recette si elles sont débloquées
     if(potions_unlock[0] == 1){
         createText(win->pRenderer, text, SCREEN_WIDTH/2, 50, 400, 50, nomPotions[0], font, 'w');
 
@@ -195,6 +203,7 @@ int AfficherPotion(window *win, text_t * text, TTF_Font *font, int mouseX, int m
         noPotion = 0;
     }
 
+    //Si aucune potion débloquée
     if(noPotion)
         createText(win->pRenderer, text, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, 1100, 125, "Vous n'avez pas encore confectionne de potion", font, 'w');
 
@@ -212,19 +221,39 @@ int AfficherPotion(window *win, text_t * text, TTF_Font *font, int mouseX, int m
 }
 
 /**
- * \fn extern t_etat potion_state(window *win, text_t * text, TTF_Font *font)
+ * \fn extern t_etat potion_state(window *win, player_t *monPerso, text_t * text, TTF_Font *font)
  * \brief Menu principal des potions choix entre potion, ingrédient et quitter
  *
  * \param win Pointeur sur une structure window_s, étant la fenêtre du jeu.
+ * \param monPerso Pointeur sur une structure player_t représentant les infos d'un personnage.
  * \param text Pointeur sur une structure text_s regroupant les différents textes déjà créer et leur texture.
  * \param font Pointeur sur une police de caractère.
  *
  * \return Retourne soit son propre état soit le prochain état du jeu
  */
 extern
-t_etat potion_state(window *win, text_t * text, TTF_Font *font){
+t_etat potion_state(window *win, player_t *monPerso, text_t * text, TTF_Font *font){
 
-    static int mouseX, mouseY, click = 0, choix = 0;
+    static int mouseX, mouseY, click = 0, choix = 0, i = 0, flag = 0;
+
+    //Si nouveau joueur, alors on créer son tableau de potions sans recette trouvée
+    if(monPerso->potions_unl == NULL){
+        monPerso->potions_unl = malloc(sizeof(int) * NB_POT);
+        for(int i = 0; i < NB_POT; i++)
+            monPerso->potions_unl[i] = 0;
+    }
+    //Sinon on synchronise les infos avec ce qui est contenu dans les infos du joueur
+    else if(flag == 0){
+        for(int i = 0; i < NB_POT; i++)
+            potions_unlock[i] = monPerso->potions_unl[i];
+        flag = 1;
+    }
+
+    //Synchronisation données joueur et données état potion
+    for(i = 0; i < NB_POT; i++)
+        monPerso->potions_unl[i] = potions_unlock[i];
+
+    monPerso->nb_pot = NB_POT;
 
     SDL_RenderClear(win->pRenderer);
 
@@ -242,6 +271,7 @@ t_etat potion_state(window *win, text_t * text, TTF_Font *font){
     }
     SDL_GetMouseState(&mouseX, &mouseY);
 
+    //Switch de navigation
     switch(choix){
         case 0:
             if(!(zone_detect(SCREEN_WIDTH/2-250, 50, 500, 150, mouseX, mouseY))){
@@ -293,3 +323,4 @@ t_etat potion_state(window *win, text_t * text, TTF_Font *font){
     SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 0 );
     return POTION;
 }
+

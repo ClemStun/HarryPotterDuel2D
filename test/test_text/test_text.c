@@ -17,7 +17,7 @@ int main(int argc, char **argv){
 
     while(!should_quit){
         SDL_RenderClear(win->pRenderer);
-        SDL_SetRenderDrawColor(win->pRenderer, 255, 255, 255, 255);
+        SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 0);
 
         while(SDL_PollEvent(&event)){
 			switch (event.type){
@@ -27,10 +27,10 @@ int main(int argc, char **argv){
             }
         }
 
-        createText(win->pRenderer, text, 100, 100, 100, 100, "pouette", font, 'r');
+        createText(win->pRenderer, text, SCREEN_WIDTH/2, SCREEN_HEIGHT/2, 100, 100, "Test", font, 'r');
 
         // Actualisation du rendu
-        SDL_SetRenderDrawColor(win->pRenderer, 255, 255, 255, 255);
+        SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 0);
         SDL_RenderPresent(win->pRenderer);
     }
 
@@ -54,3 +54,6 @@ int main(int argc, char **argv){
     SDL_Quit();
     return 1;
 }
+
+
+

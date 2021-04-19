@@ -41,6 +41,8 @@ typedef struct player_s{
     int is_protego;
     SDL_TimerID id_timer;
     SDL_Texture *sprite;
+    int nb_pot;
+    int *potions_unl;
 
     int (*unStun)(int, struct player_s *);
 
@@ -51,3 +53,4 @@ extern void freePlayer(player_t * p);
 extern int playerPosX(player_t * p);
 extern int playerPosY(player_t * p);
 extern void rand_click_bot(player_t *mannequin);
+

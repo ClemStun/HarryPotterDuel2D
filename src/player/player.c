@@ -50,6 +50,8 @@ player_t * createPlayer(int id_player, char name[], int xp, SDL_Texture * sprite
     p->vitesse = 0.2;
     p->timerSprite = 1;
     p->numSprite = 1;
+    p->nb_pot = 0;
+    p->potions_unl = NULL;
 
     if(setSort != NULL){
         for (int i = 0; i < NB_SORT; i++){
@@ -70,6 +72,7 @@ player_t * createPlayer(int id_player, char name[], int xp, SDL_Texture * sprite
  */
 extern
 void freePlayer(player_t * p){
+    free(p->potions_unl);
     free(p);
 }
 

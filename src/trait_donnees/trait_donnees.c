@@ -9,6 +9,8 @@
 
 #include "../../lib/trait_donnees.h"
 
+#define NB_INFOS 4
+
 /**
  * \fn static void load_data(player_t ** monPerso, images_t * images, cd_t setSort[])
  * \brief Fonction de chargement de donnees à partir d'un fichier.
@@ -26,8 +28,11 @@ void load_data(player_t ** monPerso, images_t * images, cd_t setSort[], char fna
     char cherche[40];
     char data_storage[30];
     char house, car;
-    int trouve = 0, id, xp, compte = 0;
+    int trouve = 0, id, xp, compte = 0, nb_pot = 0, y = 0, i = 0;
+    int *popo = NULL;
 
+
+    //Ouverture du fichier grâce au pseudo du joueur, si il n'est pas trouvé le programme se ferme
     strcpy(data_storage, fname);
 
     printf("Quel est le pseudo du personnage à charger : ");
@@ -43,6 +48,7 @@ void load_data(player_t ** monPerso, images_t * images, cd_t setSort[], char fna
         exit(2);
     }
 
+    //On vérifie bien que le pseudo présent dans le fichier est bien celui qui est concerné, dans le cas contraire le programme se ferme
     fscanf(fichier, "%s", cherche);
     if(strcmp(cherche, pseudo) == 0)
         trouve = 1;
@@ -53,28 +59,63 @@ void load_data(player_t ** monPerso, images_t * images, cd_t setSort[], char fna
         exit(3);
     }
     else{
+        //On compte bien le nombre de parametres au : qui les separe pour ne pas que le fichier soit lu corrompu
         rewind(fichier);
         while(!feof(fichier)){
             fscanf(fichier, "%c", &car);
             if(car == ':') compte++;
         }
 
-        if(compte != 3){
-            printf("Nombre de champs trop élevé.\n");
+
+        //Ici on se place au niveau des potions dans le fichier
+        rewind(fichier);
+        while(y < NB_INFOS){
+            fscanf(fichier, "%c", &car);
+            if(car == ':') y++;
+        }
+        y = 0;
+        //Ici on compte le nombre de potions qu'il y a, on peut donc en ajouter, la sauvergarde sera adaptive
+        while(!feof(fichier)){
+            fscanf(fichier, "%i", &y);
+            if(y == 0 || y == 1) nb_pot++;
+        }
+        nb_pot--;
+        popo = malloc(sizeof(int)*nb_pot);
+
+        //Ici, grâce au nombre de potions obtenues, on rentre dans un tableau dynamique les infos sur le fait qu'une potion soit débloquée ou non
+        rewind(fichier);
+        y = 0;
+        while(y < NB_INFOS){
+            fscanf(fichier, "%c", &car);
+            if(car == ':') y++;
+        }
+        y = 0;
+        while(i < 3){
+            fscanf(fichier, "%i", &y);
+            popo[i] = y;
+            i++;
+        }
+
+        //Ici on test si le fichier contient trop d'infos ou pas assez
+        if(compte != NB_INFOS){
+            printf("Nombre de champs incorrect.\n");
             exit(4);
         }
 
+        //Hop, on met les informations dans les variables à partir du fichier
         rewind(fichier);
         fscanf(fichier, "%s : %i : %i : %c", cherche, &id, &xp, &house);
 
         if(feof(fichier)) printf("fin de fichier\n");
 
+        //On fait des tests de sécurité sur les informations
         if(id < 0 || id > 100){
             printf("Id du joueur impossible, fichier corrompu.\n");
             exit(5);
         }
         if(xp < 0) xp = 0;
 
+        //On rentre les informations dans l'entité joueur que l'on créer
         if(searchTexture(images, pseudo) == NULL){
             *monPerso = createPlayer(id, pseudo, xp, searchTexture(images, "Mannequin.png"), setSort, 200, 250);
         }
@@ -83,6 +124,7 @@ void load_data(player_t ** monPerso, images_t * images, cd_t setSort[], char fna
         }
         if(house != 'g' && house != 's' && house != 'r' && house != 'p' && house != 'n') house = 'n';
         (*monPerso)->house = house;
+        (*monPerso)->potions_unl = popo;
     }
     fclose(fichier);
 }
@@ -100,6 +142,7 @@ void save_data(player_t * monPerso, char fname[]){
     FILE * fichier;
     char data_storage[30];
 
+    //On ouvre le fichier avec le pseudo concerné en testant que c'est bien valide
     strcpy(data_storage, fname);
 
     strcat(data_storage, monPerso->name);
@@ -115,8 +158,11 @@ void save_data(player_t * monPerso, char fname[]){
     if(monPerso == NULL)
         exit(4);
 
-    fprintf(fichier, "%s : %i : %i : %c", monPerso->name, monPerso->id_player, monPerso->pt_xp, monPerso->house);
-    //potion peut etre a venir
+    //On rentre les informations dans le fichier
+    fprintf(fichier, "%s : %i : %i : %c\n", monPerso->name, monPerso->id_player, monPerso->pt_xp, monPerso->house);
+    fprintf(fichier, "potions : %i ", monPerso->potions_unl[0]);
+    for(int i = 1; i < monPerso->nb_pot; i++)
+        fprintf(fichier, "%i ", monPerso->potions_unl[i]);
 
     fclose(fichier);
 }

@@ -583,6 +583,7 @@ static
 int final_test(window *win, text_t * text, TTF_Font *font, int house[], char choix){
     static int last_test = 0, i, max;
 
+    //On trouve le max de points
     if(last_test == 0){
         for(i = 0; i < 4; i++){
             if(house[i] > house[max]){
@@ -590,6 +591,7 @@ int final_test(window *win, text_t * text, TTF_Font *font, int house[], char cho
             }
         }
 
+        //Si max de point à plusieurs endroit, on fait un dernier test
         for(i = 0; i < 4; i++){
             if(house[max] == house[i] && max != i){
                 last_test = 1;
@@ -637,6 +639,7 @@ int final_test(window *win, text_t * text, TTF_Font *font, int house[], char cho
         }
         return 11;
     }
+    //Une fois le test ultime effectué, on fait bien attention à passer au prochain état
     else if(last_test == 0 || last_test == 2){
         return 12;
     }
@@ -807,3 +810,4 @@ t_etat test_m_state(window *win, text_t * text, player_t * monPerso, TTF_Font *f
     SDL_SetRenderDrawColor(win->pRenderer, 0, 0, 0, 0 );
     return TEST_M;
 }
+
