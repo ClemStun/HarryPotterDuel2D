@@ -28,7 +28,7 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 \doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} \mbox{\hyperlink{potions_8h_a30bfb00b952ee8c8a7814e478506761c}{potion\+\_\+state}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, T\+T\+F\+\_\+\+Font $\ast$font)
+\mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} \mbox{\hyperlink{potions_8h_a99c95af51944bc0e8d43f071b22b14f2}{potion\+\_\+state}} (\mbox{\hyperlink{structwindow__s}{window}} $\ast$win, \mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$mon\+Perso, \mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$text, T\+T\+F\+\_\+\+Font $\ast$font)
 \begin{DoxyCompactList}\small\item\em Menu principal des potions choix entre potion, ingrédient et quitter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
@@ -61,11 +61,11 @@ C\+O\+M\+TE Clément
 
 
 \doxysubsection{Documentation des fonctions}
-\mbox{\Hypertarget{potions_8h_a30bfb00b952ee8c8a7814e478506761c}\label{potions_8h_a30bfb00b952ee8c8a7814e478506761c}} 
+\mbox{\Hypertarget{potions_8h_a99c95af51944bc0e8d43f071b22b14f2}\label{potions_8h_a99c95af51944bc0e8d43f071b22b14f2}} 
 \index{potions.h@{potions.h}!potion\_state@{potion\_state}}
 \index{potion\_state@{potion\_state}!potions.h@{potions.h}}
 \doxysubsubsection{\texorpdfstring{potion\_state()}{potion\_state()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} potion\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$}]{text,  }\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{menus_8h_a0f3684078562a23c3ea21266d10cf275}{t\+\_\+etat}} potion\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structwindow__s}{window}} $\ast$}]{win,  }\item[{\mbox{\hyperlink{structplayer__s}{player\+\_\+t}} $\ast$}]{mon\+Perso,  }\item[{\mbox{\hyperlink{structtext__s}{text\+\_\+t}} $\ast$}]{text,  }\item[{T\+T\+F\+\_\+\+Font $\ast$}]{font }\end{DoxyParamCaption})}
 
 
 
@@ -74,6 +74,8 @@ Menu principal des potions choix entre potion, ingrédient et quitter.
 
 \begin{DoxyParams}{Paramètres}
 {\em win} & Pointeur sur une structure \mbox{\hyperlink{structwindow__s}{window\+\_\+s}}, étant la fenêtre du jeu. \\
+\hline
+{\em mon\+Perso} & Pointeur sur une structure player\+\_\+t représentant les infos d\textquotesingle{}un personnage. \\
 \hline
 {\em text} & Pointeur sur une structure \mbox{\hyperlink{structtext__s}{text\+\_\+s}} regroupant les différents textes déjà créer et leur texture. \\
 \hline

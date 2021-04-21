@@ -105,9 +105,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a30bfb00b952ee8c8a7814e478506761c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="potions_8h.html#a30bfb00b952ee8c8a7814e478506761c">potion_state</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font)</td></tr>
-<tr class="memdesc:a30bfb00b952ee8c8a7814e478506761c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Menu principal des potions choix entre potion, ingrédient et quitter.  <a href="potions_8h.html#a30bfb00b952ee8c8a7814e478506761c">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a30bfb00b952ee8c8a7814e478506761c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99c95af51944bc0e8d43f071b22b14f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="menus_8h.html#a0f3684078562a23c3ea21266d10cf275">t_etat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="potions_8h.html#a99c95af51944bc0e8d43f071b22b14f2">potion_state</a> (<a class="el" href="structwindow__s.html">window</a> *win, <a class="el" href="structplayer__s.html">player_t</a> *monPerso, <a class="el" href="structtext__s.html">text_t</a> *text, TTF_Font *font)</td></tr>
+<tr class="memdesc:a99c95af51944bc0e8d43f071b22b14f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Menu principal des potions choix entre potion, ingrédient et quitter.  <a href="potions_8h.html#a99c95af51944bc0e8d43f071b22b14f2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a99c95af51944bc0e8d43f071b22b14f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -129,8 +129,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>potions_unlock</b> [NB
 <dl class="section version"><dt>Version</dt><dd>1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>17 avril 2021 </dd></dl>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
-<a id="a30bfb00b952ee8c8a7814e478506761c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30bfb00b952ee8c8a7814e478506761c">&#9670;&nbsp;</a></span>potion_state()</h2>
+<a id="a99c95af51944bc0e8d43f071b22b14f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99c95af51944bc0e8d43f071b22b14f2">&#9670;&nbsp;</a></span>potion_state()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -140,6 +140,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>potions_unlock</b> [NB
           <td>(</td>
           <td class="paramtype"><a class="el" href="structwindow__s.html">window</a> *&#160;</td>
           <td class="paramname"><em>win</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structplayer__s.html">player_t</a> *&#160;</td>
+          <td class="paramname"><em>monPerso</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -165,6 +171,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>potions_unlock</b> [NB
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">win</td><td>Pointeur sur une structure <a class="el" href="structwindow__s.html" title="Information fenêtre SDL.">window_s</a>, étant la fenêtre du jeu. </td></tr>
+    <tr><td class="paramname">monPerso</td><td>Pointeur sur une structure player_t représentant les infos d'un personnage. </td></tr>
     <tr><td class="paramname">text</td><td>Pointeur sur une structure <a class="el" href="structtext__s.html" title="Bibliothèque de textures de textes avec leur contenu et le nombre de textes stockés.">text_s</a> regroupant les différents textes déjà créer et leur texture. </td></tr>
     <tr><td class="paramname">font</td><td>Pointeur sur une police de caractère.</td></tr>
   </table>

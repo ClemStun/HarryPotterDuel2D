@@ -27,7 +27,7 @@ void *function(void *arg){
             recv(socket, &j2, sizeof j2, 0);
 
             x = SCREEN_WIDTH-100-j2.x_click;
-            y = SCREEN_HEIGHT-100-j2.y_click;
+            y = j2.y_click;
             if(j2.x_click != 0 && j2.y_click != 0){
                 //Le joueur a envoyé un sort
                 if(j2.sort != -1){
